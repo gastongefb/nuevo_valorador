@@ -27,7 +27,7 @@ class TitulosModel extends Model
         return $this->where('puntaje', $codigo)->findAll();
     }
     */ 
-
+    
     public function getDatosByCodigo($codigo)
     {
         $builder = $this->db->table($this->table);

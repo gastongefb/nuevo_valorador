@@ -520,8 +520,8 @@ class NuevoController extends BaseController
             $tt = $mat->getNombreMateria($idMateriaValoracion);
             $materia = $tt[0]['nombre_materia'];
             
-            $t = $tit->getDatosByCodigo($idTitulo);
-            $titulo_det = $t[0]['detalle_titulo'];
+            //$t = $tit->getDatosByCodigo($idTitulo);
+            //$titulo_det = $t[0]['detalle_titulo'];
 
             
             //PASOS PARA ARMAR EL PUNTAJE
@@ -546,11 +546,13 @@ class NuevoController extends BaseController
                 $suma=$suma + $puntaje[0]['puntaje']; 
             }
 
+            
             //PUNTAJE DE TÍTULOS POSTGRADO    
             //$valPos = new ValoracionPostgradoModel();
-            $datosTabla1 = $valpos ->getCodigoById_valoracion($id_va);//ACÁ PUEDE TRAER VARIOS
+            $datosTabla1 = $valpos->getCodigoById_valoracion($id_va);//ACÁ PUEDE TRAER VARIOS
             $tit = new TitulosPostgradoModel();
             // Recorrer el array de códigos y obtener los puntajes del modelo TitulosPostgradoModel
+            //print_r($datosTabla1);
             foreach ($datosTabla1 as $t) {
             $titulo = $tit->find($t['id_titulo_postgrado']); // Suponiendo que el método find busca por la clave primaria
               if ($titulo) {
@@ -560,6 +562,8 @@ class NuevoController extends BaseController
                   ];
               }
             }
+
+            //print_r($puntajes);
 
             //PUNTAJE ANTECEDENTES DOCENTES-ANTIGUEDAD            
             $datosTabla5 = $antDoc->getDatosById_ant_doc($id_va);//ACÁ PUEDE TRAER VARIOS
@@ -647,7 +651,7 @@ class NuevoController extends BaseController
           
             $titulo[] = [
                 'dni' => $dni,
-                'titulo_det' => $titulo_det,
+                'titulo_det' => $j1,
                 'j1' => $j1,
                 'j2' => $j2,
                 'j3' => $j3,
@@ -664,7 +668,7 @@ class NuevoController extends BaseController
             }
             return ($a['titulo_det'] === 'Docente') ? -1 : 1;
         });
-        */
+        
         usort($titulo, function($a, $b) {
             // Asignamos una prioridad a cada tipo de `titulo_det`.
             $prioridades = [
@@ -685,21 +689,23 @@ class NuevoController extends BaseController
             // Ordenamos por prioridad (menor prioridad primero).
             return $prioridadA - $prioridadB;
         });
-          
+        */
         } 
        
         //PASAMOS LOS DATOS A LA VISTA  
         //return view('mostrarValoraciones', ['datosTabla1' => $titulo,]);
         
 
-        return view('mostrar_valoraciones_porDocente_porMateria4', [
+       //print_r($titulo);
+         
+       
+          return view('mostrar_valoraciones_porDocente_porMateria4', [
             'datosTabla1' => $titulo,
             'datosTabla2' => $puntajes,
 
         ]);
-         /*
         
-     */  
+    
 
     }
     

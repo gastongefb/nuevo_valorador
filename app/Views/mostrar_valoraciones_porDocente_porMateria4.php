@@ -46,6 +46,10 @@
   foreach ($datosTabla1 as $registro): ?>
   <tbody>
     <tr>
+    <?php  
+    // Verifica si $registro es un array antes de acceder a sus elementos
+      if (is_array($registro)): 
+    ?>
       <th scope="row"><?php echo"$x";?></th>
       <td><?= $registro['dni']; ?></td>
       <td><?= $registro['titulo_det'];?></td>
@@ -58,6 +62,7 @@
       <td><h5>Detalle</h5></td>
       <?php //echo"$x";
       $x=$x + 1;
+    endif;
       ?>
     </tr>
  </tbody>
@@ -88,7 +93,7 @@
       <th scope="row"><?php echo"$x";?></th>
       <td><?= $dato['detalle'] ?></td>
       <td><?= $dato['puntaje'] ?></td>
-      <?php $punt= $punt + $dato['puntaje'];?>
+      <?php //$punt= $punt + $dato['puntaje'];?>
       <?php $x=$x + 1;?>
     </tr>
  </tbody>
