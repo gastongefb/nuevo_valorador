@@ -1,0 +1,166 @@
+CRITICAL - 2024-06-14 21:41:23 --> ErrorException: Undefined array key 0
+in APPPATH\Controllers\Validacion.php on line 192.
+ 1 APPPATH\Controllers\Validacion.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\Validacion.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-14 21:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-14 21:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-14 21:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-14 21:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-14 21:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-14 21:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-14 21:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-14 21:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-14 22:43:13 --> CodeIgniter\Router\Exceptions\RouterException: Router.invalidParameterType
+in SYSTEMPATH\Router\RouteCollection.php on line 1377.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1377): CodeIgniter\Router\Exceptions\RouterException::forInvalidParameterType()
+ 2 SYSTEMPATH\Router\RouteCollection.php(1171): CodeIgniter\Router\RouteCollection->buildReverseRoute('Docente/(num)/edit', [...])
+ 3 SYSTEMPATH\Common.php(964): CodeIgniter\Router\RouteCollection->reverseRoute('Docente.edit', '1')
+ 4 APPPATH\Views\docente\DocenteShow.php(37): route_to('Docente.edit', '1')
+ 5 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\docente\\DocenteShow.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Docente/DocenteShow', [], true)
+ 8 APPPATH\Controllers\DocenteController.php(41): view('Docente/DocenteShow', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->show('1')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 22:43:15 --> CodeIgniter\Router\Exceptions\RouterException: Router.invalidParameterType
+in SYSTEMPATH\Router\RouteCollection.php on line 1377.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1377): CodeIgniter\Router\Exceptions\RouterException::forInvalidParameterType()
+ 2 SYSTEMPATH\Router\RouteCollection.php(1171): CodeIgniter\Router\RouteCollection->buildReverseRoute('Docente/(num)/edit', [...])
+ 3 SYSTEMPATH\Common.php(964): CodeIgniter\Router\RouteCollection->reverseRoute('Docente.edit', '1')
+ 4 APPPATH\Views\docente\DocenteIndex.php(68): route_to('Docente.edit', '1')
+ 5 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\docente\\DocenteIndex.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Docente/DocenteIndex', [], true)
+ 8 APPPATH\Controllers\DocenteController.php(21): view('Docente/DocenteIndex', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 22:43:18 --> CodeIgniter\Router\Exceptions\RouterException: Router.invalidParameterType
+in SYSTEMPATH\Router\RouteCollection.php on line 1377.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1377): CodeIgniter\Router\Exceptions\RouterException::forInvalidParameterType()
+ 2 SYSTEMPATH\Router\RouteCollection.php(1171): CodeIgniter\Router\RouteCollection->buildReverseRoute('Docente/(num)/edit', [...])
+ 3 SYSTEMPATH\Common.php(964): CodeIgniter\Router\RouteCollection->reverseRoute('Docente.edit', '1')
+ 4 APPPATH\Views\docente\DocenteIndex.php(68): route_to('Docente.edit', '1')
+ 5 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\docente\\DocenteIndex.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Docente/DocenteIndex', [], true)
+ 8 APPPATH\Controllers\DocenteController.php(21): view('Docente/DocenteIndex', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 22:55:19 --> ArgumentCountError: Too few arguments to function App\Controllers\DocenteController::update(), 0 passed in C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php on line 941 and exactly 1 expected
+in APPPATH\Controllers\DocenteController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 22:56:15 --> BadMethodCallException: Call to undefined method App\Models\DocenteModel::updateDocente
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\DocenteController.php(53): CodeIgniter\Model->__call('updateDocente', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->update('1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 23:01:12 --> LogicException: No validation rules for the placeholder: id
+in SYSTEMPATH\Validation\Validation.php on line 792.
+ 1 SYSTEMPATH\Validation\Validation.php(157): CodeIgniter\Validation\Validation->fillPlaceholders([...], [...])
+ 2 SYSTEMPATH\BaseModel.php(1534): CodeIgniter\Validation\Validation->run([...], null, null)
+ 3 SYSTEMPATH\BaseModel.php(959): CodeIgniter\BaseModel->validate([...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\DocenteModel.php(61): CodeIgniter\Model->update('1', [...])
+ 6 APPPATH\Controllers\DocenteController.php(53): App\Models\DocenteModel->updateDocente('1', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->update('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 23:02:52 --> LogicException: No validation rules for the placeholder: id
+in SYSTEMPATH\Validation\Validation.php on line 792.
+ 1 SYSTEMPATH\Validation\Validation.php(157): CodeIgniter\Validation\Validation->fillPlaceholders([...], [...])
+ 2 SYSTEMPATH\BaseModel.php(1534): CodeIgniter\Validation\Validation->run([...], null, null)
+ 3 SYSTEMPATH\BaseModel.php(959): CodeIgniter\BaseModel->validate([...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\DocenteModel.php(61): CodeIgniter\Model->update('1', [...])
+ 6 APPPATH\Controllers\DocenteController.php(53): App\Models\DocenteModel->updateDocente('1', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->update('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-06-14 23:03:43 --> [DEPRECATED] Optional parameter $id declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Models\DocenteModel.php on line 55.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(311): include_once('C:\\xampp\\htdocs\\valoradorG2\\valorador\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\DocenteModel.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\DocenteModel')
+ 4 APPPATH\Controllers\DocenteController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\DocenteModel')
+ 5 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\DocenteController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-06-14 23:03:44 --> [DEPRECATED] Optional parameter $id declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Models\DocenteModel.php on line 55.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(311): include_once('C:\\xampp\\htdocs\\valoradorG2\\valorador\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\DocenteModel.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\DocenteModel')
+ 4 APPPATH\Controllers\DocenteController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\DocenteModel')
+ 5 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\DocenteController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 23:03:44 --> LogicException: No validation rules for the placeholder: id
+in SYSTEMPATH\Validation\Validation.php on line 792.
+ 1 SYSTEMPATH\Validation\Validation.php(157): CodeIgniter\Validation\Validation->fillPlaceholders([...], [...])
+ 2 SYSTEMPATH\BaseModel.php(1534): CodeIgniter\Validation\Validation->run([...], null, null)
+ 3 SYSTEMPATH\BaseModel.php(959): CodeIgniter\BaseModel->validate([...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\DocenteModel.php(61): CodeIgniter\Model->update('1', [...])
+ 6 APPPATH\Controllers\DocenteController.php(53): App\Models\DocenteModel->updateDocente('1', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->update('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-06-14 23:51:26 --> [DEPRECATED] Optional parameter $id declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Models\DocenteModel.php on line 55.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(311): include_once('C:\\xampp\\htdocs\\valoradorG2\\valorador\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\DocenteModel.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\DocenteModel')
+ 4 APPPATH\Controllers\DocenteController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\DocenteModel')
+ 5 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\DocenteController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-06-14 23:51:31 --> [DEPRECATED] Optional parameter $id declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Models\DocenteModel.php on line 55.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(311): include_once('C:\\xampp\\htdocs\\valoradorG2\\valorador\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\DocenteModel.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\DocenteModel')
+ 4 APPPATH\Controllers\DocenteController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\DocenteModel')
+ 5 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\DocenteController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 23:51:31 --> LogicException: No validation rules for the placeholder: id
+in SYSTEMPATH\Validation\Validation.php on line 792.
+ 1 SYSTEMPATH\Validation\Validation.php(157): CodeIgniter\Validation\Validation->fillPlaceholders([...], [...])
+ 2 SYSTEMPATH\BaseModel.php(1534): CodeIgniter\Validation\Validation->run([...], null, null)
+ 3 SYSTEMPATH\BaseModel.php(959): CodeIgniter\BaseModel->validate([...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\DocenteModel.php(61): CodeIgniter\Model->update('1', [...])
+ 6 APPPATH\Controllers\DocenteController.php(53): App\Models\DocenteModel->updateDocente('1', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->update('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-14 23:54:09 --> LogicException: No validation rules for the placeholder: id
+in SYSTEMPATH\Validation\Validation.php on line 792.
+ 1 SYSTEMPATH\Validation\Validation.php(157): CodeIgniter\Validation\Validation->fillPlaceholders([...], [...])
+ 2 SYSTEMPATH\BaseModel.php(1534): CodeIgniter\Validation\Validation->run([...], null, null)
+ 3 SYSTEMPATH\BaseModel.php(959): CodeIgniter\BaseModel->validate([...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\DocenteModel.php(61): CodeIgniter\Model->update('1', [...])
+ 6 APPPATH\Controllers\DocenteController.php(53): App\Models\DocenteModel->updateDocente('1', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->update('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,14 @@
+CRITICAL - 2024-06-19 00:00:15 --> ErrorException: Undefined variable $titulo
+in APPPATH\Controllers\PersonController.php on line 638.
+ 1 APPPATH\Controllers\PersonController.php(638): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\PersonController.php', 638)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->Mostrar_Valoraciones_Por_Materia3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 01:42:10 --> ErrorException: Undefined variable $titulo
+in APPPATH\Controllers\PersonController.php on line 646.
+ 1 APPPATH\Controllers\PersonController.php(646): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\PersonController.php', 646)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->Mostrar_Valoraciones_Por_Materia3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

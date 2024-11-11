@@ -1,0 +1,38 @@
+INFO - 2024-06-18 00:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 00:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 00:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 00:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 00:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 00:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 23:50:57 --> ErrorException: Undefined variable $nombre
+in APPPATH\Controllers\PersonController.php on line 381.
+ 1 APPPATH\Controllers\PersonController.php(381): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\PersonController.php', 381)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->buscar_valoracion_por_docente2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-18 23:52:59 --> ErrorException: Undefined variable $puntajes6
+in APPPATH\Controllers\PersonController.php on line 492.
+ 1 APPPATH\Controllers\PersonController.php(492): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $puntajes6', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\PersonController.php', 492)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->buscar_valoracion_por_docente2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-18 23:53:15 --> ErrorException: Undefined variable $datosTabla6
+in APPPATH\Views\resultado_busqueda_valoracion.php on line 21.
+ 1 APPPATH\Views\resultado_busqueda_valoracion.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosTabla6', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\resultado_busqueda_valoracion.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\resultado_busqueda_valoracion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('resultado_busqueda_valoracion', [], true)
+ 5 APPPATH\Controllers\PersonController.php(491): view('resultado_busqueda_valoracion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->buscar_valoracion_por_docente2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-18 23:54:26 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\PersonController.php on line 358.
+ 1 APPPATH\Controllers\PersonController.php(358): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\PersonController.php', 358)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->buscar_valoracion_por_docente2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

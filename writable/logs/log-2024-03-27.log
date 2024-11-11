@@ -1,0 +1,35 @@
+CRITICAL - 2024-03-27 00:50:28 --> ErrorException: Undefined variable $query2
+in APPPATH\Controllers\Validacion.php on line 356.
+ 1 APPPATH\Controllers\Validacion.php(356): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query2', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 356)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-27 00:50:51 --> ErrorException: Undefined variable $mm
+in APPPATH\Controllers\Validacion.php on line 362.
+ 1 APPPATH\Controllers\Validacion.php(362): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mm', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 362)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-27 00:53:23 --> ErrorException: Undefined variable $m
+in APPPATH\Controllers\Validacion.php on line 360.
+ 1 APPPATH\Controllers\Validacion.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $m', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-27 00:54:32 --> ErrorException: Undefined variable $m
+in APPPATH\Controllers\Validacion.php on line 360.
+ 1 APPPATH\Controllers\Validacion.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $m', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-27 00:56:10 --> ErrorException: Undefined variable $mm
+in APPPATH\Controllers\Validacion.php on line 360.
+ 1 APPPATH\Controllers\Validacion.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mm', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

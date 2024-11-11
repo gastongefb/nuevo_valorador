@@ -1,0 +1,42 @@
+CRITICAL - 2024-03-24 15:04:35 --> ErrorException: Undefined array key "id_puntaje_titulo"
+in APPPATH\Controllers\Validacion.php on line 289.
+ 1 APPPATH\Controllers\Validacion.php(289): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_puntaje_titulo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 289)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-24 15:06:52 --> ErrorException: Undefined array key "id_puntaje_titulo"
+in APPPATH\Controllers\Validacion.php on line 289.
+ 1 APPPATH\Controllers\Validacion.php(289): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_puntaje_titulo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 289)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-24 15:06:58 --> ErrorException: Undefined array key "id_puntaje_titulo"
+in APPPATH\Controllers\Validacion.php on line 289.
+ 1 APPPATH\Controllers\Validacion.php(289): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_puntaje_titulo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 289)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-24 15:07:26 --> ErrorException: Undefined array key "detalle_titulo"
+in APPPATH\Controllers\Validacion.php on line 290.
+ 1 APPPATH\Controllers\Validacion.php(290): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_titulo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 290)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-24 15:09:39 --> ErrorException: Undefined variable $n
+in APPPATH\Controllers\Validacion.php on line 299.
+ 1 APPPATH\Controllers\Validacion.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $n', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 299)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-24 15:09:50 --> ErrorException: Undefined variable $n
+in APPPATH\Controllers\Validacion.php on line 299.
+ 1 APPPATH\Controllers\Validacion.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $n', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 299)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

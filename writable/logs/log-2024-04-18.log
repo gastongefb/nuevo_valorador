@@ -1,0 +1,285 @@
+ERROR - 2024-04-18 19:03:25 --> mysqli_sql_exception: Table 'valorador.validación' doesn't exist in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_vali...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_vali...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_vali...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_vali...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-18 19:03:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 19:03:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 19:03:25 --> [Caused by] mysqli_sql_exception: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-18 19:03:34 --> mysqli_sql_exception: Table 'valorador.validación' doesn't exist in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_vali...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_vali...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_vali...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_vali...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-18 19:03:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 19:03:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 19:03:34 --> [Caused by] mysqli_sql_exception: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `id_validacion_condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-18 19:18:34 --> mysqli_sql_exception: Table 'valorador.validación' doesn't exist in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-18 19:18:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 19:18:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 19:18:34 --> [Caused by] mysqli_sql_exception: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-18 19:19:49 --> mysqli_sql_exception: Column 'id_materia' in field list is ambiguous in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-18 19:19:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 19:19:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 19:19:49 --> [Caused by] mysqli_sql_exception: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-18 19:21:54 --> mysqli_sql_exception: Column 'id_materia' in field list is ambiguous in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-18 19:21:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 19:21:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 19:21:54 --> [Caused by] mysqli_sql_exception: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

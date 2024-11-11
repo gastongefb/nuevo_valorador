@@ -1,0 +1,27 @@
+CRITICAL - 2024-05-12 14:23:12 --> ErrorException: Undefined variable $materias
+in APPPATH\Views\valoracion\cargar_titulo.php on line 18.
+ 1 APPPATH\Views\valoracion\cargar_titulo.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $materias', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\valoracion\\cargar_titulo.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\valoracion\\cargar_titulo.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('valoracion/cargar_titulo.php', [], true)
+ 5 APPPATH\Controllers\PersonController.php(296): view('valoracion/cargar_titulo.php')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->paso1()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-05-12 14:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-12 14:32:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "paginacion/cargar_titulo_postgrado.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('paginacion/cargar_titulo_postgrado.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('paginacion/cargar_titulo_postgrado', [], true)
+ 3 APPPATH\Controllers\PersonController.php(348): view('paginacion/cargar_titulo_postgrado')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->paso2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-05-12 14:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 14:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 14:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 14:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 14:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-12 14:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

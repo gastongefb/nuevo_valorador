@@ -1,0 +1,554 @@
+ERROR - 2024-03-18 01:48:20 --> mysqli_sql_exception: Column 'id_materia' in on clause is ambiguous in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `dni`\nFR...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `dni`\nFR...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `dni`\nFR...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`\nFR...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->index()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-18 01:48:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in on clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 01:48:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 01:48:20 --> [Caused by] mysqli_sql_exception: Column 'id_materia' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-18 01:49:09 --> mysqli_sql_exception: Unknown column 'n.id_materia' in 'on clause' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `dni`\nFR...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `dni`\nFR...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `dni`\nFR...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`\nFR...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->index()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-18 01:49:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'n.id_materia' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 01:49:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'n.id_materia' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 01:49:09 --> [Caused by] mysqli_sql_exception: Unknown column 'n.id_materia' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-18 01:53:06 --> mysqli_sql_exception: Unknown column 'n.id_materia_validacion' in 'on clause' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `dni`\nFR...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `dni`\nFR...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `dni`\nFR...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`\nFR...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->index()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-18 01:53:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'n.id_materia_validacion' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 01:53:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'n.id_materia_validacion' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia_validacion` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 01:53:06 --> [Caused by] mysqli_sql_exception: Unknown column 'n.id_materia_validacion' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia_validacion` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia_validacion` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `dni`
+FROM `validación`
+JOIN `materias` ON `n`.`id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 01:54:05 --> ErrorException: Undefined array key "id_validacion"
+in APPPATH\Views\mostrarValidaciones.php on line 46.
+ 1 APPPATH\Views\mostrarValidaciones.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_validacion"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 46)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(36): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 01:55:01 --> ErrorException: Undefined array key "dni"
+in APPPATH\Views\mostrarValidaciones.php on line 47.
+ 1 APPPATH\Views\mostrarValidaciones.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dni"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(36): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 01:59:06 --> ErrorException: Undefined array key "dni"
+in APPPATH\Views\mostrarValidaciones.php on line 47.
+ 1 APPPATH\Views\mostrarValidaciones.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dni"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(36): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 01:59:12 --> ErrorException: Undefined array key "dni"
+in APPPATH\Views\mostrarValidaciones.php on line 47.
+ 1 APPPATH\Views\mostrarValidaciones.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dni"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(36): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 02:00:13 --> ErrorException: Undefined array key "dni"
+in APPPATH\Views\mostrarValidaciones.php on line 47.
+ 1 APPPATH\Views\mostrarValidaciones.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dni"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(36): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 02:02:35 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValidaciones.php on line 14.
+ 1 APPPATH\Views\mostrarValidaciones.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 14)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(36): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 02:02:59 --> ErrorException: Undefined array key "titulo"
+in APPPATH\Views\mostrarValidaciones.php on line 49.
+ 1 APPPATH\Views\mostrarValidaciones.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "titulo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(36): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 02:03:01 --> ErrorException: Undefined array key "titulo"
+in APPPATH\Views\mostrarValidaciones.php on line 49.
+ 1 APPPATH\Views\mostrarValidaciones.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "titulo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(36): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 02:04:45 --> ErrorException: Undefined array key "id_materia"
+in APPPATH\Views\mostrarValidaciones.php on line 54.
+ 1 APPPATH\Views\mostrarValidaciones.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_materia"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 54)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(36): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 02:10:12 --> ParseError: syntax error, unexpected variable "$query"
+in APPPATH\Controllers\Validacion.php on line 28.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 02:17:47 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::and()
+in APPPATH\Controllers\Validacion.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-18 11:11:19 --> mysqli_sql_exception: Table 'valorador.validación' doesn't exist in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_vali...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_vali...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_vali...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_vali...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-18 11:11:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 2 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 11:11:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 4 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 11:11:19 --> [Caused by] mysqli_sql_exception: Table 'valorador.validación' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 5 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-18 11:13:44 --> mysqli_sql_exception: Unknown column 'titulo' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_vali...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_vali...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_vali...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_vali...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-18 11:13:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 2 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 11:13:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 4 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 11:13:44 --> [Caused by] mysqli_sql_exception: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 5 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-18 11:14:45 --> mysqli_sql_exception: Unknown column 'titulo' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_vali...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_vali...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_vali...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_vali...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-18 11:14:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 2 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 11:14:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 4 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 11:14:45 --> [Caused by] mysqli_sql_exception: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 5 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-18 11:14:46 --> mysqli_sql_exception: Unknown column 'titulo' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_vali...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_vali...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_vali...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_vali...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-18 11:14:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 2 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 11:14:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 4 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 11:14:46 --> [Caused by] mysqli_sql_exception: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validacion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 5 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 14:15:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "nuevo.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('nuevo.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('nuevo', [], true)
+ 3 APPPATH\Controllers\Validacion.php(185): view('nuevo')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->nuevo()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

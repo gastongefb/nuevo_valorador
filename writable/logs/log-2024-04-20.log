@@ -1,0 +1,1935 @@
+ERROR - 2024-04-20 01:59:28 --> mysqli_sql_exception: Column 'id_materia' in field list is ambiguous in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 01:59:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 01:59:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 01:59:28 --> [Caused by] mysqli_sql_exception: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 02:06:59 --> mysqli_sql_exception: Column 'id_materia' in field list is ambiguous in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 02:06:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:06:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:06:59 --> [Caused by] mysqli_sql_exception: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 02:09:41 --> mysqli_sql_exception: Column 'id_materia' in field list is ambiguous in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 02:09:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:09:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:09:41 --> [Caused by] mysqli_sql_exception: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 02:09:42 --> mysqli_sql_exception: Column 'id_materia' in field list is ambiguous in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 02:09:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:09:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:09:42 --> [Caused by] mysqli_sql_exception: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 02:09:43 --> mysqli_sql_exception: Column 'id_materia' in field list is ambiguous in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 02:09:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:09:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:09:43 --> [Caused by] mysqli_sql_exception: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 02:09:44 --> mysqli_sql_exception: Column 'id_materia' in field list is ambiguous in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 02:09:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:09:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:09:44 --> [Caused by] mysqli_sql_exception: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 02:10:00 --> mysqli_sql_exception: Column 'id_materia' in field list is ambiguous in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 02:10:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `valoracion`.`id_materia` = `materias`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:10:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `valoracion`.`id_materia` = `materias`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `valoracion`.`id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `valoracion`.`id_materia` = `materias`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:10:00 --> [Caused by] mysqli_sql_exception: Column 'id_materia' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `valoracion`.`id_materia` = `materias`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `valoracion`.`id_materia` = `materias`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `valoracion`.`id_materia` = `materias`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `valoracion`.`id_materia` = `materias`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:12:49 --> ErrorException: Undefined array key "id_validacion"
+in APPPATH\Views\mostrarValidaciones.php on line 35.
+ 1 APPPATH\Views\mostrarValidaciones.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_validacion"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(149): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:13:15 --> ErrorException: Undefined array key "titulo"
+in APPPATH\Views\mostrarValidaciones.php on line 37.
+ 1 APPPATH\Views\mostrarValidaciones.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "titulo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(149): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:13:48 --> ErrorException: Undefined array key "id_validacion_condicion"
+in APPPATH\Views\mostrarValidaciones.php on line 41.
+ 1 APPPATH\Views\mostrarValidaciones.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_validacion_condicion"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 41)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(149): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:14:04 --> ErrorException: Undefined array key "nombre_materia"
+in APPPATH\Views\mostrarValidaciones.php on line 42.
+ 1 APPPATH\Views\mostrarValidaciones.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_materia"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(149): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:15:26 --> ErrorException: Undefined array key "nid_materia"
+in APPPATH\Views\mostrarValidaciones.php on line 42.
+ 1 APPPATH\Views\mostrarValidaciones.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nid_materia"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(149): view('mostrarValidaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 02:26:25 --> mysqli_sql_exception: Unknown column '*.v' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `*`.`v`,...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `*`.`v`,...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `*`.`v`,...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `*`.`v`,...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 02:26:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '*.v' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `*`.`v`, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:26:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '*.v' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `*`.`v`, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `*`.`v`, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `*`.`v`, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:26:25 --> [Caused by] mysqli_sql_exception: Unknown column '*.v' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `*`.`v`, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `*`.`v`, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `*`.`v`, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `*`.`v`, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 02:27:23 --> mysqli_sql_exception: Unknown column 'v.id_materia' in 'on clause' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 02:27:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'v.id_materia' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:27:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'v.id_materia' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:27:23 --> [Caused by] mysqli_sql_exception: Unknown column 'v.id_materia' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `v`.`id_materia` = `m`.`id_materia`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:27:57 --> ErrorException: Undefined array key "id_materia"
+in APPPATH\Views\mostrarValoraciones.php on line 42.
+ 1 APPPATH\Views\mostrarValoraciones.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_materia"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(149): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 02:41:29 --> mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 02:41:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:41:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:41:29 --> [Caused by] mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:51:44 --> ErrorException: Undefined array key "codigo"
+in APPPATH\Controllers\Validacion.php on line 112.
+ 1 APPPATH\Controllers\Validacion.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones_por_dni()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 02:59:22 --> mysqli_sql_exception: Unknown column 'id_materia_validacion' in 'on clause' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valo...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valo...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valo...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valo...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(118): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 02:59:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_materia_validacion' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 2 APPPATH\Controllers\Validacion.php(118): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:59:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_materia_validacion' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'0\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'0\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 4 APPPATH\Controllers\Validacion.php(118): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 02:59:22 --> [Caused by] mysqli_sql_exception: Unknown column 'id_materia_validacion' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'0\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'0\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'0\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`
+FROM `valoracion`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 5 APPPATH\Controllers\Validacion.php(118): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:00:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mostrarValidaciones.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mostrarValidaciones.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones', [], true)
+ 3 APPPATH\Controllers\Validacion.php(126): view('mostrarValidaciones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:00:47 --> ErrorException: Undefined array key "nombre_materia"
+in APPPATH\Views\mostrarValoraciones.php on line 42.
+ 1 APPPATH\Views\mostrarValoraciones.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_materia"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(126): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 03:54:46 --> mysqli_sql_exception: Unknown column 'id_carrera' in 'where clause' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `m`.*\nFR...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `m`.*\nFR...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `m`.*\nFR...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `m`.*\nFR...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrarPlanes3()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 03:54:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_carrera' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `m`.*
+FROM `materias` `m`
+WHERE `id_carrera` = :id_carrera:', [...], false)
+ 2 APPPATH\Controllers\Validacion.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrarPlanes3()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:54:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_carrera' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `m`.*
+FROM `materias` `m`
+WHERE `id_carrera` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `m`.*
+FROM `materias` `m`
+WHERE `id_carrera` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `m`.*
+FROM `materias` `m`
+WHERE `id_carrera` = :id_carrera:', [...], false)
+ 4 APPPATH\Controllers\Validacion.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrarPlanes3()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:54:46 --> [Caused by] mysqli_sql_exception: Unknown column 'id_carrera' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `m`.*
+FROM `materias` `m`
+WHERE `id_carrera` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `m`.*
+FROM `materias` `m`
+WHERE `id_carrera` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `m`.*
+FROM `materias` `m`
+WHERE `id_carrera` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `m`.*
+FROM `materias` `m`
+WHERE `id_carrera` = :id_carrera:', [...], false)
+ 5 APPPATH\Controllers\Validacion.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrarPlanes3()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:57:28 --> ErrorException: Undefined variable $var
+in APPPATH\Controllers\Validacion.php on line 233.
+ 1 APPPATH\Controllers\Validacion.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $var', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 233)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrarPlanes3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:50:44 --> ErrorException: Undefined array key "detalle_condicion"
+in APPPATH\Views\mostrarValoraciones.php on line 37.
+ 1 APPPATH\Views\mostrarValoraciones.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_condicion"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 14:55:41 --> mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 14:55:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:55:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:55:41 --> [Caused by] mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 14:57:43 --> mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 14:57:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:57:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:57:43 --> [Caused by] mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 14:57:45 --> mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 14:57:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:57:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:57:45 --> [Caused by] mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 14:57:45 --> mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 14:57:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:57:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:57:45 --> [Caused by] mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 14:58:45 --> mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-20 14:58:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:58:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 14:58:45 --> [Caused by] mysqli_sql_exception: Unknown column 'c.detalle_condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `v`.*, `m`.`nombre_materia`, `c`.`detalle_condicion`
+FROM `valoracion` `v`
+JOIN `materias` `m` ON `condicion_docente``c`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:01:49 --> ErrorException: Undefined array key "detalle_condicion"
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 APPPATH\Views\mostrarValoraciones.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_condicion"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:05:27 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 APPPATH\Views\mostrarValoraciones.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:05:43 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 APPPATH\Views\mostrarValoraciones.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:11:40 --> Error: Undefined constant "detalle_condicion"
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 4 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:13:00 --> Error: Undefined constant "resultado2"
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 4 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:14:34 --> Error: Undefined constant "detalle_condicion"
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 4 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:14:44 --> ErrorException: Undefined variable $resultado2
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 APPPATH\Views\mostrarValoraciones.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resultado2', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:15:13 --> Error: Undefined constant "detalle_condicion"
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 4 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:15:21 --> ErrorException: Undefined array key "detalle_condicion"
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 APPPATH\Views\mostrarValoraciones.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_condicion"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:15:58 --> ErrorException: Undefined variable $pp
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 APPPATH\Views\mostrarValoraciones.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pp', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:16:16 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 APPPATH\Views\mostrarValoraciones.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:16:36 --> ParseError: syntax error, unexpected string content "", expecting "-" or identifier or variable or number
+in APPPATH\Views\mostrarValoraciones.php on line 49.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 3 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:18:11 --> ErrorException: Undefined variable $validacion2
+in APPPATH\Views\mostrarValoraciones.php on line 10.
+ 1 APPPATH\Views\mostrarValoraciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validacion2', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:18:22 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValoraciones.php on line 10.
+ 1 APPPATH\Views\mostrarValoraciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:18:53 --> ParseError: syntax error, unexpected token "=>", expecting "," or ";"
+in APPPATH\Views\mostrarValoraciones.php on line 10.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 3 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:19:10 --> ErrorException: Undefined variable $data
+in APPPATH\Views\mostrarValoraciones.php on line 10.
+ 1 APPPATH\Views\mostrarValoraciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:19:39 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValoraciones.php on line 10.
+ 1 APPPATH\Views\mostrarValoraciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:21:37 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValoraciones.php on line 10.
+ 1 APPPATH\Views\mostrarValoraciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:22:01 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValoraciones.php on line 10.
+ 1 APPPATH\Views\mostrarValoraciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:22:24 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValoraciones.php on line 10.
+ 1 APPPATH\Views\mostrarValoraciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:22:32 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValoraciones.php on line 10.
+ 1 APPPATH\Views\mostrarValoraciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:23:05 --> ErrorException: Array to string conversion
+in APPPATH\Views\mostrarValoraciones.php on line 10.
+ 1 APPPATH\Views\mostrarValoraciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:28:06 --> ParseError: syntax error, unexpected end of file
+in APPPATH\Views\mostrarValoraciones.php on line 72.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 3 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:28:48 --> ParseError: syntax error, unexpected token "endforeach"
+in APPPATH\Views\mostrarValoraciones.php on line 17.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 3 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:29:07 --> Error: Undefined constant "arre"
+in APPPATH\Views\mostrarValoraciones.php on line 15.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 4 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:30:34 --> ParseError: syntax error, unexpected variable "$i", expecting ";"
+in APPPATH\Views\mostrarValoraciones.php on line 19.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 3 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:34:16 --> ErrorException: Undefined array key 11
+in APPPATH\Views\mostrarValoraciones.php on line 63.
+ 1 APPPATH\Views\mostrarValoraciones.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 11', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 63)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:39:01 --> ErrorException: Undefined array key 11
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 APPPATH\Views\mostrarValoraciones.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 11', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:39:16 --> ErrorException: Undefined array key 11
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 APPPATH\Views\mostrarValoraciones.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 11', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:40:00 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-20 15:40:05 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-20 15:40:14 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-20 15:40:15 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-20 15:40:20 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-20 15:41:53 --> ErrorException: Undefined array key 11
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 APPPATH\Views\mostrarValoraciones.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 11', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:43:05 --> ErrorException: Undefined array key 2
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 APPPATH\Views\mostrarValoraciones.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:43:18 --> ErrorException: Undefined array key 2
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 APPPATH\Views\mostrarValoraciones.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:43:21 --> ErrorException: Undefined array key 2
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 APPPATH\Views\mostrarValoraciones.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:43:22 --> ErrorException: Undefined array key 2
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 APPPATH\Views\mostrarValoraciones.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:43:22 --> ErrorException: Undefined array key 2
+in APPPATH\Views\mostrarValoraciones.php on line 23.
+ 1 APPPATH\Views\mostrarValoraciones.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:47:19 --> ErrorException: Undefined array key 3
+in APPPATH\Views\mostrarValoraciones.php on line 24.
+ 1 APPPATH\Views\mostrarValoraciones.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 3', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(157): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:56:17 --> ErrorException: Undefined variable $validaciones2
+in APPPATH\Views\mostrarValoraciones.php on line 13.
+ 1 APPPATH\Views\mostrarValoraciones.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validaciones2', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 13)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(126): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 15:57:59 --> ErrorException: Undefined variable $validaciones2
+in APPPATH\Views\mostrarValoraciones.php on line 13.
+ 1 APPPATH\Views\mostrarValoraciones.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validaciones2', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php', 13)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValoraciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValoraciones', [], true)
+ 5 APPPATH\Controllers\Validacion.php(126): view('mostrarValoraciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 17:30:26 --> mysqli_sql_exception: Unknown column 'id_materia' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(425): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+#9 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#10 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-20 17:30:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_materia' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (:dni:, :id_titulo:, :j1:, :j2:, :j3:, :id_materia:, :id_condicion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Controllers\Validacion.php(425): CodeIgniter\Model->insert([...], false)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:30:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_materia' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (27269774, \'1\', 23568978, 25368596, 45784578, \'1\', 1)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (27269774, \'1\', 23568978, 25368596, 45784578, \'1\', 1)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (:dni:, :id_titulo:, :j1:, :j2:, :j3:, :id_materia:, :id_condicion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Controllers\Validacion.php(425): CodeIgniter\Model->insert([...], false)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:30:27 --> [Caused by] mysqli_sql_exception: Unknown column 'id_materia' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (27269774, \'1\', 23568978, 25368596, 45784578, \'1\', 1)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (27269774, \'1\', 23568978, 25368596, 45784578, \'1\', 1)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (27269774, \'1\', 23568978, 25368596, 45784578, \'1\', 1)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (:dni:, :id_titulo:, :j1:, :j2:, :j3:, :id_materia:, :id_condicion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Controllers\Validacion.php(425): CodeIgniter\Model->insert([...], false)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 17:31:19 --> mysqli_sql_exception: Unknown column 'id_materia' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(425): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+#9 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#10 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-20 17:31:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_materia' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (:dni:, :id_titulo:, :j1:, :j2:, :j3:, :id_materia:, :id_condicion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Controllers\Validacion.php(425): CodeIgniter\Model->insert([...], false)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:31:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_materia' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (27269774, \'1\', 23568978, 25368596, 45784578, \'1\', 1)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (27269774, \'1\', 23568978, 25368596, 45784578, \'1\', 1)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (:dni:, :id_titulo:, :j1:, :j2:, :j3:, :id_materia:, :id_condicion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Controllers\Validacion.php(425): CodeIgniter\Model->insert([...], false)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:31:19 --> [Caused by] mysqli_sql_exception: Unknown column 'id_materia' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (27269774, \'1\', 23568978, 25368596, 45784578, \'1\', 1)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (27269774, \'1\', 23568978, 25368596, 45784578, \'1\', 1)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (27269774, \'1\', 23568978, 25368596, 45784578, \'1\', 1)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion` (`dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia`, `id_condicion`) VALUES (:dni:, :id_titulo:, :j1:, :j2:, :j3:, :id_materia:, :id_condicion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Controllers\Validacion.php(425): CodeIgniter\Model->insert([...], false)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:39:07 --> ErrorException: Undefined array key "emails"
+in APPPATH\Controllers\Validacion.php on line 430.
+ 1 APPPATH\Controllers\Validacion.php(430): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "emails"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 430)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:39:31 --> ErrorException: Undefined array key "id_postgrado"
+in APPPATH\Controllers\Validacion.php on line 460.
+ 1 APPPATH\Controllers\Validacion.php(460): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_postgrado"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 460)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 17:41:33 --> mysqli_sql_exception: Unknown column 'id_materia' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(474): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+#9 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#10 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-20 17:41:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_materia' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_valoracion`, `id_materia`, `detalle_valoracion_postgrado`) VALUES (:id_valoracion:, :id_materia:, :detalle_valoracion_postgrado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Controllers\Validacion.php(474): CodeIgniter\Model->insert([...], false)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:41:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_materia' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`id_valoracion`, `id_materia`, `detalle_valoracion_postgrado`) VALUES (37, \'2\', \'sssss\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`id_valoracion`, `id_materia`, `detalle_valoracion_postgrado`) VALUES (37, \'2\', \'sssss\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_valoracion`, `id_materia`, `detalle_valoracion_postgrado`) VALUES (:id_valoracion:, :id_materia:, :detalle_valoracion_postgrado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Controllers\Validacion.php(474): CodeIgniter\Model->insert([...], false)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:41:33 --> [Caused by] mysqli_sql_exception: Unknown column 'id_materia' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`id_valoracion`, `id_materia`, `detalle_valoracion_postgrado`) VALUES (37, \'2\', \'sssss\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`id_valoracion`, `id_materia`, `detalle_valoracion_postgrado`) VALUES (37, \'2\', \'sssss\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`id_valoracion`, `id_materia`, `detalle_valoracion_postgrado`) VALUES (37, \'2\', \'sssss\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_valoracion`, `id_materia`, `detalle_valoracion_postgrado`) VALUES (:id_valoracion:, :id_materia:, :detalle_valoracion_postgrado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Controllers\Validacion.php(474): CodeIgniter\Model->insert([...], false)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:43:16 --> ErrorException: Undefined array key "id_postgrado"
+in APPPATH\Controllers\Validacion.php on line 496.
+ 1 APPPATH\Controllers\Validacion.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_postgrado"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 17:50:40 --> mysqli_sql_exception: Duplicate entry '3' for key 'PRIMARY' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(511): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+#9 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#10 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-20 17:50:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (:id_postgrado:, :id_valoracion:, :detalle_valoracion_postgrado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Controllers\Validacion.php(511): CodeIgniter\Model->insert([...], false)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:50:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 40, \'sssss\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 40, \'sssss\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (:id_postgrado:, :id_valoracion:, :detalle_valoracion_postgrado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Controllers\Validacion.php(511): CodeIgniter\Model->insert([...], false)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:50:40 --> [Caused by] mysqli_sql_exception: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 40, \'sssss\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 40, \'sssss\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 40, \'sssss\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (:id_postgrado:, :id_valoracion:, :detalle_valoracion_postgrado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Controllers\Validacion.php(511): CodeIgniter\Model->insert([...], false)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:51:23 --> CodeIgniter\HTTP\Exceptions\HTTPException: The route for "http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/')
+ 2 SYSTEMPATH\Common.php(864): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Validacion.php(518): redirect('http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 17:52:36 --> mysqli_sql_exception: Duplicate entry '3' for key 'PRIMARY' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(511): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+#9 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#10 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-20 17:52:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (:id_postgrado:, :id_valoracion:, :detalle_valoracion_postgrado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Controllers\Validacion.php(511): CodeIgniter\Model->insert([...], false)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:52:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 42, \'espe1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 42, \'espe1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (:id_postgrado:, :id_valoracion:, :detalle_valoracion_postgrado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Controllers\Validacion.php(511): CodeIgniter\Model->insert([...], false)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:52:36 --> [Caused by] mysqli_sql_exception: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 42, \'espe1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 42, \'espe1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 42, \'espe1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (:id_postgrado:, :id_valoracion:, :detalle_valoracion_postgrado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Controllers\Validacion.php(511): CodeIgniter\Model->insert([...], false)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:53:32 --> CodeIgniter\HTTP\Exceptions\HTTPException: The route for "http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/cargarValoracion" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/cargarValoracion')
+ 2 SYSTEMPATH\Common.php(864): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Validacion.php(518): redirect('http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/cargarValoracion')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 17:53:59 --> mysqli_sql_exception: Duplicate entry '3' for key 'PRIMARY' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(511): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+#9 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#10 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-20 17:53:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (:id_postgrado:, :id_valoracion:, :detalle_valoracion_postgrado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Controllers\Validacion.php(511): CodeIgniter\Model->insert([...], false)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:53:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 44, \'aa\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 44, \'aa\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (:id_postgrado:, :id_valoracion:, :detalle_valoracion_postgrado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Controllers\Validacion.php(511): CodeIgniter\Model->insert([...], false)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 17:53:59 --> [Caused by] mysqli_sql_exception: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 44, \'aa\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 44, \'aa\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (\'3\', 44, \'aa\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`) VALUES (:id_postgrado:, :id_valoracion:, :detalle_valoracion_postgrado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Controllers\Validacion.php(511): CodeIgniter\Model->insert([...], false)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 18:07:05 --> ParseError: syntax error, unexpected single-quoted string "fecha", expecting "]"
+in APPPATH\Controllers\Validacion.php on line 474.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 18:07:33 --> ParseError: syntax error, unexpected token ";", expecting "]"
+in APPPATH\Controllers\Validacion.php on line 474.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 18:12:09 --> ParseError: syntax error, unexpected single-quoted string "id_titulo_postgrado", expecting "]"
+in APPPATH\Controllers\Validacion.php on line 473.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 18:12:22 --> ParseError: syntax error, unexpected single-quoted string "id_titulo_postgrado", expecting "]"
+in APPPATH\Controllers\Validacion.php on line 473.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 18:12:37 --> ParseError: syntax error, unexpected single-quoted string "id_titulo_postgrado", expecting "]"
+in APPPATH\Controllers\Validacion.php on line 510.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 18:12:39 --> ParseError: syntax error, unexpected single-quoted string "id_titulo_postgrado", expecting "]"
+in APPPATH\Controllers\Validacion.php on line 510.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 18:12:40 --> ParseError: syntax error, unexpected single-quoted string "id_titulo_postgrado", expecting "]"
+in APPPATH\Controllers\Validacion.php on line 510.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 18:12:42 --> ParseError: syntax error, unexpected single-quoted string "id_titulo_postgrado", expecting "]"
+in APPPATH\Controllers\Validacion.php on line 510.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,49 @@
+CRITICAL - 2024-05-06 00:19:46 --> ErrorException: Undefined array key "dni"
+in APPPATH\Controllers\PersonController.php on line 105.
+ 1 APPPATH\Controllers\PersonController.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dni"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-06 00:20:01 --> ErrorException: Undefined variable $datoRelacionado
+in APPPATH\Controllers\PersonController.php on line 108.
+ 1 APPPATH\Controllers\PersonController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datoRelacionado', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-06 00:20:18 --> ErrorException: Undefined variable $vpModel
+in APPPATH\Controllers\PersonController.php on line 113.
+ 1 APPPATH\Controllers\PersonController.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vpModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 113)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-06 01:10:01 --> ErrorException: Undefined array key "diplomatura"
+in APPPATH\Controllers\PersonController.php on line 133.
+ 1 APPPATH\Controllers\PersonController.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "diplomatura"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 133)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-06 01:12:33 --> ErrorException: Undefined variable $di
+in APPPATH\Controllers\PersonController.php on line 155.
+ 1 APPPATH\Controllers\PersonController.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $di', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 155)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-06 01:13:00 --> ErrorException: Undefined property: App\Controllers\PersonController::$valoracionModel
+in APPPATH\Controllers\PersonController.php on line 184.
+ 1 APPPATH\Controllers\PersonController.php(184): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PersonController::$valoracionModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 184)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-06 01:14:20 --> ErrorException: Undefined property: App\Controllers\PersonController::$valoracionModel
+in APPPATH\Controllers\PersonController.php on line 190.
+ 1 APPPATH\Controllers\PersonController.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PersonController::$valoracionModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 190)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

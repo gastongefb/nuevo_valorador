@@ -1,0 +1,305 @@
+CRITICAL - 2024-03-19 11:25:45 --> Error: Call to undefined function from_input()
+in APPPATH\Views\nuevo.php on line 15.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('nuevo', [], true)
+ 4 APPPATH\Controllers\Validacion.php(185): view('nuevo')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->nuevo()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 12:28:07 --> ParseError: syntax error, unexpected token "}"
+in APPPATH\Controllers\Validacion.php on line 192.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 12:28:09 --> ParseError: syntax error, unexpected token "}"
+in APPPATH\Controllers\Validacion.php on line 192.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 12:28:15 --> ParseError: syntax error, unexpected token "}"
+in APPPATH\Controllers\Validacion.php on line 192.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:38:48 --> CodeIgniter\HTTP\Exceptions\HTTPException: The route for "http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/insertar_materia1" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/insertar_materia1')
+ 2 SYSTEMPATH\Common.php(864): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Validacion.php(163): redirect('http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/insertar_materia1')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->insertar_materia2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:39:15 --> CodeIgniter\HTTP\Exceptions\HTTPException: The route for "http://localhost/framework_ci4_ministerio/public/insertar_materia1" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost/framework_ci4_ministerio/public/insertar_materia1')
+ 2 SYSTEMPATH\Common.php(864): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Validacion.php(163): redirect('http://localhost/framework_ci4_ministerio/public/insertar_materia1')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->insertar_materia2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:39:45 --> CodeIgniter\HTTP\Exceptions\HTTPException: The route for "http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/')
+ 2 SYSTEMPATH\Common.php(864): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Validacion.php(163): redirect('http://localhost/framework_ci4_ministerio/public/http:/localhost/framework_ci4_ministerio/public/')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->insertar_materia2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:47:13 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 42.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:48:38 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:48:44 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:48:45 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:48:45 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:48:46 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:49:33 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:49:34 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:49:34 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:49:35 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:50:20 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:50:28 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:50:29 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:51:41 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:51:42 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:51:42 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:51:42 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:51:43 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:51:43 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:51:43 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:51:46 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:52:34 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 42.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:54:04 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 39.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:54:06 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 39.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:54:14 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 39.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 17:54:14 --> ParseError: syntax error, unexpected token ">", expecting end of file
+in APPPATH\Views\mostrarMaterias.php on line 39.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarMaterias', [], true)
+ 3 APPPATH\Controllers\Validacion.php(210): view('mostrarMaterias', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_materias()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 18:16:32 --> ErrorException: Undefined array key "codigo"
+in APPPATH\Controllers\Validacion.php on line 128.
+ 1 APPPATH\Controllers\Validacion.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_valoraciones()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

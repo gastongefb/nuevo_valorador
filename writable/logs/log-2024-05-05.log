@@ -1,0 +1,82 @@
+CRITICAL - 2024-05-05 00:35:15 --> ErrorException: Undefined array key "opciones"
+in APPPATH\Controllers\PersonController.php on line 87.
+ 1 APPPATH\Controllers\PersonController.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "opciones"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 87)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-05 00:37:18 --> ErrorException: Undefined array key "opciones"
+in APPPATH\Controllers\PersonController.php on line 87.
+ 1 APPPATH\Controllers\PersonController.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "opciones"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 87)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-05 00:38:05 --> ErrorException: Undefined array key "opciones"
+in APPPATH\Controllers\PersonController.php on line 87.
+ 1 APPPATH\Controllers\PersonController.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "opciones"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 87)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-05 00:38:22 --> ErrorException: Undefined array key "opciones"
+in APPPATH\Controllers\PersonController.php on line 87.
+ 1 APPPATH\Controllers\PersonController.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "opciones"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 87)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-05 23:11:48 --> ErrorException: Undefined array key "opciones"
+in APPPATH\Controllers\PersonController.php on line 87.
+ 1 APPPATH\Controllers\PersonController.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "opciones"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 87)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-05 23:13:30 --> ErrorException: Undefined array key "opciones"
+in APPPATH\Controllers\PersonController.php on line 87.
+ 1 APPPATH\Controllers\PersonController.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "opciones"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 87)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-05 23:28:00 --> ErrorException: Undefined variable $totalTime
+in SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalTime', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php', 46)
+ 2 SYSTEMPATH\Debug\Toolbar.php(512): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 3 SYSTEMPATH\Debug\Toolbar.php(475): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 4 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH\Events\Events.php(154): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Events\Events::trigger('pre_system')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-05 23:46:08 --> ErrorException: Attempt to read property "insert_id" on bool
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 588.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(588): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "insert_id" on bool', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\system\\Database\\MySQLi\\Connection.php', 588)
+ 2 SYSTEMPATH\Model.php(868): CodeIgniter\Database\MySQLi\Connection->insertID()
+ 3 APPPATH\Models\ValidacionModel.php(43): CodeIgniter\Model->__call('insertID', [])
+ 4 APPPATH\Controllers\PersonController.php(81): App\Models\ValidacionModel->getLastInsertedId()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-05 23:48:01 --> ErrorException: Attempt to read property "insert_id" on bool
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 588.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(588): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "insert_id" on bool', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\system\\Database\\MySQLi\\Connection.php', 588)
+ 2 SYSTEMPATH\Model.php(868): CodeIgniter\Database\MySQLi\Connection->insertID()
+ 3 APPPATH\Models\ValidacionModel.php(43): CodeIgniter\Model->__call('insertID', [])
+ 4 APPPATH\Controllers\PersonController.php(81): App\Models\ValidacionModel->getLastInsertedId()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-05 23:49:39 --> ErrorException: Attempt to read property "insert_id" on bool
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 588.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(588): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "insert_id" on bool', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\system\\Database\\MySQLi\\Connection.php', 588)
+ 2 SYSTEMPATH\Model.php(868): CodeIgniter\Database\MySQLi\Connection->insertID()
+ 3 APPPATH\Models\ValidacionModel.php(43): CodeIgniter\Model->__call('insertID', [])
+ 4 APPPATH\Controllers\PersonController.php(86): App\Models\ValidacionModel->getLastInsertedId()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

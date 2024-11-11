@@ -1,0 +1,487 @@
+DEBUG - 2024-06-23 12:36:28 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+CRITICAL - 2024-06-23 12:50:54 --> ErrorException: Undefined variable $datas2
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datas2', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(145): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:51:12 --> ErrorException: Undefined variable $data2
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data2', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(145): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:52:50 --> ErrorException: Undefined variable $data2
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data2', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(146): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:53:42 --> ErrorException: Undefined variable $data2
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data2', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(146): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:53:44 --> ErrorException: Undefined variable $data2
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data2', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(146): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:53:54 --> ErrorException: Undefined variable $data2
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data2', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(146): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:55:56 --> ErrorException: Undefined variable $data2
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data2', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(147): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:56:08 --> ErrorException: Undefined variable $data2
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data2', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(147): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:56:20 --> ErrorException: Undefined variable $data
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(147): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:59:07 --> ErrorException: Undefined variable $data22
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data22', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(148): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:59:09 --> ErrorException: Undefined variable $data22
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data22', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(148): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 12:59:09 --> ErrorException: Undefined variable $data22
+in APPPATH\Views\materias\edit.php on line 21.
+ 1 APPPATH\Views\materias\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data22', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(148): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-23 13:06:48 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 2
+)
+
+DEBUG - 2024-06-23 13:07:11 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+DEBUG - 2024-06-23 13:36:21 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 2
+)
+
+CRITICAL - 2024-06-23 13:36:21 --> ErrorException: Undefined array key "nombre_carrera"
+in APPPATH\Views\materias\updated.php on line 11.
+ 1 APPPATH\Views\materias\updated.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_carrera"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/updated', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(166): view('materias/updated', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-23 13:41:38 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 2
+)
+
+CRITICAL - 2024-06-23 13:41:38 --> ErrorException: Undefined array key "nombre_carrera"
+in APPPATH\Views\materias\updated.php on line 11.
+ 1 APPPATH\Views\materias\updated.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_carrera"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/updated', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(172): view('materias/updated', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-23 13:41:57 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 2
+)
+
+DEBUG - 2024-06-23 13:43:05 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+DEBUG - 2024-06-23 13:43:50 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+CRITICAL - 2024-06-23 13:43:50 --> ErrorException: Undefined array key "nombre_carrera"
+in APPPATH\Views\materias\updated.php on line 12.
+ 1 APPPATH\Views\materias\updated.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_carrera"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/updated', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(172): view('materias/updated', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-23 13:44:20 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 2
+)
+
+CRITICAL - 2024-06-23 13:44:20 --> ErrorException: Undefined array key "nombre_carrera"
+in APPPATH\Views\materias\updated.php on line 12.
+ 1 APPPATH\Views\materias\updated.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_carrera"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/updated', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(172): view('materias/updated', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-23 13:45:08 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+CRITICAL - 2024-06-23 13:45:08 --> ErrorException: Undefined array key "id_materia"
+in APPPATH\Views\materias\updated.php on line 8.
+ 1 APPPATH\Views\materias\updated.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_materia"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php', 8)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/updated', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(172): view('materias/updated', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-23 13:50:36 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+CRITICAL - 2024-06-23 13:50:36 --> ErrorException: Undefined array key "nombre_carrera"
+in APPPATH\Controllers\MateriasController.php on line 174.
+ 1 APPPATH\Controllers\MateriasController.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_carrera"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\MateriasController.php', 174)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-23 13:51:25 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 2
+)
+
+DEBUG - 2024-06-23 13:52:14 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+CRITICAL - 2024-06-23 13:52:14 --> ErrorException: Undefined array key "nombre_carrera"
+in APPPATH\Controllers\MateriasController.php on line 175.
+ 1 APPPATH\Controllers\MateriasController.php(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_carrera"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\MateriasController.php', 175)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-23 13:54:53 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 2
+)
+
+CRITICAL - 2024-06-23 13:54:53 --> ErrorException: Undefined variable $id
+in APPPATH\Models\CarrerasModel.php on line 28.
+ 1 APPPATH\Models\CarrerasModel.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\CarrerasModel.php', 28)
+ 2 APPPATH\Controllers\MateriasController.php(170): App\Models\CarrerasModel->traerUnaCarrera('2')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-23 13:55:13 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 2
+)
+
+DEBUG - 2024-06-23 13:55:13 --> Datos de la carrera: Array
+(
+    [id_carrera] => 2
+    [nombre_carrera] => Energías Rebovables
+)
+
+DEBUG - 2024-06-23 13:55:25 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+DEBUG - 2024-06-23 13:55:25 --> Datos de la carrera: Array
+(
+    [id_carrera] => 1
+    [nombre_carrera] => Tecnicatura Superior en Desarrollo de Software
+)
+
+DEBUG - 2024-06-23 13:56:19 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+DEBUG - 2024-06-23 13:56:19 --> Datos de la carrera: Array
+(
+    [id_carrera] => 1
+    [nombre_carrera] => Tecnicatura Superior en Desarrollo de Software
+)
+
+DEBUG - 2024-06-23 13:59:09 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 2
+)
+
+DEBUG - 2024-06-23 13:59:09 --> Datos de la carrera: Array
+(
+    [id_carrera] => 2
+    [nombre_carrera] => Energías Rebovables
+)
+
+INFO - 2024-06-23 14:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-23 14:09:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Home.php(11): view('login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-23 14:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 14:10:15 --> mysqli_sql_exception: Table 'valorador.usuarios' doesn't exist in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\app\Models\Usuarios.php(8): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\Home.php(23): App\Models\Usuarios->obtenerUsuario(Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\Home->login()
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-23 14:10:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.usuarios' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `nombre_usuario` = :nombre_usuario:', [...], false)
+ 2 APPPATH\Models\Usuarios.php(8): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(23): App\Models\Usuarios->obtenerUsuario([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 14:10:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.usuarios' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+WHERE `nombre_usuario` = \'sergio\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+WHERE `nombre_usuario` = \'sergio\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `nombre_usuario` = :nombre_usuario:', [...], false)
+ 4 APPPATH\Models\Usuarios.php(8): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(23): App\Models\Usuarios->obtenerUsuario([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 14:10:15 --> [Caused by] mysqli_sql_exception: Table 'valorador.usuarios' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `usuarios`
+WHERE `nombre_usuario` = \'sergio\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+WHERE `nombre_usuario` = \'sergio\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+WHERE `nombre_usuario` = \'sergio\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `nombre_usuario` = :nombre_usuario:', [...], false)
+ 5 APPPATH\Models\Usuarios.php(8): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(23): App\Models\Usuarios->obtenerUsuario([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-23 14:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-06-23 14:11:57 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+DEBUG - 2024-06-23 14:11:57 --> Datos de la carrera: Array
+(
+    [id_carrera] => 1
+    [nombre_carrera] => Tecnicatura Superior en Desarrollo de Software
+)
+
+INFO - 2024-06-23 14:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 14:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

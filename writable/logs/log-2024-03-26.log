@@ -1,0 +1,229 @@
+ERROR - 2024-03-26 22:08:48 --> mysqli_sql_exception: Table 'valorador.puntajes_titulos' doesn't exist in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion()
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-26 22:08:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.puntajes_titulos' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `puntajes_titulos`', [], false)
+ 2 APPPATH\Controllers\Validacion.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:08:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.puntajes_titulos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `puntajes_titulos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `puntajes_titulos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `puntajes_titulos`', [], false)
+ 4 APPPATH\Controllers\Validacion.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:08:48 --> [Caused by] mysqli_sql_exception: Table 'valorador.puntajes_titulos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `puntajes_titulos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `puntajes_titulos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `puntajes_titulos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `puntajes_titulos`', [], false)
+ 5 APPPATH\Controllers\Validacion.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:12:02 --> ErrorException: Undefined array key "id_puntaje_titulo"
+in APPPATH\Views\cargarValoracion.php on line 25.
+ 1 APPPATH\Views\cargarValoracion.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_puntaje_titulo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\cargarValoracion.php', 25)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\cargarValoracion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('cargarValoracion', [], true)
+ 5 APPPATH\Controllers\Validacion.php(282): view('cargarValoracion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:28:36 --> ErrorException: Undefined array key "cantidad"
+in APPPATH\Controllers\Validacion.php on line 291.
+ 1 APPPATH\Controllers\Validacion.php(291): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidad"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 291)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:42:43 --> ErrorException: Undefined variable $n
+in APPPATH\Controllers\Validacion.php on line 322.
+ 1 APPPATH\Controllers\Validacion.php(322): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $n', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 322)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:43:06 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], false)
+ 3 APPPATH\Controllers\Validacion.php(327): CodeIgniter\Model->insert([...], false)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:44:13 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], false)
+ 3 APPPATH\Controllers\Validacion.php(326): CodeIgniter\Model->insert([...], false)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:45:20 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], false)
+ 3 APPPATH\Controllers\Validacion.php(326): CodeIgniter\Model->insert([...], false)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:46:18 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], false)
+ 3 APPPATH\Controllers\Validacion.php(326): CodeIgniter\Model->insert([...], false)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:49:14 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], false)
+ 3 APPPATH\Controllers\Validacion.php(326): CodeIgniter\Model->insert([...], false)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:52:16 --> ErrorException: Undefined property: App\Controllers\Validacion::$crud
+in APPPATH\Controllers\Validacion.php on line 330.
+ 1 APPPATH\Controllers\Validacion.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Validacion::$crud', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 330)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:52:53 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], false)
+ 3 APPPATH\Controllers\Validacion.php(330): CodeIgniter\Model->insert([...], false)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:59:02 --> Error: Class "App\Models\ValoracionModel" not found
+in APPPATH\Controllers\Validacion.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Validacion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:59:07 --> Error: Class "App\Models\ValoracionModel" not found
+in APPPATH\Controllers\Validacion.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Validacion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:59:36 --> Error: Class "App\Controllers\ValidacionnModel" not found
+in APPPATH\Controllers\Validacion.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Validacion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 22:59:40 --> Error: Class "App\Controllers\ValidacionnModel" not found
+in APPPATH\Controllers\Validacion.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Validacion->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 23:09:02 --> ErrorException: Undefined variable $ii
+in APPPATH\Controllers\Validacion.php on line 334.
+ 1 APPPATH\Controllers\Validacion.php(334): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ii', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 334)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 23:10:13 --> ErrorException: Undefined variable $ii
+in APPPATH\Controllers\Validacion.php on line 334.
+ 1 APPPATH\Controllers\Validacion.php(334): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ii', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 334)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 23:11:13 --> ErrorException: Undefined variable $ii
+in APPPATH\Controllers\Validacion.php on line 334.
+ 1 APPPATH\Controllers\Validacion.php(334): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ii', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 334)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 23:11:37 --> ErrorException: Undefined variable $ii
+in APPPATH\Controllers\Validacion.php on line 334.
+ 1 APPPATH\Controllers\Validacion.php(334): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ii', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 334)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 23:20:18 --> ErrorException: Undefined variable $valoracionpostgradoModel
+in APPPATH\Controllers\Validacion.php on line 21.
+ 1 APPPATH\Controllers\Validacion.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $valoracionpostgradoModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Validacion->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 23:21:42 --> ErrorException: Undefined variable $vpModel
+in APPPATH\Controllers\Validacion.php on line 21.
+ 1 APPPATH\Controllers\Validacion.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vpModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Validacion->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 23:37:06 --> ErrorException: Undefined variable $ii
+in APPPATH\Controllers\Validacion.php on line 332.
+ 1 APPPATH\Controllers\Validacion.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ii', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 332)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 23:46:05 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Validacion.php on line 351.
+ 1 APPPATH\Controllers\Validacion.php(351): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 351)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 23:46:37 --> ErrorException: Undefined array key "id_postgrado"
+in APPPATH\Controllers\Validacion.php on line 358.
+ 1 APPPATH\Controllers\Validacion.php(358): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_postgrado"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 358)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-26 23:47:35 --> ErrorException: Undefined array key "id_postgrado"
+in APPPATH\Controllers\Validacion.php on line 358.
+ 1 APPPATH\Controllers\Validacion.php(358): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_postgrado"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 358)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,206 @@
+INFO - 2024-10-22 20:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-22 20:45:13 --> ParseError: Unmatched '}'
+in APPPATH\Controllers\NuevoController.php on line 628.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\NuevoController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\NuevoController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\NuevoController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-22 20:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:47:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 20:58:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 21:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 21:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 21:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 21:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 21:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 21:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 21:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 21:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 21:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 21:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-22 21:40:12 --> Error: Class "App\Controllers\TitulosModel" not found
+in APPPATH\Controllers\NuevoController.php on line 487.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarT()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-22 21:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-22 21:40:22 --> Error: Class "App\Controllers\TitulosModel" not found
+in APPPATH\Controllers\NuevoController.php on line 487.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarT()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-22 22:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 22:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 22:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 22:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 22:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 22:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-22 22:56:36 --> ErrorException: Undefined property: App\Controllers\NuevoController::$valoracionModel
+in APPPATH\Controllers\NuevoController.php on line 587.
+ 1 APPPATH\Controllers\NuevoController.php(587): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$valoracionModel', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 587)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 22:57:52 --> ParseError: syntax error, unexpected token "new"
+in APPPATH\Controllers\NuevoController.php on line 578.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\NuevoController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\NuevoController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\NuevoController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 22:59:07 --> ErrorException: Undefined property: App\Controllers\NuevoController::$valoracionModel
+in APPPATH\Controllers\NuevoController.php on line 589.
+ 1 APPPATH\Controllers\NuevoController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$valoracionModel', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:05:15 --> ErrorException: Undefined property: App\Controllers\NuevoController::$valoracionModel
+in APPPATH\Controllers\NuevoController.php on line 590.
+ 1 APPPATH\Controllers\NuevoController.php(590): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$valoracionModel', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 590)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:05:48 --> ErrorException: Undefined property: App\Controllers\NuevoController::$val
+in APPPATH\Controllers\NuevoController.php on line 590.
+ 1 APPPATH\Controllers\NuevoController.php(590): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$val', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 590)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:09:23 --> ErrorException: Undefined property: App\Controllers\NuevoController::$val
+in APPPATH\Controllers\NuevoController.php on line 595.
+ 1 APPPATH\Controllers\NuevoController.php(595): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$val', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 595)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:09:24 --> ErrorException: Undefined property: App\Controllers\NuevoController::$val
+in APPPATH\Controllers\NuevoController.php on line 595.
+ 1 APPPATH\Controllers\NuevoController.php(595): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$val', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 595)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:09:24 --> ErrorException: Undefined property: App\Controllers\NuevoController::$val
+in APPPATH\Controllers\NuevoController.php on line 595.
+ 1 APPPATH\Controllers\NuevoController.php(595): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$val', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 595)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:09:24 --> ErrorException: Undefined property: App\Controllers\NuevoController::$val
+in APPPATH\Controllers\NuevoController.php on line 595.
+ 1 APPPATH\Controllers\NuevoController.php(595): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$val', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 595)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:09:52 --> ErrorException: Undefined property: App\Controllers\NuevoController::$val
+in APPPATH\Controllers\NuevoController.php on line 595.
+ 1 APPPATH\Controllers\NuevoController.php(595): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$val', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 595)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:10:22 --> ErrorException: Undefined variable $val
+in APPPATH\Controllers\NuevoController.php on line 595.
+ 1 APPPATH\Controllers\NuevoController.php(595): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $val', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 595)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:12:20 --> ErrorException: Undefined property: App\Controllers\NuevoController::$valoracionModel
+in APPPATH\Controllers\NuevoController.php on line 595.
+ 1 APPPATH\Controllers\NuevoController.php(595): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$valoracionModel', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 595)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:13:55 --> Error: Class "App\Models\ValoracionModel" not found
+in APPPATH\Controllers\NuevoController.php on line 594.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-22 23:13:57 --> Error: Class "App\Models\ValoracionModel" not found
+in APPPATH\Controllers\NuevoController.php on line 594.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-22 23:16:05 --> mysqli_sql_exception: Column 'id_materia_valoracion' cannot be null in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(595): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->guardarDatosFinales()
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#10 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+INFO - 2024-10-22 23:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 23:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 23:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-22 23:16:17 --> Error: Call to undefined function App\Controllers\ValidacionModel()
+in APPPATH\Controllers\NuevoController.php on line 490.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarT()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-22 23:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 23:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-22 23:16:59 --> Error: Call to undefined function App\Controllers\ValidacionModel()
+in APPPATH\Controllers\NuevoController.php on line 490.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarT()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-22 23:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-22 23:17:48 --> Error: Call to undefined function App\Controllers\ValidacionModel()
+in APPPATH\Controllers\NuevoController.php on line 490.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->guardarT()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-22 23:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 23:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-22 23:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

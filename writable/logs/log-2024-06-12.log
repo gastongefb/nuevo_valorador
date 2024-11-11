@@ -1,0 +1,39 @@
+CRITICAL - 2024-06-12 16:30:20 --> BadMethodCallException: Call to undefined method App\Models\ValidacionModel::getValidacionesPorMateria
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Validacion.php(317): CodeIgniter\Model->__call('getValidacionesPorMateria', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->Mostrar_Valoraciones_Por_Materia3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 16:34:03 --> BadMethodCallException: Call to undefined method App\Models\ValidacionModel::getValidacionesPorMateria
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Validacion.php(317): CodeIgniter\Model->__call('getValidacionesPorMateria', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->Mostrar_Valoraciones_Por_Materia3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 17:21:58 --> ErrorException: Undefined variable $id_valoracion
+in APPPATH\Controllers\PersonController.php on line 545.
+ 1 APPPATH\Controllers\PersonController.php(545): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_valoracion', 'C:\\xampp\\htdocs\\valorador\\app\\Controllers\\PersonController.php', 545)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->buscar_valoracion()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 17:58:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "<mostrarPlanes/mostrarPlanes4.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('<mostrarPlanes/mostrarPlanes4.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('<mostrarPlanes/mostrarPlanes4', [], true)
+ 3 APPPATH\Controllers\Validacion.php(161): view('<mostrarPlanes/mostrarPlanes4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrarPlanes3()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-12 18:16:16 --> ErrorException: Cannot redeclare App\Controllers\PersonController::buscar_valoracion_por_docente()
+in APPPATH\Controllers\PersonController.php on line 341.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-06-12 18:25:56 --> Error: Class "App\Controllers\MateriasModel" not found
+in APPPATH\Controllers\PersonController.php on line 493.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->Mostrar_Valoraciones_Por_Materia3()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

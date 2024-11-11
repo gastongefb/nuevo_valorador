@@ -1,0 +1,118 @@
+ERROR - 2024-03-20 21:41:10 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`valorador`.`materias`, CONSTRAINT `materias_ibfk_1` FOREIGN KEY (`id_carrera_materia`) REFERENCES `carreras` (`id_carrera`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(133): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->insertar()
+#9 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#10 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-20 21:41:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`valorador`.`materias`, CONSTRAINT `materias_ibfk_1` FOREIGN KEY (`id_carrera_materia`) REFERENCES `carreras` (`id_carrera`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `materias` (`nombre_materia`, `cuatrimestre`) VALUES (:nombre_materia:, :cuatrimestre:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Controllers\Validacion.php(133): CodeIgniter\Model->insert([...], false)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-20 21:41:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`valorador`.`materias`, CONSTRAINT `materias_ibfk_1` FOREIGN KEY (`id_carrera_materia`) REFERENCES `carreras` (`id_carrera`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `materias` (`nombre_materia`, `cuatrimestre`) VALUES (\'matematica III\', \'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `materias` (`nombre_materia`, `cuatrimestre`) VALUES (\'matematica III\', \'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `materias` (`nombre_materia`, `cuatrimestre`) VALUES (:nombre_materia:, :cuatrimestre:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Controllers\Validacion.php(133): CodeIgniter\Model->insert([...], false)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->insertar()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-20 21:41:10 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`valorador`.`materias`, CONSTRAINT `materias_ibfk_1` FOREIGN KEY (`id_carrera_materia`) REFERENCES `carreras` (`id_carrera`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `materias` (`nombre_materia`, `cuatrimestre`) VALUES (\'matematica III\', \'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `materias` (`nombre_materia`, `cuatrimestre`) VALUES (\'matematica III\', \'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `materias` (`nombre_materia`, `cuatrimestre`) VALUES (\'matematica III\', \'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `materias` (`nombre_materia`, `cuatrimestre`) VALUES (:nombre_materia:, :cuatrimestre:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 8 APPPATH\Controllers\Validacion.php(133): CodeIgniter\Model->insert([...], false)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->insertar()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-20 21:41:19 --> mysqli_sql_exception: Unknown column 'condicion' in 'field list' in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_vali...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_vali...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_vali...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_vali...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+#6 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#7 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-20 21:41:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'condicion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 2 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-20 21:41:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 4 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-20 21:41:19 --> [Caused by] mysqli_sql_exception: Unknown column 'condicion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = \'27269774\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id_validacion`, `dni`, `titulo`, `j1`, `j2`, `j3`, `condicion`, `nombre_materia`
+FROM `validación`
+JOIN `materias` ON `id_materia_validacion` = `materias`.`id_materia`
+WHERE `dni` = :dni:', [...], false)
+ 5 APPPATH\Controllers\Validacion.php(111): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

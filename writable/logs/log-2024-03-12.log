@@ -1,0 +1,534 @@
+CRITICAL - 2024-03-12 15:53:00 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-12 15:58:39 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-12 15:59:50 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-12 16:02:30 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-12 16:09:57 --> ParseError: syntax error, unexpected token "="
+in APPPATH\Controllers\Validacion.php on line 11.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 16:58:02 --> ParseError: syntax error, unexpected token "="
+in APPPATH\Controllers\Validacion.php on line 11.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 16:58:27 --> ErrorException: Undefined variable $crud
+in APPPATH\Controllers\Validacion.php on line 12.
+ 1 APPPATH\Controllers\Validacion.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $crud', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Controllers\\Validacion.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-12 16:58:40 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\framework_ci4\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\framework_ci4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\framework_ci4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\framework_ci4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\framework_ci4\app\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\framework_ci4\app\Controllers\Validacion.php(12): App\Models\ValidacionModel->getValidacion()
+#8 C:\xampp\htdocs\framework_ci4\system\CodeIgniter.php(941): App\Controllers\Validacion->index()
+#9 C:\xampp\htdocs\framework_ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#10 C:\xampp\htdocs\framework_ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\framework_ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\framework_ci4\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\framework_ci4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\framework_ci4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\framework_ci4\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\framework_ci4\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\framework_ci4\app\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\framework_ci4\app\Controllers\Validacion.php(12): App\Models\ValidacionModel->getValidacion()
+#7 C:\xampp\htdocs\framework_ci4\system\CodeIgniter.php(941): App\Controllers\Validacion->index()
+#8 C:\xampp\htdocs\framework_ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#9 C:\xampp\htdocs\framework_ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\framework_ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-12 16:58:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `validaciones`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Validacion.php(12): App\Models\ValidacionModel->getValidacion()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-12 16:59:32 --> mysqli_sql_exception: Table 'valorador.validaciones' doesn't exist in C:\xampp\htdocs\framework_ci4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\framework_ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\framework_ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\framework_ci4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\framework_ci4\app\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\framework_ci4\app\Controllers\Validacion.php(12): App\Models\ValidacionModel->getValidacion()
+#8 C:\xampp\htdocs\framework_ci4\system\CodeIgniter.php(941): App\Controllers\Validacion->index()
+#9 C:\xampp\htdocs\framework_ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#10 C:\xampp\htdocs\framework_ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\framework_ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-12 16:59:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validaciones' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `validaciones`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Validacion.php(12): App\Models\ValidacionModel->getValidacion()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 16:59:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validaciones' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `validaciones`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `validaciones`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `validaciones`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Validacion.php(12): App\Models\ValidacionModel->getValidacion()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 16:59:32 --> [Caused by] mysqli_sql_exception: Table 'valorador.validaciones' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `validaciones`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `validaciones`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `validaciones`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `validaciones`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Validacion.php(12): App\Models\ValidacionModel->getValidacion()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 16:59:57 --> ErrorException: Undefined variable $dato
+in APPPATH\Views\validacion.php on line 12.
+ 1 APPPATH\Views\validacion.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dato', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(14): view('validacion.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:00:29 --> ParseError: syntax error, unexpected variable "$dato"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(14): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:04:03 --> ParseError: syntax error, unexpected token "return"
+in APPPATH\Controllers\Validacion.php on line 19.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:04:36 --> ParseError: syntax error, unexpected token "echo"
+in APPPATH\Controllers\Validacion.php on line 19.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:05:08 --> ParseError: syntax error, unexpected variable "$dato"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:05:10 --> ParseError: syntax error, unexpected variable "$dato"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:05:10 --> ParseError: syntax error, unexpected variable "$dato"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:05:10 --> ParseError: syntax error, unexpected variable "$dato"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:05:11 --> ParseError: syntax error, unexpected variable "$dato"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:05:11 --> ParseError: syntax error, unexpected variable "$dato"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:05:11 --> ParseError: syntax error, unexpected variable "$dato"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:05:19 --> ParseError: syntax error, unexpected variable "$data"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:05:23 --> ParseError: syntax error, unexpected variable "$data"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:05:47 --> ParseError: syntax error, unexpected variable "$data"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:06:07 --> ParseError: syntax error, unexpected variable "$data"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:06:08 --> ParseError: syntax error, unexpected variable "$data"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:06:08 --> ParseError: syntax error, unexpected variable "$data"
+in APPPATH\Views\validacion.php on line 12.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:08:34 --> ParseError: syntax error, unexpected token "endforeach", expecting "," or ";"
+in APPPATH\Views\validacion.php on line 16.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:09:20 --> ParseError: syntax error, unexpected token "endforeach", expecting "," or ";"
+in APPPATH\Views\validacion.php on line 16.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:09:21 --> ParseError: syntax error, unexpected token "endforeach", expecting "," or ";"
+in APPPATH\Views\validacion.php on line 16.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:09:46 --> ErrorException: Undefined array key "nombre_materia"
+in APPPATH\Views\validacion.php on line 14.
+ 1 APPPATH\Views\validacion.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_materia"', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php', 14)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(19): view('validacion.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:10:28 --> TypeError: App\Controllers\Validacion::index(): Return value must be of type string, none returned
+in APPPATH\Controllers\Validacion.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:10:57 --> ParseError: syntax error, unexpected token "{"
+in APPPATH\Controllers\Validacion.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:11:16 --> TypeError: App\Controllers\Validacion::index(): Return value must be of type string, none returned
+in APPPATH\Controllers\Validacion.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:29:26 --> ErrorException: Undefined variable $db
+in APPPATH\Models\ValidacionModel.php on line 18.
+ 1 APPPATH\Models\ValidacionModel.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Models\\ValidacionModel.php', 18)
+ 2 APPPATH\Controllers\Validacion.php(27): App\Models\ValidacionModel->getUnaValidacion(27269774)
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:30:59 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResult()
+in APPPATH\Models\ValidacionModel.php on line 22.
+ 1 APPPATH\Controllers\Validacion.php(27): App\Models\ValidacionModel->getUnaValidacion(27269774)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:31:24 --> ErrorException: Undefined property: CodeIgniter\Database\MySQLi\Builder::$getResult
+in APPPATH\Models\ValidacionModel.php on line 22.
+ 1 APPPATH\Models\ValidacionModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Builder::$getResult', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Models\\ValidacionModel.php', 22)
+ 2 APPPATH\Controllers\Validacion.php(27): App\Models\ValidacionModel->getUnaValidacion(27269774)
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:34:04 --> ErrorException: Undefined variable $testos
+in APPPATH\Views\validacion.php on line 12.
+ 1 APPPATH\Views\validacion.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $testos', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(31): view('validacion.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:34:21 --> ErrorException: Undefined variable $testos
+in APPPATH\Views\validacion.php on line 12.
+ 1 APPPATH\Views\validacion.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $testos', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(31): view('validacion.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:34:22 --> ErrorException: Undefined variable $testos
+in APPPATH\Views\validacion.php on line 12.
+ 1 APPPATH\Views\validacion.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $testos', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(31): view('validacion.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:34:30 --> ErrorException: Undefined variable $data
+in APPPATH\Views\validacion.php on line 14.
+ 1 APPPATH\Views\validacion.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php', 14)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(31): view('validacion.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:35:07 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\validacion.php on line 14.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 4 APPPATH\Controllers\Validacion.php(33): view('validacion.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:36:26 --> Error: Object of class stdClass could not be converted to string
+in APPPATH\Views\validacion.php on line 14.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 4 APPPATH\Controllers\Validacion.php(33): view('validacion.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:45:33 --> ErrorException: Undefined variable $testos2
+in APPPATH\Views\validacion.php on line 23.
+ 1 APPPATH\Views\validacion.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $testos2', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [...], true)
+ 5 APPPATH\Controllers\Validacion.php(40): view('validacion.php', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:48:03 --> ErrorException: Attempt to read property "dni" on array
+in APPPATH\Views\validacion.php on line 25.
+ 1 APPPATH\Views\validacion.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "dni" on array', 'C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php', 25)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4\\app\\Views\\validacion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(40): view('validacion.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 17:48:39 --> Error: Undefined constant "dni"
+in APPPATH\Views\validacion.php on line 25.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 4 APPPATH\Controllers\Validacion.php(40): view('validacion.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 18:06:29 --> ParseError: syntax error, unexpected integer "27269774", expecting variable
+in APPPATH\Controllers\Validacion.php on line 23.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\framework_ci4\\app\\Controllers\\Validacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Validacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Validacion')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Validacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 18:06:45 --> Error: Class "App\Controllers\MateriaModel" not found
+in APPPATH\Controllers\Validacion.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 18:06:59 --> Error: Class "App\Controllers\MateriasModel" not found
+in APPPATH\Controllers\Validacion.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 18:07:21 --> BadMethodCallException: Call to undefined method App\Models\ValidacionModel::getUnaMateria
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Validacion.php(38): CodeIgniter\Model->__call('getUnaMateria', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 18:08:42 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\validacion.php on line 25.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 4 APPPATH\Controllers\Validacion.php(44): view('validacion.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 18:09:13 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\validacion.php on line 25.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 4 APPPATH\Controllers\Validacion.php(44): view('validacion.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->busca()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 18:33:13 --> ErrorException: Cannot redeclare App\Controllers\Validacion::busca()
+in APPPATH\Controllers\Validacion.php on line 48.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

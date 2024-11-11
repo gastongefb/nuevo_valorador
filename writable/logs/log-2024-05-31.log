@@ -1,0 +1,151 @@
+CRITICAL - 2024-05-31 21:27:33 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\docente\DocenteShow.php(43): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\docente\\DocenteShow.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Docente/DocenteShow', [], true)
+ 5 APPPATH\Controllers\DocenteController.php(39): view('Docente/DocenteShow', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 22:25:30 --> CodeIgniter\HTTP\Exceptions\HTTPException: The route for "Docente.DocenteIndex" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('Docente.DocenteIndex')
+ 2 APPPATH\Controllers\DocenteController.php(33): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-31 22:34:32 --> mysqli_sql_exception: Unknown column 'username' in 'where clause' in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('asdas', 'username', Array, NULL, 'usuario')
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'asdas', Array, Array)
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(1534): CodeIgniter\Validation\Validation->run(Array, NULL, NULL)
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(771): CodeIgniter\BaseModel->validate(Array)
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#10 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#11 C:\xampp\htdocs\valoradorG2\valorador\app\Models\DocenteModel.php(51): CodeIgniter\BaseModel->save(Array)
+#12 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\DocenteController.php(32): App\Models\DocenteModel->saveDocente(Array)
+#13 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\DocenteController->store()
+#14 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+#15 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#17 {main}
+CRITICAL - 2024-05-31 22:34:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'username' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `docente`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('asdas', 'username', [...], null, 'usuario')
+ 4 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'asdas', [...], [...])
+ 5 SYSTEMPATH\BaseModel.php(1534): CodeIgniter\Validation\Validation->run([...], null, null)
+ 6 SYSTEMPATH\BaseModel.php(771): CodeIgniter\BaseModel->validate([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Models\DocenteModel.php(51): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\DocenteController.php(32): App\Models\DocenteModel->saveDocente([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->store()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 22:34:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'username' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `docente`
+WHERE `username` = \'asdas\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `docente`
+WHERE `username` = \'asdas\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `docente`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('asdas', 'username', [...], null, 'usuario')
+ 6 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'asdas', [...], [...])
+ 7 SYSTEMPATH\BaseModel.php(1534): CodeIgniter\Validation\Validation->run([...], null, null)
+ 8 SYSTEMPATH\BaseModel.php(771): CodeIgniter\BaseModel->validate([...])
+ 9 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+10 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+11 APPPATH\Models\DocenteModel.php(51): CodeIgniter\BaseModel->save([...])
+12 APPPATH\Controllers\DocenteController.php(32): App\Models\DocenteModel->saveDocente([...])
+13 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->store()
+14 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+15 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 22:34:32 --> [Caused by] mysqli_sql_exception: Unknown column 'username' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1
+FROM `docente`
+WHERE `username` = \'asdas\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `docente`
+WHERE `username` = \'asdas\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `docente`
+WHERE `username` = \'asdas\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `docente`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('asdas', 'username', [...], null, 'usuario')
+ 7 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('usuario', 'usuario', 'asdas', [...], [...])
+ 8 SYSTEMPATH\BaseModel.php(1534): CodeIgniter\Validation\Validation->run([...], null, null)
+ 9 SYSTEMPATH\BaseModel.php(771): CodeIgniter\BaseModel->validate([...])
+10 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+11 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+12 APPPATH\Models\DocenteModel.php(51): CodeIgniter\BaseModel->save([...])
+13 APPPATH\Controllers\DocenteController.php(32): App\Models\DocenteModel->saveDocente([...])
+14 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->store()
+15 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+16 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 22:40:41 --> ParseError: syntax error, unexpected token "exit"
+in APPPATH\Controllers\DocenteController.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\DocenteController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DocenteController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DocenteController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\DocenteController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 22:44:18 --> ErrorException: Undefined array key "password"
+in APPPATH\Models\DocenteModel.php on line 61.
+ 1 APPPATH\Models\DocenteModel.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\DocenteModel.php', 61)
+ 2 APPPATH\Models\DocenteModel.php(48): App\Models\DocenteModel->hashPassword([...])
+ 3 APPPATH\Controllers\DocenteController.php(32): App\Models\DocenteModel->saveDocente([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 22:56:01 --> ParseError: syntax error, unexpected token "}", expecting ";"
+in APPPATH\Models\DocenteModel.php on line 56.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\DocenteModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\DocenteModel')
+ 3 APPPATH\Controllers\DocenteController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\DocenteModel')
+ 4 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\DocenteController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 22:56:24 --> ErrorException: Undefined variable $validationMessages
+in APPPATH\Models\DocenteModel.php on line 53.
+ 1 APPPATH\Models\DocenteModel.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validationMessages', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\DocenteModel.php', 53)
+ 2 APPPATH\Controllers\DocenteController.php(32): App\Models\DocenteModel->saveDocente([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DocenteController->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocenteController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

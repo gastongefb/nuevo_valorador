@@ -1,0 +1,163 @@
+ERROR - 2024-03-16 21:16:36 --> mysqli_sql_exception: Table 'valorador.validacion' doesn't exist in C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\framework_ci4_ministerio\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\framework_ci4_ministerio\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework_ci4_ministerio\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\framework_ci4_ministerio\app\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\framework_ci4_ministerio\app\Controllers\Validacion.php(24): App\Models\ValidacionModel->getValidacion()
+#8 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(941): App\Controllers\Validacion->index()
+#9 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+#10 C:\xampp\htdocs\framework_ci4_ministerio\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\framework_ci4_ministerio\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-16 21:16:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validacion' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `validacion`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Validacion.php(24): App\Models\ValidacionModel->getValidacion()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:16:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.validacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `validacion`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `validacion`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `validacion`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Validacion.php(24): App\Models\ValidacionModel->getValidacion()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:16:37 --> [Caused by] mysqli_sql_exception: Table 'valorador.validacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `validacion`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `validacion`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `validacion`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `validacion`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ValidacionModel.php(13): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Validacion.php(24): App\Models\ValidacionModel->getValidacion()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:17:15 --> ErrorException: Attempt to read property "dni" on array
+in APPPATH\Views\validacion.php on line 14.
+ 1 APPPATH\Views\validacion.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "dni" on array', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\validacion.php', 14)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\validacion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('validacion.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(30): view('validacion.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:32:03 --> ErrorException: Undefined variable $id
+in APPPATH\Controllers\Validacion.php on line 86.
+ 1 APPPATH\Controllers\Validacion.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:32:21 --> ErrorException: Undefined variable $validacion
+in APPPATH\Views\mostrarValidaciones.php on line 12.
+ 1 APPPATH\Views\mostrarValidaciones.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validacion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(93): view('mostrarValidaciones.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:32:43 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Views\mostrarValidaciones.php on line 12.
+ 1 APPPATH\Views\mostrarValidaciones.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(93): view('mostrarValidaciones.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:34:33 --> ParseError: syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\mostrarValidaciones.php on line 52.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(93): view('mostrarValidaciones.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:35:10 --> ParseError: syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\mostrarValidaciones.php on line 57.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones.php', [], true)
+ 3 APPPATH\Controllers\Validacion.php(93): view('mostrarValidaciones.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:35:30 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\mostrarValidaciones.php on line 17.
+ 1 APPPATH\Views\mostrarValidaciones.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 17)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(93): view('mostrarValidaciones.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:35:59 --> ErrorException: Undefined array key "titulo"
+in APPPATH\Views\mostrarValidaciones.php on line 17.
+ 1 APPPATH\Views\mostrarValidaciones.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "titulo"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 17)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(93): view('mostrarValidaciones.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:36:48 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\mostrarValidaciones.php on line 17.
+ 1 APPPATH\Views\mostrarValidaciones.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 17)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(93): view('mostrarValidaciones.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 21:37:20 --> ErrorException: Attempt to read property "titulo" on null
+in APPPATH\Views\mostrarValidaciones.php on line 18.
+ 1 APPPATH\Views\mostrarValidaciones.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "titulo" on null', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\mostrarValidaciones.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrarValidaciones.php', [], true)
+ 5 APPPATH\Controllers\Validacion.php(93): view('mostrarValidaciones.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->mostrar_validaciones('27269774')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

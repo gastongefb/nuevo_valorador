@@ -1,0 +1,166 @@
+CRITICAL - 2024-05-04 14:41:06 --> Error: Class "App\Controllers\PersonModel" not found
+in APPPATH\Controllers\PersonController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 14:42:07 --> Error: Class "App\Models\PersonModel" not found
+in APPPATH\Controllers\PersonController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 14:43:59 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\PersonController.php(25): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 22:22:32 --> ErrorException: Undefined array key "detalle_condicion"
+in APPPATH\Views\cargarValoracion.php on line 46.
+ 1 APPPATH\Views\cargarValoracion.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_condicion"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\cargarValoracion.php', 46)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Views\\cargarValoracion.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('cargarValoracion', [], true)
+ 5 APPPATH\Controllers\PersonController.php(62): view('cargarValoracion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 22:24:54 --> ErrorException: Undefined array key "diplomatura"
+in APPPATH\Controllers\PersonController.php on line 87.
+ 1 APPPATH\Controllers\PersonController.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "diplomatura"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 87)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 22:47:07 --> ErrorException: Undefined variable $valModel
+in APPPATH\Controllers\PersonController.php on line 61.
+ 1 APPPATH\Controllers\PersonController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $valModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 22:48:30 --> ErrorException: Undefined variable $valModel
+in APPPATH\Controllers\PersonController.php on line 61.
+ 1 APPPATH\Controllers\PersonController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $valModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 22:48:31 --> ErrorException: Undefined variable $valModel
+in APPPATH\Controllers\PersonController.php on line 61.
+ 1 APPPATH\Controllers\PersonController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $valModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 22:48:32 --> ErrorException: Undefined variable $valModel
+in APPPATH\Controllers\PersonController.php on line 61.
+ 1 APPPATH\Controllers\PersonController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $valModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 22:48:32 --> ErrorException: Undefined variable $valModel
+in APPPATH\Controllers\PersonController.php on line 61.
+ 1 APPPATH\Controllers\PersonController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $valModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 22:50:29 --> BadMethodCallException: Call to undefined method App\Models\ValidacionModel::id_valoracion
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Models\ValidacionModel.php(32): CodeIgniter\Model->__call('id_valoracion', [])
+ 2 APPPATH\Controllers\PersonController.php(62): App\Models\ValidacionModel->obtenerUltimoID()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 22:51:34 --> ErrorException: Undefined variable $valModel
+in APPPATH\Controllers\PersonController.php on line 62.
+ 1 APPPATH\Controllers\PersonController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $valModel', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 22:54:40 --> BadMethodCallException: Call to undefined method App\Models\ValidacionModel::id_valoracion
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Models\ValidacionModel.php(32): CodeIgniter\Model->__call('id_valoracion', [])
+ 2 APPPATH\Controllers\PersonController.php(63): App\Models\ValidacionModel->obtenerUltimoID()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 23:00:31 --> ErrorException: Undefined variable $modelo
+in APPPATH\Controllers\PersonController.php on line 70.
+ 1 APPPATH\Controllers\PersonController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelo', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->cargarValoracion()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 23:23:41 --> ErrorException: Undefined array key 1
+in APPPATH\Controllers\PersonController.php on line 84.
+ 1 APPPATH\Controllers\PersonController.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 23:25:19 --> ErrorException: Undefined array key 1
+in APPPATH\Controllers\PersonController.php on line 84.
+ 1 APPPATH\Controllers\PersonController.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 23:26:09 --> Error: Undefined constant "App\Controllers\nombre"
+in APPPATH\Controllers\PersonController.php on line 84.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 23:26:43 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\PersonController.php on line 85.
+ 1 APPPATH\Controllers\PersonController.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 23:27:03 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\PersonController.php on line 85.
+ 1 APPPATH\Controllers\PersonController.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 23:30:46 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\PersonController.php on line 86.
+ 1 APPPATH\Controllers\PersonController.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 23:31:45 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\PersonController.php on line 88.
+ 1 APPPATH\Controllers\PersonController.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\PersonController.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 23:50:21 --> Error: Class "App\Controllers\TitulosPostgradoModel" not found
+in APPPATH\Controllers\PersonController.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-04 23:51:09 --> ErrorException: Undefined array key "dato_relacionado"
+in APPPATH\Models\TitulosPostgradoModel.php on line 33.
+ 1 APPPATH\Models\TitulosPostgradoModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dato_relacionado"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Models\\TitulosPostgradoModel.php', 33)
+ 2 APPPATH\Controllers\PersonController.php(89): App\Models\TitulosPostgradoModel->obtenerDatoRelacionadoPorDNI('1')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PersonController->save()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

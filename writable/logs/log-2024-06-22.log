@@ -1,0 +1,231 @@
+CRITICAL - 2024-06-22 17:42:23 --> ErrorException: Cannot redeclare App\Controllers\MateriasController::actualizar()
+in APPPATH\Controllers\MateriasController.php on line 176.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-06-22 17:43:06 --> Error: Class "App\Controllers\MateriaModel" not found
+in APPPATH\Controllers\MateriasController.php on line 128.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->search()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 17:43:34 --> BadMethodCallException: Call to undefined method App\Models\MateriasModel::searchMaterias
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\MateriasController.php(131): CodeIgniter\Model->__call('searchMaterias', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->search()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 17:49:01 --> BadMethodCallException: Call to undefined method App\Models\MateriasModel::searchMaterias
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\MateriasController.php(131): CodeIgniter\Model->__call('searchMaterias', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->search()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 17:58:41 --> Error: Class "App\Controllers\MateriaModel" not found
+in APPPATH\Controllers\MateriasController.php on line 129.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->search()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 17:58:59 --> Error: Class "App\Controllers\MateriaModel" not found
+in APPPATH\Controllers\MateriasController.php on line 139.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 17:59:10 --> ErrorException: Undefined array key "id_materia_carrera"
+in APPPATH\Views\materias\edit.php on line 18.
+ 1 APPPATH\Views\materias\edit.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_materia_carrera"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/edit', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(142): view('materias/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 18:00:49 --> Error: Class "App\Controllers\MateriaModel" not found
+in APPPATH\Controllers\MateriasController.php on line 147.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('20')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-22 18:01:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`valorador`.`materias`, CONSTRAINT `materias_ibfk_1` FOREIGN KEY (`id_carrera_materia`) REFERENCES `carreras` (`id_carrera`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `materia...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `materia...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `materia...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `materia...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(987): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(807): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\MateriasController.php(155): CodeIgniter\Model->update('20', Array)
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\MateriasController->update('20')
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+#10 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-06-22 18:01:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`valorador`.`materias`, CONSTRAINT `materias_ibfk_1` FOREIGN KEY (`id_carrera_materia`) REFERENCES `carreras` (`id_carrera`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `materias` SET `nombre_materia` = :nombre_materia:, `cuatrimestre` = :cuatrimestre:, `id_carrera_materia` = :id_carrera_materia:
+WHERE `materias`.`id_materia` IN :materias.id_materia:', [...], false)
+ 2 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\MateriasController.php(155): CodeIgniter\Model->update('20', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('20')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 18:01:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`valorador`.`materias`, CONSTRAINT `materias_ibfk_1` FOREIGN KEY (`id_carrera_materia`) REFERENCES `carreras` (`id_carrera`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `materias` SET `nombre_materia` = \'Programacion I\', `cuatrimestre` = \'1\', `id_carrera_materia` = \'5\'
+WHERE `materias`.`id_materia` IN (\'20\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `materias` SET `nombre_materia` = \'Programacion I\', `cuatrimestre` = \'1\', `id_carrera_materia` = \'5\'
+WHERE `materias`.`id_materia` IN (\'20\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `materias` SET `nombre_materia` = :nombre_materia:, `cuatrimestre` = :cuatrimestre:, `id_carrera_materia` = :id_carrera_materia:
+WHERE `materias`.`id_materia` IN :materias.id_materia:', [...], false)
+ 4 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\MateriasController.php(155): CodeIgniter\Model->update('20', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('20')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 18:01:06 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`valorador`.`materias`, CONSTRAINT `materias_ibfk_1` FOREIGN KEY (`id_carrera_materia`) REFERENCES `carreras` (`id_carrera`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `materias` SET `nombre_materia` = \'Programacion I\', `cuatrimestre` = \'1\', `id_carrera_materia` = \'5\'
+WHERE `materias`.`id_materia` IN (\'20\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `materias` SET `nombre_materia` = \'Programacion I\', `cuatrimestre` = \'1\', `id_carrera_materia` = \'5\'
+WHERE `materias`.`id_materia` IN (\'20\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `materias` SET `nombre_materia` = \'Programacion I\', `cuatrimestre` = \'1\', `id_carrera_materia` = \'5\'
+WHERE `materias`.`id_materia` IN (\'20\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `materias` SET `nombre_materia` = :nombre_materia:, `cuatrimestre` = :cuatrimestre:, `id_carrera_materia` = :id_carrera_materia:
+WHERE `materias`.`id_materia` IN :materias.id_materia:', [...], false)
+ 5 SYSTEMPATH\Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\MateriasController.php(155): CodeIgniter\Model->update('20', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('20')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-22 18:25:46 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 0
+    [id_carrera_materia] => 2
+)
+
+DEBUG - 2024-06-22 18:26:55 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 0
+    [id_carrera_materia] => 2
+)
+
+DEBUG - 2024-06-22 18:28:20 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de softwaaaaa
+    [cuatrimestre] => 0
+    [id_carrera_materia] => 2
+)
+
+DEBUG - 2024-06-22 18:29:00 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de softwaaaaa
+    [cuatrimestre] => 0
+    [id_carrera_materia] => 2
+)
+
+DEBUG - 2024-06-22 18:29:27 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de softwa I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 2
+)
+
+DEBUG - 2024-06-22 18:29:45 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+DEBUG - 2024-06-22 18:35:20 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+DEBUG - 2024-06-22 18:36:02 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+DEBUG - 2024-06-22 18:39:18 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+CRITICAL - 2024-06-22 18:39:18 --> ErrorException: Undefined variable $updatedData
+in APPPATH\Controllers\MateriasController.php on line 158.
+ 1 APPPATH\Controllers\MateriasController.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $updatedData', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\MateriasController.php', 158)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-22 18:40:15 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+CRITICAL - 2024-06-22 18:40:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "materias/updated.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('materias/updated.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/updated', [], true)
+ 3 APPPATH\Controllers\MateriasController.php(160): view('materias/updated', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-22 18:42:08 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+CRITICAL - 2024-06-22 18:42:08 --> ErrorException: Undefined array key "id_materia_carrera"
+in APPPATH\Views\materias\updated.php on line 11.
+ 1 APPPATH\Views\materias\updated.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_materia_carrera"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\materias\\updated.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('materias/updated', [], true)
+ 5 APPPATH\Controllers\MateriasController.php(160): view('materias/updated', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MateriasController->update('34')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MateriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-06-22 18:42:43 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+
+DEBUG - 2024-06-22 18:44:33 --> Datos a actualizar: Array
+(
+    [nombre_materia] => desarrollo de software I
+    [cuatrimestre] => 1
+    [id_carrera_materia] => 1
+)
+

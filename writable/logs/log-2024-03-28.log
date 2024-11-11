@@ -1,0 +1,42 @@
+CRITICAL - 2024-03-28 23:28:32 --> ErrorException: Undefined variable $dat
+in APPPATH\Controllers\Validacion.php on line 364.
+ 1 APPPATH\Controllers\Validacion.php(364): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dat', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 364)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 23:34:56 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Validacion.php on line 367.
+ 1 APPPATH\Controllers\Validacion.php(367): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 367)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 23:36:29 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Validacion.php on line 373.
+ 1 APPPATH\Controllers\Validacion.php(373): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 373)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 23:41:24 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Validacion.php on line 360.
+ 1 APPPATH\Controllers\Validacion.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 23:42:16 --> ErrorException: Undefined array key "detalle_postgrado"
+in APPPATH\Controllers\Validacion.php on line 360.
+ 1 APPPATH\Controllers\Validacion.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_postgrado"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 23:42:37 --> ErrorException: Undefined array key "id_postgrado"
+in APPPATH\Controllers\Validacion.php on line 360.
+ 1 APPPATH\Controllers\Validacion.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_postgrado"', 'C:\\xampp\\htdocs\\framework_ci4_ministerio\\app\\Controllers\\Validacion.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Validacion->cargarValoracion2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Validacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

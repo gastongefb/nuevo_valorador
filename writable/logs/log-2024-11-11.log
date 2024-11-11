@@ -1,0 +1,30 @@
+INFO - 2024-11-11 00:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 00:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-11 00:16:18 --> ErrorException: Undefined variable $valPos
+in APPPATH\Controllers\NuevoController.php on line 551.
+ 1 APPPATH\Controllers\NuevoController.php(551): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $valPos', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 551)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-11 00:16:47 --> ErrorException: Undefined variable $id_valoracion
+in APPPATH\Controllers\NuevoController.php on line 551.
+ 1 APPPATH\Controllers\NuevoController.php(551): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_valoracion', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 551)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-11 00:17:10 --> BadMethodCallException: Call to undefined method App\Models\TitulosPostgradoModel::getDatosByCodigo
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\NuevoController.php(638): CodeIgniter\Model->__call('getDatosByCodigo', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-11 00:20:50 --> BadMethodCallException: Call to undefined method App\Models\TitulosPostgradoModel::getDatosByCodigo
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\NuevoController.php(523): CodeIgniter\Model->__call('getDatosByCodigo', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
