@@ -8,6 +8,8 @@
   <link rel="icon" href="icono8.png" type="image/x-icon">
   <link rel="stylesheet" href="<?= base_url() ?>/bootstrap/css/bootstrap.min.css">
 
+  
+
   <style>
         /* Estilo para centrar el texto en las celdas */
         .table td, .table th {
@@ -15,6 +17,8 @@
             vertical-align: middle;
         }
     </style>
+
+    
     
 </head>
 

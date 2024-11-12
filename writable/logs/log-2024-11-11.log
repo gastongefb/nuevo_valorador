@@ -153,3 +153,77 @@ in APPPATH\Views\mostrar_valoraciones_porDocente_porMateria4.php on line 96.
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 INFO - 2024-11-11 15:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 19:53:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 19:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 19:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 19:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 19:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 19:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:25:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-11 22:32:38 --> ErrorException: Undefined variable $id_valoracion
+in APPPATH\Controllers\NuevoController.php on line 542.
+ 1 APPPATH\Controllers\NuevoController.php(542): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_valoracion', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 542)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-11 22:33:06 --> ErrorException: Undefined variable $datosTabla8
+in APPPATH\Views\mostrar_valoraciones_porDocente_porMateria4.php on line 84.
+ 1 APPPATH\Views\mostrar_valoraciones_porDocente_porMateria4.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosTabla8', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\mostrar_valoraciones_porDocente_porMateria4.php', 84)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\mostrar_valoraciones_porDocente_porMateria4.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrar_valoraciones_porDocente_porMateria4', [], true)
+ 5 APPPATH\Controllers\NuevoController.php(713): view('mostrar_valoraciones_porDocente_porMateria4', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-11 22:33:26 --> ErrorException: Undefined variable $punt
+in APPPATH\Views\mostrar_valoraciones_porDocente_porMateria4.php on line 90.
+ 1 APPPATH\Views\mostrar_valoraciones_porDocente_porMateria4.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $punt', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\mostrar_valoraciones_porDocente_porMateria4.php', 90)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\mostrar_valoraciones_porDocente_porMateria4.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrar_valoraciones_porDocente_porMateria4', [], true)
+ 5 APPPATH\Controllers\NuevoController.php(713): view('mostrar_valoraciones_porDocente_porMateria4', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-11 22:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-11 22:37:42 --> ErrorException: Undefined variable $fecha
+in APPPATH\Controllers\NuevoController.php on line 569.
+ 1 APPPATH\Controllers\NuevoController.php(569): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fecha', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 569)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-11 22:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-11 22:49:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('mostrar_valoraciones_porDocente_porMateria4', [], true)
+ 4 APPPATH\Controllers\NuevoController.php(715): view('mostrar_valoraciones_porDocente_porMateria4', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-11 22:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 22:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 23:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 23:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 23:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

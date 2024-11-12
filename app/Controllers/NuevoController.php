@@ -537,14 +537,22 @@ class NuevoController extends BaseController
                  $suma = $suma + $tot3;
              }
 
-            //PUNTAJE POSTGRADO
-            $val = $valpos->getCodigoById_valoracion($id_va);
-            //$suma = 0;
-            foreach($val as $vv) {
-                $valor = $vv['id_titulo_postgrado'];
-                $puntaje = $Titulopostgrado->getCodigoByPuntaje($valor);
-                $suma=$suma + $puntaje[0]['puntaje']; 
+            //PUNTAJE DE OTROS TÍTULOS    
+            $val_otros_t = new ValoracionOtrosTitulosModel();
+            $datosTabla8 = $val_otros_t ->getCodigoById_valoracion($id_va);//ACÁ PUEDE TRAER VARIOS
+            $otros_t = new OtrosTitulosModel();
+            // Recorrer el array de códigos y obtener los puntajes del modelo TitulosPostgradoModel
+            foreach ($datosTabla8 as $t) {
+            $otros_titulo = $otros_t->find($t['id_otros_titulos']); // Suponiendo que el método find busca por la clave primaria
+              if ($otros_titulo) {
+                 $puntajes8[] = [
+                    'detalle' => $t['detalle_otros_titulos'],
+                    'puntaje' => $otros_titulo['puntaje'],
+                    'fecha' => $t['fecha'],
+                 ];
+              }
             }
+            
 
             
             //PUNTAJE DE TÍTULOS POSTGRADO    
@@ -558,7 +566,8 @@ class NuevoController extends BaseController
               if ($titulo) {
                   $puntajes[] = [
                     'detalle' => $t['detalle_valoracion_postgrado'],
-                    'puntaje' => $titulo['puntaje']
+                    'puntaje' => $titulo['puntaje'],
+                    'fecha' => $t['fecha'],
                   ];
               }
             }
@@ -650,6 +659,7 @@ class NuevoController extends BaseController
             //ARMO UN ARREGLO CON TODOS LOS DATOS QUE NECESITO MOSTRAR
           
             $titulo[] = [
+                'id_va' => $id_va,
                 'dni' => $dni,
                 'titulo_det' => $j1,
                 'j1' => $j1,
@@ -697,16 +707,92 @@ class NuevoController extends BaseController
         
 
        //print_r($titulo);
+       //print_r($puntajes);
          
        
           return view('mostrar_valoraciones_porDocente_porMateria4', [
             'datosTabla1' => $titulo,
-            'datosTabla2' => $puntajes,
+            'datosTabla2' => $puntajes8,
+            'datosTabla3' => $puntajes,
 
         ]);
         
-    
+        
 
+    }
+
+    public function actualizarValoracion()
+    {
+        // Verifica si la solicitud es de tipo POST
+        if ($this->request->getMethod() === 'post') {
+            // Obtén los datos enviados desde el formulario
+            $va = $this->request->getPost('id_va');
+            $dni = $this->request->getPost('dni');
+            $titulo_det = $this->request->getPost('titulo_det');
+            $j1 = $this->request->getPost('j1');
+            $j2 = $this->request->getPost('j2');
+            $j3 = $this->request->getPost('j3');
+            $materia = $this->request->getPost('materia');
+
+            // Carga el modelo
+            $valoracionModel = new ValidacionModel();
+
+            // Prepara los datos para la actualización
+            $data = [
+                'dni' => $dni,
+                'titulo_det' => $titulo_det,
+                'j1' => $j1,
+                'j2' => $j2,
+                'j3' => $j3,
+                'materia' => $materia
+            ];
+
+           // Verificar si la actualización fue exitosa
+        if ($valoracionModel->updateValoracion($va, $data)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado correctamente.']);
+        } else {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Hubo un problema al actualizar el registro.']);
+        }
+    }
+
+    return $this->response->setJSON(['status' => 'error', 'message' => 'Solicitud no válida.']);
+    }
+
+
+    // Función para actualizar los datos de la segunda tabla (otros títulos)
+    public function actualizarOtrosTitulos()
+    {
+        // Cargar el modelo correspondiente
+        $otrosTitulosModel = new ValoracionOtrosTitulosModel();
+
+        // Obtener los datos enviados por el formulario AJAX
+        $detalle = $this->request->getPost('detalle');
+        $fecha = $this->request->getPost('fecha');
+        $puntaje = $this->request->getPost('puntaje');
+        $id = $this->request->getPost('id'); // Asumiendo que pasas un ID único de la fila
+
+        // Validar los datos antes de actualizar (puedes agregar más validaciones según lo necesario)
+        if (!$detalle || !$fecha || !$puntaje || !$id) {
+            return $this->response->setJSON(['error' => 'Todos los campos son obligatorios.']);
+        }
+
+        // Crear un array con los datos a actualizar
+        $datos = [
+            'detalle' => $detalle,
+            'fecha' => $fecha,
+            'puntaje' => $puntaje,
+        ];
+
+        // Llamar al modelo para actualizar los datos en la base de datos
+        $actualizado = $otrosTitulosModel->update($id, $datos);
+
+        if ($actualizado) {
+            // Respuesta positiva
+            return $this->response->setJSON(['success' => 'Datos actualizados correctamente.']);
+        } else {
+            // En caso de error
+            return $this->response->setJSON(['error' => 'Hubo un problema al actualizar los datos.']);
+        }
     }
     
 }    

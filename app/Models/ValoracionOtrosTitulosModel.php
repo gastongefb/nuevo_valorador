@@ -43,5 +43,11 @@ class ValoracionOtrosTitulosModel extends Model
        return $query->getResultArray(); // Devuelve los resultados como un array asociativo
    }
 
+   public function updateValoracion($va, $data)
+   {
+       // Usa el método update() de la clase base
+       return $this->update($va, $data); // Aquí $dni es el id y $data son los nuevos valores
+   }
+
     
 }
