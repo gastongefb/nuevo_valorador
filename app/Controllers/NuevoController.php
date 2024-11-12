@@ -537,6 +537,8 @@ class NuevoController extends BaseController
                  $suma = $suma + $tot3;
              }
 
+             //print_r($datosTabla9 );
+
             //PUNTAJE DE OTROS TÍTULOS    
             $val_otros_t = new ValoracionOtrosTitulosModel();
             $datosTabla8 = $val_otros_t ->getCodigoById_valoracion($id_va);//ACÁ PUEDE TRAER VARIOS
@@ -545,7 +547,8 @@ class NuevoController extends BaseController
             foreach ($datosTabla8 as $t) {
             $otros_titulo = $otros_t->find($t['id_otros_titulos']); // Suponiendo que el método find busca por la clave primaria
               if ($otros_titulo) {
-                 $puntajes8[] = [
+                    $puntajes8[] = [
+                    'id_otros_titulos' => $t['id_otros_titulos'],
                     'detalle' => $t['detalle_otros_titulos'],
                     'puntaje' => $otros_titulo['puntaje'],
                     'fecha' => $t['fecha'],
@@ -553,7 +556,7 @@ class NuevoController extends BaseController
               }
             }
             
-
+            //print_r($puntajes8);
             
             //PUNTAJE DE TÍTULOS POSTGRADO    
             //$valPos = new ValoracionPostgradoModel();
@@ -712,7 +715,7 @@ class NuevoController extends BaseController
        
           return view('mostrar_valoraciones_porDocente_porMateria4', [
             'datosTabla1' => $titulo,
-            'datosTabla2' => $puntajes8,
+            'datosTabla2' => $datosTabla9,
             'datosTabla3' => $puntajes,
 
         ]);
@@ -766,29 +769,35 @@ class NuevoController extends BaseController
         $otrosTitulosModel = new ValoracionOtrosTitulosModel();
 
         // Obtener los datos enviados por el formulario AJAX
+        $id_va = $this->request->getPost('id_va');
         $detalle = $this->request->getPost('detalle');
         $fecha = $this->request->getPost('fecha');
-        $puntaje = $this->request->getPost('puntaje');
+        $id_otros = $this->request->getPost('id_otros');
+        //$puntaje = $this->request->getPost('puntaje');
         $id = $this->request->getPost('id'); // Asumiendo que pasas un ID único de la fila
 
         // Validar los datos antes de actualizar (puedes agregar más validaciones según lo necesario)
-        if (!$detalle || !$fecha || !$puntaje || !$id) {
-            return $this->response->setJSON(['error' => 'Todos los campos son obligatorios.']);
-        }
+        //if (!$detalle || !$fecha || !$puntaje || !$id) {
+          //  return $this->response->setJSON(['error' => 'Todos los campos son obligatorios.']);
+        ///}
 
         // Crear un array con los datos a actualizar
         $datos = [
-            'detalle' => $detalle,
+            'id_valoracion' => $id_va,
+            'detalle_otros_titulos' => $detalle,
             'fecha' => $fecha,
-            'puntaje' => $puntaje,
-        ];
+            'id_otros_titulos' => $id_otros
+            ];
 
+        
+            
         // Llamar al modelo para actualizar los datos en la base de datos
-        $actualizado = $otrosTitulosModel->update($id, $datos);
+        $actualizado = $otrosTitulosModel->updateOtrosTitulos($id, $datos);
 
         if ($actualizado) {
             // Respuesta positiva
             return $this->response->setJSON(['success' => 'Datos actualizados correctamente.']);
+            
         } else {
             // En caso de error
             return $this->response->setJSON(['error' => 'Hubo un problema al actualizar los datos.']);

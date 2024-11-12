@@ -45,8 +45,8 @@
 
 <script>
     // Función AJAX para actualizar los datos de la tabla 2 (Otros Títulos)
-    function submitFormViaAjaxTabla2(x) {
-        var formData = $('#updateFormTabla2' + x).serialize();  // Serializa el formulario correspondiente
+    function submitFormViaAjaxTabla2(y) {
+        var formData = $('#updateFormTabla2' + y).serialize();  // Serializa el formulario correspondiente
         $.ajax({
             url: '<?= base_url('actualizarOtrosTitulos'); ?>',  // Ruta para actualizar el registro
             type: 'POST',
@@ -55,7 +55,7 @@
                 alert('Registro actualizado correctamente.');
                 $('#detalleModalTabla2' + x).modal('hide'); // Cierra el modal después de actualizar
                 // Si deseas recargar la tabla o solo la fila específica, usa algo como esto:
-                // window.location.reload(); // Recarga la página, o puedes actualizar la tabla sin recargar la página
+                window.location.reload(); // Recarga la página, o puedes actualizar la tabla sin recargar la página
             },
             error: function(xhr, status, error) {
                 alert('Error al actualizar el registro: ' + error);
@@ -113,7 +113,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="detalleModalLabelTabla1<?= $x; ?>">Detalles del Registro</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -150,7 +150,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success">Guardar cambios</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </form>
                 </div>
@@ -169,7 +169,6 @@
             <th scope="col">Código</th>
             <th scope="col">Detalle</th>
             <th scope="col">Fecha</th>
-            <th scope="col">Puntaje</th>
             <th scope="col">Detalle</th>
         </tr>
     </thead>
@@ -177,10 +176,9 @@
         <?php $x = 1; ?>
         <?php foreach ($datosTabla2 as $dato): ?>
             <tr>
-                <th scope="row"><?php echo $x; ?></th>
-                <td><?= $dato['detalle']; ?></td>
+                <td><?= $dato['id_otros_t']; ?></td>
+                <td><?= $dato['detalle_otros_titulos']; ?></td>
                 <td><?= $dato['fecha']; ?></td>
-                <td><?= $dato['puntaje']; ?></td>
                 <td>
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detalleModalTabla2<?= $x; ?>">Detalle</button>
                 </td>
@@ -191,29 +189,34 @@
 </table>
 
 <!-- Modal para la Tabla 2 -->
-<?php $x = 1; ?>
+<?php $y = 1; ?>
 <?php foreach ($datosTabla2 as $dato): ?>
-    <div class="modal fade" id="detalleModalTabla2<?= $x; ?>" tabindex="-1" aria-labelledby="detalleModalLabelTabla2<?= $x; ?>" aria-hidden="true">
+    <div class="modal fade" id="detalleModalTabla2<?= $y; ?>" tabindex="-1" aria-labelledby="detalleModalLabelTabla2<?= $y; ?>" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="detalleModalLabelTabla2<?= $x; ?>">Detalles del Registro</h5>
+                    <h5 class="modal-title" id="detalleModalLabelTabla2<?= $y; ?>">Detalles del Registro</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form id="updateFormTabla2<?= $x; ?>" method="post" onsubmit="submitFormViaAjaxTabla2(<?= $x; ?>); return false;">
+                <form id="updateFormTabla2<?= $y; ?>" method="post" onsubmit="submitFormViaAjaxTabla2(<?= $y; ?>); return false;">
+                    
                     <div class="modal-body">
+                    <div class="form-group">
+                            <label for="id">Detalle</label>
+                            <input type="text" class="form-control" name="id" value="<?= $dato['id_otros_t']; ?>">
+                        </div>
                         <div class="form-group">
                             <label for="detalle">Detalle</label>
-                            <input type="text" class="form-control" name="detalle" value="<?= $dato['detalle']; ?>">
+                            <input type="text" class="form-control" name="detalle" value="<?= $dato['detalle_otros_titulos']; ?>">
                         </div>
                         <div class="form-group">
                             <label for="fecha">Fecha</label>
                             <input type="date" class="form-control" name="fecha" value="<?= $dato['fecha']; ?>">
                         </div>
-                        <div class="form-group">
-                            <label for="puntaje">Puntaje</label>
-                            <input type="number" class="form-control" name="puntaje" value="<?= $dato['puntaje']; ?>">
-                        </div>
+
+                        <input type="hidden" name="id_va" value="<?= $dato['id_valoracion']; ?>">
+                        <input type="hidden" name="id_otros" value="<?= $dato['id_otros_titulos']; ?>">
+                       
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Guardar cambios</button>
@@ -223,7 +226,7 @@
             </div>
         </div>
     </div>
-    <?php $x++; ?>
+    <?php $y++; ?>
 <?php endforeach; ?>
 
 

@@ -119,3 +119,4 @@ $routes->get('guardarDatosFinales', 'NuevoController::guardarDatosFinales');
 $routes->get('mostrar_valoraciones_porDocente_porMateria1', 'NuevoController::mostrar_valoraciones_porDocente_porMateria1');
 $routes->post('mostrar_valoraciones_porDocente_porMateria3', 'NuevoController::mostrar_valoraciones_porDocente_porMateria3');
 $routes->post('actualizarValoracion', 'NuevoController::actualizarValoracion');
+$routes->post('actualizarOtrosTitulos', 'NuevoController::actualizarOtrosTitulos');
