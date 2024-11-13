@@ -38,10 +38,10 @@ class ValoracionPostgradoModel extends Model
        return $query->getResultArray(); // Devuelve los resultados como un array asociativo
    }
 
-   public function updatePostgrado($id, $datos)
+   public function updatePostgrado($id,$datos)
    {
        // Usa el método update() de la clase base
-       return $this->update($id, $datos); // Aquí $dni es el id y $data son los nuevos valores
+       return $this->update($id,$datos); // Aquí $dni es el id y $data son los nuevos valores
    }
    
 }

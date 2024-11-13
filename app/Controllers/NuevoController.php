@@ -575,7 +575,7 @@ class NuevoController extends BaseController
               }
             }
 
-            //print_r($puntajes);
+            //print_r($datosTablap);
 
             //PUNTAJE ANTECEDENTES DOCENTES-ANTIGUEDAD            
             $datosTabla5 = $antDoc->getDatosById_ant_doc($id_va);//ACÁ PUEDE TRAER VARIOS
@@ -764,46 +764,42 @@ class NuevoController extends BaseController
 
 
     // Función para actualizar los datos de la segunda tabla (otros títulos)
-    public function actualizarOtrosTitulos()
-    {
-        // Cargar el modelo correspondiente
-        $otrosTitulosModel = new ValoracionOtrosTitulosModel();
+public function actualizarOtrosTitulos()
+{
+    // Cargar el modelo correspondiente
+    $otrosTitulosModel = new ValoracionOtrosTitulosModel();
 
-        // Obtener los datos enviados por el formulario AJAX
-        $id_va = $this->request->getPost('id_va');
-        $detalle = $this->request->getPost('detalle');
-        $fecha = $this->request->getPost('fecha');
-        $id_otros = $this->request->getPost('id_otros');
-        //$puntaje = $this->request->getPost('puntaje');
-        $id = $this->request->getPost('id'); // Asumiendo que pasas un ID único de la fila
+    // Obtener los datos enviados por el formulario AJAX
+    $id_va = $this->request->getPost('id_va');
+    $detalle = $this->request->getPost('detalle');
+    $fecha = $this->request->getPost('fecha');
+    $id_otros = $this->request->getPost('id_otros');
+    $id = $this->request->getPost('id'); // Asumiendo que pasas un ID único de la fila
 
-        // Validar los datos antes de actualizar (puedes agregar más validaciones según lo necesario)
-        //if (!$detalle || !$fecha || !$puntaje || !$id) {
-          //  return $this->response->setJSON(['error' => 'Todos los campos son obligatorios.']);
-        ///}
-
-        // Crear un array con los datos a actualizar
-        $datos = [
-            'id_valoracion' => $id_va,
-            'detalle_otros_titulos' => $detalle,
-            'fecha' => $fecha,
-            'id_otros_titulos' => $id_otros
-            ];
-
-        
-            
-        // Llamar al modelo para actualizar los datos en la base de datos
-        $actualizado = $otrosTitulosModel->updateOtrosTitulos($id, $datos);
-
-        if ($actualizado) {
-            // Respuesta positiva
-            return $this->response->setJSON(['success' => 'Datos actualizados correctamente.']);
-            
-        } else {
-            // En caso de error
-            return $this->response->setJSON(['error' => 'Hubo un problema al actualizar los datos.']);
-        }
+    // Validar los datos antes de actualizar (puedes agregar más validaciones según lo necesario)
+    if (!$detalle || !$fecha || !$id_otros || !$id) {
+        return $this->response->setJSON(['success' => false, 'message' => 'Todos los campos son obligatorios.']);
     }
+
+    // Crear un array con los datos a actualizar
+    $datos = [
+        'id_valoracion' => $id_va,
+        'detalle_otros_titulos' => $detalle,
+        'fecha' => $fecha,
+        'id_otros_titulos' => $id_otros
+    ];
+
+    // Llamar al modelo para actualizar los datos en la base de datos
+    $updateSuccess = $otrosTitulosModel->updateOtrosTitulos($id, $datos);
+
+    // Verificar si la actualización fue exitosa
+    if ($updateSuccess) {
+        return $this->response->setJSON(['success' => true, 'message' => 'Actualización exitosa']);
+    } else {
+        return $this->response->setJSON(['success' => false, 'message' => 'Error al actualizar']);
+    }
+}
+
     
     
     public function actualizarPosFormacion()
@@ -819,11 +815,12 @@ class NuevoController extends BaseController
         //$puntaje = $this->request->getPost('puntaje');
         $id = $this->request->getPost('id'); // Asumiendo que pasas un ID único de la fila
 
-        // Validar los datos antes de actualizar (puedes agregar más validaciones según lo necesario)
-        //if (!$detalle || !$fecha || !$puntaje || !$id) {
-          //  return $this->response->setJSON(['error' => 'Todos los campos son obligatorios.']);
-        ///}
-
+        /*
+        //Validar los datos antes de actualizar (puedes agregar más validaciones según lo necesario)
+        if (!$detalle || !$fecha || !$puntaje || !$id) {
+            return $this->response->setJSON(['error' => 'Todos los campos son obligatorios.']);
+        }
+        */ 
         // Crear un array con los datos a actualizar
         $datos = [
             'id_valoracion' => $id_va,

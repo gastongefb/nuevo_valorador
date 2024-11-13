@@ -52,10 +52,19 @@
             type: 'POST',
             data: formData,
             success: function(response) {
-                alert('Registro actualizado correctamente.');
-                $('#detalleModalTabla2' + x).modal('hide'); // Cierra el modal después de actualizar
-                // Si deseas recargar la tabla o solo la fila específica, usa algo como esto:
-                window.location.reload(); // Recarga la página, o puedes actualizar la tabla sin recargar la página
+                if (response.success) {
+                    alert('Registro actualizado correctamente.');
+
+                    // Actualizar los datos en la tabla (sin recargar la página)
+                    var fila = $('#fila' + y);  // Obtenemos la fila que corresponde a este registro
+                    fila.find('.detalle-otros').text($('#updateFormTabla2' + y + ' input[name="detalle"]').val());  // Actualizamos el detalle
+                    fila.find('.fecha-otros').text($('#updateFormTabla2' + y + ' input[name="fecha"]').val());  // Actualizamos la fecha
+
+                    // Cierra el modal después de actualizar
+                    $('#detalleModalTabla2' + y).modal('hide');
+                } else {
+                    alert('Error al actualizar el registro.');
+                }
             },
             error: function(xhr, status, error) {
                 alert('Error al actualizar el registro: ' + error);
@@ -193,16 +202,16 @@
             <th scope="col">Código</th>
             <th scope="col">Detalle</th>
             <th scope="col">Fecha</th>
-            <th scope="col">Detalle</th>
+            <th scope="col">Acciones</th>
         </tr>
     </thead>
     <tbody>
         <?php $x = 1; ?>
         <?php foreach ($datosTabla2 as $dato): ?>
-            <tr>
+            <tr id="fila<?= $x; ?>"> <!-- Añadimos un id único a cada fila -->
                 <td><?= $dato['id_otros_t']; ?></td>
-                <td><?= $dato['detalle_otros_titulos']; ?></td>
-                <td><?= $dato['fecha']; ?></td>
+                <td class="detalle-otros"><?= $dato['detalle_otros_titulos']; ?></td> <!-- Clase para actualizar el detalle -->
+                <td class="fecha-otros"><?= $dato['fecha']; ?></td> <!-- Clase para actualizar la fecha -->
                 <td>
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detalleModalTabla2<?= $x; ?>">Detalle</button>
                 </td>
@@ -223,11 +232,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form id="updateFormTabla2<?= $y; ?>" method="post" onsubmit="submitFormViaAjaxTabla2(<?= $y; ?>); return false;">
-                    
                     <div class="modal-body">
-                    <div class="form-group">
+                        <div class="form-group">
                             <label for="id">Detalle</label>
-                            <input type="text" class="form-control" name="id" value="<?= $dato['id_otros_t']; ?>">
+                            <input type="text" class="form-control" name="id" value="<?= $dato['id_otros_t']; ?>" readonly>
                         </div>
                         <div class="form-group">
                             <label for="detalle">Detalle</label>
@@ -240,7 +248,6 @@
 
                         <input type="hidden" name="id_va" value="<?= $dato['id_valoracion']; ?>">
                         <input type="hidden" name="id_otros" value="<?= $dato['id_otros_titulos']; ?>">
-                       
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Guardar cambios</button>
