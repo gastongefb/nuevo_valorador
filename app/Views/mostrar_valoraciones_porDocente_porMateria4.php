@@ -64,6 +64,30 @@
     }
 </script>
 
+<script>
+    function submitFormViaAjaxTabla3(z) {
+        // Obtener los datos del formulario específico mediante su ID
+        var formData = $('#updateFormTabla3' + z).serialize();
+        console.log(formData); // Verificar qué datos se están enviando
+
+        // Enviar los datos del formulario con AJAX
+        $.ajax({
+            url: '<?= base_url('actualizarPosFormacion'); ?>',  // Ruta para guardar los cambios
+            type: 'POST',
+            data: formData,
+            success: function(response) {
+                // Cuando la actualización sea exitosa, recargar la tabla o la página
+                alert('Registro actualizado correctamente.');
+                $('#detalleModalTabla3' + z).modal('hide'); // Cierra el modal después de actualizar
+                window.location.reload();  // Recarga la página
+            },
+            error: function(xhr, status, error) {
+                // En caso de error
+                alert('Error al actualizar el registro: ' + error);
+            }
+        });
+    }
+</script>
 
 
 
@@ -117,7 +141,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form id="updateFormTabla1<?= $x; ?>" method="post" onsubmit="submitFormViaAjax(<?= $x; ?>); return false;">
+                    <form id="updateFormTabla1<?= $x; ?>" method="post" onsubmit="submitFormViaAjaxTabla3(<?= $x; ?>); return false;">
                         <div class="modal-body">
                         <div class="form-group">
                                 <label for="id_va">Val</label>
@@ -230,6 +254,79 @@
 <?php endforeach; ?>
 
 
+<h4>Postgrado</h4>
+<!-- Tabla 3 -->
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Detalle</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Detalle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php $z = 1; ?>
+        <?php foreach ($datosTabla3 as $registro): ?>
+            <?php if (is_array($registro)): ?>
+                <tr>
+                    <th scope="row"><?php echo $x; ?></th>
+                    <td><?= $registro['id_postgrado']; ?></td>
+                    <td><?= $registro['detalle_valoracion_postgrado']; ?></td>
+                    <td><?= $registro['fecha']; ?></td>
+                    <td>
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detalleModalTabla3<?= $z; ?>">Detalle</button>
+                    </td>
+                </tr>
+                <?php $z++; ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+<!-- Modal para la Tabla 3 -->
+<?php $z = 1; ?>
+<?php foreach ($datosTabla3 as $registro): ?>
+    <?php if (is_array($registro)): ?>
+        <div class="modal fade" id="detalleModalTabla3<?= $z; ?>" tabindex="-1" role="dialog" aria-labelledby="detalleModalLabelTabla3<?= $z; ?>" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="detalleModalLabelTabla3<?= $z; ?>">Detalles del Registro</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form id="updateFormTabla3<?= $z; ?>" method="post" onsubmit="submitFormViaAjaxTabla3(<?= $z; ?>); return false;">
+                        <div class="modal-body">
+                        <div class="form-group">
+                                <label for="id">Código</label>
+                                <input type="text" class="form-control" name="id" value="<?= $registro['id_postgrado']; ?>" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="detalle">DNI</label>
+                                <input type="text" class="form-control" name="detalle" value="<?= $registro['detalle_valoracion_postgrado']; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="titulo_det">Fecha</label>
+                                <input type="text" class="form-control" name="fecha" value="<?= $registro['fecha']; ?>">
+                            </div>
+
+                            <input type="hidden" name="id_va" value="<?= $registro['id_valoracion']; ?>">
+                            <input type="hidden" name="id_tit" value="<?= $registro['id_titulo_postgrado']; ?>">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Guardar cambios</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <?php $x++; ?>
+    <?php endif; ?>
+<?php endforeach; ?>
 
 
 

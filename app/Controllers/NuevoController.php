@@ -560,11 +560,11 @@ class NuevoController extends BaseController
             
             //PUNTAJE DE TÍTULOS POSTGRADO    
             //$valPos = new ValoracionPostgradoModel();
-            $datosTabla1 = $valpos->getCodigoById_valoracion($id_va);//ACÁ PUEDE TRAER VARIOS
+            $datosTablap = $valpos->getCodigoById_valoracion($id_va);//ACÁ PUEDE TRAER VARIOS
             $tit = new TitulosPostgradoModel();
             // Recorrer el array de códigos y obtener los puntajes del modelo TitulosPostgradoModel
             //print_r($datosTabla1);
-            foreach ($datosTabla1 as $t) {
+            foreach ($datosTablap as $t) {
             $titulo = $tit->find($t['id_titulo_postgrado']); // Suponiendo que el método find busca por la clave primaria
               if ($titulo) {
                   $puntajes[] = [
@@ -711,12 +711,13 @@ class NuevoController extends BaseController
 
        //print_r($titulo);
        //print_r($puntajes);
+       //print_r($datosTablap);
          
        
           return view('mostrar_valoraciones_porDocente_porMateria4', [
             'datosTabla1' => $titulo,
             'datosTabla2' => $datosTabla9,
-            'datosTabla3' => $puntajes,
+            'datosTabla3' => $datosTablap,
 
         ]);
         
@@ -804,5 +805,50 @@ class NuevoController extends BaseController
         }
     }
     
+    
+    public function actualizarPosFormacion()
+    {
+        // Cargar el modelo correspondiente
+        $postgrado = new ValoracionPostradoModel();
+
+        // Obtener los datos enviados por el formulario AJAX
+        $id_va = $this->request->getPost('id_va');
+        $detalle = $this->request->getPost('detalle');
+        $fecha = $this->request->getPost('fecha');
+        $id_otros = $this->request->getPost('id_tit');
+        //$puntaje = $this->request->getPost('puntaje');
+        $id = $this->request->getPost('id'); // Asumiendo que pasas un ID único de la fila
+
+        // Validar los datos antes de actualizar (puedes agregar más validaciones según lo necesario)
+        //if (!$detalle || !$fecha || !$puntaje || !$id) {
+          //  return $this->response->setJSON(['error' => 'Todos los campos son obligatorios.']);
+        ///}
+
+        // Crear un array con los datos a actualizar
+        $datos = [
+            'id_valoracion' => $id_va,
+            'detalle_valoracion_postgrado' => $detalle,
+            'fecha' => $fecha,
+            'id_titulo_postgrado' => $id_otros
+            ];
+
+        
+            
+        // Llamar al modelo para actualizar los datos en la base de datos
+        $actualizado = $postgrado->updatePostgrado($id, $datos);
+
+        if ($actualizado) {
+            // Respuesta positiva
+            return $this->response->setJSON(['success' => 'Datos actualizados correctamente.']);
+            
+        } else {
+            // En caso de error
+            return $this->response->setJSON(['error' => 'Hubo un problema al actualizar los datos.']);
+        }
+    }
+
+
+
+
 }    
 
