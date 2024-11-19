@@ -805,7 +805,7 @@ public function actualizarOtrosTitulos()
     public function actualizarPosFormacion()
     {
         // Cargar el modelo correspondiente
-        $postgrado = new ValoracionPostradoModel();
+        $postgrado = new ValoracionPostgradoModel();
 
         // Obtener los datos enviados por el formulario AJAX
         $id_va = $this->request->getPost('id_va');
@@ -832,16 +832,17 @@ public function actualizarOtrosTitulos()
         
             
         // Llamar al modelo para actualizar los datos en la base de datos
-        $actualizado = $postgrado->updatePostgrado($id, $datos);
+        //$actualizado = $postgrado->updatePostgrado($id, $datos);
 
-        if ($actualizado) {
-            // Respuesta positiva
-            return $this->response->setJSON(['success' => 'Datos actualizados correctamente.']);
-            
-        } else {
-            // En caso de error
-            return $this->response->setJSON(['error' => 'Hubo un problema al actualizar los datos.']);
-        }
+        // Llamar al modelo para actualizar los datos en la base de datos
+       $updateSuccess = $postgrado->updatePostgrado($id, $datos);
+
+    // Verificar si la actualización fue exitosa
+    if ($updateSuccess) {
+        return $this->response->setJSON(['success' => true, 'message' => 'Actualización exitosa']);
+    } else {
+        return $this->response->setJSON(['success' => false, 'message' => 'Error al actualizar']);
+    }
     }
 
 
