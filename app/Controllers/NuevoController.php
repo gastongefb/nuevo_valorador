@@ -714,7 +714,7 @@ class NuevoController extends BaseController
        //print_r($datosTablap);
          
        
-          return view('mostrar_valoraciones_porDocente_porMateria4', [
+          return view('data_view2', [
             'datosTabla1' => $titulo,
             'datosTabla2' => $datosTabla9,
             'datosTabla3' => $datosTablap,
@@ -805,7 +805,7 @@ public function actualizarOtrosTitulos()
     public function actualizarPosFormacion()
     {
         // Cargar el modelo correspondiente
-        $postgrado = new ValoracionPostgradoModel();
+        $postgrado = new ValoracionPostradoModel();
 
         // Obtener los datos enviados por el formulario AJAX
         $id_va = $this->request->getPost('id_va');
@@ -832,19 +832,36 @@ public function actualizarOtrosTitulos()
         
             
         // Llamar al modelo para actualizar los datos en la base de datos
-        //$actualizado = $postgrado->updatePostgrado($id, $datos);
+        $actualizado = $postgrado->updatePostgrado($id, $datos);
 
-        // Llamar al modelo para actualizar los datos en la base de datos
-       $updateSuccess = $postgrado->updatePostgrado($id, $datos);
-
-    // Verificar si la actualización fue exitosa
-    if ($updateSuccess) {
-        return $this->response->setJSON(['success' => true, 'message' => 'Actualización exitosa']);
-    } else {
-        return $this->response->setJSON(['success' => false, 'message' => 'Error al actualizar']);
+        if ($actualizado) {
+            // Respuesta positiva
+            return $this->response->setJSON(['success' => 'Datos actualizados correctamente.']);
+            
+        } else {
+            // En caso de error
+            return $this->response->setJSON(['error' => 'Hubo un problema al actualizar los datos.']);
+        }
     }
-    }
 
+
+
+    public function update2()
+    {
+        $model = new ValoracionPostgradoModel();
+        $id = $this->request->getPost('id');
+        $updatedData = [
+            'id_valoracion' => $this->request->getPost('id_va'),
+            'detalle_valoracion_postgrado' => $this->request->getPost('detalle'),
+            'fecha' => $this->request->getPost('fecha'),
+            'id_titulo_postgrado' => $this->request->getPost('id_tit'),
+        ];
+
+        $model->update($id, $updatedData);
+
+        // Retorna los datos actualizados en formato JSON
+        return $this->response->setJSON(['status' => 'success', 'data' => $updatedData]);
+    }
 
 
 

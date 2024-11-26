@@ -1,0 +1,21 @@
+INFO - 2024-11-14 15:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-14 15:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-14 15:38:53 --> Error: Class "App\Controllers\ValoracionPostradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 808.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->actualizarPosFormacion()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 15:39:14 --> Error: Class "App\Controllers\ValoracionPostradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 808.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->actualizarPosFormacion()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 15:39:39 --> Error: Class "App\Controllers\ValoracionPostradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 808.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->actualizarPosFormacion()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

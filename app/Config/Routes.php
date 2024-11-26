@@ -121,3 +121,16 @@ $routes->post('mostrar_valoraciones_porDocente_porMateria3', 'NuevoController::m
 $routes->post('actualizarValoracion', 'NuevoController::actualizarValoracion');
 $routes->post('actualizarOtrosTitulos', 'NuevoController::actualizarOtrosTitulos');
 $routes->post('actualizarPosFormacion', 'NuevoController::actualizarPosFormacion');
+
+$routes->post('update2', 'NuevoController::update2');
+
+
+
+
+
+
+$routes->get('data', 'DataController::index2');
+$routes->post('DataController/update', 'DataController::update');
+
+$routes->get('data2', 'NuevoController::mostrar_valoraciones_porDocente_porMateria1');
+$routes->post('DataController/update2', 'DataController::update2');
