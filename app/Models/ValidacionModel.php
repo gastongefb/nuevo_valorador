@@ -104,6 +104,17 @@ class ValidacionModel extends Model
        return $query->getResultArray(); // Devuelve los resultados como un array asociativo
    }
 
+   public function getValoracionDni($dni)
+   {
+       $builder = $this->db->table($this->table);
+       $builder->select('*');
+       $builder->where('dni', $dni);
+       //$builder->where('id_materia_valoracion', $id_materia); // Ajuste en la clave para el segundo where
+       $query = $builder->get();
+
+       return $query->getResultArray(); // Devuelve los resultados como un array asociativo
+   }
+
     public function updateValoracion($va, $data)
     {
         // Usa el método update() de la clase base

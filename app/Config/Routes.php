@@ -134,3 +134,12 @@ $routes->post('DataController/update', 'DataController::update');
 
 $routes->get('data2', 'NuevoController::mostrar_valoraciones_porDocente_porMateria1');
 $routes->post('DataController/update2', 'DataController::update2');
+
+
+$routes->get('data', 'NuevoController::updateDynamic');
+$routes->post('DataController/update', 'DataController::update');
+
+$routes->post('NuevoController/updateDynamic', 'NuevoController::updateDynamic'); // Ruta para manejar la actualización dinámica
+
+
+$routes->post('NuevoController/deleteRecord', 'NuevoController::deleteRecord'); // Ruta para manejar la eliminación dinámica

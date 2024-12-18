@@ -718,6 +718,12 @@ class NuevoController extends BaseController
             'datosTabla1' => $titulo,
             'datosTabla2' => $datosTabla9,
             'datosTabla3' => $datosTablap,
+            'datosTabla4' => $datosTabla5,
+            'datosTabla5' => $datos_capacitacion,
+            'datosTabla6' => $datosTabla_f_o,
+            'datosTabla7' => $datosTabla_inv,
+            'datosTabla8' => $datosTabla_oa,
+            'datosTabla9' => $datosTabla4,
 
         ]);
         
@@ -862,6 +868,76 @@ public function actualizarOtrosTitulos()
         // Retorna los datos actualizados en formato JSON
         return $this->response->setJSON(['status' => 'success', 'data' => $updatedData]);
     }
+
+
+
+    public function updateDynamic()
+{
+    $table = $this->request->getPost('table');
+    $id = $this->request->getPost('id');
+    $fields = $this->request->getPost();
+
+    unset($fields['table'], $fields['id']); // Eliminar campos no relevantes
+
+    $model = null;
+
+    if ($table === 'table1') {
+        $model = new ValoracionOtrosTitulosModel();
+    } elseif ($table === 'table2') {
+        $model = new ValoracionPostgradoModel();
+    }elseif ($table === 'table3') {
+        $model = new AntecedentesDocModel();
+    }elseif ($table === 'table4') {
+        $model = new CapacitacionModel();
+    }elseif ($table === 'table5') {
+        $model = new FormacionOfrecidaModel();
+    }elseif ($table === 'table6') {
+        $model = new InvestigacionModel();
+    }elseif ($table === 'table7') {
+        $model = new OtrosAntecedentesDocModel();
+    }elseif ($table === 'table8') {
+        $model = new AntecedentesLabModel();
+    }
+
+    if ($model) {
+        $model->update($id, $fields);
+        return $this->response->setJSON(['status' => 'success', 'data' => $fields]);
+    }
+
+    return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid table']);
+}
+
+public function deleteRecord()
+{
+    $table = $this->request->getPost('table');
+    $id = $this->request->getPost('id');
+
+    $model = null;
+
+    if ($table === 'table1') {
+        $model = new ValoracionOtrosTitulosModel();
+    } elseif ($table === 'table2') {
+        $model = new ValoracionPostgradoModel();
+    }elseif ($table === 'table3') {
+        $model = new AntecedentesDocModel();
+    }elseif ($table === 'table4') {
+        $model = new CapacitacionModel();
+    }elseif ($table === 'table5') {
+        $model = new FormacionOfrecidaModel();
+    }elseif ($table === 'table6') {
+        $model = new InvestigacionModel();
+    }elseif ($table === 'table7') {
+        $model = new OtrosAntecedentesDocModel();
+    }elseif ($table === 'table8') {
+        $model = new AntecedentesLabModel();
+    }
+
+    if ($model && $model->delete($id)) {
+        return $this->response->setJSON(['status' => 'success']);
+    }
+
+    return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to delete record']);
+}
 
 
 
