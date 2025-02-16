@@ -80,7 +80,12 @@ class Filters extends BaseConfig
                 "/Docente",
                 "/Docente/create",
                 "/Docente/edit",
-                "/Docente/update"
+                "/Docente/update",
+                "/cargar_datos",
+                "/mostrar_valoraciones_porDocente_porMateria1",
+                "/buscar_valoracion_por_docente",
+                "/Mostrar_Valoraciones_Por_Materia",
+                "/mostrar_valoraciones"
                
         ]
         ]

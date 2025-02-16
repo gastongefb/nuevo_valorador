@@ -14,6 +14,12 @@ class FormacionOfrecidaModel extends Model
 
     protected $allowedFields = ['id_valoracion','detalle_formacion','fecha','id_formacion_ofrecida'];
 
+    //protected $useSoftDelete = true;
+    protected $useTimestamps = true;
+    protected $dataFormat = 'datetime'; // date
+    protected $createdField = 'fecha_alta';
+    protected $updatedField = 'fecha_modifica';
+
     protected $table = 'formacion_ofrecida';
 
     public function getValidacion()

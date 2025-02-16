@@ -1,0 +1,314 @@
+INFO - 2024-12-31 15:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-31 15:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-31 15:27:23 --> ErrorException: Undefined variable $titulo
+in APPPATH\Controllers\NuevoController.php on line 728.
+ 1 APPPATH\Controllers\NuevoController.php(728): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 728)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:29:12 --> ErrorException: Undefined variable $titulo
+in APPPATH\Controllers\NuevoController.php on line 728.
+ 1 APPPATH\Controllers\NuevoController.php(728): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 728)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:29:36 --> ErrorException: Undefined array key "name"
+in APPPATH\Views\data_view3.php on line 29.
+ 1 APPPATH\Views\data_view3.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data_view3', [], true)
+ 5 APPPATH\Controllers\NuevoController.php(737): view('data_view3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:31:27 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:31:27 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:31:28 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:36:37 --> ErrorException: Undefined variable $records
+in APPPATH\Views\data_view3.php on line 26.
+ 1 APPPATH\Views\data_view3.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $records', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data_view3', [], true)
+ 5 APPPATH\Controllers\NuevoController.php(737): view('data_view3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:39:05 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:39:06 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:39:06 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:47:04 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1070.
+ 1 APPPATH\Controllers\NuevoController.php(1070): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1070)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->editRecord('70')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:50:08 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1070.
+ 1 APPPATH\Controllers\NuevoController.php(1070): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1070)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->editRecord('70')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:51:56 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1070.
+ 1 APPPATH\Controllers\NuevoController.php(1070): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1070)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->editRecord('70')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:53:55 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:53:57 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:53:57 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:53:57 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 15:54:16 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:26:34 --> ErrorException: Undefined property: App\Controllers\NuevoController::$model
+in APPPATH\Controllers\NuevoController.php on line 1079.
+ 1 APPPATH\Controllers\NuevoController.php(1079): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NuevoController::$model', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1079)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->deleteRecord2('70')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:36:38 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\NuevoController.php on line 536.
+ 1 APPPATH\Controllers\NuevoController.php(536): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 536)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:42:50 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\NuevoController.php on line 536.
+ 1 APPPATH\Controllers\NuevoController.php(536): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 536)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:45:45 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\NuevoController.php on line 536.
+ 1 APPPATH\Controllers\NuevoController.php(536): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 536)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:45:59 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\NuevoController.php on line 536.
+ 1 APPPATH\Controllers\NuevoController.php(536): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 536)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:48:22 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\NuevoController.php on line 536.
+ 1 APPPATH\Controllers\NuevoController.php(536): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 536)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:51:56 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\NuevoController.php on line 536.
+ 1 APPPATH\Controllers\NuevoController.php(536): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 536)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:56:03 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:56:07 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:56:07 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:56:08 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:56:08 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 19:57:23 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\NuevoController.php on line 1060.
+ 1 APPPATH\Controllers\NuevoController.php(1060): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1060)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-12-31 20:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-31 21:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-31 21:36:01 --> ErrorException: Undefined variable $titulo
+in APPPATH\Controllers\NuevoController.php on line 728.
+ 1 APPPATH\Controllers\NuevoController.php(728): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 728)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-12-31 21:36:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-31 22:02:08 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 22:02:12 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 22:02:13 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 22:02:13 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 22:02:13 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 22:02:31 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 22:02:31 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 22:02:32 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 22:02:32 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 22:02:32 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-31 22:02:58 --> ErrorException: Undefined array key "otros"
+in APPPATH\Controllers\NuevoController.php on line 1068.
+ 1 APPPATH\Controllers\NuevoController.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otros"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1068)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

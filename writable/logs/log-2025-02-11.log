@@ -1,0 +1,277 @@
+INFO - 2025-02-11 11:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 11:34:21 --> ErrorException: Undefined variable $titulo
+in APPPATH\Controllers\NuevoController.php on line 756.
+ 1 APPPATH\Controllers\NuevoController.php(756): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 756)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-02-11 11:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 11:35:43 --> Registro con ID 107 no encontrado.
+ERROR - 2025-02-11 11:35:46 --> Registro con ID 107 no encontrado.
+ERROR - 2025-02-11 11:35:50 --> Registro con ID 107 no encontrado.
+INFO - 2025-02-11 11:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 11:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 13:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 13:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 13:16:11 --> Registro con ID 222 no encontrado.
+ERROR - 2025-02-11 13:16:14 --> Registro con ID 222 no encontrado.
+INFO - 2025-02-11 13:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 13:17:57 --> Registro con ID 222 no encontrado.
+ERROR - 2025-02-11 13:17:57 --> Registro con ID 222 no encontrado.
+ERROR - 2025-02-11 13:17:57 --> Registro con ID 222 no encontrado.
+ERROR - 2025-02-11 13:18:00 --> Registro con ID 222 no encontrado.
+INFO - 2025-02-11 13:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 13:30:53 --> Registro con ID 222 no encontrado.
+ERROR - 2025-02-11 13:30:54 --> Registro con ID 222 no encontrado.
+INFO - 2025-02-11 13:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 13:41:11 --> Registro con ID 222 no encontrado.
+ERROR - 2025-02-11 13:41:12 --> Registro con ID 222 no encontrado.
+ERROR - 2025-02-11 13:41:12 --> Registro con ID 222 no encontrado.
+ERROR - 2025-02-11 13:41:13 --> Registro con ID 222 no encontrado.
+INFO - 2025-02-11 13:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 13:43:09 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:43:10 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:43:11 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:43:11 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:43:11 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:43:11 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:43:12 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-02-11 13:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 13:46:11 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:46:12 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:46:12 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:46:12 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:46:13 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:46:13 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-02-11 13:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 13:48:00 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:48:01 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:48:04 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:48:04 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:48:04 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:48:05 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-02-11 13:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 13:57:21 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:57:22 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:57:23 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 13:57:23 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 14:00:19 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 14:00:19 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 14:00:19 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-02-11 14:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 14:00:32 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-02-11 14:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 14:00:54 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-02-11 14:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 14:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 14:03:50 --> Error: Class "App\Controllers\ActualizacionPostgradoModel" not found
+in APPPATH\Controllers\NuevoController.php on line 1287.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-02-11 14:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 14:06:57 --> Registro con ID 222 no encontrado.
+ERROR - 2025-02-11 14:07:01 --> Registro con ID 222 no encontrado.
+ERROR - 2025-02-11 14:07:01 --> Registro con ID 222 no encontrado.
+INFO - 2025-02-11 14:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-11 14:11:38 --> Registro con ID 222 no encontrado.
+INFO - 2025-02-11 14:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 14:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 14:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 14:16:43 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\NuevoController.php on line 1291.
+ 1 APPPATH\Controllers\NuevoController.php(1291): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1291)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-11 14:16:48 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\NuevoController.php on line 1291.
+ 1 APPPATH\Controllers\NuevoController.php(1291): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1291)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetailPostgrado('222')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-02-11 14:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 14:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 14:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-11 14:57:20 --> ErrorException: Cannot redeclare App\Controllers\NuevoController::editRecord2()
+in APPPATH\Controllers\NuevoController.php on line 1283.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-11 14:57:25 --> ErrorException: Cannot redeclare App\Controllers\NuevoController::editRecord2()
+in APPPATH\Controllers\NuevoController.php on line 1283.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-11 14:57:29 --> ErrorException: Cannot redeclare App\Controllers\NuevoController::editRecord2()
+in APPPATH\Controllers\NuevoController.php on line 1283.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-11 14:57:32 --> ErrorException: Cannot redeclare App\Controllers\NuevoController::editRecord2()
+in APPPATH\Controllers\NuevoController.php on line 1283.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-11 14:58:42 --> ErrorException: Cannot redeclare App\Controllers\NuevoController::editRecord2()
+in APPPATH\Controllers\NuevoController.php on line 1264.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-11 14:58:49 --> ErrorException: Cannot redeclare App\Controllers\NuevoController::editRecord2()
+in APPPATH\Controllers\NuevoController.php on line 1264.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2025-02-11 14:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 14:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-11 14:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

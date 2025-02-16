@@ -1,10 +1,9 @@
 
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
+<?= $this->section('content') ?>
 
-<?php echo $this->section('contenido'); ?>
-
-<h1>Editar Materia</h1>
+<h3>Editar Materia</h3>
 <form action="<?php echo base_url('update/'.$materia['id_materia']) ?>" method="post">
     <label for="nombre_materia">Nombre Materia:</label>
     <input type="text" name="nombre_materia" id="nombre_materia" value="<?= $materia['nombre_materia'] ?>">
@@ -28,4 +27,7 @@
 
 
     
-<?php echo $this->endSection() ;?>
+<?= $this->endSection() ?>
+
+
+

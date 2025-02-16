@@ -1,12 +1,11 @@
 
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
-
-<?php echo $this->section('contenido'); ?>
+<?= $this->section('content') ?>
 
     <h1>SISTEMA VALORADOR DE ANTECEDENTES ISFT</h1>
 
     
- <?php echo $this->endSection() ;?>    
+    <?= $this->endSection() ?>  
 
  

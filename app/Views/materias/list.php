@@ -1,9 +1,8 @@
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
+<?= $this->section('content') ?>
 
-<?php echo $this->section('contenido'); ?>
-
-    <h1>Listado de Materias</h1>
+    <h3>Listado de Materias</h3>
     <ul>
         <?php foreach ($materias as $materia): ?>
             <li>
@@ -15,4 +14,4 @@
 
     
 
-    <?php echo $this->endSection() ;?>
+    <?= $this->endSection() ?>

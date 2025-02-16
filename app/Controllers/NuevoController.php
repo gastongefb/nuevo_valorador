@@ -25,6 +25,19 @@ use App\Models\DetalleInvestigacionModel;
 use App\Models\DetalleOtrosAntDocModel;
 use App\Models\DetalleAntLabModel;
 
+use App\Models\ValoracionActualizacionModel;
+use App\Models\ActualizacionOtrosTitulosModel;
+use App\Models\ActualizacionDocenteModel;
+use App\Models\ActualizacionPostgradoModel;
+use App\Models\ActualizacionAntDocModel;
+use App\Models\ActualizacionCapacitacionModel;
+use App\Models\ActualizacionFormacionOfrecidaModel;
+use App\Models\ActualizacionInvModel;
+use App\Models\ActualizacionOtrosAntModel;
+use App\Models\ActualizacionAntLabModel;
+
+use CodeIgniter\Email\Email;
+
 use CodeIgniter\I18n\Time;
 
 class NuevoController extends BaseController
@@ -374,8 +387,29 @@ class NuevoController extends BaseController
         // Limpiar la sesión después de guardar los datos
         session()->remove(['datos_titulo', 'datos_otros_titulos', 'datos_postgrado','datos_antiguedad','datos_fr','datos_fo','datos_i','datos_oa','datos_al']);
 
-        return $this->response->setStatusCode(200, 'Datos guardados exitosamente');
-        //return view('cargar_datos');
+        //return $this->response->setStatusCode(200, 'Datos guardados exitosamente');
+
+        $email = \Config\Services::email();
+        $xc = $datosTitulo["dni"];
+        $doc = new \App\Models\DocenteModel();
+        $mail = $doc->getMail($xc);
+        $xxx = $mail[0]["mail"];
+      
+        $email->setFrom('valoracionisft@gmail.com', 'ISFT');
+        $email->setTo($xxx);
+        $email->setSubject("Valoración de antecedentes");
+        $email->setMessage("Le enviamos este mail para notificarle que se ah efectuado una valoración sobre su carpeta de antecedentes");  
+        
+        if ($email->send()) {
+            echo('Correo enviado correctamente.');
+        } else {
+            echo('Error al enviar el correo.');
+        }
+        
+
+        return  redirect()->to(base_url('cargar_datos').'');
+
+        
     } catch (\Exception $e) {
         return $this->response->setStatusCode(500, 'Error al guardar los datos: ' . $e->getMessage());
     }
@@ -553,6 +587,17 @@ class NuevoController extends BaseController
                     'puntaje' => $otros_titulo['puntaje'],
                     'fecha' => $t['fecha'],
                  ];
+                 /*
+                 $puntajes88[] = [
+                    'id_otros_t' => $t['id_otros_t'],
+                    'id_otros_titulos' => $t['id_otros_titulos'],
+                    'detalle' => $t['detalle_otros_titulos'],
+                    'valoracion' => $t['id_valoracion'],
+                    'puntaje' => $otros_titulo['puntaje'],
+                    'detalle_otro' => $otros_titulo['detalle_otros_titulos'],
+                    'fecha' => $t['fecha'],
+                 ];
+                 */
               }
             }
             
@@ -714,7 +759,7 @@ class NuevoController extends BaseController
        //print_r($datosTablap);
          
        
-          return view('data_view2', [
+          return view('data_view3', [
             'datosTabla1' => $titulo,
             'datosTabla2' => $datosTabla9,
             'datosTabla3' => $datosTablap,
@@ -724,6 +769,7 @@ class NuevoController extends BaseController
             'datosTabla7' => $datosTabla_inv,
             'datosTabla8' => $datosTabla_oa,
             'datosTabla9' => $datosTabla4,
+            //'datosTabla10' => $puntajes88,
 
         ]);
         
@@ -907,6 +953,7 @@ public function actualizarOtrosTitulos()
     return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid table']);
 }
 
+
 public function deleteRecord()
 {
     $table = $this->request->getPost('table');
@@ -939,7 +986,980 @@ public function deleteRecord()
     return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to delete record']);
 }
 
+/*
+public function addRecord()
+{
+    $table = $this->request->getPost('table');
+    $fields = $this->request->getPost();
+    unset($fields['table']); // Eliminar campo no relevante
+
+    $model = null;
+
+    if ($table === 'table1') {
+        $model = new ValoracionOtrosTitulosModel();
+    } elseif ($table === 'table2') {
+        $model = new ValoracionPostgradoModel();
+    } elseif ($table === 'table3') {
+        $model = new AntecedentesDocModel();
+    } elseif ($table === 'table4') {
+        $model = new CapacitacionModel();
+    } elseif ($table === 'table5') {
+        $model = new FormacionOfrecidaModel();
+    } elseif ($table === 'table6') {
+        $model = new InvestigacionModel();
+    } elseif ($table === 'table7') {
+        $model = new OtrosAntecedentesDocModel();
+    } elseif ($table === 'table8') {
+        $model = new AntecedentesLabModel();
+    }
+
+    if ($model) {
+        $newId = $model->insert($fields);
+        if ($newId) {
+            $fields['id'] = $newId; // Agregar el ID al array de respuesta
+            return $this->response->setJSON(['status' => 'success', 'data' => $fields]);
+        }
+    }
+
+    return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to add record']);
+}
+*/
+
+public function agregarRegistro()
+    {
+        if ($this->request->isAJAX()) {
+            $data = $this->request->getPost();
+            $model = new ValoracionOtrosTitulosModel();
+
+            // Validar datos
+            $validation = \Config\Services::validation();
+            $validation->setRules([
+                'detalle_otros_titulos' => 'required|max_length[255]',
+                'fecha' => 'required|valid_date[Y-m-d]',
+                'id_valoracion' => 'required|integer',
+            ]);
+
+            if (!$validation->run($data)) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'errors' => $validation->getErrors(),
+                ]);
+            }
+
+            // Insertar datos en la base de datos
+            $model->insert($data);
+
+            return $this->response->setJSON([
+                'status' => 'success',
+                'message' => 'Registro agregado correctamente',
+                'registro' => $model->find($model->insertID()), // Retornar el nuevo registro
+            ]);
+        }
+
+        return $this->response->setStatusCode(400, 'Solicitud no válida');
+    }
+
+    public function agregarRegistro2()
+    {
+        if ($this->request->isAJAX()) {
+            $data = $this->request->getPost();
+            $model = new ValoracionPostgradoModel();
+
+            
+        }
+
+            // Insertar datos en la base de datos
+            $model->insert($data);
+
+            return $this->response->setJSON([
+                'status' => 'success',
+                'message' => 'Registro agregado correctamente',
+                'registro' => $model->find($model->insertID()), // Retornar el nuevo registro
+            ]);
+        
+
+        return $this->response->setStatusCode(400, 'Solicitud no válida');
+    }
 
 
-}    
+
+//***************************************************************************************************** */
+    //FUNCIONES PARA OTROS TITULOS
+    public function cargarOtrosTitulos()
+    {
+       $otrosTitulosModel = new OtrosTitulosModel();
+       $otrosTitulos = $otrosTitulosModel->findAll();
+ 
+       // Enviar los datos a la vista
+       return $this->response->setJSON($otrosTitulos);
+    }
+
+    public function addRecord()
+    {
+        //$mm = new ValoracionActualizacionModel();
+        $modelValoracion = new ValoracionOtrosTitulosModel();
+        $modelActualizacion = new ActualizacionOtrosTitulosModel();
+
+        //obtenemos datos del formulario
+        $data = $this->request->getPost();
+        /*
+        //$dd = $this->request->getPost('addValoracion');
+        // Mapear el campo 'otros' a 'id_otros_titulos'
+        $data['id_otros_titulos'] = $data['id_otros_titulos'];
+        unset($data['otros']); // Opcional: elimina el campo 'otros' si no es necesario
+
+    
+        if ($model->insert($data)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro agregado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar el registro']);
+
+        */
+            // Insertar en la primera tabla (valoracion_otros_titulos)
+    $valoracionData = [
+        'detalle_otros_titulos' => $data['detalle_otros_titulos'],
+        'fecha' => $data['fecha'],
+        'id_valoracion' => $data['id_valoracion'],
+        'id_otros_titulos' => $data['id_otros_titulos']
+    ];
+
+    if ($modelValoracion->insert($valoracionData)) {
+        // Obtener el ID recién insertado
+        $idOtrosT = $modelValoracion->insertID();
+
+        // Insertar en la segunda tabla (actualizacion_otros_titulos)
+        $actualizacionData = [
+            'id_otros_t' => $idOtrosT,
+            'detalle_act_otros_tit' => $data['detalle_otros_titulos'],
+            'fecha' => $data['fecha']
+        ];
+
+        if ($modelActualizacion->insert($actualizacionData)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro agregado exitosamente']);
+        } else {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar en actualizacion_otros_titulos']);
+        }
+    }
+
+    return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar el registro en valoracion_otros_titulos']);
+    }
+
+    public function editRecord($id)
+    {
+        
+        $modelValoracion = new ValoracionOtrosTitulosModel();
+        $modelActualizacion = new ActualizacionOtrosTitulosModel();
+
+        // Obtener los datos del formulario
+        $data = $this->request->getPost();
+
+        // Datos para actualizar en valoracion_otros_titulos
+        $valoracionData = [
+        'detalle_otros_titulos' => $data['detalle_otros_titulos'],
+        'fecha' => $data['fecha'],
+        'id_valoracion' => $data['id_valoracion'],
+        'id_otros_titulos' => $data['id_otros_titulos']
+        ];
+
+       // Intentar actualizar en valoracion_otros_titulos
+       if ($modelValoracion->update($id, $valoracionData)) {
+
+           $hoy = getdate();
+          // Datos para insertar en actualizacion_otros_titulos
+          $actualizacionData = [
+            'id_otros_t' => $id, // Usamos el mismo ID relacionado
+            'detalle_act_otros_tit' => $data['detalle_otros_titulos'],
+            'id_otros_titulos' => $data['id_otros_titulos'],
+            'fecha' => date('Y-m-d H:i:s')
+          ];
+
+          // Insertar un nuevo registro en actualizacion_otros_titulos
+          if ($modelActualizacion->insert($actualizacionData)) {
+              return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado en valoracion_otros_titulos y almacenado en actualizacion_otros_titulos']);
+          } else {
+              return $this->response->setJSON(['status' => 'error', 'message' => 'Error al almacenar el registro en actualizacion_otros_titulos']);
+              }
+        }
+
+      return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
+    }
+
+
+    public function deleteRecord2($id)
+    {
+        $model = new ValoracionOtrosTitulosModel();
+        if ($model->delete($id)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro eliminado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al eliminar el registro']);
+    }
+
+  
+    
+    public function getDetail($id)
+    {
+        //$otrosTitulosModel = new ValoracionOtrosTitulosModel();
+        //$record = $otrosTitulosModel->find($id);
+        
+        $mod = new ActualizacionOtrosTitulosModel();
+        $rec = $mod->getval($id);
+        
+       
+       
+        // Convertir a un arreglo simple
+        $simpleArray = [];
+        foreach ($rec as $item) {
+            foreach ($item as $key => $value) {
+                $simpleArray[$key][] = $value;
+            }
+        }
+            
+
+         // convierto array asociativo en array simple
+        //$simpleArray = $rec[0];
+        //print_r($simpleArray);
+        //exit;
+        
+        if ($simpleArray) {
+            return $this->response->setJSON($simpleArray);
+        } else {
+            log_message('error', "Registro con ID {$id} no encontrado.");
+            return $this->response->setJSON(['error' => "Registro con ID {$id} no encontrado."])->setStatusCode(404);
+        }
+       
+    }
+
+
+//**************************************************************************************************** */
+
+
+//************** FUNCIONES PARA POSTGRADO **************************************************************
+    public function cargarOtrosTitulos2()
+    {
+       $otrosTitulosModel = new TitulosPostgradoModel();
+       $otrosTitulos = $otrosTitulosModel->findAll();
+ 
+       // Enviar los datos a la vista
+       return $this->response->setJSON($otrosTitulos);
+    }
+
+    public function addRecord2()
+    {
+        $model = new ValoracionPostgradoModel();
+        $data = $this->request->getPost();
+        // Mapear el campo 'otros' a 'id_otros_titulos'
+        $data['id_titulo_postgrado'] = $data['id_titulo_postgrado'];
+        unset($data['otros']); // Opcional: elimina el campo 'otros' si no es necesario
+        
+        if ($model->insert($data)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro agregado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar el registro']);
+    }
+
+
+    public function editRecord2($id)
+    {
+        $model = new ValoracionPostgradoModel();
+        $modelActPos = new ActualizacionPostgradoModel();
+
+        $data = $this->request->getPost();
+
+       // Datos para actualizar en 
+        $valoracionData = [
+        'detalle_valoracion_postgrado' => $data['detalle_valoracion_postgrado'],
+        'fecha' => $data['fecha'],
+        'id_valoracion' => $data['id_valoracion'],
+        'id_titulo_postgrado' => $data['id_titulo_postgrado']
+        ];
+
+       // Intentar actualizar en 
+       if ($model->update($id, $valoracionData)) {
+
+           $hoy = getdate();
+          // Datos para insertar en actualizacion_postgrado
+          $actualizacionData = [
+            'id_postgrado' => $id, // Usamos el mismo ID relacionado
+            'detalle_act_postgrado' => $data['detalle_valoracion_postgrado'],
+            'id_titulo_postgrado' => $data['id_titulo_postgrado'],
+            'fecha' => date('Y-m-d H:i:s')
+          ];
+
+          // Insertar un nuevo registro en actualizacion_postgrado
+          if ($modelActPos->insert($actualizacionData)) {
+              return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado en valoracion_otros_titulos y almacenado en actualizacion_otros_titulos']);
+          } else {
+              return $this->response->setJSON(['status' => 'error', 'message' => 'Error al almacenar el registro en actualizacion_otros_titulos']);
+              }
+        }
+
+      return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
+    }
+    
+    public function getDetailPostgrado($id)
+    {
+        //$otrosTitulosModel = new ValoracionOtrosTitulosModel();
+        //$record = $otrosTitulosModel->find($id);
+        
+        $mod = new ActualizacionPostgradoModel();
+        $rec = $mod->getpos($id);
+        
+        // Convertir a un arreglo simple
+        $simpleArray = [];
+        foreach ($rec as $item) {
+            foreach ($item as $key => $value) {
+                $simpleArray[$key][] = $value;
+            }
+        }
+            
+
+         // convierto array asociativo en array simple
+        //$simpleArray = $rec[0];
+        //print_r($simpleArray);
+        //exit;
+        
+        if ($simpleArray) {
+            return $this->response->setJSON($simpleArray);
+        } else {
+            log_message('error', "Registro con ID {$id} no encontrado.");
+            return $this->response->setJSON(['error' => "Registro con ID {$id} no encontrado."])->setStatusCode(404);
+        }
+       
+    }
+
+
+
+    //***** FUNCIONES PARA ANTIGUEDAD ***************************************************************************************
+
+    public function cargarOtrosTitulos3()
+    {
+       $otrosTitulosModel = new DetalleAntDocModel();
+       $otrosTitulos = $otrosTitulosModel->findAll();
+ 
+       // Enviar los datos a la vista
+       return $this->response->setJSON($otrosTitulos);
+    }
+
+    public function addRecord3()
+    {
+        $model = new AntecedentesDocModel();
+        $data = $this->request->getPost();
+        // Mapear el campo 'otros' a 'id_otros_titulos'
+        $data['id_detalle_doc'] = $data['id_detalle_doc'];
+        unset($data['otros']); // Opcional: elimina el campo 'otros' si no es necesario
+        
+        if ($model->insert($data)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro agregado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar el registro']);
+    }
+
+    public function editRecord3($id)
+    {
+        $model = new AntecedentesDocModel();
+        $modelActAnt = new ActualizacionAntDocModel();
+
+        $data = $this->request->getPost();
+
+       // Datos para actualizar en 
+        $valoracionData = [
+        'detalle_ant_doc' => $data['detalle_ant_doc'],
+        'cantidad' => $data['cantidad'],
+        'id_valoracion' => $data['id_valoracion'],
+        'id_detalle_doc' => $data['id_detalle_doc']
+        ];
+
+       // Intentar actualizar en 
+       if ($model->update($id, $valoracionData)) {
+
+           $hoy = getdate();
+          // Datos para insertar en actualizacion_postgrado
+          $actualizacionData = [
+            'id_ant_doc' => $id, // Usamos el mismo ID relacionado
+            'detalle_act_ant_doc' => $data['detalle_ant_doc'],
+            'cantidad' => $data['cantidad'],
+            'id_detalle_doc' => $data['id_detalle_doc'],
+            'fecha' => date('Y-m-d H:i:s')
+          ];
+
+          // Insertar un nuevo registro en actualizacion_postgrado
+          if ($modelActAnt->insert($actualizacionData)) {
+              return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado en valoracion_otros_titulos y almacenado en actualizacion_otros_titulos']);
+          } else {
+              return $this->response->setJSON(['status' => 'error', 'message' => 'Error al almacenar el registro en actualizacion_otros_titulos']);
+              }
+        }
+
+      return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
+    }
+
+
+
+    public function deleteRecord23($id)
+    {
+        $model = new AntecedentesDocModel();
+        if ($model->delete($id)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro eliminado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al eliminar el registro']);
+    }
+
+    public function getDetailAntiguedad($id)
+    {
+        //$otrosTitulosModel = new ValoracionOtrosTitulosModel();
+        //$record = $otrosTitulosModel->find($id);
+        
+        $mod = new ActualizacionAntDocModel();
+        $rec = $mod->getAntDoc($id);
+        
+        // Convertir a un arreglo simple
+        $simpleArray = [];
+        foreach ($rec as $item) {
+            foreach ($item as $key => $value) {
+                $simpleArray[$key][] = $value;
+            }
+        }
+            
+
+         // convierto array asociativo en array simple
+        //$simpleArray = $rec[0];
+        //print_r($simpleArray);
+        //exit;
+        
+        if ($simpleArray) {
+            return $this->response->setJSON($simpleArray);
+        } else {
+            log_message('error', "Registro con ID {$id} no encontrado.");
+            return $this->response->setJSON(['error' => "Registro con ID {$id} no encontrado."])->setStatusCode(404);
+        }
+       
+    }
+    
+
+    //******************* FUNCIONES PARA CAPACITACIÓN *************************************************************************
+    public function cargarOtrosTitulos4()
+    {
+       $otrosTitulosModel = new DetalleCapacitacionModel();
+       $otrosTitulos = $otrosTitulosModel->findAll();
+ 
+       // Enviar los datos a la vista
+       return $this->response->setJSON($otrosTitulos);
+    }
+
+    public function addRecord4()
+    {
+        $model = new CapacitacionModel();
+        $data = $this->request->getPost();
+        // Mapear el campo 'otros' a 'id_otros_titulos'
+        $data['id_detalle_capacitacion'] = $data['id_detalle_capacitacion'];
+        unset($data['otros']); // Opcional: elimina el campo 'otros' si no es necesario
+        
+        if ($model->insert($data)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro agregado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar el registro']);
+    }
+
+    public function editRecord4($id)
+    {
+        $model = new CapacitacionModel();
+        $modelActCap = new ActualizacionCapacitacionModel();
+
+        $data = $this->request->getPost();
+
+       // Datos para actualizar en 
+        $valoracionData = [
+        'detalle_capacitacion' => $data['detalle_capacitacion'],
+        'fecha' => $data['fecha'],
+        'id_valoracion' => $data['id_valoracion'],
+        'id_capacitacion' => $data['id_capacitacion'],
+        'id_detalle_capacitacion' => $data['id_detalle_capacitacion']
+        ];
+
+       // Intentar actualizar en 
+       if ($model->update($id, $valoracionData)) {
+
+           $hoy = getdate();
+          // Datos para insertar en actualizacion_postgrado
+          $actualizacionData = [
+            'id_capacitacion' => $id, // Usamos el mismo ID relacionado
+            'detalle_act_capacitacion' => $data['detalle_capacitacion'],
+            'id_detalle_capacitacion' => $data['id_detalle_capacitacion'],
+            'fecha' => date('Y-m-d H:i:s')
+          ];
+
+          // Insertar un nuevo registro en actualizacion_postgrado
+          if ($modelActCap->insert($actualizacionData)) {
+              return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado en valoracion_otros_titulos y almacenado en actualizacion_otros_titulos']);
+          } else {
+              return $this->response->setJSON(['status' => 'error', 'message' => 'Error al almacenar el registro en actualizacion_otros_titulos']);
+              }
+        }
+
+      return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
+    }
+
+
+    public function deleteRecord24($id)
+    {
+        $model = new CapacitacionModel();
+        if ($model->delete($id)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro eliminado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al eliminar el registro']);
+    }
+
+    public function getDetailCapacitacion($id)
+    {
+        //$otrosTitulosModel = new ValoracionOtrosTitulosModel();
+        //$record = $otrosTitulosModel->find($id);
+        
+        $mod = new ActualizacionCapacitacionModel();
+        $rec = $mod->getCapacitacion($id);
+        
+        // Convertir a un arreglo simple
+        $simpleArray = [];
+        foreach ($rec as $item) {
+            foreach ($item as $key => $value) {
+                $simpleArray[$key][] = $value;
+            }
+        }
+            
+
+         // convierto array asociativo en array simple
+        //$simpleArray = $rec[0];
+        //print_r($simpleArray);
+        //exit;
+        
+        if ($simpleArray) {
+            return $this->response->setJSON($simpleArray);
+        } else {
+            log_message('error', "Registro con ID {$id} no encontrado.");
+            return $this->response->setJSON(['error' => "Registro con ID {$id} no encontrado."])->setStatusCode(404);
+        }
+       
+    }
+
+
+    //********** FUNCIONES PARA FORMACIÓN OFRECIDA************************************************************************
+    public function cargarOtrosTitulos5()
+    {
+       $otrosTitulosModel = new DetalleFormacionOfrecidaModel();
+       $otrosTitulos = $otrosTitulosModel->findAll();
+ 
+       // Enviar los datos a la vista
+       return $this->response->setJSON($otrosTitulos);
+    }
+
+    public function addRecord5()
+    {
+        $model = new FormacionOfrecidaModel();
+        $data = $this->request->getPost();
+        // Mapear el campo 'otros' a 'id_otros_titulos'
+        $data['id_formacion_ofrecida'] = $data['id_formacion_ofrecida'];
+        unset($data['otros']); // Opcional: elimina el campo 'otros' si no es necesario
+        
+        if ($model->insert($data)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro agregado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar el registro']);
+    }
+
+    public function editRecord5($id)
+    {
+        $model = new FormacionOfrecidaModel();
+        $modelActCap = new ActualizacionFormacionOfrecidaModel();
+
+        $data = $this->request->getPost();
+
+       // Datos para actualizar en 
+        $valoracionData = [
+        'detalle_formacion' => $data['detalle_formacion'],
+        'fecha' => $data['fecha'],
+        'id_valoracion' => $data['id_valoracion'],
+        'id_formacion' => $data['id_formacion'],
+        'id_formacion_ofrecida' => $data['id_formacion_ofrecida']
+        ];
+
+       // Intentar actualizar en 
+       if ($model->update($id, $valoracionData)) {
+
+           $hoy = getdate();
+          // Datos para insertar en actualizacion_postgrado
+          $actualizacionData = [
+            'id_formacion' => $id, // Usamos el mismo ID relacionado
+            'detalle_act_for_of' => $data['detalle_formacion'],
+            'id_formacion_ofrecida' => $data['id_formacion_ofrecida'],
+            'fecha' => date('Y-m-d H:i:s')
+          ];
+
+          // Insertar un nuevo registro en actualizacion_postgrado
+          if ($modelActCap->insert($actualizacionData)) {
+              return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado en valoracion_otros_titulos y almacenado en actualizacion_otros_titulos']);
+          } else {
+              return $this->response->setJSON(['status' => 'error', 'message' => 'Error al almacenar el registro en actualizacion_otros_titulos']);
+              }
+        }
+
+      return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
+    }
+
+    public function deleteRecord25($id)
+    {
+        $model = new FormacionOfrecidaModel();
+        if ($model->delete($id)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro eliminado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al eliminar el registro']);
+    }
+
+    public function getDetailFormacionOfrecida($id)
+    {
+        //$otrosTitulosModel = new ValoracionOtrosTitulosModel();
+        //$record = $otrosTitulosModel->find($id);
+        
+        $mod = new ActualizacionFormacionOfrecidaModel();
+        $rec = $mod->getFormacionOfrecida($id);
+        
+        // Convertir a un arreglo simple
+        $simpleArray = [];
+        foreach ($rec as $item) {
+            foreach ($item as $key => $value) {
+                $simpleArray[$key][] = $value;
+            }
+        }
+            
+
+         // convierto array asociativo en array simple
+        //$simpleArray = $rec[0];
+        //print_r($simpleArray);
+        //exit;
+        
+        if ($simpleArray) {
+            return $this->response->setJSON($simpleArray);
+        } else {
+            log_message('error', "Registro con ID {$id} no encontrado.");
+            return $this->response->setJSON(['error' => "Registro con ID {$id} no encontrado."])->setStatusCode(404);
+        }
+       
+    }    
+
+    //*********** FUNCIONES PARA INVESTIGACIÓN **************************************     
+    public function cargarOtrosTitulos6()
+    {
+       $otrosTitulosModel = new DetalleInvestigacionModel();
+       $otrosTitulos = $otrosTitulosModel->findAll();
+ 
+       // Enviar los datos a la vista
+       return $this->response->setJSON($otrosTitulos);
+    }
+
+    public function addRecord6()
+    {
+        $model = new InvestigacionModel();
+        $data = $this->request->getPost();
+        // Mapear el campo 'otros' a 'id_otros_titulos'
+        $data['id_detalle_investigacion'] = $data['id_detalle_investigacion'];
+        unset($data['otros']); // Opcional: elimina el campo 'otros' si no es necesario
+        
+        if ($model->insert($data)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro agregado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar el registro']);
+    }
+
+    public function editRecord6($id)
+    {
+        $model = new InvestigacionModel();
+        $modelActInv = new ActualizacionInvModel();
+
+        $data = $this->request->getPost();
+
+       // Datos para actualizar en 
+        $valoracionData = [
+        'detalle_investigacion' => $data['detalle_investigacion'],
+        'fecha' => $data['fecha'],
+        'id_valoracion' => $data['id_valoracion'],
+        'id_investigacion' => $data['id_investigacion'],
+        'id_detalle_investigacion' => $data['id_detalle_investigacion']
+        ];
+
+       // Intentar actualizar en 
+       if ($model->update($id, $valoracionData)) {
+
+           $hoy = getdate();
+          // Datos para insertar en actualizacion_postgrado
+          $actualizacionData = [
+            'id_investigacion' => $id, // Usamos el mismo ID relacionado
+            'detalle_act_investigacion' => $data['detalle_investigacion'],
+            'id_detalle_investigacion' => $data['id_detalle_investigacion'],
+            'fecha' => date('Y-m-d H:i:s')
+          ];
+
+          // Insertar un nuevo registro en actualizacion_postgrado
+          if ($modelActInv->insert($actualizacionData)) {
+              return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado en valoracion_otros_titulos y almacenado en actualizacion_otros_titulos']);
+          } else {
+              return $this->response->setJSON(['status' => 'error', 'message' => 'Error al almacenar el registro en actualizacion_otros_titulos']);
+              }
+        }
+
+      return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
+    }
+
+
+    public function deleteRecord26($id)
+    {
+        $model = new InvestigacionModel();
+        if ($model->delete($id)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro eliminado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al eliminar el registro']);
+    }
+
+    public function getDetailInvestigacion($id)
+    {
+        //$otrosTitulosModel = new ValoracionOtrosTitulosModel();
+        //$record = $otrosTitulosModel->find($id);
+        
+        $mod = new ActualizacionInvModel();
+        $rec = $mod->getInvestigacion($id);
+        
+        // Convertir a un arreglo simple
+        $simpleArray = [];
+        foreach ($rec as $item) {
+            foreach ($item as $key => $value) {
+                $simpleArray[$key][] = $value;
+            }
+        }
+            
+
+         // convierto array asociativo en array simple
+        //$simpleArray = $rec[0];
+        //print_r($simpleArray);
+        //exit;
+        
+        if ($simpleArray) {
+            return $this->response->setJSON($simpleArray);
+        } else {
+            log_message('error', "Registro con ID {$id} no encontrado.");
+            return $this->response->setJSON(['error' => "Registro con ID {$id} no encontrado."])->setStatusCode(404);
+        }
+       
+    } 
+
+
+
+    //*********** FUNCIONES PARA OTROS ANTECEDENTES ********************************************      
+    public function cargarOtrosTitulos7()
+    {
+       $otrosTitulosModel = new DetalleOtrosAntDocModel();
+       $otrosTitulos = $otrosTitulosModel->findAll();
+ 
+       // Enviar los datos a la vista
+       return $this->response->setJSON($otrosTitulos);
+    }
+
+    public function addRecord7()
+    {
+        $model = new OtrosAntecedentesDocModel();
+        $data = $this->request->getPost();
+        // Mapear el campo 'otros' a 'id_otros_titulos'
+        $data['id_detalle_otros_ant'] = $data['id_detalle_otros_ant'];
+        unset($data['otros']); // Opcional: elimina el campo 'otros' si no es necesario
+        
+        if ($model->insert($data)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro agregado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar el registro']);
+    }
+
+    public function editRecord7($id)
+    {
+        $model = new OtrosAntecedentesDocModel();
+        $modelOtros = new ActualizacionOtrosAntModel();
+
+        $data = $this->request->getPost();
+
+       // Datos para actualizar en 
+        $valoracionData = [
+        'detalle_otros_ant_doc' => $data['detalle_otros_ant_doc'],
+        'fecha' => $data['fecha'],
+        'id_valoracion' => $data['id_valoracion'],
+        'id_detalle_ant' => $data['id_detalle_ant'],
+        'id_detalle_otros_ant' => $data['id_detalle_otros_ant']
+        ];
+
+       // Intentar actualizar en 
+       if ($model->update($id, $valoracionData)) {
+
+           $hoy = getdate();
+          // Datos para insertar en actualizacion_postgrado
+          $actualizacionData = [
+            'id_detalle_ant' => $id, // Usamos el mismo ID relacionado
+            'detalle_act_otros' => $data['detalle_otros_ant_doc'],
+            'id_detalle_otros_ant' => $data['id_detalle_otros_ant'],
+            'fecha' => date('Y-m-d H:i:s')
+          ];
+
+          // Insertar un nuevo registro en actualizacion_postgrado
+          if ($modelOtros->insert($actualizacionData)) {
+              return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado en valoracion_otros_titulos y almacenado en actualizacion_otros_titulos']);
+          } else {
+              return $this->response->setJSON(['status' => 'error', 'message' => 'Error al almacenar el registro en actualizacion_otros_titulos']);
+              }
+        }
+
+      return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
+    }
+
+    public function deleteRecord27($id)
+    {
+        $model = new OtrosAntecedentesDocModel();
+        if ($model->delete($id)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro eliminado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al eliminar el registro']);
+    }
+
+    public function getDetailOtros($id)
+    {
+        //$otrosTitulosModel = new ValoracionOtrosTitulosModel();
+        //$record = $otrosTitulosModel->find($id);
+        
+        $mod = new ActualizacionOtrosAntModel();
+        $rec = $mod->getOtros($id);
+        
+        // Convertir a un arreglo simple
+        $simpleArray = [];
+        foreach ($rec as $item) {
+            foreach ($item as $key => $value) {
+                $simpleArray[$key][] = $value;
+            }
+        }
+            
+
+         // convierto array asociativo en array simple
+        //$simpleArray = $rec[0];
+        //print_r($simpleArray);
+        //exit;
+        
+        if ($simpleArray) {
+            return $this->response->setJSON($simpleArray);
+        } else {
+            log_message('error', "Registro con ID {$id} no encontrado.");
+            return $this->response->setJSON(['error' => "Registro con ID {$id} no encontrado."])->setStatusCode(404);
+        }
+       
+    }
+
+
+     //*********** FUNCIONES PARA ANT LABORALES *******************************************************************      
+     public function cargarOtrosTitulos8()
+     {
+        $otrosTitulosModel = new DetalleAntLabModel();
+        $otrosTitulos = $otrosTitulosModel->findAll();
+  
+        // Enviar los datos a la vista
+        return $this->response->setJSON($otrosTitulos);
+     }
+ 
+     public function addRecord8()
+     {
+         $model = new AntecedentesLabModel();
+         $data = $this->request->getPost();
+         // Mapear el campo 'otros' a 'id_otros_titulos'
+         $data['id_detalle_lab'] = $data['id_detalle_lab'];
+         unset($data['otros']); // Opcional: elimina el campo 'otros' si no es necesario
+         
+         if ($model->insert($data)) {
+             return $this->response->setJSON(['status' => 'success', 'message' => 'Registro agregado exitosamente']);
+         }
+         return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar el registro']);
+     }
+ 
+     public function editRecord8($id)
+    {
+        $model = new AntecedentesLabModel();
+        $modelLab = new ActualizacionAntLabModel();
+
+        $data = $this->request->getPost();
+
+       // Datos para actualizar en 
+        $valoracionData = [
+        'detalle_ant_lab' => $data['detalle_ant_lab'],
+        'cantidad' => $data['cantidad'],
+        'id_valoracion' => $data['id_valoracion'],
+        'id_ant_lab' => $data['id_ant_lab'],
+        'id_detalle_lab' => $data['id_detalle_lab']
+        ];
+
+       // Intentar actualizar en 
+       if ($model->update($id, $valoracionData)) {
+
+           $hoy = getdate();
+          // Datos para insertar en actualizacion_postgrado
+          $actualizacionData = [
+            'id_ant_lab' => $id, // Usamos el mismo ID relacionado
+            'detalle_act_lab' => $data['detalle_ant_lab'],
+            'id_detalle_lab' => $data['id_detalle_lab'],
+            'cantidad' => $data['cantidad']
+          ];
+
+          // Insertar un nuevo registro en actualizacion_postgrado
+          if ($modelLab->insert($actualizacionData)) {
+              return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado en valoracion_otros_titulos y almacenado en actualizacion_otros_titulos']);
+          } else {
+              return $this->response->setJSON(['status' => 'error', 'message' => 'Error al almacenar el registro en actualizacion_otros_titulos']);
+              }
+        }
+
+      return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
+    }
+ 
+     public function deleteRecord28($id)
+     {
+         $model = new AntecedentesLabModel();
+         if ($model->delete($id)) {
+             return $this->response->setJSON(['status' => 'success', 'message' => 'Registro eliminado exitosamente']);
+         }
+         return $this->response->setJSON(['status' => 'error', 'message' => 'Error al eliminar el registro']);
+     }
+
+     public function getDetailLab($id)
+    {
+        //$otrosTitulosModel = new ValoracionOtrosTitulosModel();
+        //$record = $otrosTitulosModel->find($id);
+        
+        $mod = new ActualizacionAntLabModel();
+        $rec = $mod->getLab($id);
+        
+        // Convertir a un arreglo simple
+        $simpleArray = [];
+        foreach ($rec as $item) {
+            foreach ($item as $key => $value) {
+                $simpleArray[$key][] = $value;
+            }
+        }
+            
+
+         // convierto array asociativo en array simple
+        //$simpleArray = $rec[0];
+        //print_r($simpleArray);
+        //exit;
+        
+        if ($simpleArray) {
+            return $this->response->setJSON($simpleArray);
+        } else {
+            log_message('error', "Registro con ID {$id} no encontrado.");
+            return $this->response->setJSON(['error' => "Registro con ID {$id} no encontrado."])->setStatusCode(404);
+        }
+       
+    }
+ 
+    
+    
+}
+
+
 

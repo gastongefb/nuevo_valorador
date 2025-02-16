@@ -1,8 +1,6 @@
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
-
-<?php echo $this->section('contenido'); ?>
-
+<?= $this->section('content') ?>
 
 <div class="container-fluid">
     <h3>Seleccione un Plan de Estudio</h3>
@@ -25,4 +23,4 @@
 </div>
 
 
-   <?php echo $this->endSection() ;?>
+<?php echo $this->endSection() ;?>

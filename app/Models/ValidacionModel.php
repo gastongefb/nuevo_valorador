@@ -14,6 +14,12 @@ class ValidacionModel extends Model
 
     protected $allowedFields = ['dni', 'id_titulo','j1','j2','j3','id_materia_valoracion'];
 
+    //protected $useSoftDelete = true;
+    protected $useTimestamps = true;
+    protected $dataFormat = 'datetime'; // date
+    protected $createdField = 'fecha_alta';
+    protected $updatedField = 'fecha_modifica';
+
     protected $table = 'valoracion';
 
     public function getValidacion()

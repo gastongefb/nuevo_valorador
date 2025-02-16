@@ -1,0 +1,630 @@
+INFO - 2025-01-15 11:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 11:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 11:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 11:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 11:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-15 11:20:44 --> ErrorException: Undefined variable $titulo
+in APPPATH\Controllers\NuevoController.php on line 734.
+ 1 APPPATH\Controllers\NuevoController.php(734): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 734)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-01-15 11:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 12:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 12:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 12:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-15 12:12:34 --> ErrorException: Undefined variable $fecha
+in APPPATH\Views\data_view3.php on line 49.
+ 1 APPPATH\Views\data_view3.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fecha', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data_view3', [], true)
+ 5 APPPATH\Controllers\NuevoController.php(742): view('data_view3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-15 13:15:29 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-15 14:23:10 --> mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+#6 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-01-15 14:23:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 4 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:23:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 6 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:23:10 --> [Caused by] mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 7 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-15 14:23:12 --> mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+#6 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-01-15 14:23:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 4 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:23:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 6 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:23:12 --> [Caused by] mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 7 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-15 14:45:05 --> mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+#6 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-01-15 14:45:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 4 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 6 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:05 --> [Caused by] mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 7 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-15 14:45:06 --> mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+#6 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-01-15 14:45:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 4 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 6 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:06 --> [Caused by] mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 7 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-15 14:45:06 --> mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+#6 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-01-15 14:45:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 4 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 6 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:06 --> [Caused by] mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 7 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-15 14:45:06 --> mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+#6 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-01-15 14:45:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 4 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 6 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:06 --> [Caused by] mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 7 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-15 14:45:06 --> mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+#6 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-01-15 14:45:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 4 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 6 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:06 --> [Caused by] mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 7 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-15 14:45:06 --> mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+#6 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-01-15 14:45:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 4 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 6 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:45:06 --> [Caused by] mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'102\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '102')
+ 7 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('102')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-15 14:46:15 --> mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '103')
+#6 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('103')
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-01-15 14:46:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '103')
+ 4 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('103')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:46:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'103\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'103\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '103')
+ 6 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('103')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 14:46:15 --> [Caused by] mysqli_sql_exception: Table 'valorador.valoracion_actualizacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'103\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'103\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = \'103\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `valoracion_actualizacion`
+WHERE `valoracion_actualizacion`.`id_val_act` = :valoracion_actualizacion.id_val_act:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '103')
+ 7 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\BaseModel->find('103')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-15 14:52:43 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-15 14:54:39 --> Registro con ID 307 no encontrado.
+ERROR - 2025-01-15 14:55:17 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-15 14:55:19 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-15 14:55:24 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-15 14:56:21 --> Registro con ID 103 no encontrado.
+ERROR - 2025-01-15 14:56:26 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-15 15:08:52 --> Registro con ID 102 no encontrado.
+CRITICAL - 2025-01-15 15:10:49 --> ParseError: syntax error, unexpected token "if", expecting "," or ";"
+in APPPATH\Controllers\NuevoController.php on line 1125.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\NuevoController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\NuevoController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\NuevoController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

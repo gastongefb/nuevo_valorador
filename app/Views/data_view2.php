@@ -10,8 +10,16 @@
 </head>
 <body>
     <div class="container mt-4">
+
+    <?php
+
+      print_r($datosTabla10);
+
+    ?>
         <!-- Tabla 1 -->
         <h5>Tabla Otros Títulos</h5>
+        <!-- Botón para abrir el modal -->
+        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#agregarModal">Agregar Registro</button>
         <table class="table table-bordered" id="table1">
             <thead>
                 <tr>
@@ -19,16 +27,20 @@
                     <th>Valoracion</th>
                     <th>Detalle</th>
                     <th>Fecha</th>
+                    <th>Título</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($datosTabla2 as $record): ?>
+                <?php foreach ($datosTabla2 as $record): 
+                    $val =  $record['id_valoracion'];
+                    ?>
                 <tr id="table1-row-<?= $record['id_otros_t'] ?>">
                     <td><?= $record['id_otros_t'] ?></td>
                     <td class="valoracion"><?= $record['id_valoracion'] ?></td>
                     <td class="detalle_otros_titulos"><?= $record['detalle_otros_titulos'] ?></td>
                     <td class="fecha"><?= $record['fecha'] ?></td>
+                    <td class="titulo"><?= $record['id_otros_titulos'] ?></td>
                     <td>
                         <button class="btn btn-primary btn-edit" data-table="table1" data-id="<?= $record['id_otros_t'] ?>">Editar</button>
                         <button class="btn btn-danger btn-delete" data-table="table1" data-id="<?= $record['id_otros_t'] ?>">Delete</button>
@@ -40,6 +52,8 @@
 
         <!-- Tabla 2 -->
         <h5>Tabla Postgrado</h5>
+         <!-- Botón para abrir el modal -->
+         <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#agregarModalp">Agregar Registro</button>
         <table class="table table-bordered" id="table2">
             <thead>
                 <tr>
@@ -47,6 +61,7 @@
                     <th>Valoracion</th>
                     <th>Detalle</th>
                     <th>Fecha</th>
+                    <th>Título</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -57,6 +72,7 @@
                     <td class="valoracion"><?= $record['id_valoracion'] ?></td>
                     <td class="detalle_valoracion_postgrado"><?= $record['detalle_valoracion_postgrado'] ?></td>
                     <td class="fecha"><?= $record['fecha'] ?></td>
+                    <td class="titulo"><?= $record['id_titulo_postgrado'] ?></td>
                     <td>
                         <button class="btn btn-primary btn-edit" data-table="table2" data-id="<?= $record['id_postgrado'] ?>">Editar</button>
                         <button class="btn btn-danger btn-delete" data-table="table2" data-id="<?= $record['id_postgrado'] ?>">Delete</button>
@@ -237,7 +253,7 @@
         </table>
     </div>
 
-    <!-- Modal dinámico -->
+    <!-- Modal dinámico editar -->
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -256,6 +272,63 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal para agregar otros titulos-->
+    <!-- Modal -->
+    <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Agregar Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAgregar">
+                        <input type="hidden" id="id_valoracion" name="id_valoracion" value="<?= $val ?>"> <!-- ID Valoración -->
+                        <div class="mb-3">
+                            <label for="detalle_otros_titulos" class="form-label">Detalle</label>
+                            <input type="text" class="form-control" id="detalle_otros_titulos" name="detalle_otros_titulos" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar postgrado-->
+    <!-- Modal -->
+    <div class="modal fade" id="agregarModalp" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Agregar Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAgregar2">
+                        <input type="hidden" id="id_valoracion" name="id_valoracion" value="<?= $val ?>"> <!-- ID Valoración -->
+                        <div class="mb-3">
+                            <label for="detalle_valoracion_postgrado" class="form-label">Detalle2</label>
+                            <input type="text" class="form-control" id="detalle_valoracion_postgrado" name="detalle_valoracion_postgrado" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label">Fecha2</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <script>
         $(document).ready(function () {
@@ -330,6 +403,203 @@
     }
 });
 
-    </script>
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#formAgregar').on('submit', function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: '<?= site_url('NuevoController/agregarRegistro') ?>',
+                method: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response); // Verifica la respuesta completa del servidor
+
+                    if (response.status === 'success') {
+                        const registro = response.registro;
+                        console.log(registro); // Verifica el contenido del registro
+
+                        // Crear la nueva fila con los botones de editar y eliminar
+                        const nuevaFila = `
+                            <tr id="row_${registro.id_otros_t}">
+                                <td>${registro.id_otros_t}</td>
+                                <td>${registro.id_valoracion}</td>
+                                <td>${registro.detalle_otros_titulos}</td>
+                                 <td>${registro.fecha}</td>                      
+                                <td>
+                                    <button class="btn btn-primary btnEditar" data-id="${registro.id_otros_t}">Editar</button>
+                                    <button class="btn btn-danger btnEliminar" data-id="${registro.id_otros_t}">Eliminar</button>
+                                </td>
+                            </tr>
+                        `;
+                        // Agregar la nueva fila a la tabla
+                        $('#table1').append(nuevaFila);
+
+                        // Mostrar una alerta de éxito
+                        alert('Registro agregado correctamente.');
+
+                        // Cerrar el modal y eliminar cualquier overlay residual
+                        $('#agregarModal').modal('hide');
+                        $('body').removeClass('modal-open');
+                        $('.modal-backdrop').remove();
+
+                        // Resetear el formulario
+                        $('#formAgregar')[0].reset();
+                    } else {
+                        // Mostrar errores de validación
+                        alert('Errores: ' + JSON.stringify(response.errors));
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Manejar el error de la solicitud
+                    console.error('Error:', error);
+                    alert('Ocurrió un error al agregar el registro.');
+                }
+            });
+        });
+
+        // Función para manejar el clic en el botón de editar
+        $(document).on('click', '.btnEditar', function () {
+            const id = $(this).data('id');
+            console.log('Editar registro con ID: ' + id);
+        });
+
+        // Función para manejar el clic en el botón de eliminar
+        $(document).on('click', '.btnEliminar', function () {
+            const id = $(this).data('id');
+            const row = $('#row_' + id);
+
+            if (confirm('¿Estás seguro de que deseas eliminar este registro?')) {
+                $.ajax({
+                    url: '<?= site_url('valoracionotros/eliminarRegistro') ?>',
+                    method: 'POST',
+                    data: { id: id },
+                    dataType: 'json',
+                    success: function (response) {
+                        if (response.status === 'success') {
+                            row.remove();
+                            alert('Registro eliminado correctamente.');
+                        } else {
+                            alert('Error al eliminar el registro.');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error:', error);
+                        alert('Ocurrió un error al eliminar el registro.');
+                    }
+                });
+            }
+        });
+
+        // Reiniciar el modal al cerrarlo
+        $('#agregarModal').on('hidden.bs.modal', function () {
+            $('#formAgregar')[0].reset();
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#formAgregar2').on('submit', function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: '<?= site_url('NuevoController/agregarRegistro2') ?>',
+                method: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response); // Verifica la respuesta completa del servidor
+
+                    if (response.status === 'success') {
+                        const registro = response.registro;
+                        console.log(registro); // Verifica el contenido del registro
+
+                        // Crear la nueva fila con los botones de editar y eliminar
+                        const nuevaFila = `
+                            <tr id="row_${registro.id_postgrado}">
+                                <td>${registro.id_postgrado}</td>
+                                <td>${registro.id_valoracion}</td>
+                                <td>${registro.detalle_valoracion_postgrado}</td>
+                                 <td>${registro.fecha}</td>                      
+                                <td>
+                                    <button class="btn btn-primary btnEditar" data-id="${registro.id_postgrado}">Editar</button>
+                                    <button class="btn btn-danger btnEliminar" data-id="${registro.id_postgrado}">Eliminar</button>
+                                </td>
+                            </tr>
+                        `;
+                        // Agregar la nueva fila a la tabla
+                        $('#table2').append(nuevaFila);
+
+                        // Mostrar una alerta de éxito
+                        alert('Registro agregado correctamente.');
+
+                        // Cerrar el modal y eliminar cualquier overlay residual
+                        $('#agregarModalp').modal('hide');
+                        $('body').removeClass('modal-open');
+                        $('.modal-backdrop').remove();
+
+                        // Resetear el formulario
+                        $('#formAgregar2')[0].reset();
+                    } else {
+                        // Mostrar errores de validación
+                        alert('Errores: ' + JSON.stringify(response.errors));
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Manejar el error de la solicitud
+                    console.error('Error:', error);
+                    alert('Ocurrió un error al agregar el registro.');
+                }
+            });
+        });
+
+        // Función para manejar el clic en el botón de editar
+        $(document).on('click', '.btnEditar', function () {
+            const id = $(this).data('id');
+            console.log('Editar registro con ID: ' + id);
+        });
+
+        // Función para manejar el clic en el botón de eliminar
+        $(document).on('click', '.btnEliminar', function () {
+            const id = $(this).data('id');
+            const row = $('#row_' + id);
+
+            if (confirm('¿Estás seguro de que deseas eliminar este registro?')) {
+                $.ajax({
+                    url: '<?= site_url('NuevoController/deleteRecord') ?>',
+                    method: 'POST',
+                    data: { id: id },
+                    dataType: 'json',
+                    success: function (response) {
+                        if (response.status === 'success') {
+                            row.remove();
+                            alert('Registro eliminado correctamente.');
+                        } else {
+                            alert('Error al eliminar el registro.');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error:', error);
+                        alert('Ocurrió un error al eliminar el registro.');
+                    }
+                });
+            }
+        });
+
+        // Reiniciar el modal al cerrarlo
+        $('#agregarModalp').on('hidden.bs.modal', function () {
+            $('#formAgregar2')[0].reset();
+        });
+    });
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

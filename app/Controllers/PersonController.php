@@ -494,12 +494,21 @@ class PersonController extends Controller
         $antDoc = new AntecedentesDocModel();
         $otros_ant = new OtrosAntecedentesDocModel();
 
+        
     // Obtener todos los registros de la tabla 'valoracion'
     $registros = $validacionModel->getValoracionDni($dni);
 
     if ((!empty($registros)) and (!empty($dni))){
 
     $fechaActual = Time::now(); //TRAE FECHA ACTUAL
+
+    //ESTO LO HAGO PARA OBTERNER NOMBRE Y APELLIDO PARA MOSTRAR EN LA VISTA
+    $docc = new DocenteModel();
+    $dd = $docc->getDatosDocentes($dni);
+    $nom = $dd[0]['nombre'];
+    $ape = $dd[0]['apellido'];
+
+     
 
     foreach ($registros as $registro) {
         $dni = $registro['dni'];
@@ -517,6 +526,14 @@ class PersonController extends Controller
         
         $t = $tit->getDatosByCodigo($idTitulo);
         $titulo_det = $t[0]['detalle_titulo'];
+
+        $fecha = $registro['fecha_alta'];
+        // Formatear la fecha
+        $fechaFormateada = date('d-m-Y', strtotime($fecha));
+
+        $fecha2 = $registro['fecha_modifica'];
+        // Formatear la fecha
+        $fechaFormateada2 = date('d-m-Y', strtotime($fecha));
 
         
         //PASOS PARA ARMAR EL PUNTAJE
@@ -611,18 +628,6 @@ class PersonController extends Controller
            $tot7 = $de['cantidad'] * $detalle_la['puntaje'];//CALCULA EL PUNTAJE FINAL EN BASE A LA CANTIDAD DE AÑOS
            $suma = $suma + $tot7;
         }
-
-        /*
-        //PUNTAJE OTROS ANTECEDENTES DOCENTES
-        $otros_ant = new OtrosAntecedentesDocModel();
-        $datosTabla8 = $otros_ant->getDatosById_ant_doc($id_va);//ACÁ PUEDE TRAER VARIOS
-        $otros_do = new DetalleOtrosAntDocModel();
-        foreach ($datosTabla8 as $dcc) {
-           $detalle_doc = $otros_do->find($dcc['id_detalle_otros_ant']); // Suponiendo que el método find busca por la clave primaria
-           $tot2 = $detalle_doc['puntaje'];//CALCULA EL PUNTAJE FINAL EN BASE A LA CANTIDAD DE AÑOS
-           $suma = $suma + $tot2;
-        }
-         */
               
         //PUNTAJE DEL TÍTULO DE BASE
         $datosTabla2 = $tit->getDatosByCodigo($idTitulo);//ACÁ TRAE UN DATO
@@ -630,8 +635,6 @@ class PersonController extends Controller
         $vv2 = $datosTabla2[0]['puntaje']; 
     
         $suma = $suma + $vv2;
-
-
 
         //ARMO UN ARREGLO CON TODOS LOS DATOS QUE NECESITO MOSTRAR
       
@@ -644,17 +647,13 @@ class PersonController extends Controller
             'materia' => $materia,
             'condicion' => $materia,
             'puntaje' => $suma,
+            'fecha_alta' => $fechaFormateada,
+            'fecha_modifica' => $fechaFormateada2,
+            'nombre' => $nom,
+            'apellido' => $ape,
 
         ];
-    /* 
-         // Ordenar por sexo y luego por edad
-        usort($titulo, function($a, $b) {
-        if ($a['titulo_det'] === $b['titulo_det']) {
-            return $b['puntaje'] - $a['puntaje'];
-        }
-        return ($a['titulo_det'] === 'Docente') ? -1 : 1;
-    });
-    */
+    
       usort($titulo, function($a, $b) {
         // Asignamos una prioridad a cada tipo de `titulo_det`.
         $prioridades = [
@@ -680,10 +679,8 @@ class PersonController extends Controller
     } 
     //PASAMOS LOS DATOS A LA VISTA  
     //return view('resultado_busqueda_valoracion', ['datosTabla1' => $titulo,]);
-    return view('mostrarValoraciones', ['datosTabla1' => $titulo,]);
-    
- 
-        
+    return view('mostrarValoracionesPorDocentes', ['datosTabla1' => $titulo,]);
+            
     } 
        
     }
@@ -757,6 +754,13 @@ class PersonController extends Controller
         $t = $tit->getDatosByCodigo($idTitulo);
         $titulo_det = $t[0]['detalle_titulo'];
 
+        $fecha = $registro['fecha_alta'];
+        // Formatear la fecha
+        $fechaFormateada = date('d-m-Y', strtotime($fecha));
+
+        $fecha2 = $registro['fecha_modifica'];
+        // Formatear la fecha
+        $fechaFormateada2 = date('d-m-Y', strtotime($fecha));
         
         //PASOS PARA ARMAR EL PUNTAJE
         $suma = 0;
@@ -850,27 +854,13 @@ class PersonController extends Controller
            $tot7 = $de['cantidad'] * $detalle_la['puntaje'];//CALCULA EL PUNTAJE FINAL EN BASE A LA CANTIDAD DE AÑOS
            $suma = $suma + $tot7;
         }
-
-        /*
-        //PUNTAJE OTROS ANTECEDENTES DOCENTES
-        $otros_ant = new OtrosAntecedentesDocModel();
-        $datosTabla8 = $otros_ant->getDatosById_ant_doc($id_va);//ACÁ PUEDE TRAER VARIOS
-        $otros_do = new DetalleOtrosAntDocModel();
-        foreach ($datosTabla8 as $dcc) {
-           $detalle_doc = $otros_do->find($dcc['id_detalle_otros_ant']); // Suponiendo que el método find busca por la clave primaria
-           $tot2 = $detalle_doc['puntaje'];//CALCULA EL PUNTAJE FINAL EN BASE A LA CANTIDAD DE AÑOS
-           $suma = $suma + $tot2;
-        }
-         */
-              
+    
         //PUNTAJE DEL TÍTULO DE BASE
         $datosTabla2 = $tit->getDatosByCodigo($idTitulo);//ACÁ TRAE UN DATO
         $vv = $datosTabla2[0]['detalle_titulo']; 
         $vv2 = $datosTabla2[0]['puntaje']; 
     
         $suma = $suma + $vv2;
-
-
 
         //ARMO UN ARREGLO CON TODOS LOS DATOS QUE NECESITO MOSTRAR
       
@@ -883,17 +873,11 @@ class PersonController extends Controller
             'materia' => $materia,
             'condicion' => $materia,
             'puntaje' => $suma,
+            'fecha_alta' => $fechaFormateada,
+            'fecha_modifica' => $fechaFormateada2,
 
         ];
-    /* 
-         // Ordenar por sexo y luego por edad
-        usort($titulo, function($a, $b) {
-        if ($a['titulo_det'] === $b['titulo_det']) {
-            return $b['puntaje'] - $a['puntaje'];
-        }
-        return ($a['titulo_det'] === 'Docente') ? -1 : 1;
-    });
-    */
+ 
       usort($titulo, function($a, $b) {
         // Asignamos una prioridad a cada tipo de `titulo_det`.
         $prioridades = [
@@ -918,12 +902,11 @@ class PersonController extends Controller
     }); 
     } 
     //PASAMOS LOS DATOS A LA VISTA  
-    return view('mostrarValoraciones', ['datosTabla1' => $titulo,]);
-    
- 
-        
+    return view('mostrarValoracionesPorMateria', ['datosTabla1' => $titulo,]);
+            
     } 
  }  
+
 
     //FUNCIÓN PARA MOSTRAR TODAS LAS VALORACIONES
     public function mostrar_valoraciones()
@@ -973,6 +956,13 @@ class PersonController extends Controller
             $t = $tit->getDatosByCodigo($idTitulo);
             $titulo_det = $t[0]['detalle_titulo'];
 
+            $fecha = $registro['fecha_alta'];
+            // Formatear la fecha
+            $fechaFormateada = date('d-m-Y', strtotime($fecha));
+
+            $fecha2 = $registro['fecha_modifica'];
+            // Formatear la fecha
+            $fechaFormateada2 = date('d-m-Y', strtotime($fecha));
             
             //PASOS PARA ARMAR EL PUNTAJE
             $suma = 0;
@@ -1067,26 +1057,12 @@ class PersonController extends Controller
                $suma = $suma + $tot7;
             }
 
-            /*
-            //PUNTAJE OTROS ANTECEDENTES DOCENTES
-            $otros_ant = new OtrosAntecedentesDocModel();
-            $datosTabla8 = $otros_ant->getDatosById_ant_doc($id_va);//ACÁ PUEDE TRAER VARIOS
-            $otros_do = new DetalleOtrosAntDocModel();
-            foreach ($datosTabla8 as $dcc) {
-               $detalle_doc = $otros_do->find($dcc['id_detalle_otros_ant']); // Suponiendo que el método find busca por la clave primaria
-               $tot2 = $detalle_doc['puntaje'];//CALCULA EL PUNTAJE FINAL EN BASE A LA CANTIDAD DE AÑOS
-               $suma = $suma + $tot2;
-            }
-             */
-                  
             //PUNTAJE DEL TÍTULO DE BASE
             $datosTabla2 = $tit->getDatosByCodigo($idTitulo);//ACÁ TRAE UN DATO
             $vv = $datosTabla2[0]['detalle_titulo']; 
             $vv2 = $datosTabla2[0]['puntaje']; 
         
             $suma = $suma + $vv2;
-    
-
 
             //ARMO UN ARREGLO CON TODOS LOS DATOS QUE NECESITO MOSTRAR
           
@@ -1099,18 +1075,12 @@ class PersonController extends Controller
                 'materia' => $materia,
                 'condicion' => $materia,
                 'puntaje' => $suma,
+                'fecha_alta' => $fechaFormateada,
+                'fecha_modifica' => $fechaFormateada2,
 
             ];
-        /* 
-             // Ordenar por sexo y luego por edad
+      
             usort($titulo, function($a, $b) {
-            if ($a['titulo_det'] === $b['titulo_det']) {
-                return $b['puntaje'] - $a['puntaje'];
-            }
-            return ($a['titulo_det'] === 'Docente') ? -1 : 1;
-        });
-        */
-        usort($titulo, function($a, $b) {
             // Asignamos una prioridad a cada tipo de `titulo_det`.
             $prioridades = [
                 'Docente' => 1,
@@ -1134,21 +1104,9 @@ class PersonController extends Controller
         } 
        
         //PASAMOS LOS DATOS A LA VISTA  
-        return view('mostrarValoraciones', ['datosTabla1' => $titulo,]);
+        return view('mostrarTodasValoraciones', ['datosTabla1' => $titulo,]);
         
-
-         /*
-        
-     */  
-
     }
-
-
-    
-
-    
-
-
 
    
 

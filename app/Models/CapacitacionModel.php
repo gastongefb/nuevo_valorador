@@ -14,6 +14,12 @@ class CapacitacionModel extends Model
 
     protected $allowedFields = ['id_valoracion','detalle_capacitacion','fecha','id_detalle_capacitacion'];
 
+    //protected $useSoftDelete = true;
+    protected $useTimestamps = true;
+    protected $dataFormat = 'datetime'; // date
+    protected $createdField = 'fecha_alta';
+    protected $updatedField = 'fecha_modifica';
+
     protected $table = 'capacitacion';
 
     public function getValidacion()

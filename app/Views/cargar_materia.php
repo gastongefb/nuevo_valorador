@@ -1,18 +1,8 @@
 
 
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
-
-<?php echo $this->section('contenido'); ?>
-
-<?php 
-
-//foreach($carreras as $c):
-
-//echo $c['id_carrera']; echo $c['nombre_carrera'];
-
-//endforeach
-   ?>
+<?= $this->section('content') ?>
 
     <h1>Nueva Materia</h1>
 

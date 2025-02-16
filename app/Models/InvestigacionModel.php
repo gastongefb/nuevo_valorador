@@ -14,6 +14,12 @@ class InvestigacionModel extends Model
 
     protected $allowedFields = ['id_valoracion','detalle_investigacion','fecha','id_detalle_investigacion'];
 
+    //protected $useSoftDelete = true;
+    protected $useTimestamps = true;
+    protected $dataFormat = 'datetime'; // date
+    protected $createdField = 'fecha_alta';
+    protected $updatedField = 'fecha_modifica';
+
     protected $table = 'investigacion';
 
     public function getValidacion()

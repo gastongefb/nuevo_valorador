@@ -76,6 +76,9 @@ $routes->post('/guardar', 'Validacion::guardar');
 
 
 //RUTAS PARA TRABAJAR CON DOCENTES
+$routes->get('/buscar_docente', 'DocenteController::buscar_docente');
+$routes->post('/buscar_docente2', 'DocenteController::buscar_docente2');
+
 $routes->get('/Docente', 'DocenteController::index');
 $routes->get('/Docente/create', 'DocenteController::create');
 $routes->post('/Docente', 'DocenteController::store');
@@ -84,6 +87,8 @@ $routes->get('/Docente/(:num)/edit', 'DocenteController::edit/$1',[ 'as' => 'Doc
 $routes->put('/Docente/:id', 'DocenteController::update');
 $routes->post('/Docente/update/(:num)', 'DocenteController::update/$1',[ 'as' => 'Docente.update' ]); 
 $routes->delete('/Docente/(:num)', 'DocenteController::destroy/$1',[ 'as' => 'Docente.destroy' ]); 
+
+
 
 //$routes->delete('/Docente/:num', 'DocenteController::destroy');
 //$routes->delete('/Docente/:id', 'DocenteController::destroy')->filter('authGuard');
@@ -117,6 +122,9 @@ $routes->get('guardarDatosFinales', 'NuevoController::guardarDatosFinales');
 
 //
 $routes->get('mostrar_valoraciones_porDocente_porMateria1', 'NuevoController::mostrar_valoraciones_porDocente_porMateria1');
+
+//$routes->match(['get', 'post'], 'mostrar_valoraciones_porDocente_porMateria3', 'NuevoController::mostrar_valoraciones_porDocente_porMateria3');
+
 $routes->post('mostrar_valoraciones_porDocente_porMateria3', 'NuevoController::mostrar_valoraciones_porDocente_porMateria3');
 $routes->post('actualizarValoracion', 'NuevoController::actualizarValoracion');
 $routes->post('actualizarOtrosTitulos', 'NuevoController::actualizarOtrosTitulos');
@@ -141,5 +149,95 @@ $routes->post('DataController/update', 'DataController::update');
 
 $routes->post('NuevoController/updateDynamic', 'NuevoController::updateDynamic'); // Ruta para manejar la actualización dinámica
 
+$routes->post('NuevoController/getSelectOptions', 'NuevoController::getSelectOptions');
 
 $routes->post('NuevoController/deleteRecord', 'NuevoController::deleteRecord'); // Ruta para manejar la eliminación dinámica
+
+$routes->post('NuevoController/agregarRegistro', 'NuevoController::agregarRegistro'); // Ruta para manejar la agregación dinámica
+
+$routes->post('NuevoController/agregarRegistro2', 'NuevoController::agregarRegistro2'); // Ruta para manejar la agregación dinámica
+
+
+
+
+//RUTAS PARA ACTUALIZAR
+//RUTAS PARA OTROS TÍTULOS
+$routes->post('NuevoController/addRecord', 'NuevoController::addRecord');
+$routes->get('NuevoController/cargarOtrosTitulos', 'NuevoController::cargarOtrosTitulos');
+$routes->post('NuevoController/editRecord/(:num)', 'NuevoController::editRecord/$1');
+$routes->post('NuevoController/deleteRecord2/(:num)', 'NuevoController::deleteRecord2/$1');
+//RUTAS PARA FORMULARIO MODAL QUE MUESTRA EL DETALLE DE LOS ITEM EN LA OPCIÓN ACTUALIZAR
+$routes->get('NuevoController/getDetail/(:num)', 'NuevoController::getDetail/$1');
+
+//RUTAS PARA POSTGRADO
+$routes->post('NuevoController/addRecord2', 'NuevoController::addRecord2');
+$routes->get('NuevoController/cargarOtrosTitulos2', 'NuevoController::cargarOtrosTitulos2');
+$routes->post('NuevoController/editRecord2/(:num)', 'NuevoController::editRecord2/$1');
+$routes->post('NuevoController/deleteRecord22/(:num)', 'NuevoController::deleteRecord22/$1');
+//RUTAS PARA FORMULARIO MODAL QUE MUESTRA EL DETALLE DE LOS ITEM EN LA OPCIÓN ACTUALIZAR
+$routes->get('NuevoController/getDetailPostgrado/(:num)', 'NuevoController::getDetailPostgrado/$1');
+
+
+//RUTAS PARA ANTIGUEDAD
+$routes->post('NuevoController/addRecord3', 'NuevoController::addRecord3');
+$routes->get('NuevoController/cargarOtrosTitulos3', 'NuevoController::cargarOtrosTitulos3');
+$routes->post('NuevoController/editRecord3/(:num)', 'NuevoController::editRecord3/$1');
+$routes->post('NuevoController/deleteRecord23/(:num)', 'NuevoController::deleteRecord23/$1');
+//RUTAS PARA FORMULARIO MODAL QUE MUESTRA EL DETALLE DE LOS ITEM EN LA OPCIÓN ACTUALIZAR
+$routes->get('NuevoController/getDetailAntiguedad/(:num)', 'NuevoController::getDetailAntiguedad/$1');
+
+//RUTAS PARA CAPACITACIÓN
+$routes->post('NuevoController/addRecord4', 'NuevoController::addRecord4');
+$routes->get('NuevoController/cargarOtrosTitulos4', 'NuevoController::cargarOtrosTitulos4');
+$routes->post('NuevoController/editRecord4/(:num)', 'NuevoController::editRecord4/$1');
+$routes->post('NuevoController/deleteRecord24/(:num)', 'NuevoController::deleteRecord24/$1');
+//RUTAS PARA FORMULARIO MODAL QUE MUESTRA EL DETALLE DE LOS ITEM EN LA OPCIÓN ACTUALIZAR
+$routes->get('NuevoController/getDetailCapacitacion/(:num)', 'NuevoController::getDetailCapacitacion/$1');
+
+//RUTAS PARA FORMACIÓN OFRECIDA
+$routes->post('NuevoController/addRecord5', 'NuevoController::addRecord5');
+$routes->get('NuevoController/cargarOtrosTitulos5', 'NuevoController::cargarOtrosTitulos5');
+$routes->post('NuevoController/editRecord5/(:num)', 'NuevoController::editRecord5/$1');
+$routes->post('NuevoController/deleteRecord25/(:num)', 'NuevoController::deleteRecord25/$1');
+//RUTAS PARA FORMULARIO MODAL QUE MUESTRA EL DETALLE DE LOS ITEM EN LA OPCIÓN ACTUALIZAR
+$routes->get('NuevoController/getDetailFormacionOfrecida/(:num)', 'NuevoController::getDetailFormacionOfrecida/$1');
+
+//RUTAS PARA INVESTIGACIÓN
+$routes->post('NuevoController/addRecord6', 'NuevoController::addRecord6');
+$routes->get('NuevoController/cargarOtrosTitulos6', 'NuevoController::cargarOtrosTitulos6');
+$routes->post('NuevoController/editRecord6/(:num)', 'NuevoController::editRecord6/$1');
+$routes->post('NuevoController/deleteRecord26/(:num)', 'NuevoController::deleteRecord26/$1');
+//RUTAS PARA FORMULARIO MODAL QUE MUESTRA EL DETALLE DE LOS ITEM EN LA OPCIÓN ACTUALIZAR
+$routes->get('NuevoController/getDetailInvestigacion/(:num)', 'NuevoController::getDetailInvestigacion/$1');
+
+//RUTAS PARA OTROS ANTECEDENTES
+$routes->post('NuevoController/addRecord7', 'NuevoController::addRecord7');
+$routes->get('NuevoController/cargarOtrosTitulos7', 'NuevoController::cargarOtrosTitulos7');
+$routes->post('NuevoController/editRecord7/(:num)', 'NuevoController::editRecord7/$1');
+$routes->post('NuevoController/deleteRecord27/(:num)', 'NuevoController::deleteRecord27/$1');
+//RUTAS PARA FORMULARIO MODAL QUE MUESTRA EL DETALLE DE LOS ITEM EN LA OPCIÓN ACTUALIZAR
+$routes->get('NuevoController/getDetailOtros/(:num)', 'NuevoController::getDetailOtros/$1');
+
+//RUTAS PARA ANTECEDENTES LABORALES
+$routes->post('NuevoController/addRecord8', 'NuevoController::addRecord8');
+$routes->get('NuevoController/cargarOtrosTitulos8', 'NuevoController::cargarOtrosTitulos8');
+$routes->post('NuevoController/editRecord8/(:num)', 'NuevoController::editRecord8/$1');
+$routes->post('NuevoController/deleteRecord28/(:num)', 'NuevoController::deleteRecord28/$1');
+//RUTAS PARA FORMULARIO MODAL QUE MUESTRA EL DETALLE DE LOS ITEM EN LA OPCIÓN ACTUALIZAR
+$routes->get('NuevoController/getDetailLab/(:num)', 'NuevoController::getDetailLab/$1');
+
+
+
+
+//$routes->get('pdf', 'PdfController::index'); // Ruta para mostrar la vista con la tabla de datos.
+//RUTA PARA CREAR PDF DE TODAS LAS VALORACIONES
+$routes->post('pdf/generatePdf', 'PdfController::generatePdf'); 
+//RUTA PARA CREAR PDF DE LAS VALORACIONES POR MATERIA
+$routes->post('pdf/generatePdfPorMateria', 'PdfController::generatePdfPorMateria');
+//RUTA PARA CREA PDF DE VALORACIONES POR DOCENTE
+$routes->post('pdf/generatePdfPorDocente', 'PdfController::generatePdfPorDocente');
+
+//RUTAS PARA ENVIAR CORREOS
+$routes->get('/correo', 'CorreoController::index');
+$routes->post('/correo/enviar', 'CorreoController::enviarCorreo');
+

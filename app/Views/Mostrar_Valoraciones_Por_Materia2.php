@@ -1,7 +1,7 @@
-<?php echo $this->extend('layaout'); ?>
 
+<?= $this->extend('layout/layout') ?>
 
-<?php echo $this->section('contenido'); ?>
+<?= $this->section('content') ?>
 
 <head>
     <meta charset="UTF-8">
@@ -29,4 +29,4 @@
 
   
    
-   <?php echo $this->endSection() ;?>
+<?= $this->endSection() ?>

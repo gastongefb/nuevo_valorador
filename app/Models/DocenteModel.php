@@ -103,4 +103,15 @@ class DocenteModel extends Model
         return $query->getResultArray(); // Devuelve los resultados como un array asociativo
     }
 
+    public function getMail($codigo)
+    {
+        $builder = $this->db->table($this->table);
+        $builder->select('mail');
+        $builder->where('dni', $codigo);
+        $query = $builder->get();
+ 
+        return $query->getResultArray(); // Devuelve los resultados como un array asociativo
+    }
+
+
 }

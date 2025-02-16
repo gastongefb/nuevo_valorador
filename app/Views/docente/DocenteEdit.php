@@ -1,8 +1,6 @@
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
-
-<?php echo $this->section('contenido'); ?>
-
+<?= $this->section('content') ?>
 
 
 
@@ -46,4 +44,4 @@
    <br>
    <br>
    <br>
-   <?php echo $this->endSection() ;?>
+   <?= $this->endSection() ?>

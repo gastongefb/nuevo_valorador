@@ -1,12 +1,11 @@
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
+
+<?= $this->section('content') ?>
 
 
-<?php echo $this->section('contenido'); ?>
 
 
-
-
-    <h1>Datos de Docente</h1>
+    <h3>Datos de Docente</h3>
    
 
    <label fro="nombre" class="col-sm-2 form-label">Nombre Docente</label>
@@ -41,4 +40,4 @@
    <br>
    <br>
    <br>
-   <?php echo $this->endSection() ;?>
+   <?= $this->endSection() ?>

@@ -1,7 +1,6 @@
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
-
-<?php echo $this->section('contenido'); ?>
+<?= $this->section('content') ?>
 
  
     <form action="<?php echo base_url('search') ?>" method="get">
@@ -11,4 +10,4 @@
     </form>
 
     
-<?php echo $this->endSection() ;?>
+    <?= $this->endSection() ?>

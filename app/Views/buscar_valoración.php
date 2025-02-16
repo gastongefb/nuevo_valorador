@@ -1,7 +1,6 @@
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
-
-<?php echo $this->section('contenido'); ?>
+<?= $this->section('content') ?>
 
 
 <div class="container-fluid">

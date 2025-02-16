@@ -1,7 +1,6 @@
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
-
-<?php echo $this->section('contenido'); ?>
+<?= $this->section('content') ?>
 
 <style>
         /* Estilos para la tabla */
@@ -14,6 +13,10 @@
             padding: 8px;
             text-align: left;
         }
+
+        p {
+             text-align: center;
+           }
     </style>
   
 
@@ -21,20 +24,12 @@
 <br>
 <?php
  foreach($validaciones2 as $v):   
-  ?>
-<tbody>
- <tr>
-    <th scope="row" ><?php echo $v['nombre_carrera'];?></th>
-    
-  </tr>
- 
-</tbody>
 
- <?php
+  $titulo = $v['nombre_carrera'];
+  
   endforeach;
 ?>
-
-<br>
+<h3><p><?php echo $titulo;?></p></h3>
 <br>
 <div class="container-fluid">
 <table class="table table-hover">
@@ -74,4 +69,4 @@ foreach($validaciones as $validacion):
   <br>
   <br>
 
-<?php echo $this->endSection() ;?>
+  <?php echo $this->endSection() ;?>

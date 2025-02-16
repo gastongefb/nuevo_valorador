@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="<?= base_url() ?>/bootstrap/css/bootstrap.min.css">
 
   
-
   <style>
         /* Estilo para centrar el texto en las celdas */
         .table td, .table th {
@@ -17,9 +16,7 @@
             vertical-align: middle;
         }
     </style>
-
-    
-    
+ 
 </head>
 
 <body>
@@ -32,11 +29,14 @@
       <?php echo $this->renderSection("contenido"); ?>
     </div>
 
-    <?= $this->include('ayuda') ?>
+    <?= $this->include('ayuda') ?> <!-- ESTO ES PARA QUE SE MUESTRE LA RESOLUCIÓN DE VALORACIÓN -->
   </div>
 
+  <!-- ESTOS SCRIPT SON NECESARIOS PARA EL BUEN FUNCIONAMIENTO DEL MENÚ-->
   <script src="<?= base_url() ?>/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="<?= base_url() ?>/bootstrap/js/jquery_v3.7.1.js"></script>
+
+  <!-- EL SCRIPT DE ABAJO ES PARA AGRANDAR LAS IMAGENES DEL VALORADOR-->
   <script type="text/javascript">
     $(document).ready(function() {
       $("#peques img").hover(function() {

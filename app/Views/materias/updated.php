@@ -1,10 +1,9 @@
 
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
+<?= $this->section('content') ?>
 
-<?php echo $this->section('contenido'); ?>
-
-<h1>Materia Actualizada</h1>
+<h3>Materia Actualizada</h3>
 <p><strong>ID:</strong> <?= esc($materia['id_materia']) ?></p>
 <p><strong>Nombre Materia:</strong> <?= esc($materia['nombre_materia']) ?></p>
 <p><strong>Cuatrimestre:</strong> <?= esc($materia['cuatrimestre']) ?></p>
@@ -13,6 +12,6 @@
 <a href="<?= base_url('materias') ?>">Volver a la lista de materias</a>
 
     
-<?php echo $this->endSection() ;?>    
+<?= $this->endSection() ?> 
 
 

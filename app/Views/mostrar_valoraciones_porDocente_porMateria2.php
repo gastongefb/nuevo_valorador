@@ -1,7 +1,6 @@
-<?php echo $this->extend('layaout'); ?>
+<?= $this->extend('layout/layout') ?>
 
-
-<?php echo $this->section('contenido'); ?>
+<?= $this->section('content') ?>
 
 
 <div class="tab-content mt-3" id="myTabContent">
@@ -28,4 +27,4 @@
             </form>
         </div>
 
-   <?php echo $this->endSection() ;?>
+        <?= $this->endSection() ?>

@@ -12,7 +12,13 @@ class ValoracionOtrosTitulosModel extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $allowedFields = ['id_otros_titulos','detalle_otros_titulos','fecha','id_valoracion'];
+    protected $allowedFields = ['id_valoracion','detalle_otros_titulos','fecha','id_otros_titulos'];
+
+    //protected $useSoftDelete = true;
+    protected $useTimestamps = true;
+    protected $dataFormat = 'datetime'; // date
+    protected $createdField = 'fecha_alta';
+    protected $updatedField = 'fecha_modifica';
 
     protected $table = 'valoracion_otros_titulos';
 

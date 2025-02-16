@@ -1,0 +1,161 @@
+INFO - 2025-01-16 10:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 10:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 10:23:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 10:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 10:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-16 11:09:50 --> Registro con ID 103 no encontrado.
+CRITICAL - 2025-01-16 11:12:48 --> ParseError: syntax error, unexpected token "if"
+in APPPATH\Controllers\NuevoController.php on line 1121.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\NuevoController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\NuevoController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\NuevoController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 11:16:43 --> ErrorException: Undefined array key "id_otros_t"
+in APPPATH\Controllers\NuevoController.php on line 1119.
+ 1 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_t"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1119)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-01-16 11:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-16 11:30:04 --> ErrorException: Undefined variable $record
+in APPPATH\Controllers\NuevoController.php on line 1124.
+ 1 APPPATH\Controllers\NuevoController.php(1124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $record', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1124)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 11:30:06 --> ErrorException: Undefined variable $record
+in APPPATH\Controllers\NuevoController.php on line 1124.
+ 1 APPPATH\Controllers\NuevoController.php(1124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $record', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1124)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-16 12:10:46 --> Registro con ID 102 no encontrado.
+CRITICAL - 2025-01-16 12:26:51 --> ParseError: syntax error, unexpected token "{"
+in APPPATH\Models\ActualizacionOtrosTitulosModel.php on line 33.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\ActualizacionOtrosTitulosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ActualizacionOtrosTitulosModel')
+ 3 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ActualizacionOtrosTitulosModel')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 12:26:55 --> ParseError: syntax error, unexpected token "{"
+in APPPATH\Models\ActualizacionOtrosTitulosModel.php on line 33.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\ActualizacionOtrosTitulosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ActualizacionOtrosTitulosModel')
+ 3 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ActualizacionOtrosTitulosModel')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 12:27:31 --> ParseError: syntax error, unexpected token "{"
+in APPPATH\Models\ActualizacionOtrosTitulosModel.php on line 33.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\ActualizacionOtrosTitulosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ActualizacionOtrosTitulosModel')
+ 3 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ActualizacionOtrosTitulosModel')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 12:27:36 --> ParseError: syntax error, unexpected token "{"
+in APPPATH\Models\ActualizacionOtrosTitulosModel.php on line 33.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Models\\ActualizacionOtrosTitulosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ActualizacionOtrosTitulosModel')
+ 3 APPPATH\Controllers\NuevoController.php(1119): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ActualizacionOtrosTitulosModel')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 14:11:19 --> ErrorException: Undefined array key 0
+in APPPATH\Controllers\NuevoController.php on line 1123.
+ 1 APPPATH\Controllers\NuevoController.php(1123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1123)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('102')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 16:07:13 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\NuevoController.php on line 1125.
+ 1 APPPATH\Controllers\NuevoController.php(1125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1125)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 16:07:15 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\NuevoController.php on line 1125.
+ 1 APPPATH\Controllers\NuevoController.php(1125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1125)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 16:07:20 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\NuevoController.php on line 1125.
+ 1 APPPATH\Controllers\NuevoController.php(1125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1125)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 16:07:28 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\NuevoController.php on line 1125.
+ 1 APPPATH\Controllers\NuevoController.php(1125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1125)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->getDetail('103')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-16 16:34:44 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-16 16:34:45 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-16 16:34:47 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-16 16:34:56 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-16 16:34:57 --> Registro con ID 102 no encontrado.
+ERROR - 2025-01-16 16:36:59 --> Registro con ID 104 no encontrado.
+ERROR - 2025-01-16 16:38:17 --> Registro con ID 104 no encontrado.
+ERROR - 2025-01-16 17:47:26 --> Registro con ID 102 no encontrado.
+INFO - 2025-01-16 18:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-16 18:08:45 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'valorador', 3306, '', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\app\Models\Usuarios.php(8): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\Home.php(33): App\Models\Usuarios->obtenerUsuario(Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\Home->login()
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\valoradorG2\valorador\app\Models\Usuarios.php(8): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\Home.php(33): App\Models\Usuarios->obtenerUsuario(Array)
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\Home->login()
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-01-16 18:08:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `nombre_usuario` = :nombre_usuario:', [...], false)
+ 3 APPPATH\Models\Usuarios.php(8): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(33): App\Models\Usuarios->obtenerUsuario([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-01-16 18:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 18:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 18:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 18:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,472 @@
+INFO - 2025-01-06 11:24:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-06 11:34:25 --> ErrorException: Undefined array key "id_titulo_postgrado"
+in APPPATH\Controllers\NuevoController.php on line 1115.
+ 1 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_titulo_postgrado"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1115)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-01-06 11:42:29 --> {"id_ant_doc":"","detalle_ant_doc":"esc manuel belfgranoooo","fechaa":"2025-01-03","id_valoracion":"297","id_detalle_doc":"1"}
+DEBUG - 2025-01-06 12:11:35 --> {"id_ant_doc":"94","detalle_ant_doc":"esc manuel belfgranoooo","fechaa":"2025-01-01","id_valoracion":"297","id_detalle_doc":"1"}
+DEBUG - 2025-01-06 12:11:49 --> {"id_ant_doc":"94","detalle_ant_doc":"esc manuel belfgranoooo","fechaa":"2025-01-01","id_valoracion":"297","id_detalle_doc":"3"}
+CRITICAL - 2025-01-06 12:34:20 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Controllers\NuevoController.php on line 1112.
+ 1 APPPATH\Controllers\NuevoController.php(1112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 12:34:23 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Controllers\NuevoController.php on line 1112.
+ 1 APPPATH\Controllers\NuevoController.php(1112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 12:34:23 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Controllers\NuevoController.php on line 1112.
+ 1 APPPATH\Controllers\NuevoController.php(1112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 12:34:23 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Controllers\NuevoController.php on line 1112.
+ 1 APPPATH\Controllers\NuevoController.php(1112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 12:35:22 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Controllers\NuevoController.php on line 1112.
+ 1 APPPATH\Controllers\NuevoController.php(1112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 12:35:25 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Controllers\NuevoController.php on line 1112.
+ 1 APPPATH\Controllers\NuevoController.php(1112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 12:35:25 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Controllers\NuevoController.php on line 1112.
+ 1 APPPATH\Controllers\NuevoController.php(1112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 12:35:25 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Controllers\NuevoController.php on line 1112.
+ 1 APPPATH\Controllers\NuevoController.php(1112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 12:35:25 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Controllers\NuevoController.php on line 1112.
+ 1 APPPATH\Controllers\NuevoController.php(1112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 12:35:25 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Controllers\NuevoController.php on line 1112.
+ 1 APPPATH\Controllers\NuevoController.php(1112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 1112)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2025-01-06 12:36:42 --> {"id_ant_doc":"94","detalle_ant_doc":"esc manuel belfgrano","fechaa":"2025-01-02","id_valoracion":"297","id_detalle_doc":"3"}
+DEBUG - 2025-01-06 12:41:23 --> {"id_ant_doc":"96","detalle_ant_doc":"isef","cantidada":"11","id_valoracion":"297","id_detalle_doc":"1"}
+DEBUG - 2025-01-06 12:42:45 --> {"id_ant_doc":"96","detalle_ant_doc":"isefffff","cantidada":"10","id_valoracion":"297","id_detalle_doc":"1"}
+DEBUG - 2025-01-06 12:43:00 --> {"id_ant_doc":"96","detalle_ant_doc":"isefffff","cantidada":"11","id_valoracion":"297","id_detalle_doc":"1"}
+DEBUG - 2025-01-06 12:43:54 --> {"id_ant_doc":"96","detalle_ant_doc":"isefffff","cantidada":"20","id_valoracion":"297","id_detalle_doc":"1"}
+DEBUG - 2025-01-06 12:47:37 --> {"id_ant_doc":"96","detalle_ant_doc":"isefffff","cantidada":"20","id_valoracion":"297","id_detalle_doc":"1"}
+DEBUG - 2025-01-06 14:18:47 --> {"id_ant_doc":"97","detalle_ant_doc":"esc manuel belfgranoooo","cantidada":"5","id_valoracion":"297","id_detalle_doc":"1"}
+DEBUG - 2025-01-06 14:18:57 --> {"id_ant_doc":"97","detalle_ant_doc":"esc manuel belfgranoooo","cantidada":"7","id_valoracion":"297","id_detalle_doc":"1"}
+CRITICAL - 2025-01-06 14:24:58 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\AntecedentesDocModel.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2025-01-06 14:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-06 14:25:30 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\AntecedentesDocModel.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-06 14:26:10 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\AntecedentesDocModel.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-01-06 14:26:54 --> {"id_ant_doc":"97","detalle_ant_doc":"esc manuel belfgranoooo","cantidad":"7","id_valoracion":"297","id_detalle_doc":"1"}
+DEBUG - 2025-01-06 14:32:38 --> {"id_ant_doc":"97","detalle_ant_doc":"esc manuel belfgranoooo20","cantidad":"10","id_valoracion":"297","id_detalle_doc":"5"}
+ERROR - 2025-01-06 14:53:20 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#10 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-01-06 14:53:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 14:53:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:20\', \'2025-01-06 14:53:20\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:20\', \'2025-01-06 14:53:20\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 14:53:20 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:20\', \'2025-01-06 14:53:20\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:20\', \'2025-01-06 14:53:20\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:20\', \'2025-01-06 14:53:20\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-06 14:53:23 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#10 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-01-06 14:53:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 14:53:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:23\', \'2025-01-06 14:53:23\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:23\', \'2025-01-06 14:53:23\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 14:53:23 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:23\', \'2025-01-06 14:53:23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:23\', \'2025-01-06 14:53:23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:23\', \'2025-01-06 14:53:23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-06 14:53:26 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#10 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-01-06 14:53:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 14:53:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:26\', \'2025-01-06 14:53:26\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:26\', \'2025-01-06 14:53:26\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 14:53:26 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:26\', \'2025-01-06 14:53:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:26\', \'2025-01-06 14:53:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:26\', \'2025-01-06 14:53:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-06 14:53:26 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#10 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-01-06 14:53:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 14:53:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:26\', \'2025-01-06 14:53:26\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:26\', \'2025-01-06 14:53:26\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 14:53:26 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:26\', \'2025-01-06 14:53:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:26\', \'2025-01-06 14:53:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'1\', \'2025-01-06 14:53:26\', \'2025-01-06 14:53:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-06 14:56:14 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#10 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-01-06 14:56:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 14:56:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 14:56:14\', \'2025-01-06 14:56:14\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 14:56:14\', \'2025-01-06 14:56:14\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 14:56:14 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 14:56:14\', \'2025-01-06 14:56:14\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 14:56:14\', \'2025-01-06 14:56:14\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 14:56:14\', \'2025-01-06 14:56:14\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-06 15:07:09 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#10 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-01-06 15:07:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 15:07:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 15:07:09\', \'2025-01-06 15:07:09\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 15:07:09\', \'2025-01-06 15:07:09\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 15:07:09 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 15:07:09\', \'2025-01-06 15:07:09\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 15:07:09\', \'2025-01-06 15:07:09\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 15:07:09\', \'2025-01-06 15:07:09\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-06 15:17:08 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\valoradorG2\valorador\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\valoradorG2\valorador\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\valoradorG2\valorador\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\valoradorG2\valorador\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\valoradorG2\valorador\app\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+#9 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+#10 C:\xampp\htdocs\valoradorG2\valorador\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\valoradorG2\valorador\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-01-06 15:17:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 15:17:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 15:17:08\', \'2025-01-06 15:17:08\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 15:17:08\', \'2025-01-06 15:17:08\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-06 15:17:08 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 15:17:08\', \'2025-01-06 15:17:08\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 15:17:08\', \'2025-01-06 15:17:08\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (\'diplomatura11189\', \'2025-01-01\', \'297\', \'2\', \'2025-01-06 15:17:08\', \'2025-01-06 15:17:08\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `valoracion_postgrado` (`detalle_valoracion_postgrado`, `fecha`, `id_valoracion`, `id_titulo_postgrado`, `created_at`, `fecha_modifica`) VALUES (:detalle_valoracion_postgrado:, :fecha:, :id_valoracion:, :id_titulo_postgrado:, :created_at:, :fecha_modifica:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\NuevoController.php(1115): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->addRecord2()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

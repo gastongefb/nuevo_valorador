@@ -1,12 +1,10 @@
+<?= $this->extend('layout/layout') ?>
 
-<?php echo $this->extend('layaout'); ?>
-
-
-<?php echo $this->section('contenido'); ?>
+<?= $this->section('content') ?>
 
 
 
-    <h1>Agregar Docente</h1>
+    <h3>Agregar Docente</h3>
 
    <form action="<?php echo base_url('Docente') ?>" method="post" autocomplete="off">
 
@@ -49,4 +47,4 @@
 	</div>
 
    </form>
-   <?php echo $this->endSection() ;?>
+   <?= $this->endSection() ?>

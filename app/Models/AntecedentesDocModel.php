@@ -14,6 +14,12 @@ class AntecedentesDocModel extends Model
 
     protected $allowedFields = ['id_valoracion','detalle_ant_doc','cantidad','id_detalle_doc'];
 
+    //protected $useSoftDelete = true;
+    protected $useTimestamps = true;
+    protected $dataFormat = 'datetime'; // date
+    protected $createdField = 'fecha_alta';
+    protected $updatedField = 'fecha_modifica';
+
     protected $table = 'antecedentes_docentes';
 
     public function getValidacion()

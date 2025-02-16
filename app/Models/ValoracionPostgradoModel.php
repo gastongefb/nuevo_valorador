@@ -13,8 +13,21 @@ class ValoracionPostgradoModel extends Model
     protected $useAutoIncrement = true;
 
     protected $allowedFields = ['id_valoracion','detalle_valoracion_postgrado','fecha','id_titulo_postgrado'];
+    //protected $allowedFields = ['detalle_valoracion_postgrado', 'fecha', 'id_valoracion', 'id_titulo_postgrado'];
+
+    //protected $useSoftDelete = true;
+    protected $useTimestamps = true;
+    protected $dataFormat = 'datetime'; // date
+    protected $createdField = 'fecha_alta';
+    protected $updatedField = 'fecha_modifica';
+
+    //protected $deleteField = 'deleted_at'; //si trabajo con softdelete voy a tener que usar este campo
 
     protected $table = 'valoracion_postgrado';
+
+
+
+
 
     public function getValidacion()
     {

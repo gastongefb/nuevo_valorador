@@ -55,7 +55,7 @@ class DocenteController extends BaseController
        // return redirect()->route('Docente');
     //    return redirect()->to('/Docente')->with('success', 'Docente actualizado correctamente');
         $this->session->setFlashdata('success', 'Docente actualizado correctamente');
-    return redirect()->route('Docente');
+    return redirect()->route('buscar_docente');
     }
      
 
@@ -68,4 +68,35 @@ class DocenteController extends BaseController
         //return redirect()->route('Docente.DocenteIndex');
         return redirect()->route('Docente');
     }
+
+
+
+    public function buscar_docente()
+    {
+        return view('docente/buscar_docente');
+    }
+
+    public function buscar_docente2()
+    {
+        
+        // Obtén el DNI del input (por ejemplo, de un formulario)
+        $dni = $this->request->getPost('dni');
+
+        
+        $db = \Config\Database::connect();
+
+
+        $docente = new DocenteModel();
+        
+        
+    // Obtener todos los registros de la tabla 'valoracion'
+    $doc = $docente->getDatosDocentes($dni);
+
+    return view('docente/buscar_docente3', ['datosTabla1' => $doc,]);
+    
+ 
+        
+    } 
+     
+    
 }
