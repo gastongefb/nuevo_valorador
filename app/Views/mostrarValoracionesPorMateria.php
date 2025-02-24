@@ -2,18 +2,6 @@
 
 <?= $this->section('content') ?>
 
-<br>
-<?php 
-  $mat = '';
-  foreach ($datosTabla1 as $registro): 
-     $materia = $registro['materia'];
-    // recuperamos el primer registro y cortamos el bucle
-    break;
-   endforeach; 
-  ?>
-
-<h2 class="text-center">Listado de Valoraciones de la materia: <?php echo htmlspecialchars($materia); ?></h2>
-
 <style>
   /* Estilo general de la tabla */
   table {
@@ -60,7 +48,34 @@
       white-space: nowrap;
     }
   }
+
+   /* Ajuste para la columna de Materia */
+   .materia-col {
+    max-width: 150px; /* Ajusta este valor según el diseño deseado */
+    white-space: nowrap; /* Evita que el encabezado se divida en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Si el texto es demasiado largo, lo recorta con "..." */
+  }
+
+  /* Permitir ajuste en las filas, pero no en el encabezado */
+  td.materia-col {
+    white-space: normal; /* Permite que el contenido de la fila tenga salto de línea */
+    word-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+  }
 </style>
+
+<br>
+<?php 
+  $mat = '';
+  foreach ($datosTabla1 as $registro): 
+     $materia = $registro['materia'];
+    // recuperamos el primer registro y cortamos el bucle
+    break;
+   endforeach; 
+  ?>
+
+<h2 class="text-center">Listado de Valoraciones de la materia: <?php echo htmlspecialchars($materia); ?></h2>
+
 
 <table class="table">
   <thead>
@@ -68,9 +83,9 @@
       <th scope="col">Código</th>
       <th scope="col">Dni</th>
       <th scope="col">Título</th>
-      <th scope="col">Jurado 1</th>
-      <th scope="col">Jurado 2</th>
-      <th scope="col">Jurado 3</th>
+      <th scope="col">Jurado1</th>
+      <th scope="col">Jurado2</th>
+      <th scope="col">Jurado3</th>
       <th scope="col">Materia</th>
       <th scope="col">Puntaje</th>
       <th scope="col">Fecha de alta</th>
@@ -92,7 +107,7 @@
         <td><?= esc($registro['j1']); ?></td>
         <td><?= esc($registro['j2']); ?></td>
         <td><?= esc($registro['j3']); ?></td>
-        <td><?= esc($registro['materia']); ?></td>
+        <td class="materia-col"><?= esc($registro['materia']); ?></td> <!-- se aplica la clase para la fila -->
         <td><?= esc($registro['puntaje']); ?></td>
         <td><?= esc($registro['fecha_alta']); ?></td>
         <td><?= esc($registro['fecha_modifica']); ?></td>
@@ -100,9 +115,6 @@
         $x = $x + 1;
         ?>
       </tr>
-
-      <br>
-
 
     </tbody>
   <?php endforeach; ?>
@@ -112,8 +124,10 @@
 <form method="post" action="<?= site_url('pdf/generatePdfPorMateria') ?>" style="display:none;" id="pdfForm">
   <input type="hidden" name="datosTabla1" value='<?= json_encode($datosTabla1) ?>'>
 </form>
-<button onclick="document.getElementById('pdfForm').submit();">Descargar PDF</button>
+<!--<button onclick="document.getElementById('pdfForm').submit();">Descargar PDF</button>-->
 
+
+<button type="button" class="btn btn-primary" onclick="document.getElementById('pdfForm').submit();">Descargar PDF</button>
 
 
 <?= $this->endSection() ?>

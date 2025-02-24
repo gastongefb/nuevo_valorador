@@ -131,11 +131,85 @@
       </div>
     </div>
   </nav>
+<?php
 
+//print_r($datosTabla1); 
+//echo"--------------";
+//print_r($datosTabla2); 
+//echo"---------------";
+foreach ($datosTabla1 as $item) {
+    //echo "DNI: " . $item['dni'] . "<br>";
+   // echo "Título: " . $item['titulo'] . "<br>";
+   // echo "Materia: " . $item['materia'] . "<br>";
+   // echo "Puntaje: " . $item['puntaje'] . "<br><br>";
+   // echo "nombre: " . $item['nombre'] . "<br><br>";
+    $n = $item['nombre'];
+    $a = $item['apellido'];
+    
+}
+//print_r($datosTabla2);
+?>
+
+<!-- Tabla 0 -->
+<div class="container mt-5">
+    <h1 class="text-center">Actualización de Valoración</h1>
+    <h3 class="text-center">Docente: <?php echo htmlspecialchars($n)." ".htmlspecialchars($a); ?></h3>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Dni</th>
+            <th>J1</th>
+            <th>J2</th>
+            <th>J3</th>
+            <th>Materia</th>
+            <th>Título</th>
+            <th class="actions-column">Acciones</th>
+        </tr>
+        </thead>
+        <tbody id="recordTable0">
+        <?php foreach ($datosTabla1 as $record): 
+            
+            //$vvv = $record['id_valoracion'];
+            //$f = $record['fecha'] ;
+            //$fechaFormateada = date('d-m-Y', strtotime($f));
+            ?>
+            <tr id="row-<?= $record['id_valoracion'] ?>">
+                <td><?= $record['id_valoracion']; ?></td> 
+                <td><?= $record['dni']; ?></td> 
+                <td><?= $record['j1']; ?></td>
+                <td><?= $record['j2']; ?></td>
+                <td><?= $record['j3'] ?></td>
+                <td><?= $record['materia'] ?></td>
+                <td><?= $record['titulo'] ?></td>
+                <td>
+                    <button class="btn btn-warning btn-editt" 
+                            data-idt="<?= $record['id_valoracion'] ?>" 
+                            data-dnit="<?= $record['dni'] ?>" 
+                            data-j1t="<?= $record['j1'] ?>" 
+                            data-j2t="<?= $record['j2'] ?>" 
+                            data-j3t="<?= $record['j3'] ?>" 
+                            data-materiat="<?= $record['materia'] ?>" 
+                            data-otrost="<?= $record['titulo'] ?>">
+                        Editar
+                    </button>
+                    <button class="btn btn-info btn-detail0" 
+                            data-id="<?= $record['id_valoracion'] ?>">
+                        Detalle
+                    </button>
+                    <button class="btn btn-danger btn-delete" data-id="<?= $record['id_valoracion'] ?>">Eliminar</button>
+                    
+                </td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
 
 <!-- Tabla 1 -->
 <div class="container mt-5">
-    <h1 class="text-center">Actualización de Valoración</h1>
+    
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModal">Agregar Otros Títulos</button>
     <table class="table table-bordered">
         <thead>
@@ -143,7 +217,7 @@
             <th>ID</th>
             <th>Detalle</th>
             <th>Fecha</th>
-            <th>Valoración</th>
+            <th>Cod. Valoración</th>
             <th>Otros Títulos</th>
             <th class="actions-column">Acciones</th>
         </tr>
@@ -512,6 +586,82 @@
         <?php endforeach; ?>
         </tbody>
     </table>
+</div>
+
+<!-- Modal Editar Títulos -->
+<div class="modal fade" id="editModalt" tabindex="-1">
+    <div class="modal-dialog">
+        <form id="editFormt">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Títulos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="editIdt" name="id_valoracion">
+                    <div class="mb-3">
+                        <label for="editDni" class="form-label">Dni</label>
+                        <input type="text" class="form-control" id="editDni" name="dni" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editJ1" class="form-label">Jurado 1</label>
+                        <input type="text" class="form-control" id="editJ1" name="j1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editJ2" class="form-label">Jurado 2</label>
+                        <input type="text" class="form-control" id="editJ2" name="j2" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editJ3" class="form-label">Jurado 3</label>
+                        <input type="text" class="form-control" id="editJ3" name="j3" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editMateria" class="form-label">Materia</label>
+                        <select class="form-control" id="editMateria" name="materia" required>
+                            <option value="">Seleccione una materia</option>
+                            <!-- Las opciones se cargarán dinámicamente -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editOtrost" class="form-label">Otros Títulos</label>
+                        <select class="form-control" id="editOtrost" name="titulo" required>
+                            <option value="">Seleccione un título</option>
+                            <!-- Las opciones se cargarán dinámicamente -->
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Detalle Títulos -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg"> <!-- Usamos modal-lg para un tamaño más grande -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalles Títulos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered text-center"> <!-- Centrar los contenidos de la tabla -->
+                    <thead id="detailTableHead0">
+                        <!-- Cabecera de la tabla se cargará dinámicamente -->
+                    </thead>
+                    <tbody id="detailTableBody0">
+                        <!-- Datos se cargarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -1368,8 +1518,124 @@
 </div> 
 </footer>
 
+<!-- SCRIPT PARA TÍTULOS -->
+<script>
+    $('.btn-detail0').on('click', function () {
+        const id = $(this).data('id');
+
+        // Mapeo de claves a nombres personalizados
+        const columnNames = {
+            'id_act_postgrado': 'Dni',
+            'id_postgrado': 'ID Postgrado',
+            'detalle_act_postgrado': 'Detalle',
+            'id_titulo_postgrado': 'Cód. Postgrado',
+            'fecha': 'fecha',
+            // Añade aquí más claves y sus nombres personalizados según sea necesario
+        };
+
+        $.get(`<?= base_url('NuevoController/getDetailPostgrado') ?>/${id}`, function (response) {
+            const detailTableHead = $('#detailTableHead2');
+            const detailTableBody = $('#detailTableBody2');
+
+            detailTableHead.empty();
+            detailTableBody.empty();
+
+            // Crear encabezado de la tabla con nombres personalizados
+            let headers = '<tr>';
+            for (const key in columnNames) {
+                if (response[key]) {
+                    headers += `<th>${columnNames[key]}</th>`;
+                }
+            }
+            headers += '</tr>';
+            detailTableHead.append(headers);
+
+            // Determinar la cantidad de filas a crear
+            const numRows = response[Object.keys(response)[0]].length;
+
+            // Crear filas con los valores del objeto
+            for (let i = 0; i < numRows; i++) {
+                let row = '<tr>';
+                for (const key in columnNames) {
+                    if (response[key]) {
+                        row += `<td>${response[key][i]}</td>`;
+                    }
+                }
+                row += '</tr>';
+                detailTableBody.append(row);
+            }
+
+            $('#detailModal2').modal('show');
+        });
+    });
+</script>
+
+<script>
+    // Cargar listado de "títulos" al abrir el modal de edición
+    $('.btn-editt').on('click', function () {
+        const idt = $(this).data('idt');
+        const dnit = $(this).data('dnit');
+        const j1t = $(this).data('j1t');
+        const j2t = $(this).data('j2t');
+        const j3t = $(this).data('j3t');
+        const materiat = $(this).data('materiat');
+        const otrosId = $(this).data('otrost');
+
+        // Asignar los valores al formulario
+        $('#editIdt').val(idt);
+        $('#editDni').val(dnit);
+        $('#editJ1').val(j1t);
+        $('#editJ2').val(j2t);
+        $('#editJ3').val(j3t);
+        //$('#editMateria').val(materiat);
+
+        // Obtener listado de "otros títulos" con la opción actual seleccionada
+        $.get('<?= base_url('NuevoController/cargarOtrosTitulos0') ?>', function (response) {
+            const otrosTitulosSelect = $('#editOtrost');
+            otrosTitulosSelect.empty(); // Limpiar opciones previas
+            otrosTitulosSelect.append('<option value="">Seleccione un título</option>'); // Opción predeterminada
+
+            response.forEach(titulo => {
+                const selected = titulo.detalle_titulo == otrosId ? 'selected' : '';
+                otrosTitulosSelect.append(`<option value="${titulo.id_titulo}" ${selected}>${titulo.detalle_titulo}</option>`);
+            });
+
+            // Cargar materias
+            $.get('<?= base_url('NuevoController/cargarMaterias') ?>', function (response) {
+                const materiaSelect = $('#editMateria');
+                materiaSelect.empty();
+                materiaSelect.append('<option value="">Seleccione una materia</option>');
+
+                response.forEach(materia => {
+                    const selected = materia.id_materia == materiat ? 'selected' : '';
+                    materiaSelect.append(`<option value="${materia.id_materia}" ${selected}>${materia.nombre_materia}</option>`);
+                });
+
+                // Mostrar el modal después de cargar las opciones
+                $('#editModalt').modal('show');
+            }); // Cierre correcto de $.get('cargarMaterias')
+        }); // Cierre correcto de $.get('cargarOtrosTitulos0')
+    });
 
 
+    // Manejo del formulario de edición
+    $('#editFormt').on('submit', function (e) {
+        e.preventDefault();
+        $.post(`<?= base_url('NuevoController/editRecord0') ?>/${$('#editIdt').val()}`, $(this).serialize(), function (response) {
+            location.reload();
+        });
+    });
+
+    $('.btn-delete').on('click', function () {
+        if (confirm('¿Estás seguro de eliminar este registro?')) {
+            $.post(`<?= base_url('NuevoController/deleteRecord20') ?>/${$(this).data('id')}`, function () {
+                location.reload();
+            });
+        }
+    });
+</script>
+
+<!-- SCRIPT PARA OTROS TITULOS-->
 <script>
     $('.btn-detail').on('click', function () {
         const id = $(this).data('id');

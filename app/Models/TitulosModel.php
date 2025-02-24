@@ -27,12 +27,22 @@ class TitulosModel extends Model
         return $this->where('puntaje', $codigo)->findAll();
     }
     */ 
-    
-    public function getDatosByCodigo($codigo)
+    //$t = $tit->     getDatosByCodigo($idTitulo);
+    public function getDatosTitulos($codigo)
     {
         $builder = $this->db->table($this->table);
         $builder->select('*');
         $builder->where('id_titulo',$codigo);
+        $query = $builder->get();
+ 
+        return $query->getResultArray(); // Devuelve los resultados como un array asociativo
+    }
+
+    public function getDatosByCodigo($idTitulo)
+    {
+        $builder = $this->db->table($this->table);
+        $builder->select('*');
+        $builder->where('id_titulo',$idTitulo);
         $query = $builder->get();
  
         return $query->getResultArray(); // Devuelve los resultados como un array asociativo

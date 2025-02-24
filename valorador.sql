@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 12, 2024 at 10:01 PM
+-- Generation Time: Feb 24, 2025 at 03:05 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -24,6 +24,126 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `actualizacion_antecedentes_docentes`
+--
+
+CREATE TABLE `actualizacion_antecedentes_docentes` (
+  `id_act_ant_doc` int(11) NOT NULL,
+  `id_ant_doc` int(11) NOT NULL,
+  `detalle_act_ant_doc` varchar(100) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `id_detalle_doc` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `actualizacion_antecedentes_docentes`
+--
+
+INSERT INTO `actualizacion_antecedentes_docentes` (`id_act_ant_doc`, `id_ant_doc`, `detalle_act_ant_doc`, `cantidad`, `id_detalle_doc`, `fecha`) VALUES
+(6, 114, 'IES MANUEL BELGRANO0', 7, 1, '2025-02-23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `actualizacion_antecedentes_laborales`
+--
+
+CREATE TABLE `actualizacion_antecedentes_laborales` (
+  `id_act_lab` int(11) NOT NULL,
+  `id_ant_lab` int(11) NOT NULL,
+  `detalle_act_lab` varchar(100) NOT NULL,
+  `id_detalle_lab` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `actualizacion_capacitacion`
+--
+
+CREATE TABLE `actualizacion_capacitacion` (
+  `id_act_capacitacion` int(11) NOT NULL,
+  `id_capacitacion` int(11) NOT NULL,
+  `detalle_act_capacitacion` varchar(100) NOT NULL,
+  `id_detalle_capacitacion` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `actualizacion_formacion_ofrecida`
+--
+
+CREATE TABLE `actualizacion_formacion_ofrecida` (
+  `id_act_for_of` int(11) NOT NULL,
+  `id_formacion` int(11) NOT NULL,
+  `detalle_act_for_of` varchar(100) NOT NULL,
+  `id_formacion_ofrecida` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `actualizacion_investigacion`
+--
+
+CREATE TABLE `actualizacion_investigacion` (
+  `id_act_investigacion` int(11) NOT NULL,
+  `id_investigacion` int(11) NOT NULL,
+  `detalle_act_investigacion` varchar(100) NOT NULL,
+  `id_detalle_investigacion` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `actualizacion_otros_antecedentes`
+--
+
+CREATE TABLE `actualizacion_otros_antecedentes` (
+  `id_act_otros` int(11) NOT NULL,
+  `id_detalle_ant` int(11) NOT NULL,
+  `detalle_act_otros` varchar(100) NOT NULL,
+  `id_detalle_otros_ant` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `actualizacion_otros_titulos`
+--
+
+CREATE TABLE `actualizacion_otros_titulos` (
+  `id_act_otros_tit` int(11) NOT NULL,
+  `id_otros_t` int(11) NOT NULL,
+  `detalle_act_otros_tit` varchar(100) NOT NULL,
+  `id_otros_titulos` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `actualizacion_postgrado`
+--
+
+CREATE TABLE `actualizacion_postgrado` (
+  `id_act_postgrado` int(11) NOT NULL,
+  `id_postgrado` int(11) NOT NULL,
+  `detalle_act_postgrado` varchar(100) NOT NULL,
+  `id_titulo_postgrado` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `antecedentes_docentes`
 --
 
@@ -31,56 +151,22 @@ CREATE TABLE `antecedentes_docentes` (
   `id_ant_doc` int(11) NOT NULL,
   `id_valoracion` int(11) NOT NULL,
   `detalle_ant_doc` varchar(100) NOT NULL,
-  `fecha` int(11) NOT NULL,
-  `id_detalle_doc` int(11) NOT NULL
+  `cantidad` varchar(2) NOT NULL,
+  `id_detalle_doc` int(11) NOT NULL,
+  `fecha_alta` datetime NOT NULL,
+  `fecha_modifica` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `antecedentes_docentes`
 --
 
-INSERT INTO `antecedentes_docentes` (`id_ant_doc`, `id_valoracion`, `detalle_ant_doc`, `fecha`, `id_detalle_doc`) VALUES
-(21, 156, 'xzxzz', 3, 2),
-(22, 157, 'erere', 2, 2),
-(23, 158, 'dfdfd', 2, 2),
-(24, 159, 'sdssdsdsds', 2, 2),
-(25, 159, 'dfdf', 2, 3),
-(26, 160, 'erer', 10, 1),
-(27, 161, '', 0, 1),
-(28, 162, '', 0, 1),
-(29, 163, '', 0, 1),
-(30, 164, '', 0, 1),
-(31, 165, 'wewew', 2, 1),
-(32, 166, '', 0, 1),
-(33, 167, '', 0, 1),
-(34, 168, '', 0, 1),
-(35, 169, '', 0, 1),
-(36, 170, '', 0, 1),
-(37, 171, '', 0, 1),
-(38, 172, '', 0, 1),
-(39, 173, '', 0, 1),
-(40, 175, '', 0, 1),
-(41, 176, '', 0, 1),
-(42, 177, '', 0, 1),
-(43, 178, '', 0, 1),
-(44, 180, '', 0, 1),
-(45, 181, '', 0, 1),
-(46, 184, '', 0, 1),
-(47, 185, '', 0, 1),
-(48, 186, '', 0, 1),
-(49, 187, '', 0, 1),
-(50, 188, '', 0, 1),
-(51, 189, '', 0, 1),
-(52, 190, '', 0, 1),
-(53, 191, '', 0, 1),
-(54, 192, '', 0, 1),
-(55, 202, '', 0, 1),
-(56, 203, '', 0, 1),
-(57, 204, '', 0, 1),
-(58, 205, '', 0, 1),
-(59, 206, '', 0, 1),
-(60, 207, '', 0, 1),
-(61, 208, 'ccc', 2, 1);
+INSERT INTO `antecedentes_docentes` (`id_ant_doc`, `id_valoracion`, `detalle_ant_doc`, `cantidad`, `id_detalle_doc`, `fecha_alta`, `fecha_modifica`) VALUES
+(114, 310, 'IES MANUEL BELGRANO0', '7', 1, '2025-02-22 20:05:39', '2025-02-23 14:21:29'),
+(115, 310, 'IES MANUEL BELGRANO', '7', 2, '2025-02-22 20:05:39', '2025-02-22 20:05:39'),
+(116, 310, 'IES MANUEL BELGRANO', '7', 3, '2025-02-22 20:05:39', '2025-02-22 20:05:39'),
+(117, 310, 'ISFT ANGACO', '5', 4, '2025-02-22 20:05:39', '2025-02-22 20:05:39'),
+(118, 310, 'ISFT ANGACO', '4', 5, '2025-02-22 20:05:39', '2025-02-22 20:05:39');
 
 -- --------------------------------------------------------
 
@@ -92,7 +178,7 @@ CREATE TABLE `antecedentes_laborales` (
   `id_ant_lab` int(11) NOT NULL,
   `id_valoracion` int(11) NOT NULL,
   `detalle_ant_lab` varchar(50) NOT NULL,
-  `fecha` int(11) NOT NULL,
+  `cantidad` float NOT NULL,
   `id_detalle_lab` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -100,48 +186,8 @@ CREATE TABLE `antecedentes_laborales` (
 -- Dumping data for table `antecedentes_laborales`
 --
 
-INSERT INTO `antecedentes_laborales` (`id_ant_lab`, `id_valoracion`, `detalle_ant_lab`, `fecha`, `id_detalle_lab`) VALUES
-(21, 156, 'zxxzx', 4, 2),
-(22, 157, 'ereer', 7, 1),
-(23, 158, 'ddfd', 2, 2),
-(24, 159, 'erere', 2, 1),
-(25, 160, 'sds', 10, 1),
-(26, 161, '', 0, 1),
-(27, 162, '', 0, 1),
-(28, 163, '', 0, 1),
-(29, 164, '', 0, 1),
-(30, 165, 'e33', 2, 1),
-(31, 166, '', 0, 1),
-(32, 167, '', 0, 1),
-(33, 168, '', 0, 1),
-(34, 169, '', 0, 1),
-(35, 170, '', 0, 1),
-(36, 171, '', 0, 1),
-(37, 172, '', 0, 1),
-(38, 173, '', 0, 1),
-(39, 175, '', 0, 1),
-(40, 176, '', 0, 1),
-(41, 177, '', 0, 1),
-(42, 178, '', 0, 1),
-(43, 180, '', 0, 1),
-(44, 181, '', 0, 1),
-(45, 184, '', 0, 1),
-(46, 185, '', 0, 1),
-(47, 186, '', 0, 1),
-(48, 186, '', 0, 1),
-(49, 187, '', 0, 1),
-(50, 188, '', 0, 1),
-(51, 189, '', 0, 1),
-(52, 190, '', 0, 1),
-(53, 191, '', 0, 1),
-(54, 192, '', 0, 1),
-(55, 202, '', 0, 1),
-(56, 203, '', 0, 1),
-(57, 204, '', 0, 1),
-(58, 205, '', 0, 1),
-(59, 206, '', 0, 1),
-(60, 207, '', 0, 1),
-(61, 208, '', 0, 1);
+INSERT INTO `antecedentes_laborales` (`id_ant_lab`, `id_valoracion`, `detalle_ant_lab`, `cantidad`, `id_detalle_lab`) VALUES
+(93, 310, 'MINISTERIO DE EDUCACIÓN', 8, 1);
 
 -- --------------------------------------------------------
 
@@ -154,56 +200,22 @@ CREATE TABLE `capacitacion` (
   `id_valoracion` int(11) NOT NULL,
   `detalle_capacitacion` varchar(100) NOT NULL,
   `fecha` date NOT NULL,
-  `id_detalle_capacitacion` int(11) NOT NULL
+  `id_detalle_capacitacion` int(11) NOT NULL,
+  `fecha_alta` datetime NOT NULL,
+  `fecha_modifica` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `capacitacion`
 --
 
-INSERT INTO `capacitacion` (`id_capacitacion`, `id_valoracion`, `detalle_capacitacion`, `fecha`, `id_detalle_capacitacion`) VALUES
-(46, 156, 'assa', '2021-01-01', 2),
-(47, 157, 'fdfdfd', '2019-06-18', 2),
-(48, 158, 'dffdf', '2021-01-01', 2),
-(49, 159, 'eeere', '2020-01-02', 1),
-(50, 159, 'wewew', '2019-02-02', 3),
-(51, 160, 'erer', '2020-01-01', 1),
-(52, 161, '', '0000-00-00', 1),
-(53, 162, '', '0000-00-00', 1),
-(54, 163, '', '0000-00-00', 1),
-(55, 164, '', '0000-00-00', 1),
-(56, 165, 'ewew', '2021-01-02', 2),
-(57, 166, '', '0000-00-00', 1),
-(58, 167, '', '0000-00-00', 1),
-(59, 168, '', '0000-00-00', 1),
-(60, 169, '', '0000-00-00', 1),
-(61, 170, '', '0000-00-00', 1),
-(62, 171, '', '0000-00-00', 1),
-(63, 172, '', '0000-00-00', 1),
-(64, 173, '', '0000-00-00', 1),
-(65, 175, '', '0000-00-00', 1),
-(66, 176, '', '0000-00-00', 1),
-(67, 177, '', '0000-00-00', 1),
-(68, 178, 'fgfgfgf', '2020-04-04', 2),
-(69, 178, '', '0000-00-00', 1),
-(70, 180, 'dfdd', '2021-01-01', 2),
-(71, 181, '', '0000-00-00', 1),
-(72, 184, '', '0000-00-00', 1),
-(73, 185, '', '0000-00-00', 1),
-(74, 186, '', '0000-00-00', 1),
-(75, 187, '', '0000-00-00', 1),
-(76, 188, '', '0000-00-00', 1),
-(77, 189, '', '0000-00-00', 1),
-(78, 190, '', '0000-00-00', 1),
-(79, 191, '', '0000-00-00', 1),
-(80, 192, '', '0000-00-00', 1),
-(81, 202, '', '0000-00-00', 1),
-(82, 203, '', '0000-00-00', 1),
-(83, 204, '', '0000-00-00', 1),
-(84, 205, '', '0000-00-00', 1),
-(85, 206, '', '0000-00-00', 1),
-(86, 207, '', '0000-00-00', 1),
-(87, 208, 'ddd', '2024-08-14', 1);
+INSERT INTO `capacitacion` (`id_capacitacion`, `id_valoracion`, `detalle_capacitacion`, `fecha`, `id_detalle_capacitacion`, `fecha_alta`, `fecha_modifica`) VALUES
+(133, 310, 'CIBERSESGURIDAD UNI SANTO TOME', '2022-06-07', 1, '2025-02-22 20:05:39', '2025-02-22 20:05:39'),
+(134, 310, 'CURSO PYTHON', '2024-02-22', 6, '2025-02-22 20:05:39', '2025-02-22 20:05:39'),
+(135, 310, 'CURSO BACKEND', '2025-02-06', 6, '2025-02-22 20:05:39', '2025-02-22 20:05:39'),
+(136, 310, 'CURSO CSS', '2025-02-04', 6, '2025-02-22 20:05:39', '2025-02-22 20:05:39'),
+(137, 310, 'DIPLOMATURA EN REDES', '2023-06-06', 1, '2025-02-22 21:06:50', '2025-02-22 21:06:50'),
+(138, 314, 'DIPLOMATURA EN BAKEND', '2025-02-05', 1, '2025-02-22 21:34:40', '2025-02-22 21:34:40');
 
 -- --------------------------------------------------------
 
@@ -222,7 +234,7 @@ CREATE TABLE `carreras` (
 
 INSERT INTO `carreras` (`id_carrera`, `nombre_carrera`) VALUES
 (1, 'Tecnicatura Superior en Desarrollo de Software'),
-(2, 'Energías Rebovables');
+(2, 'Energías Renovables');
 
 -- --------------------------------------------------------
 
@@ -260,9 +272,11 @@ CREATE TABLE `detalle_ant_doc` (
 --
 
 INSERT INTO `detalle_ant_doc` (`id_detalle_doc`, `detalle_ant_doc`, `puntaje`) VALUES
-(1, 'Antiguedad en el espacio curricular o equivalente en el nivel Superior Técnico.', 1.5),
-(2, 'Antiguedad en otros espacios curriculares del nivel Superior Técnico.', 1),
-(3, 'Antiguedad en otros espacios curriculares del nivel Superior Técnico.', 0);
+(1, 'En la docencia', 0.1),
+(2, 'En el nivel superior', 0.15),
+(3, 'En el nivel superior técnico', 0.2),
+(4, 'En la institución', 0.25),
+(5, 'En la unidad curricular', 0.3);
 
 -- --------------------------------------------------------
 
@@ -281,8 +295,8 @@ CREATE TABLE `detalle_ant_lab` (
 --
 
 INSERT INTO `detalle_ant_lab` (`id_detalle_lab`, `detalle_ant_lab`, `puntaje`) VALUES
-(1, 'Antecedentes en empreas, PyMes, organismos del estado no mayor a 15 años a la fecha de postulación.', 0.5),
-(2, 'Antecedentes en empreas, PyMes, y/o emprendimientos propios no mayor a 15 años a la fecha de postula', 1);
+(1, 'Antecedentes en relación de dependencias(con organismos del Estado o privados)', 0.4),
+(2, 'Antecedentes sin relación de dependencia y/o emprendimientos propios', 0.6);
 
 -- --------------------------------------------------------
 
@@ -301,12 +315,85 @@ CREATE TABLE `detalle_capacitacion` (
 --
 
 INSERT INTO `detalle_capacitacion` (`id_detalle_capacitacion`, `detalle`, `puntaje`) VALUES
-(1, 'con evaluación, con un mínimo de 30 hs.', 0.25),
-(2, 'con evaluación, con menos de 30 hs.', 0.15),
-(3, 'con evaluación, donde se detallan días y no horas.', 0.15),
-(4, 'sin evaluación, con un mínimo de 30 hs.', 0.15),
-(5, 'sin evaluación, con menos o sin especificar las ho', 0.05),
-(6, 'sin evaluación, donde se detallan días y no horas', 0.1);
+(1, 'Diplomatura.Por certificación.', 1),
+(2, 'Curso de Postgrado.Más de 81 hs.', 0.5),
+(3, 'Curso de Postgrado.Entre 41 y 80 hs.', 0.4),
+(4, 'Curso de Postgrado.Entre 21 y 40 hs.', 0.15),
+(5, 'Curso de Postgrado.Hasta 20 hs.', 0.2),
+(6, 'Cursos.Con evaluación.41 o más horas.', 0.05),
+(7, 'Cursos.Con evaluación.Entre 21 y 40 hs.', 0.04),
+(8, 'Trayectos.Hasta 20 hs.', 0.03),
+(9, 'Trayectos.Donde consten días y no horas.', 0.003),
+(10, 'Trayectos.Sin evaluación.', 0.002),
+(11, 'Congresos.Eventos internacionales.', 0.2),
+(12, 'Congresos.Eventos nacionales.', 0.15),
+(13, 'Congresos.Eventos provinciales.', 0.1),
+(14, 'Congresos.Eventos departamentales.', 0.05),
+(15, 'Congresos.Eventos institucionales.', 0.02);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detalle_formacion_ofrecida`
+--
+
+CREATE TABLE `detalle_formacion_ofrecida` (
+  `id_formacion_ofrecida` int(11) NOT NULL,
+  `detalle` varchar(100) NOT NULL,
+  `puntaje` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `detalle_formacion_ofrecida`
+--
+
+INSERT INTO `detalle_formacion_ofrecida` (`id_formacion_ofrecida`, `detalle`, `puntaje`) VALUES
+(1, 'Cursos,seminarios,foros,etc.Con normativa de aval de organismo oficial.Más de 81 hs.', 0.25),
+(2, 'Cursos,seminarios,foros,etc.Con normativa de aval de organismo oficial.Entre 41 y 80 hs.', 0.2),
+(3, 'Cursos,seminarios,foros,etc.Con normativa de aval de organismo oficial.Entre 21 y 40 hs.', 0.15),
+(4, 'Cursos,seminarios,foros,etc.Con normativa de aval de organismo oficial.Hasta 20 hs.', 0.1),
+(5, 'Cursos,seminarios,foros,etc.Sin normativa de aval de organismo oficial.Por certificación', 0.05),
+(6, 'Congresos y Simposios.Eventos internacionales.Coordinador/moderador', 0.25),
+(7, 'Congresos y Simposios.Eventos internacionales.Expositor/Distante', 0.3),
+(9, 'Congresos y Simposios.Eventos nacionales.Coordinaodr/Moderador.', 0.2),
+(10, 'Congresos y Simposios.Eventos nacionales.Expositor/Disertante', 0.25),
+(11, 'Congresos y Simposios.Eventos provinciales.Coordinador/moderador', 0.1),
+(12, 'Congresos y Simposios.Eventos provinciales.Expositor/Disertante', 0.15),
+(13, 'Congresos y Simposios.Eventos departamentales.Coordinador/moderador', 0.05),
+(14, 'Congresos y Simposios.Eventos departamentales.Expositor/Disertante', 0.03),
+(15, 'Congresos y Simposios.Eventos departamentales.Coordinador/moderador', 0.05),
+(16, 'Congresos y Simposios.Eventos departamentales.Expositor/Disertante', 0.1),
+(17, 'Congresos y Simposios.Eventos institucionales.Coordinador/moderador', 0.03),
+(18, 'Congresos y Simposios.Eventos institucionales.Expositor/Disertante', 0.05);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detalle_investigacion`
+--
+
+CREATE TABLE `detalle_investigacion` (
+  `id_detalle_investigacion` int(11) NOT NULL,
+  `detalle` varchar(100) NOT NULL,
+  `puntaje` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `detalle_investigacion`
+--
+
+INSERT INTO `detalle_investigacion` (`id_detalle_investigacion`, `detalle`, `puntaje`) VALUES
+(1, 'Proyecto de investigación relacionado con el espacio curricular y/o la carrera', 1),
+(2, 'Publicaciones científicas y/o académcias.Libro.Autor', 0.5),
+(3, 'Publicaciones científicas y/o académcias.Libro.Co-Autor', 0.25),
+(4, 'Publicaciones científicas y/o académcias.Libro.Compilador', 0.1),
+(5, 'Publicaciones científicas y/o académcias.Capítulo.Autor', 0.25),
+(6, 'Publicaciones científicas y/o académcias.Capítulo.Co-Autor.', 0.15),
+(7, 'Publicaciones científicas y/o académcias.Capítulo.Compilador', 0.1),
+(8, 'Publicaciones científicas y/o académcias.Artículo.Autor', 0.15),
+(9, 'Publicaciones científicas y/o académcias.Artículo.Co-Autor', 0.1),
+(10, 'Publicaciones científicas y/o académcias.Artículo.Compilador', 0.05),
+(11, 'Otras publicaciones relativas a la especificidad de la carrera', 0.2);
 
 -- --------------------------------------------------------
 
@@ -315,8 +402,8 @@ INSERT INTO `detalle_capacitacion` (`id_detalle_capacitacion`, `detalle`, `punta
 --
 
 CREATE TABLE `detalle_otros_ant_doc` (
-  `id_detalle_otro_ant` int(11) NOT NULL,
-  `detalle_otros_ant` varchar(100) NOT NULL,
+  `id_detalle_otros_ant` int(11) NOT NULL,
+  `detalle_otros_ant` varchar(200) NOT NULL,
   `puntaje` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -324,11 +411,15 @@ CREATE TABLE `detalle_otros_ant_doc` (
 -- Dumping data for table `detalle_otros_ant_doc`
 --
 
-INSERT INTO `detalle_otros_ant_doc` (`id_detalle_otro_ant`, `detalle_otros_ant`, `puntaje`) VALUES
-(1, 'Expositor y/o autor de trabajos presentados en congresos, simposios,etc.', 0.7),
-(2, 'Publicaciones relacionadas al espacio curricular a la carrera, de los últimos 5 años.Con referato', 1),
-(3, 'Publicaciones relacionadas al espacio curricular a la carrera, de los últimos 5 años.Sin referato', 0.25),
-(4, 'Participación en la elaboración de diseños curriculares de carreras de Nivel Superior Técnico en los', 1);
+INSERT INTO `detalle_otros_ant_doc` (`id_detalle_otros_ant`, `detalle_otros_ant`, `puntaje`) VALUES
+(1, 'Jurado de concursos de valoración de antecedentes(hasta un 1 punto)', 0.03),
+(2, 'Miembro del comité de elaboración e diseños curriculares de carreras de Nivel Superior.Coordinador', 1),
+(3, 'Miembro del comité de elaboración e diseños curriculares de carreras de Nivel Superior.Colaboradores', 0.2),
+(4, 'Becas,concursos,premios relacionados con el espacio curricular y con la carrera,realizados en los últimos 5 años Internacionales', 0.2),
+(5, 'Becas,concursos,premios relacionados con el espacio curricular y con la carrera,realizados en los últimos 5 años Nacionales', 0.1),
+(6, 'Becas,concursos,premios relacionados con el espacio curricular y con la carrera,realizados en los últimos 5 años Provinciales', 0.05),
+(7, 'Antecedentes en gestión(por año de gestión o fracción mayor a 6 meses)hasta cuatro(4)puntos.Rector', 0.4),
+(8, 'Antecedentes en gestión(por año de gestión o fracción mayor a 6 meses)hasta cuatro(4)puntos.Coordinador', 0.35);
 
 -- --------------------------------------------------------
 
@@ -338,10 +429,10 @@ INSERT INTO `detalle_otros_ant_doc` (`id_detalle_otro_ant`, `detalle_otros_ant`,
 
 CREATE TABLE `docente` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `apellido` varchar(200) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(50) NOT NULL,
   `dni` varchar(10) NOT NULL,
-  `mail` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `estado` int(11) NOT NULL,
   `usuario` varchar(50) NOT NULL,
   `clave` varchar(50) NOT NULL
@@ -351,37 +442,13 @@ CREATE TABLE `docente` (
 -- Dumping data for table `docente`
 --
 
-INSERT INTO `docente` (`id`, `nombre`, `apellido`, `dni`, `mail`, `estado`, `usuario`, `clave`) VALUES
-(1, ' MARCELO HUMBERTO', 'ABALLAY SORIA', '25714353', '', 0, '', ''),
-(2, ' ALICIA NOEMI', 'CELAYES FLORES', '30157746', '', 0, '', ''),
-(3, ' MARIA CELINA', 'COTO HIDALGO', '37741589', '', 0, '', ''),
-(4, ' ANALIA DEL PILAR', 'DELGADO', '20805413', '', 0, '', ''),
-(5, ' SERGIO GASTON', 'GARBEROGLIO ELIZONDO', '27269774', '', 0, '', ''),
-(6, ' ANALIA VERONICA', 'HEREDIA', '23922369', '', 0, '', ''),
-(7, ' JUAN DE DIOS', 'LOPEZ', '30725012', '', 0, '', ''),
-(8, ' EDUARDO MARCELO', 'MAURIN', '20130177', '', 0, '', ''),
-(9, ' RAQUEL EUGENIA', 'MICHALEK FORQUERA', '28262995', '', 0, '', ''),
-(10, ' VERÓNICA NOELIA', 'MOLINA ATENCIO', '32007429', '', 0, '', ''),
-(11, ' JOSE RUBEN', 'MOLL', '29588455', '', 0, '', ''),
-(12, ' LAURA EMILIA', 'ROMERO', '31642634', '', 0, '', ''),
-(13, ' VIVIANA EDITH', 'SANCHEZ', '29177212', '', 0, '', ''),
-(14, ' MARIA CECILIA DEL ROSARIO', 'SILVA IBAÑEZ', '35188938', '', 0, '', ''),
-(15, ' LUIS FERNANDO NICOLAS', 'ZALAZAR GARCIA', '28773900', '', 0, '', ''),
-(1, ' MARCELO HUMBERTO', 'ABALLAY SORIA', '25714353', '', 0, '', ''),
-(2, ' ALICIA NOEMI', 'CELAYES FLORES', '30157746', '', 0, '', ''),
-(3, ' MARIA CELINA', 'COTO HIDALGO', '37741589', '', 0, '', ''),
-(4, ' ANALIA DEL PILAR', 'DELGADO', '20805413', '', 0, '', ''),
-(5, ' SERGIO GASTON', 'GARBEROGLIO ELIZONDO', '27269774', '', 0, '', ''),
-(6, ' ANALIA VERONICA', 'HEREDIA', '23922369', '', 0, '', ''),
-(7, ' JUAN DE DIOS', 'LOPEZ', '30725012', '', 0, '', ''),
-(8, ' EDUARDO MARCELO', 'MAURIN', '20130177', '', 0, '', ''),
-(9, ' RAQUEL EUGENIA', 'MICHALEK FORQUERA', '28262995', '', 0, '', ''),
-(10, ' VERÓNICA NOELIA', 'MOLINA ATENCIO', '32007429', '', 0, '', ''),
-(11, ' JOSE RUBEN', 'MOLL', '29588455', '', 0, '', ''),
-(12, ' LAURA EMILIA', 'ROMERO', '31642634', '', 0, '', ''),
-(13, ' VIVIANA EDITH', 'SANCHEZ', '29177212', '', 0, '', ''),
-(14, ' MARIA CECILIA DEL ROSARIO', 'SILVA IBAÑEZ', '35188938', '', 0, '', ''),
-(15, ' LUIS FERNANDO NICOLAS', 'ZALAZAR GARCIA', '28773900', '', 0, '', '');
+INSERT INTO `docente` (`id`, `nombre`, `apellido`, `dni`, `email`, `estado`, `usuario`, `clave`) VALUES
+(1, 'ANALIA VERONICA', 'HEREDIA', '23922369', '', 0, '', ''),
+(2, 'JOSE RUBEN', 'MOLL', '29588455', '', 0, '', ''),
+(3, 'LUIS FERNANDO NICOLAS', 'ZALAZAR GARCIA', '28773900', 'gastongefb222@gmail.com', 0, '', ''),
+(4, 'LAURA EMILIA', 'ROMERO', '31642634', '', 0, '', ''),
+(5, 'CINTIA', 'MOLL', '32887912', 'mollcintia830@gmail.com', 0, '', ''),
+(6, 'SERGIO GASTON', 'GARBEROGLIO', '27269774', 'gastongefb222@gmail.com', 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -415,6 +482,38 @@ INSERT INTO `dynamic_inputs_table` (`id`, `input_value`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `formacion_ofrecida`
+--
+
+CREATE TABLE `formacion_ofrecida` (
+  `id_formacion` int(11) NOT NULL,
+  `id_valoracion` int(11) NOT NULL,
+  `detalle_formacion` varchar(100) NOT NULL,
+  `fecha` date NOT NULL,
+  `id_formacion_ofrecida` int(11) NOT NULL,
+  `fecha_alta` datetime NOT NULL,
+  `fecha_modifica` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `investigacion`
+--
+
+CREATE TABLE `investigacion` (
+  `id_investigacion` int(11) NOT NULL,
+  `id_valoracion` int(11) NOT NULL,
+  `detalle_investigacion` varchar(100) NOT NULL,
+  `fecha` date NOT NULL,
+  `id_detalle_investigacion` int(11) NOT NULL,
+  `fecha_alta` datetime NOT NULL,
+  `fecha_modifica` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `materias`
 --
 
@@ -431,13 +530,14 @@ CREATE TABLE `materias` (
 
 INSERT INTO `materias` (`id_materia`, `nombre_materia`, `cuatrimestre`, `id_carrera_materia`) VALUES
 (1, 'Programacion I', 1, 1),
-(2, 'Sistemas de Informac', 1, 1),
-(20, 'Programacion I', 1, 2),
+(2, 'Sistemas de Información', 1, 1),
 (32, 'Energías Renovables', 1, 2),
 (33, 'Energía Fotovoltáica', 2, 2),
-(34, 'desarrollo de software I', 1, 1),
-(35, 'ambiente empresarial', 0, 1),
-(36, 'ingles', 0, 1);
+(34, 'Desarrollo de software I', 1, 1),
+(35, 'Ambiente Empresarial', 2, 1),
+(37, 'Energía de la Biomasa', 1, 2),
+(38, 'Inglés Técnico', 1, 1),
+(42, 'Energia de la Biomasa', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -450,27 +550,18 @@ CREATE TABLE `otros_antecedentes_docentes` (
   `id_valoracion` int(11) NOT NULL,
   `detalle_otros_ant_doc` varchar(100) NOT NULL,
   `fecha` date NOT NULL,
-  `id_detalle_otros_ant` int(11) NOT NULL
+  `id_detalle_otros_ant` int(11) NOT NULL,
+  `fecha_alta` datetime NOT NULL,
+  `fecha_modifica` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `otros_antecedentes_docentes`
 --
 
-INSERT INTO `otros_antecedentes_docentes` (`id_detalle_ant`, `id_valoracion`, `detalle_otros_ant_doc`, `fecha`, `id_detalle_otros_ant`) VALUES
-(1, 202, 'rrrr', '2020-01-01', 0),
-(2, 202, 'tttt', '2022-02-01', 0),
-(3, 203, 'rtrtr', '2024-08-05', 0),
-(4, 203, 'yyyyy', '2024-08-26', 0),
-(5, 204, 'rrrr', '2024-08-06', 1),
-(6, 204, 'ggg', '2024-08-19', 0),
-(7, 205, 'ddd', '2024-08-21', 1),
-(8, 205, 'fff', '2024-08-11', 4),
-(9, 206, '', '0000-00-00', 1),
-(10, 207, 'qqqq', '2024-08-12', 1),
-(11, 207, 'dddd', '2024-08-06', 4),
-(12, 208, 'aaaaaaa', '2024-08-12', 1),
-(13, 208, 'eeeee', '2024-08-13', 4);
+INSERT INTO `otros_antecedentes_docentes` (`id_detalle_ant`, `id_valoracion`, `detalle_otros_ant_doc`, `fecha`, `id_detalle_otros_ant`, `fecha_alta`, `fecha_modifica`) VALUES
+(34, 310, 'JURADO EN ISFT ULLUM', '2024-05-08', 1, '2025-02-22 20:05:39', '2025-02-22 20:05:39'),
+(35, 310, 'JURADO EN ISFT CENT 18', '2023-07-13', 1, '2025-02-22 20:05:39', '2025-02-22 20:05:39');
 
 -- --------------------------------------------------------
 
@@ -489,10 +580,11 @@ CREATE TABLE `otros_titulos` (
 --
 
 INSERT INTO `otros_titulos` (`id_otros_titulos`, `detalle_otros_titulos`, `puntaje`) VALUES
-(1, 'Títulos de grado universitario relacionado con la educación.', 2),
-(2, 'Títulos universitario de Profesor, asociado al título universitario e base.', 2),
-(3, 'Título de Técnico Superior relacionado a la carrera y al espacio curricular.', 1.5),
-(4, 'Título de Técnico de Nivel Secundario relacionado a la carrera y al espacio curricular.', 0.5);
+(1, 'Docente de nivel superior universitario', 2),
+(2, 'Docente de nivel superior.(No universitario)', 1),
+(3, 'No Docente de nivel superior universitario', 1.5),
+(4, 'No docente de nivel superior', 0.5),
+(5, 'Otros', 0.25);
 
 -- --------------------------------------------------------
 
@@ -502,107 +594,52 @@ INSERT INTO `otros_titulos` (`id_otros_titulos`, `detalle_otros_titulos`, `punta
 
 CREATE TABLE `personas` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(20) NOT NULL,
-  `apellido` varchar(20) NOT NULL,
-  `edad` int(11) NOT NULL
+  `nombre` varchar(100) NOT NULL,
+  `apellido` varchar(100) NOT NULL,
+  `telefono` varchar(15) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `comentarios` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `personas`
 --
 
-INSERT INTO `personas` (`id`, `nombre`, `apellido`, `edad`) VALUES
-(0, 'trtrtttt', 'rtrtr', 222),
-(0, 'trtrtttt', 'rtrtr', 222),
-(0, 'trtrtttt', 'rtrtr', 222),
-(0, 'trtrtttt', 'rtrtr', 222),
-(0, 'trtrtttt', 'rtrtr', 222),
-(0, 'pepe', 'honguito', 20),
-(0, 'pepe', 'honguito', 20),
-(0, 'Cintia', 'Moll', 55),
-(0, 'Cintia', 'Moll', 20),
-(0, 'duque', 'honguito', 36);
+INSERT INTO `personas` (`id`, `nombre`, `apellido`, `telefono`, `email`, `comentarios`, `created_at`) VALUES
+(1, 'gas', 'garbe', '2644409547', 'gastongefb@yahoo.com.ar', 'dfddfdfdfd', '2024-10-04 13:50:08'),
+(2, 'sergio gastón', 'garberoglio', '2644409547', 'gastongefb@yahoo.com.ar', 'sdsddsds', '2024-10-04 13:55:11'),
+(3, 'pep', 'luis', '2644409547', 'mollcinta830@gmail.com', 'dfddfdfd', '2024-10-04 13:55:46'),
+(4, 'tobi', 'Moll', '2644409547', 'gastongefb@yahoo.com.ar', 'RTRRTRR', '2024-10-04 14:05:09'),
+(5, '', '', '', '', '', '2024-10-04 14:05:43'),
+(6, 'serg', 'DFDFDF', '', '', 'DDDDDD', '2024-10-04 14:07:36'),
+(7, 'www', 'erere', NULL, NULL, NULL, '2024-10-04 14:50:32'),
+(8, 'www', 'erere', NULL, NULL, NULL, '2024-10-04 14:50:58'),
+(9, 'ere', 'erere', NULL, NULL, NULL, '2024-10-04 14:54:58'),
+(10, 'ddd', 'wwww', '2644409547', 'gastongefb@yahoo.com.ar', NULL, '2024-10-04 14:59:52'),
+(11, 'ere', 'erere', '2644409547', 'gastongefb@yahoo.com.ar', NULL, '2024-10-04 15:02:41'),
+(12, 'ere', 'ssss', '2644409547', 'gastongefb@yahoo.com.ar', NULL, '2024-10-04 15:05:53'),
+(13, 'www', 'erere', '2644409547', 'gastongefb@yahoo.com.ar', NULL, '2024-10-04 15:06:28');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `persons`
+-- Table structure for table `records`
 --
 
-CREATE TABLE `persons` (
+CREATE TABLE `records` (
   `id` int(11) NOT NULL,
-  `dni` int(11) NOT NULL,
-  `nombre` varchar(20) NOT NULL,
-  `apellido` varchar(30) NOT NULL,
-  `edad` int(11) NOT NULL,
-  `nuevo_dato` int(11) NOT NULL,
-  `opciones` int(11) NOT NULL
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `persons`
+-- Dumping data for table `records`
 --
 
-INSERT INTO `persons` (`id`, `dni`, `nombre`, `apellido`, `edad`, `nuevo_dato`, `opciones`) VALUES
-(1, 2222, 'pepe', 'gas', 22, 0, 0),
-(23, 3, 'po', 'lk', 45, 2, 0),
-(24, 1, 'tgt', 'yyy', 56, 4, 0),
-(25, 2, 'eee', 'ddd', 33, 3, 0),
-(26, 1, 'www', 'eee', 22, 4, 0),
-(27, 2, 'eee', 'ddd', 23, 3, 0),
-(28, 1, 'ooo', 'pppp', 12, 4, 0),
-(29, 1, 'ooo', 'pppp', 12, 4, 0),
-(30, 1, 'ooo', 'pppp', 12, 4, 0),
-(31, 1, 'ooo', 'pppp', 12, 4, 0),
-(32, 1, 'ooo', 'pppp', 12, 4, 0),
-(33, 1, 'qqq', 'www', 0, 4, 0),
-(34, 1, 'www', 'ssss', 22, 4, 3),
-(35, 1, 'www', 'ssss', 22, 4, 2),
-(36, 1, 'qqq', 'aaaa', 222, 4, 2),
-(37, 1, 'qqq', 'aaaa', 222, 4, 2),
-(38, 1, 'qqq', 'aaaa', 222, 4, 2);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tabla1`
---
-
-CREATE TABLE `tabla1` (
-  `id_tabla1` int(11) NOT NULL,
-  `nombre1` varchar(20) NOT NULL,
-  `apellido1` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tabla1`
---
-
-INSERT INTO `tabla1` (`id_tabla1`, `nombre1`, `apellido1`) VALUES
-(1, 'pepe', 'gomez'),
-(2, 'qq', 'ww'),
-(3, '1', '2');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tabla2`
---
-
-CREATE TABLE `tabla2` (
-  `id_tabla2` int(11) NOT NULL,
-  `nombre2` varchar(20) NOT NULL,
-  `apellido2` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tabla2`
---
-
-INSERT INTO `tabla2` (`id_tabla2`, `nombre2`, `apellido2`) VALUES
-(1, 'ana', 'lopez'),
-(2, 'alb', 'alb2'),
-(3, 'eee', 'dddd');
+INSERT INTO `records` (`id`, `name`, `email`) VALUES
+(1, 'gastonnnn', 'garbee'),
+(2, 'cintia', 'mollllll');
 
 -- --------------------------------------------------------
 
@@ -621,9 +658,9 @@ CREATE TABLE `titulos` (
 --
 
 INSERT INTO `titulos` (`id_titulo`, `detalle_titulo`, `puntaje`) VALUES
-(1, 'Título de Nivel Superior de cuatro años o más.', 9),
-(2, 'Título de Nivel Superior de Bibliotecario de 3 año', 7),
-(3, 'Títutlo de Fruticultor Enólogode Escuela de Enolog', 7);
+(1, 'Docente', 9),
+(2, 'Habilitante', 6),
+(3, 'Supletorio', 3);
 
 -- --------------------------------------------------------
 
@@ -633,7 +670,7 @@ INSERT INTO `titulos` (`id_titulo`, `detalle_titulo`, `puntaje`) VALUES
 
 CREATE TABLE `titulos_postgrado` (
   `id_titulo_postgrado` int(11) NOT NULL,
-  `detalle_postgrado` varchar(50) NOT NULL,
+  `detalle_postgrado` varchar(100) NOT NULL,
   `puntaje` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -642,10 +679,32 @@ CREATE TABLE `titulos_postgrado` (
 --
 
 INSERT INTO `titulos_postgrado` (`id_titulo_postgrado`, `detalle_postgrado`, `puntaje`) VALUES
-(1, 'doctorado', 4),
-(2, 'maestria', 3),
-(3, 'especializacion', 1.5),
-(4, 'diplomatura', 1);
+(1, 'Actualización académica (200 horas cátedra o más).', 1),
+(2, 'Especialización docente de Nivel Superior (400 horas cátedra o más)', 2),
+(3, 'Diplomatura Superior (600 horas cátedra o más)', 3),
+(4, 'Especialización (360 horas o más)', 3.5),
+(5, 'Maestría (700 horas reloj o más)', 5),
+(6, 'Doctorado', 6),
+(7, 'Postdoctorado', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`username`, `password`, `email`) VALUES
+('gaston', '123', 'gaston@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -665,7 +724,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre_usuario`, `contrasena`, `fecha_registro`) VALUES
-(1, 'admin', '123', '2024-04-29 22:11:43');
+(1, 'admin', '123', '2024-04-29 22:11:43'),
+(1, 'admin', '123', '2024-04-29 22:11:43'),
+(3, 'gas', '1234', '2025-01-13 10:40:05');
 
 -- --------------------------------------------------------
 
@@ -681,50 +742,21 @@ CREATE TABLE `valoracion` (
   `j2` int(11) NOT NULL,
   `j3` int(11) NOT NULL,
   `id_materia_valoracion` int(11) NOT NULL,
-  `id_condicion` int(11) NOT NULL
+  `id_condicion` int(11) NOT NULL,
+  `fecha_alta` datetime NOT NULL,
+  `fecha_modifica` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `valoracion`
 --
 
-INSERT INTO `valoracion` (`id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia_valoracion`, `id_condicion`) VALUES
-(156, 28773900, 2, 1, 2, 3, 34, 2),
-(157, 444, 1, 1, 2, 3, 34, 2),
-(158, 666, 1, 1, 2, 3, 34, 1),
-(159, 232, 1, 323, 4343, 343, 1, 1),
-(160, 32887912, 1, 11, 11, 11, 1, 2),
-(161, 6666, 1, 34, 12, 43, 1, 1),
-(162, 555, 1, 343, 2323, 232, 1, 1),
-(163, 4554, 1, 444, 555, 444, 1, 1),
-(164, 222, 1, 445, 666, 22344, 1, 1),
-(182, 4545, 1, 445, 2323, 3434, 1, 1),
-(183, 4545, 1, 445, 2323, 3434, 1, 1),
-(184, 4545, 1, 445, 2323, 3434, 1, 1),
-(185, 5, 0, 6, 4, 7, 0, 0),
-(186, 1, 0, 2, 3, 4, 0, 0),
-(187, 1, 0, 2, 3, 4, 0, 0),
-(188, 1, 0, 2, 3, 4, 0, 0),
-(189, 1, 0, 2, 3, 4, 0, 0),
-(190, 1, 0, 2, 3, 4, 0, 0),
-(191, 1, 0, 2, 3, 4, 0, 0),
-(192, 1, 0, 2, 3, 4, 0, 0),
-(193, 1, 0, 2, 3, 4, 0, 0),
-(194, 1, 0, 2, 3, 4, 0, 0),
-(195, 1, 0, 2, 3, 4, 0, 0),
-(196, 1, 0, 2, 3, 4, 0, 0),
-(197, 1, 0, 2, 3, 4, 0, 0),
-(198, 1, 0, 2, 3, 4, 0, 0),
-(199, 1, 0, 2, 3, 4, 0, 0),
-(200, 1, 0, 2, 3, 4, 0, 0),
-(201, 1, 0, 2, 3, 4, 0, 0),
-(202, 1, 0, 2, 3, 4, 0, 0),
-(203, 1, 0, 2, 3, 4, 0, 0),
-(204, 3, 0, 4, 5, 6, 0, 0),
-(205, 1, 0, 2, 3, 4, 0, 0),
-(206, 30725012, 1, 1, 1, 1, 1, 1),
-(207, 20805413, 0, 1, 2, 3, 0, 0),
-(208, 20130177, 1, 1, 2, 3, 1, 1);
+INSERT INTO `valoracion` (`id_valoracion`, `dni`, `id_titulo`, `j1`, `j2`, `j3`, `id_materia_valoracion`, `id_condicion`, `fecha_alta`, `fecha_modifica`) VALUES
+(310, 27269774, 3, 19222333, 29789456, 25412789, 1, 0, '2025-02-22 20:05:39', '2025-02-22 20:05:39'),
+(311, 28773900, 2, 122211121, 23232323, 33434343, 1, 0, '2025-02-22 20:11:33', '2025-02-22 20:11:33'),
+(312, 31642634, 1, 343, 29789456, 25412789, 38, 0, '2025-02-22 21:12:00', '2025-02-22 21:12:00'),
+(313, 23922369, 1, 19222333, 334, 25412789, 1, 0, '2025-02-22 21:25:28', '2025-02-22 21:25:28'),
+(314, 27269774, 2, 19222333, 29789456, 25412789, 2, 0, '2025-02-22 21:34:40', '2025-02-22 21:34:40');
 
 -- --------------------------------------------------------
 
@@ -737,34 +769,17 @@ CREATE TABLE `valoracion_otros_titulos` (
   `id_valoracion` int(11) NOT NULL,
   `detalle_otros_titulos` varchar(50) NOT NULL,
   `fecha` date NOT NULL,
-  `id_otros_titulos` int(11) NOT NULL
+  `id_otros_titulos` int(11) NOT NULL,
+  `fecha_alta` date NOT NULL,
+  `fecha_modifica` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `valoracion_otros_titulos`
 --
 
-INSERT INTO `valoracion_otros_titulos` (`id_otros_t`, `id_valoracion`, `detalle_otros_titulos`, `fecha`, `id_otros_titulos`) VALUES
-(1, 184, '', '2024-08-07', 1),
-(2, 184, '', '2024-06-04', 4),
-(3, 185, '', '2024-07-27', 3),
-(4, 185, '', '2024-07-02', 4),
-(5, 186, '', '2024-08-06', 1),
-(6, 186, '', '2024-08-12', 3),
-(7, 187, '', '2024-08-12', 2),
-(8, 188, '', '2024-08-13', 2),
-(9, 189, '', '2024-08-19', 3),
-(10, 190, '', '2024-08-06', 2),
-(11, 191, '', '2024-08-05', 2),
-(12, 192, 'aaaaaaa', '2024-08-14', 3),
-(13, 202, '', '0000-00-00', 1),
-(14, 203, '', '0000-00-00', 1),
-(15, 204, '', '0000-00-00', 1),
-(16, 205, '', '0000-00-00', 1),
-(17, 206, 'eeee', '2024-08-06', 1),
-(18, 206, 'fffff', '2024-08-14', 3),
-(19, 207, '', '0000-00-00', 1),
-(20, 208, 'sss', '2024-08-12', 1);
+INSERT INTO `valoracion_otros_titulos` (`id_otros_t`, `id_valoracion`, `detalle_otros_titulos`, `fecha`, `id_otros_titulos`, `fecha_alta`, `fecha_modifica`) VALUES
+(108, 311, 'profesor', '2023-06-06', 1, '2025-02-22', '2025-02-22');
 
 -- --------------------------------------------------------
 
@@ -777,46 +792,69 @@ CREATE TABLE `valoracion_postgrado` (
   `id_valoracion` int(11) NOT NULL,
   `detalle_valoracion_postgrado` varchar(100) NOT NULL,
   `fecha` date NOT NULL,
-  `id_titulo_postgrado` int(11) NOT NULL
+  `id_titulo_postgrado` int(11) NOT NULL,
+  `fecha_alta` datetime NOT NULL,
+  `fecha_modifica` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `valoracion_postgrado`
 --
 
-INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`, `fecha`, `id_titulo_postgrado`) VALUES
-(63, 0, 'wewew', '2020-01-01', 2),
-(64, 0, 'wwew', '2020-01-02', 2),
-(65, 0, 'wewe', '2020-01-02', 2),
-(66, 0, 'sds', '2020-01-02', 2),
-(67, 0, 'wee', '2020-01-02', 2),
-(68, 0, 'erere', '2020-01-02', 2),
-(70, 95, 'siplo', '2020-01-02', 4),
-(71, 114, 'wewew', '2020-01-02', 3),
-(72, 114, 'sdsd', '2022-01-02', 2),
-(73, 115, 'maestriiiii', '2020-01-01', 2),
-(74, 115, 'diplo', '2022-01-01', 4),
-(75, 116, 'especiali', '2023-01-01', 3),
-(125, 184, '', '0000-00-00', 1),
-(126, 185, '', '0000-00-00', 1),
-(127, 186, '', '0000-00-00', 1),
-(128, 187, '', '0000-00-00', 1),
-(129, 188, '', '0000-00-00', 1),
-(130, 189, '', '0000-00-00', 1),
-(131, 190, '', '0000-00-00', 1),
-(132, 191, '', '0000-00-00', 1),
-(133, 192, '', '0000-00-00', 1),
-(134, 202, '', '0000-00-00', 1),
-(135, 203, '', '0000-00-00', 1),
-(136, 204, '', '0000-00-00', 1),
-(137, 205, '', '0000-00-00', 1),
-(138, 206, 'wew', '2024-08-07', 2),
-(139, 207, '', '0000-00-00', 1),
-(140, 208, 'ssss', '2024-08-12', 2);
+INSERT INTO `valoracion_postgrado` (`id_postgrado`, `id_valoracion`, `detalle_valoracion_postgrado`, `fecha`, `id_titulo_postgrado`, `fecha_alta`, `fecha_modifica`) VALUES
+(223, 312, 'ESPECIALIZACIÓN EN INGLÉS', '2025-02-05', 1, '2025-02-22 21:12:00', '2025-02-22 21:12:00');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `actualizacion_antecedentes_docentes`
+--
+ALTER TABLE `actualizacion_antecedentes_docentes`
+  ADD PRIMARY KEY (`id_act_ant_doc`);
+
+--
+-- Indexes for table `actualizacion_antecedentes_laborales`
+--
+ALTER TABLE `actualizacion_antecedentes_laborales`
+  ADD PRIMARY KEY (`id_act_lab`);
+
+--
+-- Indexes for table `actualizacion_capacitacion`
+--
+ALTER TABLE `actualizacion_capacitacion`
+  ADD PRIMARY KEY (`id_act_capacitacion`);
+
+--
+-- Indexes for table `actualizacion_formacion_ofrecida`
+--
+ALTER TABLE `actualizacion_formacion_ofrecida`
+  ADD PRIMARY KEY (`id_act_for_of`);
+
+--
+-- Indexes for table `actualizacion_investigacion`
+--
+ALTER TABLE `actualizacion_investigacion`
+  ADD PRIMARY KEY (`id_act_investigacion`);
+
+--
+-- Indexes for table `actualizacion_otros_antecedentes`
+--
+ALTER TABLE `actualizacion_otros_antecedentes`
+  ADD PRIMARY KEY (`id_act_otros`);
+
+--
+-- Indexes for table `actualizacion_otros_titulos`
+--
+ALTER TABLE `actualizacion_otros_titulos`
+  ADD PRIMARY KEY (`id_act_otros_tit`);
+
+--
+-- Indexes for table `actualizacion_postgrado`
+--
+ALTER TABLE `actualizacion_postgrado`
+  ADD PRIMARY KEY (`id_act_postgrado`);
 
 --
 -- Indexes for table `antecedentes_docentes`
@@ -867,16 +905,46 @@ ALTER TABLE `detalle_capacitacion`
   ADD PRIMARY KEY (`id_detalle_capacitacion`);
 
 --
+-- Indexes for table `detalle_formacion_ofrecida`
+--
+ALTER TABLE `detalle_formacion_ofrecida`
+  ADD PRIMARY KEY (`id_formacion_ofrecida`);
+
+--
+-- Indexes for table `detalle_investigacion`
+--
+ALTER TABLE `detalle_investigacion`
+  ADD PRIMARY KEY (`id_detalle_investigacion`);
+
+--
 -- Indexes for table `detalle_otros_ant_doc`
 --
 ALTER TABLE `detalle_otros_ant_doc`
-  ADD PRIMARY KEY (`id_detalle_otro_ant`);
+  ADD PRIMARY KEY (`id_detalle_otros_ant`);
+
+--
+-- Indexes for table `docente`
+--
+ALTER TABLE `docente`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `dynamic_inputs_table`
 --
 ALTER TABLE `dynamic_inputs_table`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `formacion_ofrecida`
+--
+ALTER TABLE `formacion_ofrecida`
+  ADD PRIMARY KEY (`id_formacion`);
+
+--
+-- Indexes for table `investigacion`
+--
+ALTER TABLE `investigacion`
+  ADD PRIMARY KEY (`id_investigacion`);
 
 --
 -- Indexes for table `materias`
@@ -898,22 +966,16 @@ ALTER TABLE `otros_titulos`
   ADD PRIMARY KEY (`id_otros_titulos`);
 
 --
--- Indexes for table `persons`
+-- Indexes for table `personas`
 --
-ALTER TABLE `persons`
+ALTER TABLE `personas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tabla1`
+-- Indexes for table `records`
 --
-ALTER TABLE `tabla1`
-  ADD PRIMARY KEY (`id_tabla1`);
-
---
--- Indexes for table `tabla2`
---
-ALTER TABLE `tabla2`
-  ADD PRIMARY KEY (`id_tabla2`);
+ALTER TABLE `records`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `titulos`
@@ -950,22 +1012,70 @@ ALTER TABLE `valoracion_postgrado`
 --
 
 --
+-- AUTO_INCREMENT for table `actualizacion_antecedentes_docentes`
+--
+ALTER TABLE `actualizacion_antecedentes_docentes`
+  MODIFY `id_act_ant_doc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `actualizacion_antecedentes_laborales`
+--
+ALTER TABLE `actualizacion_antecedentes_laborales`
+  MODIFY `id_act_lab` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `actualizacion_capacitacion`
+--
+ALTER TABLE `actualizacion_capacitacion`
+  MODIFY `id_act_capacitacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `actualizacion_formacion_ofrecida`
+--
+ALTER TABLE `actualizacion_formacion_ofrecida`
+  MODIFY `id_act_for_of` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `actualizacion_investigacion`
+--
+ALTER TABLE `actualizacion_investigacion`
+  MODIFY `id_act_investigacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `actualizacion_otros_antecedentes`
+--
+ALTER TABLE `actualizacion_otros_antecedentes`
+  MODIFY `id_act_otros` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `actualizacion_otros_titulos`
+--
+ALTER TABLE `actualizacion_otros_titulos`
+  MODIFY `id_act_otros_tit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `actualizacion_postgrado`
+--
+ALTER TABLE `actualizacion_postgrado`
+  MODIFY `id_act_postgrado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `antecedentes_docentes`
 --
 ALTER TABLE `antecedentes_docentes`
-  MODIFY `id_ant_doc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id_ant_doc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT for table `antecedentes_laborales`
 --
 ALTER TABLE `antecedentes_laborales`
-  MODIFY `id_ant_lab` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id_ant_lab` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT for table `capacitacion`
 --
 ALTER TABLE `capacitacion`
-  MODIFY `id_capacitacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id_capacitacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 
 --
 -- AUTO_INCREMENT for table `carreras`
@@ -983,7 +1093,7 @@ ALTER TABLE `condicion_docente`
 -- AUTO_INCREMENT for table `detalle_ant_doc`
 --
 ALTER TABLE `detalle_ant_doc`
-  MODIFY `id_detalle_doc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_detalle_doc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `detalle_ant_lab`
@@ -995,13 +1105,31 @@ ALTER TABLE `detalle_ant_lab`
 -- AUTO_INCREMENT for table `detalle_capacitacion`
 --
 ALTER TABLE `detalle_capacitacion`
-  MODIFY `id_detalle_capacitacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_detalle_capacitacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `detalle_formacion_ofrecida`
+--
+ALTER TABLE `detalle_formacion_ofrecida`
+  MODIFY `id_formacion_ofrecida` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `detalle_investigacion`
+--
+ALTER TABLE `detalle_investigacion`
+  MODIFY `id_detalle_investigacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `detalle_otros_ant_doc`
 --
 ALTER TABLE `detalle_otros_ant_doc`
-  MODIFY `id_detalle_otro_ant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_detalle_otros_ant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `docente`
+--
+ALTER TABLE `docente`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `dynamic_inputs_table`
@@ -1010,40 +1138,46 @@ ALTER TABLE `dynamic_inputs_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=244;
 
 --
+-- AUTO_INCREMENT for table `formacion_ofrecida`
+--
+ALTER TABLE `formacion_ofrecida`
+  MODIFY `id_formacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `investigacion`
+--
+ALTER TABLE `investigacion`
+  MODIFY `id_investigacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
 -- AUTO_INCREMENT for table `materias`
 --
 ALTER TABLE `materias`
-  MODIFY `id_materia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_materia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `otros_antecedentes_docentes`
 --
 ALTER TABLE `otros_antecedentes_docentes`
-  MODIFY `id_detalle_ant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_detalle_ant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `otros_titulos`
 --
 ALTER TABLE `otros_titulos`
-  MODIFY `id_otros_titulos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_otros_titulos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `persons`
+-- AUTO_INCREMENT for table `personas`
 --
-ALTER TABLE `persons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+ALTER TABLE `personas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `tabla1`
+-- AUTO_INCREMENT for table `records`
 --
-ALTER TABLE `tabla1`
-  MODIFY `id_tabla1` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `tabla2`
---
-ALTER TABLE `tabla2`
-  MODIFY `id_tabla2` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `records`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `titulos`
@@ -1055,25 +1189,25 @@ ALTER TABLE `titulos`
 -- AUTO_INCREMENT for table `titulos_postgrado`
 --
 ALTER TABLE `titulos_postgrado`
-  MODIFY `id_titulo_postgrado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_titulo_postgrado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `valoracion`
 --
 ALTER TABLE `valoracion`
-  MODIFY `id_valoracion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
+  MODIFY `id_valoracion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=315;
 
 --
 -- AUTO_INCREMENT for table `valoracion_otros_titulos`
 --
 ALTER TABLE `valoracion_otros_titulos`
-  MODIFY `id_otros_t` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_otros_t` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT for table `valoracion_postgrado`
 --
 ALTER TABLE `valoracion_postgrado`
-  MODIFY `id_postgrado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `id_postgrado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
 
 --
 -- Constraints for dumped tables

@@ -37,16 +37,21 @@ class PdfController extends Controller
         $pdf->SetFont('Arial', 'B', 12);
 
         // Título del documento
+        $pdf->SetFont('Arial', 'B', 16);
         $pdf->Cell(0, 10, utf8_decode('Listado de Valoraciones'), 0, 1, 'C');
         $pdf->Ln(10); // Espacio después del título
 
-        // Encabezado de la tabla
+        // Definir cabecera de tabla
+        $pdf->SetFont('Arial', 'B', 12); // Aumentamos tamaño para encabezados
+        $pdf->SetFillColor(200, 200, 200); // Color de fondo gris para encabezados
+        $pdf->SetTextColor(0, 0, 0); // Texto en negro
         
+        // Encabezado de la tabla
         $pdf->Cell(30, 10, utf8_decode('Dni'),1,0,'C');
         $pdf->Cell(30, 10, utf8_decode('Título'),1,0,'C');
-        $pdf->Cell(10, 10, utf8_decode('J1'),1,0,'C');
-        $pdf->Cell(10, 10, utf8_decode('J2'),1,0,'C');
-        $pdf->Cell(10, 10, utf8_decode('J3'),1,0,'C');
+        $pdf->Cell(30, 10, utf8_decode('Jurado1'),1,0,'C');
+        $pdf->Cell(30, 10, utf8_decode('Jurado2'),1,0,'C');
+        $pdf->Cell(30, 10, utf8_decode('Jurado3'),1,0,'C');
         $pdf->Cell(50, 10, utf8_decode('Materia'),1,0,'C');
         $pdf->Cell(20, 10, utf8_decode('Puntaje'),1,0,'C');
         $pdf->Cell(30, 10, utf8_decode('Alta'),1,0,'C');
@@ -58,9 +63,9 @@ class PdfController extends Controller
             
             $pdf->Cell(30, 10, utf8_decode($row['dni']),1,0,'C');
             $pdf->Cell(30, 10, utf8_decode($row['titulo_det']),1,0,'C');
-            $pdf->Cell(10, 10, utf8_decode($row['j1']),1,0,'C');
-            $pdf->Cell(10, 10, utf8_decode($row['j2']),1,0,'C');
-            $pdf->Cell(10, 10, utf8_decode($row['j3']),1,0,'C');
+            $pdf->Cell(30, 10, utf8_decode($row['j1']),1,0,'C');
+            $pdf->Cell(30, 10, utf8_decode($row['j2']),1,0,'C');
+            $pdf->Cell(30, 10, utf8_decode($row['j3']),1,0,'C');
             $pdf->Cell(50, 10, utf8_decode($row['materia']),1,0,'C');
             $pdf->Cell(20, 10, utf8_decode($row['puntaje']),1,0,'C');
             $pdf->Cell(30, 10, utf8_decode($row['fecha_alta']),1,0,'C');
@@ -99,16 +104,22 @@ class PdfController extends Controller
         $pdf->SetFont('Arial', 'B', 12);
 
         // Título del documento
+        $pdf->SetFont('Arial', 'B', 16);
         $pdf->Cell(0, 10, utf8_decode($titulo), 0, 1, 'C');
         $pdf->Ln(10); // Espacio después del título
+
+        // Definir cabecera de tabla
+        $pdf->SetFont('Arial', 'B', 12); // Aumentamos tamaño para encabezados
+        $pdf->SetFillColor(200, 200, 200); // Color de fondo gris para encabezados
+        $pdf->SetTextColor(0, 0, 0); // Texto en negro
 
         // Encabezado de la tabla
         
         $pdf->Cell(30, 10, utf8_decode('Dni'),1,0,'C');
         $pdf->Cell(30, 10, utf8_decode('Título'),1,0,'C');
-        $pdf->Cell(10, 10, utf8_decode('J1'),1,0,'C');
-        $pdf->Cell(10, 10, utf8_decode('J2'),1,0,'C');
-        $pdf->Cell(10, 10, utf8_decode('J3'),1,0,'C');
+        $pdf->Cell(30, 10, utf8_decode('Jurado1'),1,0,'C');
+        $pdf->Cell(30, 10, utf8_decode('Jurado2'),1,0,'C');
+        $pdf->Cell(30, 10, utf8_decode('Jurado3'),1,0,'C');
         $pdf->Cell(50, 10, utf8_decode('Materia'),1,0,'C');
         $pdf->Cell(20, 10, utf8_decode('Puntaje'),1,0,'C');
         $pdf->Cell(30, 10, utf8_decode('Alta'),1,0,'C');
@@ -120,9 +131,9 @@ class PdfController extends Controller
             
             $pdf->Cell(30, 10, utf8_decode($row['dni']),1,0,'C');
             $pdf->Cell(30, 10, utf8_decode($row['titulo_det']),1,0,'C');
-            $pdf->Cell(10, 10, utf8_decode($row['j1']),1,0,'C');
-            $pdf->Cell(10, 10, utf8_decode($row['j2']),1,0,'C');
-            $pdf->Cell(10, 10, utf8_decode($row['j3']),1,0,'C');
+            $pdf->Cell(30, 10, utf8_decode($row['j1']),1,0,'C');
+            $pdf->Cell(30, 10, utf8_decode($row['j2']),1,0,'C');
+            $pdf->Cell(30, 10, utf8_decode($row['j3']),1,0,'C');
             $pdf->Cell(50, 10, utf8_decode($row['materia']),1,0,'C');
             $pdf->Cell(20, 10, utf8_decode($row['puntaje']),1,0,'C');
             $pdf->Cell(30, 10, utf8_decode($row['fecha_alta']),1,0,'C');
@@ -165,16 +176,22 @@ class PdfController extends Controller
         $pdf->SetFont('Arial', 'B', 12);
 
         // Título del documento
+        $pdf->SetFont('Arial', 'B', 16);
         $pdf->Cell(0, 10, utf8_decode($titulo), 0, 1, 'C');
         $pdf->Ln(10); // Espacio después del título
+
+        // Definir cabecera de tabla
+        $pdf->SetFont('Arial', 'B', 12); // Aumentamos tamaño para encabezados
+        $pdf->SetFillColor(200, 200, 200); // Color de fondo gris para encabezados
+        $pdf->SetTextColor(0, 0, 0); // Texto en negro
 
         // Encabezado de la tabla
         
         $pdf->Cell(30, 10, utf8_decode('Dni'),1,0,'C');
         $pdf->Cell(30, 10, utf8_decode('Título'),1,0,'C');
-        $pdf->Cell(10, 10, utf8_decode('J1'),1,0,'C');
-        $pdf->Cell(10, 10, utf8_decode('J2'),1,0,'C');
-        $pdf->Cell(10, 10, utf8_decode('J3'),1,0,'C');
+        $pdf->Cell(30, 10, utf8_decode('Jurado1'),1,0,'C');
+        $pdf->Cell(30, 10, utf8_decode('Jurado2'),1,0,'C');
+        $pdf->Cell(30, 10, utf8_decode('Jurado3'),1,0,'C');
         $pdf->Cell(50, 10, utf8_decode('Materia'),1,0,'C');
         $pdf->Cell(20, 10, utf8_decode('Puntaje'),1,0,'C');
         $pdf->Cell(30, 10, utf8_decode('Alta'),1,0,'C');
@@ -186,9 +203,9 @@ class PdfController extends Controller
             
             $pdf->Cell(30, 10, utf8_decode($row['dni']),1,0,'C');
             $pdf->Cell(30, 10, utf8_decode($row['titulo_det']),1,0,'C');
-            $pdf->Cell(10, 10, utf8_decode($row['j1']),1,0,'C');
-            $pdf->Cell(10, 10, utf8_decode($row['j2']),1,0,'C');
-            $pdf->Cell(10, 10, utf8_decode($row['j3']),1,0,'C');
+            $pdf->Cell(30, 10, utf8_decode($row['j1']),1,0,'C');
+            $pdf->Cell(30, 10, utf8_decode($row['j2']),1,0,'C');
+            $pdf->Cell(30, 10, utf8_decode($row['j3']),1,0,'C');
             $pdf->Cell(50, 10, utf8_decode($row['materia']),1,0,'C');
             $pdf->Cell(20, 10, utf8_decode($row['puntaje']),1,0,'C');
             $pdf->Cell(30, 10, utf8_decode($row['fecha_alta']),1,0,'C');

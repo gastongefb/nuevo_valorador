@@ -3,6 +3,10 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Controller;
+
+namespace App\Controllers;
+
 use App\Models\PersonModel;
 use CodeIgniter\Controller;
 use App\Models\ValoracionPostgradoModel;
@@ -472,7 +476,11 @@ class PersonController extends Controller
         
 
         // Obtén el DNI del input (por ejemplo, de un formulario)
-        $dni = $this->request->getPost('dni');
+        //$dni = $this->request->getPost('dni');
+        
+        // Obtén el DNI del input (por ejemplo, de un formulario)
+        $request = service('request'); 
+        $dni = $request->getPost('dni');
 
         
         $db = \Config\Database::connect();
@@ -654,25 +662,29 @@ class PersonController extends Controller
 
         ];
     
-      usort($titulo, function($a, $b) {
-        // Asignamos una prioridad a cada tipo de `titulo_det`.
-        $prioridades = [
-            'Docente' => 1,
-            'Supletorio' => 2,
-            'Habilitante' => 3
-        ];
-    
-        // Comparamos primero por la prioridad de `titulo_det`.
-        $prioridadA = $prioridades[$a['titulo_det']] ?? PHP_INT_MAX;
-        $prioridadB = $prioridades[$b['titulo_det']] ?? PHP_INT_MAX;
-    
-        if ($prioridadA === $prioridadB) {
-            // Si tienen la misma prioridad, ordenamos por `puntaje` de mayor a menor.
-            return $b['puntaje'] - $a['puntaje'];
-        }
+        usort($titulo, function($a, $b) {
+            // Definimos las prioridades en el orden correcto
+            $prioridades = [
+                'Docente' => 1,
+                'Habilitante' => 2,
+                'Supletorio' => 3
+            ];
         
-        // Ordenamos por prioridad (menor prioridad primero).
-        return $prioridadA - $prioridadB;
+            // Normalizamos los títulos eliminando espacios en blanco
+            $tituloA = trim($a['titulo_det']);
+            $tituloB = trim($b['titulo_det']);
+        
+            // Asignamos prioridades según el título
+            $prioridadA = $prioridades[$tituloA] ?? PHP_INT_MAX;
+            $prioridadB = $prioridades[$tituloB] ?? PHP_INT_MAX;
+        
+            // Primero ordenamos por prioridad del título
+            if ($prioridadA !== $prioridadB) {
+                return $prioridadA - $prioridadB; // Menor prioridad va primero
+            }
+        
+            // Si tienen la misma prioridad, ordenamos por puntaje (de mayor a menor)
+            return $b['puntaje'] - $a['puntaje']; // Orden descendente por puntaje
 
       
      }); 
@@ -707,7 +719,7 @@ class PersonController extends Controller
     public function Mostrar_Valoraciones_Por_Materia3()
     {
          // Recuperar los datos del formulario
-         $datos = $this->request->getPost();
+         $datos = $this->request->getPost(); 
 
         //ACA TENGO QUE HACER ALGO PARECIDO A mostrar_valoraciones(), PERO PARA LA MATERIA PARTICULAR
 
@@ -735,9 +747,9 @@ class PersonController extends Controller
 
     if ((!empty($registros)) and (!empty($datos))){
 
-    $fechaActual = Time::now(); //TRAE FECHA ACTUAL
+      $fechaActual = Time::now(); //TRAE FECHA ACTUAL
 
-    foreach ($registros as $registro) {
+       foreach ($registros as $registro) {
         $dni = $registro['dni'];
         $idTitulo = $registro['id_titulo'];
         $j1 = $registro['j1'];
@@ -877,34 +889,39 @@ class PersonController extends Controller
             'fecha_modifica' => $fechaFormateada2,
 
         ];
- 
+      //echo"$titulo_det";
       usort($titulo, function($a, $b) {
-        // Asignamos una prioridad a cada tipo de `titulo_det`.
+        // Definimos las prioridades en el orden correcto
         $prioridades = [
             'Docente' => 1,
-            'Supletorio' => 2,
-            'Habilitante' => 3
+            'Habilitante' => 2,
+            'Supletorio' => 3
         ];
     
-        // Comparamos primero por la prioridad de `titulo_det`.
-        $prioridadA = $prioridades[$a['titulo_det']] ?? PHP_INT_MAX;
-        $prioridadB = $prioridades[$b['titulo_det']] ?? PHP_INT_MAX;
+        // Normalizamos los títulos eliminando espacios en blanco
+        $tituloA = trim($a['titulo_det']);
+        $tituloB = trim($b['titulo_det']);
     
-        if ($prioridadA === $prioridadB) {
-            // Si tienen la misma prioridad, ordenamos por `puntaje` de mayor a menor.
-            return $b['puntaje'] - $a['puntaje'];
+        // Asignamos prioridades según el título
+        $prioridadA = $prioridades[$tituloA] ?? PHP_INT_MAX;
+        $prioridadB = $prioridades[$tituloB] ?? PHP_INT_MAX;
+    
+        // Primero ordenamos por prioridad del título
+        if ($prioridadA !== $prioridadB) {
+            return $prioridadA - $prioridadB; // Menor prioridad va primero
         }
-        
-        // Ordenamos por prioridad (menor prioridad primero).
-        return $prioridadA - $prioridadB;
+    
+        // Si tienen la misma prioridad, ordenamos por puntaje (de mayor a menor)
+        return $b['puntaje'] - $a['puntaje']; // Orden descendente por puntaje
+       }); //LLAVES DE LA FUNCIÓN USORT
 
-      
-    }); 
-    } 
+    } //DEL FOREACH
+
     //PASAMOS LOS DATOS A LA VISTA  
     return view('mostrarValoracionesPorMateria', ['datosTabla1' => $titulo,]);
             
-    } 
+    } //DEL IF
+    
  }  
 
 
@@ -1081,24 +1098,28 @@ class PersonController extends Controller
             ];
       
             usort($titulo, function($a, $b) {
-            // Asignamos una prioridad a cada tipo de `titulo_det`.
-            $prioridades = [
-                'Docente' => 1,
-                'Supletorio' => 2,
-                'Habilitante' => 3
-            ];
-        
-            // Comparamos primero por la prioridad de `titulo_det`.
-            $prioridadA = $prioridades[$a['titulo_det']] ?? PHP_INT_MAX;
-            $prioridadB = $prioridades[$b['titulo_det']] ?? PHP_INT_MAX;
-        
-            if ($prioridadA === $prioridadB) {
-                // Si tienen la misma prioridad, ordenamos por `puntaje` de mayor a menor.
-                return $b['puntaje'] - $a['puntaje'];
-            }
+                // Definimos las prioridades en el orden correcto
+                $prioridades = [
+                    'Docente' => 1,
+                    'Habilitante' => 2,
+                    'Supletorio' => 3
+                ];
             
-            // Ordenamos por prioridad (menor prioridad primero).
-            return $prioridadA - $prioridadB;
+                // Normalizamos los títulos eliminando espacios en blanco
+                $tituloA = trim($a['titulo_det']);
+                $tituloB = trim($b['titulo_det']);
+            
+                // Asignamos prioridades según el título
+                $prioridadA = $prioridades[$tituloA] ?? PHP_INT_MAX;
+                $prioridadB = $prioridades[$tituloB] ?? PHP_INT_MAX;
+            
+                // Primero ordenamos por prioridad del título
+                if ($prioridadA !== $prioridadB) {
+                    return $prioridadA - $prioridadB; // Menor prioridad va primero
+                }
+            
+                // Si tienen la misma prioridad, ordenamos por puntaje (de mayor a menor)
+                return $b['puntaje'] - $a['puntaje']; // Orden descendente por puntaje
         });
           
         } 

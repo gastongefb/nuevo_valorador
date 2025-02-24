@@ -393,7 +393,7 @@ class NuevoController extends BaseController
         $xc = $datosTitulo["dni"];
         $doc = new \App\Models\DocenteModel();
         $mail = $doc->getMail($xc);
-        $xxx = $mail[0]["mail"];
+        $xxx = $mail[0]["email"];
       
         $email->setFrom('valoracionisft@gmail.com', 'ISFT');
         $email->setTo($xxx);
@@ -512,7 +512,7 @@ class NuevoController extends BaseController
             
             $mat = new MateriasModel();
 
-            $tit = new TitulosModel();
+            $titu = new TitulosModel();
 
             //$con = new CondicionDocenteModel();
 
@@ -587,17 +587,7 @@ class NuevoController extends BaseController
                     'puntaje' => $otros_titulo['puntaje'],
                     'fecha' => $t['fecha'],
                  ];
-                 /*
-                 $puntajes88[] = [
-                    'id_otros_t' => $t['id_otros_t'],
-                    'id_otros_titulos' => $t['id_otros_titulos'],
-                    'detalle' => $t['detalle_otros_titulos'],
-                    'valoracion' => $t['id_valoracion'],
-                    'puntaje' => $otros_titulo['puntaje'],
-                    'detalle_otro' => $otros_titulo['detalle_otros_titulos'],
-                    'fecha' => $t['fecha'],
-                 ];
-                 */
+                 
               }
             }
             
@@ -702,20 +692,29 @@ class NuevoController extends BaseController
         
             $suma = $suma + $vv2;
             */
-
+            
+            $do = $doc->getDatosDocentes($dni);
+            $n = $do[0]['nombre'];
+            $a = $do[0]['apellido'];
+           
+            $ti2 = $titu->getDatosTitulos($idTitulo);
+            $titulo = $ti2[0]['detalle_titulo'];
 
             //ARMO UN ARREGLO CON TODOS LOS DATOS QUE NECESITO MOSTRAR
           
-            $titulo[] = [
-                'id_va' => $id_va,
+            $titulo15[] = [
+                'id_valoracion' => $id_va,
                 'dni' => $dni,
-                'titulo_det' => $j1,
+                'titulo' => $titulo,
                 'j1' => $j1,
                 'j2' => $j2,
                 'j3' => $j3,
                 'materia' => $materia,
                 'condicion' => $materia,
                 'puntaje' => $suma,
+                'nombre' => $n,
+                'apellido' => $a,
+                //'titulo' => $titulo,
 
             ];
         /* 
@@ -760,7 +759,7 @@ class NuevoController extends BaseController
          
        
           return view('data_view3', [
-            'datosTabla1' => $titulo,
+            'datosTabla1' => $titulo15,
             'datosTabla2' => $datosTabla9,
             'datosTabla3' => $datosTablap,
             'datosTabla4' => $datosTabla5,
@@ -857,7 +856,7 @@ public function actualizarOtrosTitulos()
     public function actualizarPosFormacion()
     {
         // Cargar el modelo correspondiente
-        $postgrado = new ValoracionPostradoModel();
+        $postgrado = new ValoracionPostgradoModel();
 
         // Obtener los datos enviados por el formulario AJAX
         $id_va = $this->request->getPost('id_va');
@@ -1082,6 +1081,103 @@ public function agregarRegistro()
     }
 
 
+//***************************************************************************************************** */
+    //FUNCIONES PARA TITULOS
+    public function cargarOtrosTitulos0()
+    {
+       $TitulosModel = new TitulosModel();
+       $Titulos = $TitulosModel->findAll();
+
+       $matModel = new MateriasModel();
+       $Materias = $matModel->findAll();
+ 
+
+       // Enviar los datos a la vista
+       return $this->response->setJSON($Titulos);
+    }
+
+    public function cargarMaterias()
+    {
+      $materiasModel = new MateriasModel();
+      $materias = $materiasModel->findAll();
+      return $this->response->setJSON($materias);
+    }
+
+    public function editRecord0($id)
+    {
+        
+        $modelValoracion = new ValidacionModel();
+        $modelActualizacion = new ActualizacionOtrosTitulosModel();
+ 
+        // Obtener los datos del formulario
+        $data = $this->request->getPost();
+        $matModel = new MateriasModel();
+        $m = $matModel->getNombreMateria2($data['materia']);
+        $mat = $m[0]['id_materia'];
+        // Datos para actualizar en valoracion_otros_titulos
+        $valoracionData = [
+        'dni' => $data['dni'],
+        'j1' => $data['j1'],
+        'j2' => $data['j2'],
+        'j3' => $data['j3'],
+        'id_titulo' => $data['titulo'],
+        'id_materia_valoracion' => $mat,
+        ];
+
+       // Intentar actualizar en valoracion_otros_titulos
+       if (!$modelValoracion->update($id, $valoracionData)) {
+          return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
+         } else {
+           return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado correctamente']);
+           }
+
+     
+    }
+
+
+    public function deleteRecord20($id)
+    {
+        $model = new ValidacionModel();
+        if ($model->delete($id)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro eliminado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al eliminar el registro']);
+    }
+
+  
+    
+    public function getDetail0($id)
+    {
+        //$otrosTitulosModel = new ValoracionOtrosTitulosModel();
+        //$record = $otrosTitulosModel->find($id);
+        
+        $mod = new ActualizacionOtrosTitulosModel();
+        $rec = $mod->getval($id);
+        
+       
+       
+        // Convertir a un arreglo simple
+        $simpleArray = [];
+        foreach ($rec as $item) {
+            foreach ($item as $key => $value) {
+                $simpleArray[$key][] = $value;
+            }
+        }
+            
+
+         // convierto array asociativo en array simple
+        //$simpleArray = $rec[0];
+        //print_r($simpleArray);
+        //exit;
+        
+        if ($simpleArray) {
+            return $this->response->setJSON($simpleArray);
+        } else {
+            log_message('error', "Registro con ID {$id} no encontrado.");
+            return $this->response->setJSON(['error' => "Registro con ID {$id} no encontrado."])->setStatusCode(404);
+        }
+       
+    }    
 
 //***************************************************************************************************** */
     //FUNCIONES PARA OTROS TITULOS
@@ -1102,20 +1198,7 @@ public function agregarRegistro()
 
         //obtenemos datos del formulario
         $data = $this->request->getPost();
-        /*
-        //$dd = $this->request->getPost('addValoracion');
-        // Mapear el campo 'otros' a 'id_otros_titulos'
-        $data['id_otros_titulos'] = $data['id_otros_titulos'];
-        unset($data['otros']); // Opcional: elimina el campo 'otros' si no es necesario
-
-    
-        if ($model->insert($data)) {
-            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro agregado exitosamente']);
-        }
-        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al agregar el registro']);
-
-        */
-            // Insertar en la primera tabla (valoracion_otros_titulos)
+       
     $valoracionData = [
         'detalle_otros_titulos' => $data['detalle_otros_titulos'],
         'fecha' => $data['fecha'],

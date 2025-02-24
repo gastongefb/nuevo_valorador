@@ -38,6 +38,16 @@ class MateriasModel extends Model
        return $query->getResultArray(); // Devuelve los resultados como un array asociativo
    }
 
+   public function getNombreMateria2($codigo)
+   {
+       $builder = $this->db->table($this->table);
+       $builder->select('*');
+       $builder->where('nombre_materia', $codigo);
+       $query = $builder->get();
+
+       return $query->getResultArray(); // Devuelve los resultados como un array asociativo
+   }
+
    /**
      * Method to search for materias by name starting with a given term
      * @param string $term

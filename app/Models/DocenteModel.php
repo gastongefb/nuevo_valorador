@@ -8,7 +8,7 @@ class DocenteModel extends Model
 {
     protected $table = 'docente';
    // protected $allowedFields = ['name', 'surname', 'dni', 'email', 'state', 'username', 'password'];
-    protected $allowedFields = ['nombre', 'apellido', 'dni', 'mail', 'estado', 'usuario', 'clave'];
+    protected $allowedFields = ['nombre', 'apellido', 'dni', 'email', 'estado', 'usuario', 'clave'];
    
     protected $primaryKey = 'id';
 
@@ -106,7 +106,7 @@ class DocenteModel extends Model
     public function getMail($codigo)
     {
         $builder = $this->db->table($this->table);
-        $builder->select('mail');
+        $builder->select('email');
         $builder->where('dni', $codigo);
         $query = $builder->get();
  

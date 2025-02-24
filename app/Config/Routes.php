@@ -161,6 +161,14 @@ $routes->post('NuevoController/agregarRegistro2', 'NuevoController::agregarRegis
 
 
 //RUTAS PARA ACTUALIZAR
+//RUTAS PARA TITULO
+$routes->get('NuevoController/cargarOtrosTitulos0', 'NuevoController::cargarOtrosTitulos0');
+$routes->get('NuevoController/cargarMaterias', 'NuevoController::cargarMaterias');
+$routes->post('NuevoController/editRecord0/(:num)', 'NuevoController::editRecord0/$1');
+$routes->post('NuevoController/deleteRecord20/(:num)', 'NuevoController::deleteRecord20/$1');
+//RUTAS PARA FORMULARIO MODAL QUE MUESTRA EL DETALLE DE LOS ITEM EN LA OPCIÓN ACTUALIZAR
+$routes->get('NuevoController/getDetail/(:num)', 'NuevoController::getDetail/$1');
+
 //RUTAS PARA OTROS TÍTULOS
 $routes->post('NuevoController/addRecord', 'NuevoController::addRecord');
 $routes->get('NuevoController/cargarOtrosTitulos', 'NuevoController::cargarOtrosTitulos');
