@@ -1,0 +1,169 @@
+INFO - 2025-03-03 14:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-03 14:11:55 --> ErrorException: Undefined variable $titulo15
+in APPPATH\Controllers\NuevoController.php on line 762.
+ 1 APPPATH\Controllers\NuevoController.php(762): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo15', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 762)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-03 14:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-03 14:16:05 --> Registro con ID 115 no encontrado.
+ERROR - 2025-03-03 14:16:07 --> Registro con ID 115 no encontrado.
+ERROR - 2025-03-03 14:16:09 --> Registro con ID 116 no encontrado.
+ERROR - 2025-03-03 14:16:10 --> Registro con ID 117 no encontrado.
+ERROR - 2025-03-03 14:16:11 --> Registro con ID 118 no encontrado.
+INFO - 2025-03-03 14:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-03 14:16:42 --> Registro con ID 225 no encontrado.
+INFO - 2025-03-03 14:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 14:31:34 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"43","titulo":"3"}
+DEBUG - 2025-03-03 14:31:36 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"43","titulo":"3"}
+DEBUG - 2025-03-03 14:31:43 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"43","titulo":"3"}
+DEBUG - 2025-03-03 14:31:54 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"1","titulo":"1"}
+DEBUG - 2025-03-03 14:31:55 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"1","titulo":"1"}
+CRITICAL - 2025-03-03 14:31:59 --> ErrorException: Undefined variable $titulo15
+in APPPATH\Controllers\NuevoController.php on line 762.
+ 1 APPPATH\Controllers\NuevoController.php(762): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo15', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 762)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-03 14:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 14:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-03 14:57:29 --> ErrorException: Undefined array key "id_otros_titulos"
+in APPPATH\Views\data_view3.php on line 259.
+ 1 APPPATH\Views\data_view3.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_otros_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php', 259)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data_view3', [], true)
+ 5 APPPATH\Controllers\NuevoController.php(787): view('data_view3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-03 14:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-03 14:58:48 --> ErrorException: Undefined array key "detalle_titulos"
+in APPPATH\Views\data_view3.php on line 259.
+ 1 APPPATH\Views\data_view3.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_titulos"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php', 259)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data_view3', [], true)
+ 5 APPPATH\Controllers\NuevoController.php(787): view('data_view3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-03 14:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-03 14:59:18 --> Registro con ID 4 no encontrado.
+ERROR - 2025-03-03 14:59:19 --> Registro con ID 4 no encontrado.
+ERROR - 2025-03-03 14:59:20 --> Registro con ID 3 no encontrado.
+ERROR - 2025-03-03 15:00:32 --> Registro con ID 4 no encontrado.
+ERROR - 2025-03-03 15:00:35 --> Registro con ID 4 no encontrado.
+INFO - 2025-03-03 15:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-03 15:22:20 --> ErrorException: Undefined array key "detalle_postgrado"
+in APPPATH\Views\data_view3.php on line 305.
+ 1 APPPATH\Views\data_view3.php(305): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_postgrado"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php', 305)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data_view3', [], true)
+ 5 APPPATH\Controllers\NuevoController.php(805): view('data_view3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-03 15:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-03 15:23:28 --> ErrorException: Undefined array key "detalle_valoracion_postgrado"
+in APPPATH\Views\data_view3.php on line 302.
+ 1 APPPATH\Views\data_view3.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_valoracion_postgrado"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php', 302)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Views\\data_view3.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data_view3', [], true)
+ 5 APPPATH\Controllers\NuevoController.php(805): view('data_view3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-03 15:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-03 15:33:55 --> ErrorException: Undefined array key "id_postgrado"
+in APPPATH\Controllers\NuevoController.php on line 665.
+ 1 APPPATH\Controllers\NuevoController.php(665): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_postgrado"', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 665)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-03 15:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 15:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-03 16:01:25 --> ErrorException: Undefined variable $datosTabla55
+in APPPATH\Controllers\NuevoController.php on line 832.
+ 1 APPPATH\Controllers\NuevoController.php(832): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosTabla55', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 832)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 16:02:20 --> ErrorException: Undefined variable $datosTabla55
+in APPPATH\Controllers\NuevoController.php on line 832.
+ 1 APPPATH\Controllers\NuevoController.php(832): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosTabla55', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 832)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 16:03:00 --> ErrorException: Undefined variable $datosTabla55
+in APPPATH\Controllers\NuevoController.php on line 832.
+ 1 APPPATH\Controllers\NuevoController.php(832): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosTabla55', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 832)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 16:03:03 --> ErrorException: Undefined variable $datosTabla55
+in APPPATH\Controllers\NuevoController.php on line 832.
+ 1 APPPATH\Controllers\NuevoController.php(832): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosTabla55', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 832)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-03 16:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-03 16:04:48 --> Registro con ID 133 no encontrado.
+INFO - 2025-03-03 16:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 16:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-03 16:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

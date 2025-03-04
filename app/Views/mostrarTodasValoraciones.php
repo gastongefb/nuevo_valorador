@@ -2,114 +2,121 @@
 
 <?= $this->section('content') ?>
 
-<br>
-<h2 class="text-center">Listado de Valoraciones</h2>
+
+<h2 class="text-center text-primary fw-bold">Listado de Valoraciones</h2>
 
 <style>
   /* Estilo general de la tabla */
-  table {
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+  }
+
+  .styled-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
     font-size: 1em;
-    font-family: sans-serif;
-    min-width: 400px;
+    font-family: 'Arial', sans-serif;
+    min-width: 600px;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
-  /* Encabezados de la tabla */
-  thead {
+  /* Encabezado */
+  .styled-table thead tr {
     background-color: #007bff;
     color: white;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
   }
 
-  th,td {
-    padding: 12px 15px;
+  /* Celdas */
+  .styled-table th, .styled-table td {
+    padding: 10px;
     border-bottom: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap; /* Evita que los encabezados se dividan en varias líneas */
   }
 
-  /* Filas alternas para mejor visualización */
-  tbody tr:nth-child(even) {
-    background-color: #f3f3f3;
+  /* Filas alternas */
+  .styled-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
   }
 
   /* Efecto hover */
-  tbody tr:hover {
-    background-color: #d6e4ff;
-    transition: 0.3s;
+  .styled-table tbody tr:hover {
+    background-color: #cce5ff;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
   }
 
-  /* Responsividad */
-  @media (max-width: 600px) {
-    table {
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-  }
-  
-    /* Ajuste para la columna de Materia */
-    .materia-col {
-    max-width: 150px; /* Ajusta este valor según el diseño deseado */
-    white-space: nowrap; /* Evita que el encabezado se divida en varias líneas */
+  /* Ajuste para columna de materia */
+  .materia-col {
+    max-width: 200px;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Si el texto es demasiado largo, lo recorta con "..." */
+    text-overflow: ellipsis;
   }
 
-  /* Permitir ajuste en las filas, pero no en el encabezado */
-  td.materia-col {
-    white-space: normal; /* Permite que el contenido de la fila tenga salto de línea */
-    word-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+  /* Botón de descarga de PDF */
+  .pdf-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .pdf-btn:hover {
+    background-color: #0056b3;
   }
 </style>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Código</th>
-      <th scope="col">Dni</th>
-      <th scope="col">Título</th>
-      <th scope="col">Jurado1</th>
-      <th scope="col">Jurado2</th>
-      <th scope="col">Jurado3</th>
-      <th scope="col">Materia</th>
-      <th scope="col">Puntaje</th>
-      <th scope="col">Fecha de alta</th>
-      <th scope="col">Última actualización</th>
-
-
-    </tr>
-  </thead>
-  <?php
-  $x = 1;
-
-
-  foreach ($datosTabla1 as $registro): ?>
-    <tbody>
+<div class="table-container">
+  <table class="styled-table">
+    <thead>
       <tr>
-        <th scope="row"><?php echo "$x"; ?></th>
-        <td><?= esc($registro['dni']); ?></td>
-        <td><?= esc($registro['titulo_det']); ?></td>
-        <td><?= esc($registro['j1']); ?></td>
-        <td><?= esc($registro['j2']); ?></td>
-        <td><?= esc($registro['j3']); ?></td>
-        <td class="materia-col"><?= esc($registro['materia']); ?></td> <!-- se aplica la clase para la fila -->
-        <td><?= esc($registro['puntaje']); ?></td>
-        <td><?= esc($registro['fecha_alta']); ?></td>
-        <td><?= esc($registro['fecha_modifica']); ?></td>
-        <?php //echo"$x";
-        $x = $x + 1;
-        ?>
+        <th>#</th>
+        <th>DNI</th>
+        <th>Título</th>
+        <th>Jurado 1</th>
+        <th>Jurado 2</th>
+        <th>Jurado 3</th>
+        <th>Materia</th>
+        <th>Puntaje</th>
+        <th>Fecha de Alta</th>
+        <th>Última Actualización</th>
       </tr>
-
+    </thead>
+    <tbody>
+      <?php $x = 1; ?>
+      <?php foreach ($datosTabla1 as $registro): ?>
+        <tr>
+          <td><?= $x++; ?></td>
+          <td><?= esc($registro['dni']); ?></td>
+          <td><?= esc($registro['titulo_det']); ?></td>
+          <td><?= esc($registro['j1']); ?></td>
+          <td><?= esc($registro['j2']); ?></td>
+          <td><?= esc($registro['j3']); ?></td>
+          <td class="materia-col"><?= esc($registro['materia']); ?></td>
+          <td><?= esc($registro['puntaje']); ?></td>
+          <td><?= esc($registro['fecha_alta']); ?></td>
+          <td><?= esc($registro['fecha_modifica']); ?></td>
+        </tr>
+      <?php endforeach; ?>
     </tbody>
-  <?php endforeach; ?>
-</table>
-<br>
+  </table>
+</div>
 
 <form method="post" action="<?= site_url('pdf/generatePdf') ?>" style="display:none;" id="pdfForm">
   <input type="hidden" name="datosTabla1" value='<?= json_encode($datosTabla1) ?>'>
@@ -117,7 +124,9 @@
 
 <!--<button onclick="document.getElementById('pdfForm').submit();">Descargar PDF</button> -->
 
-<button type="button" class="btn btn-primary" onclick="document.getElementById('pdfForm').submit();">Descargar PDF</button>
+<button type="button" class="pdf-btn" onclick="document.getElementById('pdfForm').submit();">
+  Descargar PDF
+</button>
 
 
 

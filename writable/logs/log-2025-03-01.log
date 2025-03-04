@@ -1,0 +1,92 @@
+INFO - 2025-03-01 18:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-01 18:03:48 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"1","titulo":"3"}
+INFO - 2025-03-01 18:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-01 18:04:31 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"1","titulo":"1"}
+INFO - 2025-03-01 18:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-01 18:07:28 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"42","titulo":"1"}
+CRITICAL - 2025-03-01 18:07:28 --> ErrorException: Undefined variable $titulo15
+in APPPATH\Controllers\NuevoController.php on line 762.
+ 1 APPPATH\Controllers\NuevoController.php(762): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo15', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 762)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-01 18:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-01 18:26:11 --> ErrorException: Undefined variable $titulo15
+in APPPATH\Controllers\NuevoController.php on line 762.
+ 1 APPPATH\Controllers\NuevoController.php(762): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo15', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 762)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-01 18:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-01 18:26:28 --> ErrorException: Undefined variable $titulo15
+in APPPATH\Controllers\NuevoController.php on line 762.
+ 1 APPPATH\Controllers\NuevoController.php(762): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo15', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 762)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-01 18:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-01 18:27:07 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"1","titulo":"1"}
+INFO - 2025-03-01 18:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-01 18:27:08 --> ErrorException: Undefined variable $titulo15
+in APPPATH\Controllers\NuevoController.php on line 762.
+ 1 APPPATH\Controllers\NuevoController.php(762): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo15', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 762)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-01 18:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-01 18:30:15 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"43","titulo":"1"}
+INFO - 2025-03-01 18:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-01 18:30:15 --> ErrorException: Undefined variable $titulo15
+in APPPATH\Controllers\NuevoController.php on line 762.
+ 1 APPPATH\Controllers\NuevoController.php(762): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo15', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 762)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-01 18:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-01 18:33:04 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"1","titulo":"1"}
+INFO - 2025-03-01 18:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-01 18:33:05 --> ErrorException: Undefined variable $titulo15
+in APPPATH\Controllers\NuevoController.php on line 762.
+ 1 APPPATH\Controllers\NuevoController.php(762): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo15', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 762)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-01 18:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-01 18:34:15 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"43","titulo":"1"}
+DEBUG - 2025-03-01 18:34:19 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"43","titulo":"1"}
+CRITICAL - 2025-03-01 18:34:27 --> ErrorException: Undefined variable $titulo15
+in APPPATH\Controllers\NuevoController.php on line 762.
+ 1 APPPATH\Controllers\NuevoController.php(762): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo15', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 762)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-01 18:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-01 18:34:43 --> ErrorException: Undefined variable $titulo15
+in APPPATH\Controllers\NuevoController.php on line 762.
+ 1 APPPATH\Controllers\NuevoController.php(762): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo15', 'C:\\xampp\\htdocs\\valoradorG2\\valorador\\app\\Controllers\\NuevoController.php', 762)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\NuevoController->mostrar_valoraciones_porDocente_porMateria3()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NuevoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-03-01 18:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-01 18:35:09 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"1","titulo":"1"}
+INFO - 2025-03-01 18:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-01 18:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-01 18:38:06 --> Datos recibidos en POST: {"id_valoracion":"310","dni":"27269774","j1":"19222333","j2":"29789456","j3":"25412789","materia":"43","titulo":"1"}

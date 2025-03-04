@@ -14,7 +14,7 @@ class MateriasModel extends Model
 
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nombre_materia', 'cuatrimestre','id_carrera_materia'];
+    protected $allowedFields = ['nombre_materia','cuatrimestre','id_carrera_materia'];
 
     public function getMaterias()
     {

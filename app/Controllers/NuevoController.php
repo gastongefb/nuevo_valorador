@@ -571,6 +571,25 @@ class NuevoController extends BaseController
                  $suma = $suma + $tot3;
              }
 
+            //ARREGLO PARA PODER OBTENER EL DETALLE OTROS TITULOS(docente de nivel superior,No docente de nivel superior,etc.)  
+            $val_otros_t = new ValoracionOtrosTitulosModel();
+            $datosTabla99 = $val_otros_t ->getCodigoById_valoracion($id_va);//ACÁ PUEDE TRAER VARIOS
+            $otros_t = new OtrosTitulosModel();
+            $datosTabla22 = []; 
+            foreach ($datosTabla99 as $t) {
+                $otros_titulo = $otros_t->find($t['id_otros_titulos']); // Suponiendo que el método find busca por la clave primaria
+                  if ($otros_titulo) {
+                       $datosTabla22[] = [
+                        'id_otros_t' => $t['id_otros_t'],
+                        'id_valoracion' => $t['id_valoracion'],
+                        'detalle_otros_titulos' => $t['detalle_otros_titulos'],
+                        'detalle_titulo' => $otros_titulo['detalle_otros_titulos'],
+                        'fecha' => $t['fecha'],
+                     ];
+                     
+                  }
+                }
+
              //print_r($datosTabla9 );
 
             //PUNTAJE DE OTROS TÍTULOS    
@@ -610,6 +629,24 @@ class NuevoController extends BaseController
               }
             }
 
+            $datosTablapp = $valpos->getCodigoById_valoracion($id_va);//ACÁ PUEDE TRAER VARIOS
+            $tit = new TitulosPostgradoModel();
+            // Recorrer el array de códigos y obtener los puntajes del modelo TitulosPostgradoModel
+            //print_r($datosTabla1);
+            $datosTabla33 = []; 
+            foreach ($datosTablapp as $t) {
+            $titulo = $tit->find($t['id_titulo_postgrado']); // Suponiendo que el método find busca por la clave primaria
+              if ($titulo) {
+                  $datosTabla33[] = [
+                    'id_postgrado' => $t['id_postgrado'],
+                    'id_valoracion' => $t['id_valoracion'],
+                    'detalle_valoracion_postgrado' => $t['detalle_valoracion_postgrado'],
+                    'detalle_postgrado' => $titulo['detalle_postgrado'],
+                    'fecha' => $t['fecha'],
+                  ];
+              }
+            }
+
             //print_r($datosTablap);
 
             //PUNTAJE ANTECEDENTES DOCENTES-ANTIGUEDAD            
@@ -620,7 +657,23 @@ class NuevoController extends BaseController
                $tot2 = $dc['cantidad'] * $detalle_do['puntaje'];//CALCULA EL PUNTAJE FINAL EN BASE A LA CANTIDAD DE AÑOS
                $suma = $suma + $tot2;
             }
-
+            
+            $datosTabla5 =  $antDoc->getDatosById_ant_doc($id_va);//ACÁ PUEDE TRAER VARIOS
+            $do = new DetalleAntDocModel();
+            $datosTabla44 = []; 
+            foreach ($datosTabla5 as $dc) {
+            $detalle_do = $do->find($dc['id_detalle_doc']); // Suponiendo que el método find busca por la clave primaria
+              if ($detalle_do) {
+                  $datosTabla44[] = [
+                    'id_ant_doc' => $dc['id_ant_doc'],
+                    'id_valoracion' => $dc['id_valoracion'],
+                    'detalle_ant_doc' => $dc['detalle_ant_doc'],
+                    'detalle_antecedente_doc' => $detalle_do['detalle_ant_doc'],
+                    'cantidad' => $dc['cantidad'],
+                  ];
+              }
+            }
+             
             //PUNTAJE FORMACIÓN RECIBIDA
             $datos_capacitacion = $cap->getCodigoById_detallae_cap($id_va);
             $ca = new DetalleCapacitacionModel();
@@ -640,7 +693,24 @@ class NuevoController extends BaseController
                 }
                 
             }
-
+             
+            //CALCULO DE DATOS PARA MOSTRAR DETALLES - CAPACITACIÓN
+            $datosCap =  $cap->getCodigoById_detallae_cap($id_va);
+            $ca = new DetalleCapacitacionModel();
+            $datosTabla55 = []; 
+            foreach ($datosCap as $dca) {
+            $detalle_cap = $ca->find($dca['id_detalle_capacitacion']); // Suponiendo que el método find busca por la clave primaria
+              if ($detalle_cap) {
+                  $datosTabla55[] = [
+                    'id_capacitacion' => $dca['id_capacitacion'],
+                    'id_valoracion' => $dca['id_valoracion'],
+                    'detalle_capacitacion' => $dca['detalle_capacitacion'],
+                    'detalle' => $detalle_cap['detalle'],
+                    'fecha' => $dca['fecha'],
+                  ];
+              }
+            }
+            
             //PUNTAJE FORMACIÓN OFRECIDA
             $f_o = new FormacionOfrecidaModel();
             $datosTabla_f_o = $f_o->getCodigoById_formacion_ofrecida($id_va);//ACÁ PUEDE TRAER VARIOS
@@ -651,7 +721,27 @@ class NuevoController extends BaseController
                 $tot4 = $otra_for['puntaje'];
                 $suma = $suma + $tot4;
             }
-
+            
+            //CALCULO DE DATOS PARA MOSTRAR DETALLES - FORMACIÓN OFRECIDA
+            $f_o = new FormacionOfrecidaModel();
+            $datosTabla_f_o = $f_o->getCodigoById_formacion_ofrecida($id_va);//ACÁ PUEDE TRAER VARIOS
+            $detalle_for = new DetalleFormacionOfrecidaModel();
+            // Recorrer el array de códigos y obtener los puntajes del modelo TitulosPostgradoModel
+            $datosTabla66 = []; 
+            foreach ($datosTabla_f_o as $dfo) {
+                $detalle_fo = $detalle_for->find($dfo['id_formacion_ofrecida']); // Suponiendo que el método find busca por la clave primaria
+                  if ($detalle_fo) {
+                      $datosTabla66[] = [
+                        'id_formacion' => $dfo['id_formacion'],
+                        'id_valoracion' => $dfo['id_valoracion'],
+                        'detalle_formacion' => $dfo['detalle_formacion'],
+                        'detalle' => $detalle_fo['detalle'],
+                        'fecha' => $dfo['fecha'],
+                      ];
+                  }
+                  
+            }
+            
             //PUNTAJE INVESTIGACIÓN
             $inv = new InvestigacionModel();
             $datosTabla_inv = $inv->getCodigoById_detallae_inv($id_va);//ACÁ PUEDE TRAER VARIOS
@@ -663,6 +753,26 @@ class NuevoController extends BaseController
                 $suma = $suma + $tot5;
             }
 
+            //CALCULO DE DATOS PARA MOSTRAR DETALLES - INVESTIGACIÓN
+            $inv = new InvestigacionModel();
+            $datosTabla_inv = $inv->getCodigoById_detallae_inv($id_va);//ACÁ PUEDE TRAER VARIOS
+            $detalle_inv = new DetalleInvestigacionModel();
+            // Recorrer el array de códigos y obtener los puntajes del modelo TitulosPostgradoModel
+            $datosTabla77 = []; 
+            foreach ($datosTabla_inv as $t) {
+                $detalle_i = $detalle_inv->find($t['id_detalle_investigacion']); // Suponiendo que el método find busca por la clave primaria
+                if ($detalle_i) {
+                    $datosTabla77[] = [
+                      'id_investigacion' => $t['id_investigacion'],
+                      'id_valoracion' => $t['id_valoracion'],
+                      'detalle_investigacion' => $t['detalle_investigacion'],
+                      'detalle' => $detalle_i['detalle'],
+                      'fecha' => $t['fecha'],
+                    ];
+                }
+            }
+
+
              //PUNTAJE OTROS ANTECEDENTES DOCENTES
              $oa = new OtrosAntecedentesDocModel();
              $datosTabla_oa = $oa->getDatosById_otros_ant($id_va);//ACÁ PUEDE TRAER VARIOS
@@ -673,6 +783,27 @@ class NuevoController extends BaseController
                  $tot6 = $otra_oa['puntaje'];
                  $suma = $suma + $tot6;
              }
+             
+             //CALCULO DE DATOS PARA MOSTRAR DETALLES - OTROS ANTECEDENTES
+             $oa = new OtrosAntecedentesDocModel();
+             $datosTabla_oa = $oa->getDatosById_otros_ant($id_va);//ACÁ PUEDE TRAER VARIOS
+             $detalle_oa = new DetalleOtrosAntDocModel();
+             // Recorrer el array de códigos y obtener los puntajes del modelo TitulosPostgradoModel
+             $datosTabla88 = []; 
+             foreach ($datosTabla_oa as $t) {
+                 $otra_oa = $detalle_oa->find($t['id_detalle_otros_ant']); // Suponiendo que el método find busca por la clave primaria
+                 if ($otra_oa) {
+                    $datosTabla88[] = [
+                      'id_detalle_ant' => $t['id_detalle_ant'],
+                      'id_valoracion' => $t['id_valoracion'],
+                      'detalle_otros_ant_doc' => $t['detalle_otros_ant_doc'],
+                      'detalle' => $otra_oa['detalle_otros_ant'],
+                      'fecha' => $t['fecha'],
+                    ];
+                }
+             } 
+            
+
 
             //PUNTAJE DE ANTECEDENTES LABORALES
             $datosTabla4 = $antLab->getDatosById_detalle_lab($id_va);//ACÁ PUEDE TRAER 
@@ -682,7 +813,23 @@ class NuevoController extends BaseController
                $tot7 = $de['cantidad'] * $detalle_la['puntaje'];//CALCULA EL PUNTAJE FINAL EN BASE A LA CANTIDAD DE AÑOS
                $suma = $suma + $tot7;
             }
-
+            
+            $datosTabla4 = $antLab->getDatosById_detalle_lab($id_va);//ACÁ PUEDE TRAER 
+            $dl = new DetalleAntLabModel();
+            $datosTabla99 = []; 
+            foreach ($datosTabla4 as $de) {
+                $otra_al = $dl->find($de['id_detalle_lab']); // Suponiendo que el método find busca por la clave primaria
+                if ($otra_al) {
+                   $datosTabla99[] = [
+                     'id_ant_lab' => $de['id_ant_lab'],
+                     'id_valoracion' => $de['id_valoracion'],
+                     'detalle_ant_lab' => $de['detalle_ant_lab'],
+                     'detalle' => $otra_al['detalle_ant_lab'],
+                     'cantidad' => $de['cantidad'],
+                   ];
+               }
+            }
+            
             
              /*      
             //PUNTAJE DEL TÍTULO DE BASE
@@ -717,57 +864,20 @@ class NuevoController extends BaseController
                 //'titulo' => $titulo,
 
             ];
-        /* 
-             // Ordenar por sexo y luego por edad
-            usort($titulo, function($a, $b) {
-            if ($a['titulo_det'] === $b['titulo_det']) {
-                return $b['puntaje'] - $a['puntaje'];
-            }
-            return ($a['titulo_det'] === 'Docente') ? -1 : 1;
-        });
+      
         
-        usort($titulo, function($a, $b) {
-            // Asignamos una prioridad a cada tipo de `titulo_det`.
-            $prioridades = [
-                'Docente' => 1,
-                'Supletorio' => 2,
-                'Habilitante' => 3
-            ];
-        
-            // Comparamos primero por la prioridad de `titulo_det`.
-            $prioridadA = $prioridades[$a['titulo_det']] ?? PHP_INT_MAX;
-            $prioridadB = $prioridades[$b['titulo_det']] ?? PHP_INT_MAX;
-        
-            if ($prioridadA === $prioridadB) {
-                // Si tienen la misma prioridad, ordenamos por `puntaje` de mayor a menor.
-                return $b['puntaje'] - $a['puntaje'];
-            }
-            
-            // Ordenamos por prioridad (menor prioridad primero).
-            return $prioridadA - $prioridadB;
-        });
-        */
         } 
-       
-        //PASAMOS LOS DATOS A LA VISTA  
-        //return view('mostrarValoraciones', ['datosTabla1' => $titulo,]);
-        
-
-       //print_r($titulo);
-       //print_r($puntajes);
-       //print_r($datosTablap);
-         
-       
+            
           return view('data_view3', [
             'datosTabla1' => $titulo15,
-            'datosTabla2' => $datosTabla9,
-            'datosTabla3' => $datosTablap,
-            'datosTabla4' => $datosTabla5,
-            'datosTabla5' => $datos_capacitacion,
-            'datosTabla6' => $datosTabla_f_o,
-            'datosTabla7' => $datosTabla_inv,
-            'datosTabla8' => $datosTabla_oa,
-            'datosTabla9' => $datosTabla4,
+            'datosTabla2' => $datosTabla22,
+            'datosTabla3' => $datosTabla33,
+            'datosTabla4' => $datosTabla44,
+            'datosTabla5' => $datosTabla55,
+            'datosTabla6' => $datosTabla66,
+            'datosTabla7' => $datosTabla77,
+            'datosTabla8' => $datosTabla88,
+            'datosTabla9' => $datosTabla99,
             //'datosTabla10' => $puntajes88,
 
         ]);
@@ -985,44 +1095,6 @@ public function deleteRecord()
     return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to delete record']);
 }
 
-/*
-public function addRecord()
-{
-    $table = $this->request->getPost('table');
-    $fields = $this->request->getPost();
-    unset($fields['table']); // Eliminar campo no relevante
-
-    $model = null;
-
-    if ($table === 'table1') {
-        $model = new ValoracionOtrosTitulosModel();
-    } elseif ($table === 'table2') {
-        $model = new ValoracionPostgradoModel();
-    } elseif ($table === 'table3') {
-        $model = new AntecedentesDocModel();
-    } elseif ($table === 'table4') {
-        $model = new CapacitacionModel();
-    } elseif ($table === 'table5') {
-        $model = new FormacionOfrecidaModel();
-    } elseif ($table === 'table6') {
-        $model = new InvestigacionModel();
-    } elseif ($table === 'table7') {
-        $model = new OtrosAntecedentesDocModel();
-    } elseif ($table === 'table8') {
-        $model = new AntecedentesLabModel();
-    }
-
-    if ($model) {
-        $newId = $model->insert($fields);
-        if ($newId) {
-            $fields['id'] = $newId; // Agregar el ID al array de respuesta
-            return $this->response->setJSON(['status' => 'success', 'data' => $fields]);
-        }
-    }
-
-    return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to add record']);
-}
-*/
 
 public function agregarRegistro()
     {
@@ -1089,7 +1161,7 @@ public function agregarRegistro()
        $Titulos = $TitulosModel->findAll();
 
        $matModel = new MateriasModel();
-       $Materias = $matModel->findAll();
+       //$Materias = $matModel->findAll();
  
 
        // Enviar los datos a la vista
@@ -1108,27 +1180,30 @@ public function agregarRegistro()
         
         $modelValoracion = new ValidacionModel();
         $modelActualizacion = new ActualizacionOtrosTitulosModel();
- 
+      
         // Obtener los datos del formulario
         $data = $this->request->getPost();
-        $matModel = new MateriasModel();
-        $m = $matModel->getNombreMateria2($data['materia']);
-        $mat = $m[0]['id_materia'];
-        // Datos para actualizar en valoracion_otros_titulos
+        log_message('debug', 'Datos recibidos en POST: ' . json_encode($data));
+
+        //$matModel = new MateriasModel();
+        //$m = $matModel->getNombreMateria2($data['materia']);
+        //$mat = $m[0]['id_materia'];
+            
         $valoracionData = [
         'dni' => $data['dni'],
         'j1' => $data['j1'],
         'j2' => $data['j2'],
         'j3' => $data['j3'],
         'id_titulo' => $data['titulo'],
-        'id_materia_valoracion' => $mat,
+        'id_materia_valoracion' => $data['materia'],
         ];
 
        // Intentar actualizar en valoracion_otros_titulos
        if (!$modelValoracion->update($id, $valoracionData)) {
           return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
          } else {
-           return $this->response->setJSON(['status' => 'success', 'message' => 'Registro actualizado correctamente']);
+            return redirect()->to('/cargas_datos');
+
            }
 
      
@@ -1377,6 +1452,15 @@ public function agregarRegistro()
         }
 
       return $this->response->setJSON(['status' => 'error', 'message' => 'Error al actualizar el registro en valoracion_otros_titulos']);
+    }
+
+    public function deleteRecord22($id)
+    {
+        $model = new ValoracionPostgradoModel();
+        if ($model->delete($id)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Registro eliminado exitosamente']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Error al eliminar el registro']);
     }
     
     public function getDetailPostgrado($id)
@@ -2003,11 +2087,13 @@ public function agregarRegistro()
      public function deleteRecord28($id)
      {
          $model = new AntecedentesLabModel();
+         
          if ($model->delete($id)) {
-             return $this->response->setJSON(['status' => 'success', 'message' => 'Registro eliminado exitosamente']);
-         }
-         return $this->response->setJSON(['status' => 'error', 'message' => 'Error al eliminar el registro']);
-     }
+            return $this->response->setJSON(['success' => true]);
+        } else {
+            return $this->response->setJSON(['success' => false]);
+        }
+   }
 
      public function getDetailLab($id)
     {

@@ -8,6 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <!-- ESTILO PARA CENTRAR EL LINK DE VOLVER-->
     <style>
         .center-container {
@@ -55,82 +58,206 @@
         padding: 10px;
     }
 </style>
+
+<style>
+    /*ESTILOS PARA EL MENU
+        /* Centrar el navbar */
+        .navbar-custom {
+            background-color: #f8f9fa;
+            padding: 15px;
+        }
+
+        /* Estilos para el usuario */
+        .usuario-info {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        /* Centrar el contenido del menú */
+        .navbar-nav {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Alinear el texto en las celdas de las tablas */
+        .table td, .table th {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+
+   
+
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-    <a class="navbar-brand" href="#">ISFT ANGACO - usuario <?php echo session('usuario');?></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container">
+            <!-- Nombre del usuario centrado -->
+            <span class="usuario-info text-primary">
+                <i class="fas fa-user"></i> Usuario: <?= session('usuario'); ?>
+            </span>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Planes de Estudio</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?= base_url('/mostrarPlanes') ?>">Listado de Planes</a></li>
+                            <li><a class="dropdown-item" href="#">Cargar Plan</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Materias</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?= base_url('/insertar_materia1') ?>">Cargar Materias</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/materias') ?>">Actualizar Materias</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Valoraciones</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?= base_url('/cargar_datos') ?>">Cargar Nueva valoración</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/mostrar_valoraciones_porDocente_porMateria1') ?>">Actualizar Valoración</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/buscar_valoracion_por_docente') ?>">Buscar valoración por Docente</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/Mostrar_Valoraciones_Por_Materia') ?>">Mostrar valoración por Materia</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/mostrar_valoraciones') ?>">Mostrar Todas las valoraciones</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Docente</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?= base_url('/Docente/create') ?>">Agregar</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/buscar_docente') ?>">Buscar</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/Docente') ?>">Listar</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Opción Salir -->
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="<?= base_url('/salir') ?>"><i class="fas fa-sign-out-alt"></i> Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<style>
+  /* Contenedor de la tabla */
+  .table-container {
+  width: 80%; /* Ajusta el ancho de la tabla según lo necesites */
+  max-width: 1200px; /* Un máximo de ancho para no hacerla demasiado ancha en pantallas grandes */
+  margin: 0 auto; /* Esto centrará la tabla horizontalmente */
+  overflow-x: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+  /* Estilo de la tabla */
+  .styled-table {
+    table-layout: fixed; /* Fija el ancho de las columnas */
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: 'Arial', sans-serif;
+    min-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+  /* Encabezado */
+  .styled-table thead tr {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+  /* Celdas */
+  .styled-table th, .styled-table td {
+    padding: 8px 12px; /* Ajustamos el padding */
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+  /* Filas alternas */
+  .styled-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+  /* Efecto hover */
+  .styled-table tbody tr:hover {
+    background-color: #cce5ff;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.materia-col {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.actions-column {
+    width: 200px;  /* Ajusta según sea necesario */
+    text-align: center;
+}
+
+/* Estilo de los botones dentro de la columna de acciones */
+.actions-column button {
+    display: inline-block;  /* Asegura que los botones estén en línea */
+    margin-right: 5px;  /* Añadimos algo de espacio entre los botones */
+    margin-bottom: 5px;  /* Espacio en la parte inferior para los botones */
+}
+  /* Botones */
+  .btn {
+    padding: 5px 5px; /* Ajuste en el tamaño de los botones */
+    font-size: 0.85rem;
+}
+  .btn-warning { background-color: #ffc107; color: black; }
+  .btn-warning:hover { background-color: #e0a800; }
+
+  .btn-info { background-color: #17a2b8; color: white; }
+  .btn-info:hover { background-color: #138496; }
+
+  .btn-danger { background-color: #dc3545; color: white; }
+  .btn-danger:hover { background-color: #c82333; }
 
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Planes de Estudio
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="<?php echo base_url('/mostrarPlanes') ?> ">Listado de Planes de Estudio</a></li>
-              <li><a class="dropdown-item" href="#">Cargar Plan de Estudio</a></li>
 
+.table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th, .table td {
+    word-wrap: break-word;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
 
-              <li><a class="dropdown-item" href="#"></a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Materias
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="<?php echo base_url('/insertar_materia1') ?>">Cargar Materias</a></li>
-              <li><a class="dropdown-item" href="<?php echo base_url('/materias') ?>">Actualizar Materias</a></li>
+.table td, .table th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+</style>
 
-
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Valoraciones
-            </a>
-            <ul class="dropdown-menu">
-             <li><a class="dropdown-item" href="<?php echo base_url('/cargar_datos') ?>"> Cargar Nueva Valoración</a></li>
-             <li><a class="dropdown-item" href="<?php echo base_url('/mostrar_valoraciones_porDocente_porMateria1') ?>"> Actualizar Valoración</a></li>
-              <li><a class="dropdown-item" href="<?php echo base_url('/buscar_valoracion_por_docente') ?>">Buscar Valoración por docente</a></li>
-              <li><a class="dropdown-item" href="<?php echo base_url('/Mostrar_Valoraciones_Por_Materia') ?>">Mostrar Valoración por Materia</a></li>
-              <li><a class="dropdown-item" href="<?php echo base_url('/mostrar_valoraciones') ?>">Mostrar Todas las Valoraciones</a></li>
-
-              <li><a class="dropdown-item" href="#"></a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true"></a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Docente
-            </a>
-            <ul class="dropdown-menu">
-             <li><a class="dropdown-item" href="<?= base_url('/Docente/create') ?>"> Agregar</a></li>
-              <li><a class="dropdown-item" href="<?php echo base_url('/buscar_docente') ?>">Buscar</a></li>
-              <li><a class="dropdown-item" href="<?php echo base_url('/Docente') ?>">Listar</a></li>
-
-              <li><a class="dropdown-item" href="#"></a></li>
-            </ul>
-          </li>
-          <!-- agrego opcion salir en el menu-->
-          <li class="nav-item active">
-            <a class="nav-link" href="<?php echo base_url('/salir')?>">Salir <span class="sr-only">(current)</span> </a>
-          </li>
-
-        </ul>
-
-      </div>
-    </div>
-  </nav>
 <?php
 
 //print_r($datosTabla1); 
@@ -147,77 +274,73 @@ foreach ($datosTabla1 as $item) {
     $a = $item['apellido'];
     
 }
-//print_r($datosTabla2);
+//print_r($datosTabla9);
 ?>
 
 <!-- Tabla 0 -->
-<div class="container mt-5">
-    <h1 class="text-center">Actualización de Valoración</h1>
-    <h3 class="text-center">Docente: <?php echo htmlspecialchars($n)." ".htmlspecialchars($a); ?></h3>
-    <br>
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Dni</th>
-            <th>J1</th>
-            <th>J2</th>
-            <th>J3</th>
-            <th>Materia</th>
-            <th>Título</th>
-            <th class="actions-column">Acciones</th>
+<div class="table-container">
+  <h2 class="text-center text-primary fw-bold">Actualización de Valoración</h2>
+  <h2 class="text-center text-primary fw-bold">Docente: <?php echo htmlspecialchars($n) . " " . htmlspecialchars($a); ?></h2>
+  <br>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Dni</th>
+        <th>Jurado 1</th>
+        <th>Jurado 2</th>
+        <th>Jurado 3</th>
+        <th>Materia</th>
+        <th>Título</th>
+        <th class="actions-column">Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="recordTable0">
+      <?php foreach ($datosTabla1 as $record): ?>
+        <tr id="row-<?= $record['id_valoracion'] ?>">
+          <td><?= esc($record['id_valoracion']); ?></td>
+          <td><?= esc($record['dni']); ?></td>
+          <td><?= esc($record['j1']); ?></td>
+          <td><?= esc($record['j2']); ?></td>
+          <td><?= esc($record['j3']); ?></td>
+          <td class="materia-col"><?= esc($record['materia']); ?></td>
+          <td><?= esc($record['titulo']); ?></td>
+          <td>
+            <button class="btn btn-warning btn-editt" 
+                    data-idt="<?= esc($record['id_valoracion']) ?>" 
+                    data-dnit="<?= esc($record['dni']) ?>" 
+                    data-j1t="<?= esc($record['j1']) ?>" 
+                    data-j2t="<?= esc($record['j2']) ?>" 
+                    data-j3t="<?= esc($record['j3']) ?>" 
+                    data-materiat="<?= esc($record['materia']) ?>" 
+                    data-otrost="<?= esc($record['titulo']) ?>">
+              Editar
+            </button>
+            <button class="btn btn-info btn-detail0" 
+                    data-id="<?= esc($record['id_valoracion']) ?>">
+              Detalle
+            </button>
+            <button class="btn btn-danger btn-delete" data-id="<?= esc($record['id_valoracion']) ?>">
+              Eliminar
+            </button>
+          </td>
         </tr>
-        </thead>
-        <tbody id="recordTable0">
-        <?php foreach ($datosTabla1 as $record): 
-            
-            //$vvv = $record['id_valoracion'];
-            //$f = $record['fecha'] ;
-            //$fechaFormateada = date('d-m-Y', strtotime($f));
-            ?>
-            <tr id="row-<?= $record['id_valoracion'] ?>">
-                <td><?= $record['id_valoracion']; ?></td> 
-                <td><?= $record['dni']; ?></td> 
-                <td><?= $record['j1']; ?></td>
-                <td><?= $record['j2']; ?></td>
-                <td><?= $record['j3'] ?></td>
-                <td><?= $record['materia'] ?></td>
-                <td><?= $record['titulo'] ?></td>
-                <td>
-                    <button class="btn btn-warning btn-editt" 
-                            data-idt="<?= $record['id_valoracion'] ?>" 
-                            data-dnit="<?= $record['dni'] ?>" 
-                            data-j1t="<?= $record['j1'] ?>" 
-                            data-j2t="<?= $record['j2'] ?>" 
-                            data-j3t="<?= $record['j3'] ?>" 
-                            data-materiat="<?= $record['materia'] ?>" 
-                            data-otrost="<?= $record['titulo'] ?>">
-                        Editar
-                    </button>
-                    <button class="btn btn-info btn-detail0" 
-                            data-id="<?= $record['id_valoracion'] ?>">
-                        Detalle
-                    </button>
-                    <button class="btn btn-danger btn-delete" data-id="<?= $record['id_valoracion'] ?>">Eliminar</button>
-                    
-                </td>
-            </tr>
-        <?php endforeach; ?>
-        </tbody>
-    </table>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
 </div>
 
+<br>
 <!-- Tabla 1 -->
-<div class="container mt-5">
+<div class="table-container">
     
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModal">Agregar Otros Títulos</button>
-    <table class="table table-bordered">
+    <table class="styled-table">
         <thead>
         <tr>
-            <th>ID</th>
+            <th>Cod. Valoración</th>
             <th>Detalle</th>
             <th>Fecha</th>
-            <th>Cod. Valoración</th>
             <th>Otros Títulos</th>
             <th class="actions-column">Acciones</th>
         </tr>
@@ -230,25 +353,24 @@ foreach ($datosTabla1 as $item) {
             $fechaFormateada = date('d-m-Y', strtotime($f));
             ?>
             <tr id="row-<?= $record['id_otros_t'] ?>">
-                <td><?= $record['id_otros_t'] ?></td>
+                <td><?= $record['id_valoracion'] ?></td>
                 <td><?= $record['detalle_otros_titulos'] ?></td>
                 <td><?= $fechaFormateada; ?></td>
-                <td><?= $record['id_valoracion'] ?></td>
-                <td><?= $record['id_otros_titulos'] ?></td>
+                <td><?= $record['detalle_titulo'] ?></td>
                 <td>
                     <button class="btn btn-warning btn-edit" 
                             data-id="<?= $record['id_otros_t'] ?>" 
                             data-detalle="<?= $record['detalle_otros_titulos'] ?>" 
                             data-fecha="<?= $record['fecha'] ?>" 
                             data-valoracion="<?= $record['id_valoracion'] ?>"
-                            data-otros="<?= $record['id_otros_titulos'] ?>">
+                            data-otros="<?= $record['detalle_titulo'] ?>">
                         Editar
                     </button>
-                    <button class="btn btn-info btn-detail" 
+                    <button class="btn btn-info btn-detail00" 
                             data-id="<?= $record['id_otros_t'] ?>">
                         Detalle
                     </button>
-                    <button class="btn btn-danger btn-delete" data-id="<?= $record['id_otros_t'] ?>">Eliminar</button>
+                    <button class="btn btn-danger btn-delete2" data-id="<?= $record['id_otros_t'] ?>">Eliminar</button>
                     
                 </td>
             </tr>
@@ -257,18 +379,19 @@ foreach ($datosTabla1 as $item) {
     </table>
 </div>
 
+<br>
 <!-- Tabla 2 -->
-<div class="container mt-5">
+<div class="table-container">
     
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModalp">Agregar Postgrado</button>
-    <table class="table table-bordered">
+    <table class="styled-table">
         <thead>
         <tr>
-            <th>ID</th>
+            <th>Cod. valoración</th>
             <th>Detalle</th>
             <th>Fecha</th>
-            <th>Valoración</th>
-            <th>Otros Títulos</th>
+            <th>Título Postgrado</th>
+            
             <th class="actions-column">Acciones</th>
         </tr>
         </thead>
@@ -278,25 +401,24 @@ foreach ($datosTabla1 as $item) {
             $vvv = $record['id_valoracion'];
             ?>
             <tr id="row-<?= $record['id_postgrado'] ?>">
-                <td><?= $record['id_postgrado'] ?></td>
+                <td><?= $record['id_valoracion'] ?></td>
                 <td><?= $record['detalle_valoracion_postgrado'] ?></td>
                 <td><?= $record['fecha'] ?></td>
-                <td><?= $record['id_valoracion'] ?></td>
-                <td><?= $record['id_titulo_postgrado'] ?></td>
+                <td><?= $record['detalle_postgrado'] ?></td>
                 <td>
                     <button class="btn btn-warning btn-editp" 
                             data-idp="<?= $record['id_postgrado'] ?>" 
                             data-detallep="<?= $record['detalle_valoracion_postgrado'] ?>" 
                             data-fechap="<?= $record['fecha'] ?>" 
                             data-valoracionp="<?= $record['id_valoracion'] ?>"
-                            data-otrosp="<?= $record['id_titulo_postgrado'] ?>">
+                            data-otrosp="<?= $record['detalle_postgrado'] ?>">
                         Editar
                     </button>
                     <button class="btn btn-info btn-detail2" 
                             data-id="<?= $record['id_postgrado'] ?>">
                         Detalle
                     </button>
-                    <button class="btn btn-danger btn-delete" data-id="<?= $record['id_postgrado'] ?>">Eliminar</button>
+                    <button class="btn btn-danger btn-delete3" data-id="<?= $record['id_postgrado'] ?>">Eliminar</button>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -304,18 +426,18 @@ foreach ($datosTabla1 as $item) {
     </table>
 </div>
 
+<br>
 <!-- Tabla 3 -->
-<div class="container mt-5">
+<div  class="table-container">
     
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModala">Agregar Antecedente</button>
-    <table class="table table-bordered">
+    <table class="styled-table">
         <thead>
         <tr>
-            <th>ID</th>
+            <th>Cod. valoración</th>
             <th>Detalle</th>
             <th>Cantidad</th>
-            <th>Valoración</th>
-            <th>Código Antecedentes</th>
+            <th>Título Antecedente</th>
             <th class="actions-column">Acciones</th>
         </tr>
         </thead>
@@ -325,25 +447,24 @@ foreach ($datosTabla1 as $item) {
             $vvv = $record['id_valoracion'];
             ?>
             <tr id="row-<?= $record['id_ant_doc'] ?>">
-                <td><?= $record['id_ant_doc'] ?></td>
+                <td><?= $record['id_valoracion'] ?></td>
                 <td><?= $record['detalle_ant_doc'] ?></td>
                 <td><?= $record['cantidad'] ?></td>
-                <td><?= $record['id_valoracion'] ?></td>
-                <td><?= $record['id_detalle_doc'] ?></td>
+                <td><?= $record['detalle_antecedente_doc'] ?></td>
                 <td>
                     <button class="btn btn-warning btn-edita" 
                             data-ida="<?= $record['id_ant_doc'] ?>" 
                             data-detallea="<?= $record['detalle_ant_doc'] ?>" 
                             data-cantidada="<?= $record['cantidad'] ?>" 
                             data-valoraciona="<?= $record['id_valoracion'] ?>"
-                            data-otrosa="<?= $record['id_detalle_doc'] ?>">
+                            data-otrosa="<?= $record['detalle_antecedente_doc'] ?>">
                         Editar
                     </button>
                     <button class="btn btn-info btn-detail3" 
                             data-id="<?= $record['id_ant_doc'] ?>">
                         Detalle
                     </button>
-                    <button class="btn btn-danger btn-delete" data-id="<?= $record['id_ant_doc'] ?>">Eliminar</button>
+                    <button class="btn btn-danger btn-delete4" data-id="<?= $record['id_ant_doc'] ?>">Eliminar</button>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -351,18 +472,18 @@ foreach ($datosTabla1 as $item) {
     </table>
 </div>
 
+<br>
 <!-- Tabla 4 -->
-<div class="container mt-5">
+<div class="table-container">
     
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModalc">Agregar Capacitación</button>
-    <table class="table table-bordered">
+    <table class="styled-table">
         <thead>
         <tr>
-            <th>ID</th>
+            <th>Cod. valoración</th>
             <th>Detalle</th>
             <th>Fecha</th>
-            <th>Valoración</th>
-            <th>Código Antecedentes</th>
+            <th>Ítem Antecedentes</th>
             <th class="actions-column">Acciones</th>
         </tr>
         </thead>
@@ -372,25 +493,24 @@ foreach ($datosTabla1 as $item) {
             $vvv = $record['id_valoracion'];
             ?>
             <tr id="row-<?= $record['id_capacitacion'] ?>">
-                <td><?= $record['id_capacitacion'] ?></td>
+                <td><?= $record['id_valoracion'] ?></td>
                 <td><?= $record['detalle_capacitacion'] ?></td>
                 <td><?= $record['fecha'] ?></td>
-                <td><?= $record['id_valoracion'] ?></td>
-                <td><?= $record['id_detalle_capacitacion'] ?></td>
+                <td><?= $record['detalle'] ?></td>
                 <td>
                     <button class="btn btn-warning btn-editc" 
                             data-idc="<?= $record['id_capacitacion'] ?>" 
                             data-detallec="<?= $record['detalle_capacitacion'] ?>" 
                             data-fechac="<?= $record['fecha'] ?>" 
                             data-valoracionc="<?= $record['id_valoracion'] ?>"
-                            data-otrosc="<?= $record['id_detalle_capacitacion'] ?>">
+                            data-otrosc="<?= $record['detalle'] ?>">
                         Editar
                     </button>
                     <button class="btn btn-info btn-detail4" 
                             data-id="<?= $record['id_capacitacion'] ?>">
                         Detalle
                     </button>
-                    <button class="btn btn-danger btn-delete" data-id="<?= $record['id_capacitacion'] ?>">Eliminar</button>
+                    <button class="btn btn-danger btn-delete5" data-id="<?= $record['id_capacitacion'] ?>">Eliminar</button>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -398,18 +518,18 @@ foreach ($datosTabla1 as $item) {
     </table>
 </div>
 
+<br>
 <!-- Tabla 5 -->
-<div class="container mt-5">
+<div class="table-container">
     
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModalo">Agregar Formación Ofrecida</button>
-    <table class="table table-bordered">
+    <table class="styled-table">
         <thead>
         <tr>
-            <th>ID</th>
+            <th>Cód. valoración</th>
             <th>Detalle</th>
-            <th>Cantidad</th>
-            <th>Valoración</th>
-            <th>Código Antecedentes</th>
+            <th>Fecha</th>
+            <th>Ítem Formación Ofrecida</th>
             <th class="actions-column">Acciones</th>
         </tr>
         </thead>
@@ -419,25 +539,24 @@ foreach ($datosTabla1 as $item) {
             $vvv = $record['id_valoracion'];
             ?>
             <tr id="row-<?= $record['id_formacion'] ?>">
-                <td><?= $record['id_formacion'] ?></td>
+                <td><?= $record['id_valoracion'] ?></td>
                 <td><?= $record['detalle_formacion'] ?></td>
                 <td><?= $record['fecha'] ?></td>
-                <td><?= $record['id_valoracion'] ?></td>
-                <td><?= $record['id_formacion_ofrecida'] ?></td>
+                <td><?= $record['detalle'] ?></td>
                 <td>
                     <button class="btn btn-warning btn-edito" 
                             data-ido="<?= $record['id_formacion'] ?>" 
                             data-detalleo="<?= $record['detalle_formacion'] ?>" 
                             data-fechao="<?= $record['fecha'] ?>" 
                             data-valoraciono="<?= $record['id_valoracion'] ?>"
-                            data-otroso="<?= $record['id_formacion_ofrecida'] ?>">
+                            data-otroso="<?= $record['detalle'] ?>">
                         Editar
                     </button>
                     <button class="btn btn-info btn-detail5" 
                             data-id="<?= $record['id_formacion'] ?>">
                         Detalle
                     </button>
-                    <button class="btn btn-danger btn-delete" data-id="<?= $record['id_formacion'] ?>">Eliminar</button>
+                    <button class="btn btn-danger btn-delete6" data-id="<?= $record['id_formacion'] ?>">Eliminar</button>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -445,19 +564,18 @@ foreach ($datosTabla1 as $item) {
     </table>
 </div>
 
-
+<br>
 <!-- Tabla 6 -->
-<div class="container mt-5">
+<div class="table-container">
     
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModali">Agregar Investigación</button>
-    <table class="table table-bordered">
+    <table class="styled-table">
         <thead>
         <tr>
-            <th>ID</th>
+            <th>Cód. Valoración</th>
             <th>Detalle</th>
-            <th>Cantidad</th>
-            <th>Valoración</th>
-            <th>Código Antecedentes</th>
+            <th>Fecha</th>
+            <th>Ítem Investigación</th>
             <th class="actions-column">Acciones</th>
         </tr>
         </thead>
@@ -467,25 +585,24 @@ foreach ($datosTabla1 as $item) {
             $vvv = $record['id_valoracion'];
             ?>
             <tr id="row-<?= $record['id_investigacion'] ?>">
-                <td><?= $record['id_investigacion'] ?></td>
+                <td><?= $record['id_valoracion'] ?></td>
                 <td><?= $record['detalle_investigacion'] ?></td>
                 <td><?= $record['fecha'] ?></td>
-                <td><?= $record['id_valoracion'] ?></td>
-                <td><?= $record['id_detalle_investigacion'] ?></td>
+                <td><?= $record['detalle'] ?></td>
                 <td>
                     <button class="btn btn-warning btn-editi" 
                             data-idi="<?= $record['id_investigacion'] ?>" 
                             data-detallei="<?= $record['detalle_investigacion'] ?>" 
                             data-fechai="<?= $record['fecha'] ?>" 
                             data-valoracioni="<?= $record['id_valoracion'] ?>"
-                            data-otrosi="<?= $record['id_detalle_investigacion'] ?>">
+                            data-otrosi="<?= $record['detalle'] ?>">
                         Editar
                     </button>
                     <button class="btn btn-info btn-detail6" 
                             data-id="<?= $record['id_investigacion'] ?>">
                         Detalle
                     </button>
-                    <button class="btn btn-danger btn-delete" data-id="<?= $record['id_investigacion'] ?>">Eliminar</button>
+                    <button class="btn btn-danger btn-delete7" data-id="<?= $record['id_investigacion'] ?>">Eliminar</button>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -493,19 +610,18 @@ foreach ($datosTabla1 as $item) {
     </table>
 </div>
 
-
+<br>
 <!-- Tabla 7 -->
-<div class="container mt-5">
+<div class="table-container">
     
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModaloa">Agregar Otros Antecedentes</button>
-    <table class="table table-bordered">
+    <table class="styled-table">
         <thead>
         <tr>
-            <th>ID</th>
+            <th>Cód. Valoración</th>
             <th>Detalle</th>
-            <th>Cantidad</th>
-            <th>Valoración</th>
-            <th>Código Antecedentes</th>
+            <th>Fecha</th>
+            <th>Ítem Otros Antecedentes</th>            
             <th class="actions-column">Acciones</th>
         </tr>
         </thead>
@@ -515,25 +631,24 @@ foreach ($datosTabla1 as $item) {
             $vvv = $record['id_valoracion'];
             ?>
             <tr id="row-<?= $record['id_detalle_ant'] ?>">
-                <td><?= $record['id_detalle_ant'] ?></td>
+                <td><?= $record['id_valoracion'] ?></td>
                 <td><?= $record['detalle_otros_ant_doc'] ?></td>
                 <td><?= $record['fecha'] ?></td>
-                <td><?= $record['id_valoracion'] ?></td>
-                <td><?= $record['id_detalle_otros_ant'] ?></td>
+                <td><?= $record['detalle'] ?></td>
                 <td>
                     <button class="btn btn-warning btn-editoa" 
                             data-idoa="<?= $record['id_detalle_ant'] ?>" 
                             data-detalleoa="<?= $record['detalle_otros_ant_doc'] ?>" 
                             data-fechaoa="<?= $record['fecha'] ?>" 
                             data-valoracionoa="<?= $record['id_valoracion'] ?>"
-                            data-otrosoa="<?= $record['id_detalle_otros_ant'] ?>">
+                            data-otrosoa="<?= $record['detalle'] ?>">
                         Editar
                     </button>
                     <button class="btn btn-info btn-detail7" 
                             data-id="<?= $record['id_detalle_ant'] ?>">
                         Detalle
                     </button>
-                    <button class="btn btn-danger btn-delete" data-id="<?= $record['id_detalle_ant'] ?>">Eliminar</button>
+                    <button class="btn btn-danger btn-delete8" data-id="<?= $record['id_detalle_ant'] ?>">Eliminar</button>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -541,18 +656,18 @@ foreach ($datosTabla1 as $item) {
     </table>
 </div>
 
+<br>
 <!-- Tabla 8 -->
-<div class="container mt-5">
+<div class="table-container">
     
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModalal">Agregar Antecedente Laborales</button>
-    <table class="table table-bordered">
+    <table class="styled-table">
         <thead>
         <tr>
-            <th>ID</th>
+            <th>Cód. Valoración</th>
             <th>Detalle</th>
             <th>Cantidad</th>
-            <th>Valoración</th>
-            <th>Código Antecedentes</th>
+            <th>Ítem Ant. Laborales</th>
             <th class="actions-column">Acciones</th>
         </tr>
         </thead>
@@ -562,25 +677,24 @@ foreach ($datosTabla1 as $item) {
             $vvv = $record['id_valoracion'];
             ?>
             <tr id="row-<?= $record['id_ant_lab'] ?>">
-                <td><?= $record['id_ant_lab'] ?></td>
+                <td><?= $record['id_valoracion'] ?></td>
                 <td><?= $record['detalle_ant_lab'] ?></td>
                 <td><?= $record['cantidad'] ?></td>
-                <td><?= $record['id_valoracion'] ?></td>
-                <td><?= $record['id_detalle_lab'] ?></td>
+                <td><?= $record['detalle'] ?></td>
                 <td>
                     <button class="btn btn-warning btn-edital" 
                             data-idal="<?= $record['id_ant_lab'] ?>" 
                             data-detalleal="<?= $record['detalle_ant_lab'] ?>" 
                             data-cantidadal="<?= $record['cantidad'] ?>" 
                             data-valoracional="<?= $record['id_valoracion'] ?>"
-                            data-otrosal="<?= $record['id_detalle_lab'] ?>">
+                            data-otrosal="<?= $record['detalle'] ?>">
                         Editar
                     </button>
                     <button class="btn btn-info btn-detail8" 
                             data-id="<?= $record['id_ant_lab'] ?>">
                         Detalle
                     </button>
-                    <button class="btn btn-danger btn-delete" data-id="<?= $record['id_ant_lab'] ?>">Eliminar</button>
+                    <button class="btn btn-danger btn-delete9" data-id="<?= $record['id_ant_lab'] ?>">Eliminar</button>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -745,7 +859,7 @@ foreach ($datosTabla1 as $item) {
 </div>
 
 <!-- Modal Detalle Otros Títulos -->
-<div class="modal fade" id="detailModal" tabindex="-1">
+<div class="modal fade" id="detailModal00" tabindex="-1">
     <div class="modal-dialog modal-lg"> <!-- Usamos modal-lg para un tamaño más grande -->
         <div class="modal-content">
             <div class="modal-header">
@@ -754,10 +868,10 @@ foreach ($datosTabla1 as $item) {
             </div>
             <div class="modal-body">
                 <table class="table table-bordered text-center"> <!-- Centrar los contenidos de la tabla -->
-                    <thead id="detailTableHead">
+                    <thead id="detailTableHead00">
                         <!-- Cabecera de la tabla se cargará dinámicamente -->
                     </thead>
-                    <tbody id="detailTableBody">
+                    <tbody id="detailTableBody00">
                         <!-- Datos se cargarán dinámicamente -->
                     </tbody>
                 </table>
@@ -1587,7 +1701,7 @@ foreach ($datosTabla1 as $item) {
         $('#editJ1').val(j1t);
         $('#editJ2').val(j2t);
         $('#editJ3').val(j3t);
-        //$('#editMateria').val(materiat);
+        $('#editMateria').val(materiat);
 
         // Obtener listado de "otros títulos" con la opción actual seleccionada
         $.get('<?= base_url('NuevoController/cargarOtrosTitulos0') ?>', function (response) {
@@ -1637,7 +1751,7 @@ foreach ($datosTabla1 as $item) {
 
 <!-- SCRIPT PARA OTROS TITULOS-->
 <script>
-    $('.btn-detail').on('click', function () {
+    $('.btn-detail00').on('click', function () {
         const id = $(this).data('id');
 
         // Mapeo de claves a nombres personalizados
@@ -1651,8 +1765,8 @@ foreach ($datosTabla1 as $item) {
         };
 
         $.get(`<?= base_url('NuevoController/getDetail') ?>/${id}`, function (response) {
-            const detailTableHead = $('#detailTableHead');
-            const detailTableBody = $('#detailTableBody');
+            const detailTableHead = $('#detailTableHead00');
+            const detailTableBody = $('#detailTableBody00');
 
             detailTableHead.empty();
             detailTableBody.empty();
@@ -1682,7 +1796,7 @@ foreach ($datosTabla1 as $item) {
                 detailTableBody.append(row);
             }
 
-            $('#detailModal').modal('show');
+            $('#detailModal00').modal('show');
         });
     });
 </script>
@@ -1750,7 +1864,7 @@ foreach ($datosTabla1 as $item) {
         });
     });
 
-    $('.btn-delete').on('click', function () {
+    $('.btn-delete2').on('click', function () {
         if (confirm('¿Estás seguro de eliminar este registro?')) {
             $.post(`<?= base_url('NuevoController/deleteRecord2') ?>/${$(this).data('id')}`, function () {
                 location.reload();
@@ -1873,7 +1987,7 @@ foreach ($datosTabla1 as $item) {
         });
     });
 
-    $('.btn-delete').on('click', function () {
+    $('.btn-delete3').on('click', function () {
         if (confirm('¿Estás seguro de eliminar este registro?')) {
             $.post(`<?= base_url('NuevoController/deleteRecord22') ?>/${$(this).data('id')}`, function () {
                 location.reload();
@@ -1997,7 +2111,7 @@ foreach ($datosTabla1 as $item) {
         });
     });
 
-    $('.btn-delete').on('click', function () {
+    $('.btn-delete4').on('click', function () {
         if (confirm('¿Estás seguro de eliminar este registro?')) {
             $.post(`<?= base_url('NuevoController/deleteRecord23') ?>/${$(this).data('id')}`, function () {
                 location.reload();
@@ -2120,7 +2234,7 @@ foreach ($datosTabla1 as $item) {
         });
     });
 
-    $('.btn-delete').on('click', function () {
+    $('.btn-delete5').on('click', function () {
         if (confirm('¿Estás seguro de eliminar este registro?')) {
             $.post(`<?= base_url('NuevoController/deleteRecord24') ?>/${$(this).data('id')}`, function () {
                 location.reload();
@@ -2241,7 +2355,7 @@ foreach ($datosTabla1 as $item) {
         });
     });
 
-    $('.btn-delete').on('click', function () {
+    $('.btn-delete6').on('click', function () {
         if (confirm('¿Estás seguro de eliminar este registro?')) {
             $.post(`<?= base_url('NuevoController/deleteRecord25') ?>/${$(this).data('id')}`, function () {
                 location.reload();
@@ -2485,7 +2599,7 @@ foreach ($datosTabla1 as $item) {
         });
     });
 
-    $('.btn-delete').on('click', function () {
+    $('.btn-delete8').on('click', function () {
         if (confirm('¿Estás seguro de eliminar este registro?')) {
             $.post(`<?= base_url('NuevoController/deleteRecord27') ?>/${$(this).data('id')}`, function () {
                 location.reload();
@@ -2607,7 +2721,7 @@ foreach ($datosTabla1 as $item) {
         });
     });
 
-    $('.btn-delete').on('click', function () {
+    $('.btn-delete9').on('click', function () {
         if (confirm('¿Estás seguro de eliminar este registro?')) {
             $.post(`<?= base_url('NuevoController/deleteRecord28') ?>/${$(this).data('id')}`, function () {
                 location.reload();

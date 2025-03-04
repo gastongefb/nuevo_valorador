@@ -3,7 +3,7 @@
 
 <?= $this->section('content') ?>
 
-    <h1>SISTEMA VALORADOR DE ANTECEDENTES ISFT</h1>
+    <h2 class="text-center text-primary fw-bold">SISTEMA VALORADOR DE ANTECEDENTES ISFT</h2>
 
     
     <?= $this->endSection() ?>  
